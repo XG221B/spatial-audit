@@ -1,9 +1,12 @@
 \documentclass[11pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[margin=25mm]{geometry}
-\usepackage{amsmath,booktabs,hyperref,microtype}
+\usepackage{graphicx,amsmath,booktabs,hyperref,microtype}
 \hypersetup{hidelinks}
 \input{generated/metrics}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\newcommand{\suppfigure}[3]{\begin{figure}[htbp]\centering\includegraphics[width=.83\linewidth]{figures/#1.pdf}\caption{\textbf{#2} #3}\label{fig:s-#1}\end{figure}}
 \title{Spatial Audit: supplementary methods and reproducibility notes}
 \author{Chaohao Liu}
 \date{}
@@ -69,5 +72,36 @@ In GSE348499, each split assigns the smaller pseudo-arm uniformly without replac
 The four scaling runs reuse the same spatial extent, requested sparsity and seed. Fixture generation precedes timing; the audit timer starts immediately before manifest ingestion and stops after report serialization. Peak RSS uses the worker's process high-water mark. Paired inference requires both conditions for each donor. Stratified tests condition on within-stratum arm counts. The optional Voronoi construction clips cells to the convex hull and weights sites equally when summarizing energy. For the MSI sensitivity run each target window is removed from its own TIC before filtering the covariate; both projections retain raster coordinates. Leave-one-ion-out TIC modestly changed the joint TIC and raster share at 1,400 micrometres from 45.09\% to 44.88\%.
 
 The targeted CosMx search examined official GEO metadata for GSE348495, GSE312757 and GSE311636. GSE348495 supplies tissue and sample labels in the downloaded cell table, including repeated tumour prefixes. A biopsy-to-donor and adjacent-tissue crosswalk remained unresolved. GSE312757 describes within-specimen regions from liver metastases; GSE311636 supplies RNA and protein assay identifiers. The inspected files did not establish independent two-group donor contrasts for these candidates. The screening record preserves the inspected sample titles, URLs and SHA-256 digests.
+
+\section*{8. Supplementary tables and figures}
+
+\begin{table}[htbp]\centering\small
+\caption{Fresh-process CPU audit timing and peak resident memory across sparse synthetic workloads (10 donors, 64 features, 2.96\% nonzero density).}\label{tab:s-scaling}
+\begin{tabular}{rrr}\toprule
+Observations & Audit seconds & Peak RSS (MiB)\\\midrule
+10,000 & 2.69 & 179.2\\
+50,000 & 8.94 & 187.8\\
+250,000 & 16.65 & 203.0\\
+1,000,000 & 34.52 & 283.8\\
+\bottomrule\end{tabular}
+\end{table}
+
+\begin{table}[htbp]\centering\small
+\caption{Native R method coverage across 20 registered primary contrasts (77 completed runs; 43 inapplicable pairs).}\label{tab:s-comparators}
+\begin{tabular}{@{}llr@{}}\toprule
+Method & Target & Completed runs\\\midrule
+edgeR & Donor pseudobulk differential expression & 18\\
+DESeq2 & Donor pseudobulk differential expression & 18\\
+DESpace2 & Group-by-domain interaction & 3\\
+nnSVG & Within-section spatial variability & 19\\
+SPARK-X & Within-section spatial variability & 18\\
+Cardinal & Donor-averaged pixel intensities & 1\\
+\bottomrule\end{tabular}
+\end{table}
+
+\suppfigure{composition}{Covariate share of spatial signal energy across physical wavelengths.}{Each point summarizes patients and sections with valid physical footprint support and non-saturated covariate projections at the indicated micrometre wavelength.}
+\suppfigure{nugget}{Fine-scale contrast shifts following short-distance noise adjustment.}{Each point represents one feature normalized by its larger pre-adjustment group energy, with groups ordered lexically as recorded in the report.}
+\suppfigure{phase-diagram}{Conditional operating characteristics across the synthetic design grid.}{Panels display adjusted null rejection and alternative-hypothesis detection across the prespecified parameter slice recorded in the simulation JSON. The maximum adjusted null rejection on this slice is \MaxNullSlice{}\%.}
+\suppfigure{benchmark}{Observed runtime and memory across original-package R comparators.}{Each point corresponds to one verified method-by-cohort subprocess with measurable runtime and peak process-tree resident memory, colored by method.}
 
 \end{document}

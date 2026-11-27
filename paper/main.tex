@@ -23,16 +23,6 @@
 \end{abstract}
 \noindent\textbf{Keywords:} Spatial transcriptomics; Mass spectrometry imaging; Biomedical informatics; Pseudoreplication; Confounding audit; Reproducibility; Permutation testing.
 
-\begin{table}[htbp]\centering
-\caption{Statement of Significance}\label{tab:significance}
-\begin{tabularx}{\linewidth}{@{}p{.23\linewidth}X@{}}\toprule
-\textbf{Problem or issue} & A biomarker contrast can appear precise when many cells come from a few donors or when clinical groups occupy different slides.\\
-\textbf{What is already known} & Local quality checks identify unreliable measurements. Donor-aware tests address biological replication, and spatial variability tests identify patterns within tissue.\\
-\textbf{What this paper adds} & Across 20 public archives, the audit shows which donor contrasts and spatial scales can be assessed. The results inform decisions about descriptive reporting, donor-level testing and additional sampling.\\
-\bottomrule\end{tabularx}
-\end{table}
-
-\FloatBarrier
 \section{Introduction}
 Spatially resolved molecular profiling---spanning capture-array transcriptomics (Visium, Stereo-seq), targeted in situ imaging (Xenium, CosMx SMI, MERFISH), and matrix-assisted laser desorption/ionization mass spectrometry imaging (MALDI-MSI)---has rapidly entered clinical and translational research. Across oncology, neurodegeneration, immunology, and cardiopulmonary disease, multi-patient spatial cohorts are increasingly used to identify disease-associated markers, treatment-response programs, and tissue microenvironments. Yet translating high-dimensional spatial assays into reproducible biomedical findings confronts a fundamental statistical asymmetry: a single study may collect hundreds of thousands of spots, cells, or pixels, while the number of independent patients per clinical arm often remains between three and fifteen.
 
@@ -47,6 +37,18 @@ When downstream pipelines treat spatially correlated within-patient observations
 Spatial quality control assesses whether individual spots, segmented cells or tissue regions yield interpretable measurements. A section can pass these checks even when all cases were processed on one slide and all controls on another. Donor-aware differential expression addresses replication \cite{pseudorep,edger,deseq2}. Domain-interaction and within-section variability methods address the location of molecular patterns \cite{despace2,nnsvg,sparkx,cardinal}. Spatial Audit asks which clinical contrasts and physical scales the sampling design supports before those analyses are interpreted (Table~\ref{tab:significance}).
 
 Consider a team selecting a cortical marker for follow-up. With three case and three control donors, the smallest two-sided donor permutation probability is 0.10. The team can report donor effect estimates descriptively. If each arm occupies its own slide, additional donors processed on shared slides would help distinguish a group effect from acquisition. Once replication and slide assignment support a donor test, the proposed wavelength still matters. A coarse pattern shared with cortical layers motivates a layer-specific comparison, while a wavelength below the array's resolution calls for finer sampling before interpreting local variation.
+
+\begin{table}[htbp]\centering\small
+\caption{Statement of Significance}\label{tab:significance}
+\begin{tabularx}{\linewidth}{@{}p{.26\linewidth}X@{}}\toprule
+\textbf{Problem or Issue} & Multi-patient spatial transcriptomics and mass spectrometry imaging studies compare clinical groups using thousands of correlated spatial locations from small donor cohorts, risking pseudoreplication, slide aliasing, and covariate confounding.\\
+\textbf{What is Already Known} & Existing bioinformatics tools target specific downstream differential expression or spatial variability endpoints, but lack a unified, modality-agnostic audit of biological replication, acquisition design, and physical-scale confounding.\\
+\textbf{What this Paper Adds} & We present Spatial Audit, an open-source five-dimensional audit engine benchmarked across 20 human clinical archives from six platforms, six original R packages, real-data donor splits (93\%--95\% pooled vs 1.7\%--2.7\% donor calls), and an offline web observatory.\\
+\textbf{Who would benefit from the new knowledge in this paper} & Translational researchers, biostatisticians, and journal reviewers designing, analyzing, or auditing multi-patient spatial omics studies before prioritizing clinical biomarkers or therapeutic targets.\\
+\bottomrule\end{tabularx}
+\end{table}
+
+\FloatBarrier
 
 \section{Materials and Methods}
 \subsection{Data contract and study selection}
@@ -105,12 +107,10 @@ Public input & Units & Positions & Features & Floor & Spot \% & Unit \%\\\midrul
 \end{tabular}
 \end{table}
 
-Across all \MeasuredArchives{} measured archives, Figures~\ref{fig:exact-floor}--\ref{fig:nugget} summarize exact permutation resolution, pooled-versus-donor discovery shifts, multiscale covariate shares, and short-distance noise adjustments. Small clinical donor counts frequently placed the exhaustive permutation floor above or near $\alpha = 0.05$, while acquisition metadata directly constrained identifiability: in the CosMx severe COVID-19 lung contrast \cite{geo327879}, case and reference specimens occupy distinct slides, so introducing slide fixed effects absorbs the clinical group contrast entirely.
+Across all \MeasuredArchives{} measured archives, Figures~\ref{fig:exact-floor}--\ref{fig:replication} summarize exact permutation resolution and pooled-versus-donor discovery shifts, while Supplementary Figures~S1--S2 present multiscale covariate shares and short-distance noise adjustments. Small clinical donor counts frequently placed the exhaustive permutation floor above or near $\alpha = 0.05$, while acquisition metadata directly constrained identifiability: in the CosMx severe COVID-19 lung contrast \cite{geo327879}, case and reference specimens occupy distinct slides, so introducing slide fixed effects absorbs the clinical group contrast entirely.
 
 \auditfigure{exact-floor}{Patient-level permutation resolution across public contrasts.}{Each point marks the theoretical two-sided permutation floor under exhaustive enumeration for the observed biological group sizes. When the combinatorial space exceeds the enumeration budget, the executed Monte Carlo floor is recorded separately in each JSON report. The dashed line indicates the nominal $\alpha=0.05$ threshold.}
 \auditfigure{replication}{Sensitivity of discovery rates to the unit of analysis.}{Benjamini--Hochberg call fractions are computed over each cohort's declared feature panel under pooled-observation rank testing versus patient-level moderated permutation testing. Exact enumeration and finite Monte Carlo runs are distinguished in the machine-readable reports.}
-\auditfigure{composition}{Covariate share of spatial signal energy across physical wavelengths.}{Each point summarizes patients and sections with valid physical footprint support and non-saturated covariate projections at the indicated micrometre wavelength; denominators can vary across bands and are recorded per cohort. Cortical anatomical labels quantify regional composition, and assay-specific covariates carry their own biological or technical interpretation.}
-\auditfigure{nugget}{Fine-scale contrast shifts following short-distance noise adjustment.}{Each point represents one feature normalized by its larger pre-adjustment group energy, with groups ordered lexically as recorded in the report. Departure from the diagonal indicates sensitivity of the fine-band contrast to estimated short-lag white noise.}
 
 \FloatBarrier
 \subsection{Clinical contrasts, conditional randomization and validation}
@@ -120,29 +120,26 @@ Figure~\ref{fig:case-studies} illustrates three cases from cortex, breast cancer
 
 \auditfigure{case-studies}{Feature contrasts from cortex, breast cancer, and pancreatic cancer.}{Left: adjusted probabilities for cortical \textit{SDF4} (dashed line at 0.05). Center and right: group differences in fine-band energy before and after nugget subtraction. Scales are assay-specific; an archived mass window does not establish chemical identity.}
 
-The factorial simulation comprised \PhaseCells{} design states and \SimCohorts{} cohorts. Among settings with zero batch alignment and at least five donors per arm, the maximum adjusted null rejection was \MaxUnalignedNull{}\%. The maximum on the prespecified slice in Figure~\ref{fig:phase-diagram} was \MaxNullSlice{}\%. Figure~\ref{fig:vst-scaling} shows the matched variance-stabilization experiment and resource measurements. Table~\ref{tab:scaling} gives the four workload sizes.
-
-\input{generated/validation-tables}
-
-\auditfigure{phase-diagram}{Conditional operating characteristics across the synthetic design grid.}{Panels display adjusted null rejection and alternative-hypothesis detection across the prespecified parameter slice recorded in the simulation JSON. The maximum adjusted null rejection on this slice is \MaxNullSlice{}\%. Surface interpolation between evaluated grid cells is for visual clarity.}
-
-The benchmark comprised \SOTARuns{} native method--cohort runs with independently reconstructed BH calls (Table~\ref{tab:comparators}). The remaining 43 method--cohort pairs were recorded as inapplicable. Figure~\ref{fig:benchmark} shows measured time and memory by method.
-
 \begin{table}[htbp]\centering\small
-\caption{Native R method coverage across 20 registered primary contrasts. Multiple methods can run on the same cohort.}\label{tab:comparators}
-\begin{tabular}{@{}llr@{}}\toprule
-Method & Target & Completed runs\\\midrule
-edgeR & Donor pseudobulk differential expression & 18\\
-DESeq2 & Donor pseudobulk differential expression & 18\\
-DESpace2 & Group-by-domain interaction & 3\\
-nnSVG & Within-section spatial variability & 19\\
-SPARK-X & Within-section spatial variability & 18\\
-Cardinal & Donor-averaged pixel intensities & 1\\
+\caption{Within-arm random donor splits in GSE348499 (50 splits per arm, 1,600 feature-splits each). Unadjusted $p < 0.05$ gives the raw nominal rejection percentage; BH calls/tests and splits with calls report both denominators.}\label{tab:null}
+\begin{tabular}{llrrr}\toprule
+Arm & Endpoint & Unadjusted $p < 0.05$ (\%) & BH calls/tests & Splits with calls\\\midrule
+RD & Pooled cells & 93.44 & 1493/1600 & 50/50\\
+RD & Donor mean & 7.94 & 43/1600 & 4/50\\
+RD & Raw-scale energy & 6.25 & 2/1600 & 2/50\\
+RD & VST energy & 6.62 & 0/1600 & 0/50\\
+pCR & Pooled cells & 95.06 & 1521/1600 & 50/50\\
+pCR & Donor mean & 3.56 & 27/1600 & 1/50\\
+pCR & Raw-scale energy & 3.94 & 26/1600 & 2/50\\
+pCR & VST energy & 3.62 & 26/1600 & 2/50\\
 \bottomrule\end{tabular}
 \end{table}
 
+The factorial simulation comprised \PhaseCells{} design states and \SimCohorts{} cohorts. Among settings with zero batch alignment and at least five donors per arm, the maximum adjusted null rejection was \MaxUnalignedNull{}\%. The maximum on the prespecified slice (Supplementary Figure~S3) was \MaxNullSlice{}\%. Figure~\ref{fig:vst-scaling} shows the matched variance-stabilization experiment and computational scaling across four workload sizes (10,000 to 1,000,000 observations; Supplementary Table~S1).
+
+The cross-language R benchmark comprised \SOTARuns{} native method--cohort runs with independently reconstructed BH calls across \SOTAMethods{} packages (edgeR 18, DESeq2 18, DESpace2 3, nnSVG 19, SPARK-X 18, and Cardinal 1; Supplementary Table~S2 and Supplementary Figure~S4), with 43 additional method--cohort pairs recorded as inapplicable.
+
 \auditfigure{vst-scaling}{Calibration under an abundance shift and observed computational scaling.}{Top: exhaustive donor tests with seven donors per arm and a twofold baseline shift; bars give pointwise 95\% Wilson intervals across independent cohorts. Bottom: one fresh CPU audit per observation count at fixed panel size and spatial extent.}
-\auditfigure{benchmark}{Observed runtime and memory across original-package R comparators.}{Each point corresponds to one verified method-by-cohort subprocess with measurable runtime and peak process-tree resident memory, colored by method. Measurements include R startup, matrix ingestion, and model fitting.}
 
 \section{Discussion}
 \subsection{Practical guidance for clinical spatial omics workflows}
