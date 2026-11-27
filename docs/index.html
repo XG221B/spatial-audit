@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Spatial Audit · Cohort observatory</title>
+    <title>Spatial Audit · Multi-Patient Spatial Omics Observatory</title>
     <link rel="stylesheet" href="styles.css" />
     <script defer src="data/public/bundle.js"></script>
     <script defer src="data/synthetic/bundle.js"></script>
@@ -15,10 +15,11 @@
         ><span class="mark" aria-hidden="true">⠿</span> spatial-audit</a
       >
       <nav aria-label="Main">
-        <a href="#overview">Cohorts</a><a href="#benchmarks">Benchmarks</a
-        ><a href="#sandbox">Sandbox</a>
+        <a href="#overview">Cohorts</a>
+        <a href="#benchmarks">R Benchmarks</a>
+        <a href="#sandbox">Trap Sandbox</a>
       </nav>
-      <label class="upload"
+      <label class="upload" title="Inspect any spatial-audit JSON report locally in your browser"
         >↑ Open report<input
           type="file"
           accept=".json,application/json"
@@ -30,18 +31,20 @@
       <section id="overview">
         <div class="intro">
           <div>
-            <div class="eyebrow">Spatial omics / Reproducibility</div>
+            <div class="eyebrow">Multi-patient Spatial Omics · Reproducibility &amp; Confounding Audit</div>
             <h1>Cohort observatory</h1>
             <p>
-              Explore patient-level evidence, acquisition design and spatial
-              confounding across public archives.
+              Five-dimensional statistical assessment of biological replication,
+              acquisition collinearity, pseudoreplication, physical-scale
+              covariate sharing, and short-lag noise sensitivity across public
+              archives.
             </p>
           </div>
-          <div class="legend">
-            <span class="dot green"></span>Low flag
-            <span class="dot yellow"></span>Review
-            <span class="dot red"></span>High flag
-            <span class="dot gray"></span>Unassessed
+          <div class="legend" aria-label="Audit status legend">
+            <span><span class="dot green"></span>Low flag</span>
+            <span><span class="dot yellow"></span>Review</span>
+            <span><span class="dot red"></span>High flag</span>
+            <span><span class="dot gray"></span>Unassessed</span>
           </div>
         </div>
         <div class="metrics" id="metrics"></div>
@@ -61,7 +64,7 @@
               <input
                 id="search"
                 type="search"
-                placeholder="Search cohort or platform"
+                placeholder="Filter by accession, platform, or contrast…"
                 aria-label="Search cohorts"
               />
             </div>
@@ -70,11 +73,11 @@
                 <thead>
                   <tr>
                     <th>Cohort / platform</th>
-                    <th title="Exact floor">Power</th>
-                    <th>Design</th>
-                    <th title="Pseudoreplication">Rep.</th>
-                    <th title="Composition">Comp.</th>
-                    <th>Nugget</th>
+                    <th title="Dimension 1: Exact permutation floor and feasible BH rank">Power</th>
+                    <th title="Dimension 2: Slide, batch, and acquisition-stage collinearity">Design</th>
+                    <th title="Dimension 3: Pooled vs. patient-level BH discovery gap">Rep.</th>
+                    <th title="Dimension 4: Within-band composition or TIC energy share">Comp.</th>
+                    <th title="Dimension 5: High-frequency short-lag noise sensitivity">Nugget</th>
                   </tr>
                 </thead>
                 <tbody id="rows"></tbody>
@@ -86,13 +89,14 @@
       </section>
       <section id="benchmarks" class="below">
         <div class="sectionline">
-          <h2>Cross-method benchmarks</h2>
+          <h2>Cross-language R benchmarks</h2>
           <select id="benchselect" aria-label="Benchmark cohort"></select>
         </div>
         <p>
-          Patient differential expression, spatial variability and domain
-          interactions have distinct null hypotheses. Peak RSS is the sampled
-          process-tree high-water mark.
+          Original-package R runs on the same registered feature panels.
+          Pseudobulk differential expression, domain-interaction models, and
+          within-section spatial-variability tests target distinct null
+          hypotheses. Peak RSS records the sampled process-tree high-water mark.
         </p>
         <div id="benchplot"></div>
       </section>
@@ -102,8 +106,10 @@
           <span class="tag">Analytic illustration</span>
         </div>
         <p>
-          Balanced independent patients, Gaussian random intercepts and a
-          two-sided nominal cutoff. Move a control to recalculate.
+          Explore how donor count, within-patient correlation, tissue
+          composition, and baseline abundance shifts affect exact permutation
+          resolution, naive pooled Type&nbsp;I error, and fine-scale energy.
+          Adjust any slider to recalculate.
         </p>
         <div class="sandboxgrid">
           <div class="sliders" id="sliders"></div>
@@ -113,15 +119,19 @@
           </div>
         </div>
         <details>
-          <summary>Simulation phase diagram and minimum-N lookup</summary>
+          <summary>Simulation phase diagram &amp; minimum-donor lookup table</summary>
           <div id="phase"></div>
         </details>
       </section>
     </main>
     <footer>
-      Spatial Audit · MIT
-      <a href="AUTHOR_GUIDE_AND_DEFENSE_CN.md">中文答辩手册</a>
-      <a href="SELF_CRITIQUE_AND_REFINEMENT.md">Validation notes</a>
+      <span>Spatial Audit · MIT License · Offline-ready static observatory</span>
+      <span class="footer-links">
+        <a href="COHORTS.md">Cohort catalog</a>
+        <a href="INPUTS.md">Input contract</a>
+        <a href="AUTHOR_GUIDE_AND_DEFENSE_CN.md">中文答辩手册</a>
+        <a href="SELF_CRITIQUE_AND_REFINEMENT.md">Validation notes</a>
+      </span>
     </footer>
   </body>
 </html>

@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "spatial-audit: Patient-level reproducibility and confounding audits for spatial omics"
+message: "If you use this software in your research, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: "Liu"
+    given-names: "Chaohao"
+    orcid: "https://orcid.org/0009-0003-4341-2494"
+version: "0.1.0"
+date-released: "2026-11-27"
+license: MIT
+repository-code: "https://github.com/XG221B/spatial-audit"
+url: "https://xg221b.github.io/spatial-audit/"
+keywords:
+  - spatial transcriptomics
+  - mass spectrometry imaging
+  - reproducibility
+  - pseudoreplication
+  - confounding
+  - permutation tests
+  - graph wavelets

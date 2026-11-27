@@ -1,15 +1,35 @@
 # spatial-audit
 
-**多患者空间组学的可复现性与混杂敏感性审计**  
-**Patient-level reproducibility and confounding audits for spatial omics**
+**Patient-level reproducibility, statistical resolution, and confounding audits for multi-patient spatial omics**  
+**多患者空间组学与质谱成像队列的 5 维统计体检与混杂敏感性审计工具**
 
-打开 [离线看板](docs/index.html) 即可查看实测结果。网页支持本地 JSON、物理尺度曲线、采集位置、跨方法比较和统计陷阱沙盒。所有数据随静态页面分发，浏览器上传的文件在本机读取。
+Open the zero-backend **[Interactive Dashboard](docs/index.html)** directly in any browser (works offline via `file://` or deployed to GitHub Pages) to inspect all measured public cohorts, cross-language R benchmarks, local JSON uploads, and the interactive statistical-trap sandbox.
 
-Open the dashboard directly from a clone, or deploy the same `docs/` directory to Pages. Public archive records, measured reports and synthetic controls have explicit provenance. A gray cell means the input has yet to be audited. Select **Synthetic fixtures** for the built-in demonstrations. [Dashboard](docs/index.html) · [Repository tree](docs/REPOSITORY_TREE.md) · [Study evidence](docs/COHORTS.md) · [Input contract](docs/INPUTS.md) · [R benchmark](docs/SOTA.md) · [中文答辩手册](docs/AUTHOR_GUIDE_AND_DEFENSE_CN.md) · [Refinement record](docs/SELF_CRITIQUE_AND_REFINEMENT.md)
+[Dashboard](docs/index.html) · [Cohort Evidence](docs/COHORTS.md) · [Input Contract](docs/INPUTS.md) · [R Benchmark](docs/SOTA.md) · [Repository Tree](docs/REPOSITORY_TREE.md) · [中文一作答辩手册](docs/AUTHOR_GUIDE_AND_DEFENSE_CN.md) · [Validation & Critique](docs/SELF_CRITIQUE_AND_REFINEMENT.md)
 
-## 三条命令复现 / Quick start
+---
 
-在 Python 3.13 环境中进入仓库根目录运行以下三条命令。第二条生成四个有标签的夹具及其数据清单，第三条通过标准输入路径重新审计。JSON 与 Markdown 保存在对应的 public 或 synthetic 子目录。Run from the repository root in a Python 3.13 environment.
+## Overview / 项目简介
+
+Spatial transcriptomics (Visium, Xenium, Stereo-seq, CosMx SMI, MERFISH) and MALDI-MSI generate tens of thousands of spatial observations from a limited number of donors. **`spatial-audit`** evaluates multi-patient group contrasts across five complementary statistical and experimental-design dimensions, outputting strict RFC-8259 JSON, Markdown audit summaries, and interactive visualizations:
+
+| Dimension | What it measures | Key diagnostic output |
+|---|---|---|
+| **1. Power & Exact Floor** | True biological replicate count (patients/donors) and exact combinatorial resolution | Legal label allocations, doubled-tail exact $p$-value floor, executed Monte Carlo floor, first feasible BH rank |
+| **2. Acquisition Design** | Alignment of clinical groups with `slide_id`, `batch`, and physical stage coordinates | Patient-weighted normalized mutual information, binary Fisher exact tests, linear stage separation, `UNIDENTIFIABLE_DESIGN` warnings |
+| **3. Pseudoreplication** | Sensitivity of discovery rates to the unit of analysis | Pooled spot/pixel Mann–Whitney BH call rate vs. equal-patient moderated permutation BH call rate, rate gap, and ratio |
+| **4. Multiscale Composition** | Fraction of spatial signal energy explained by tissue composition, covariates, or TIC at physical wavelengths ($\mu\mathrm{m}$) | Finite-volume graph Laplacian, shared Chebyshev bandpass filters, within-band orthogonal projection shares |
+| **5. HF-Nugget Sensitivity** | Susceptibility of fine-scale spatial contrasts to mean-linked short-lag white noise | Matched-path two-lag semivariogram intercept, projected white-noise gain, signed raw vs. noise-adjusted fine-band energy |
+
+> **Academic Framing / 学术措辞声明**  
+> All outputs provide an objective methodological assessment of reproducibility, statistical resolution, and confounding sensitivity under a patient-level deconfounding framework on publicly archived data. Flags characterize the declared contrast, panel, coordinate calibration, and assumptions; they do not adjudicate the scientific validity of any published study.  
+> 统一学术表述：“基于公开存档数据，在患者/生物学重复级去混杂框架下的可复现性、统计功效与混杂敏感性评估”。
+
+---
+
+## Quick Start (3 Commands) / 三条命令快速复现
+
+Run from the repository root in a **Python 3.13** environment (Windows 11 / Linux compatible):
 
 ```sh
 python -m pip install -e ".[dev,agent,archives]"
@@ -17,21 +37,32 @@ spatial-audit demo --out work/demo --write-fixtures work/fixtures
 spatial-audit run --manifest work/fixtures/manifest.json --out work/replayed
 ```
 
-单独运行 `spatial-audit demo` 会执行固定种子的四个设计检查。严格零假设、伪重复、成分和均值混杂、载物台分离各有预先声明的灯号。随机队列的误报率与检出率在独立相图实验中估计。
+1. Installs `spatial-audit` along with development, MCP agent, and archive-reading dependencies.
+2. Runs the four built-in deterministic **Synthetic Benchmark Fixtures** (`null`, `pseudorep`, `composition`, `stage`) and exports them with a portable manifest.
+3. Replays the exported manifest through the standard `spatial-audit run` CLI pipeline, generating strict RFC-8259 JSON and Markdown reports under `work/replayed/synthetic/`.
 
-## Public data / 公开队列与实测范围
+---
 
-The catalog covers twenty human spatial studies across Visium, Xenium, Stereo-seq, CosMx, MERFISH and MALDI-MSI. Four supplementary records retain provenance for the axolotl injury series STDS0000056, GSE346380 with unresolved donor independence, GSE225475 with an unverified biopsy-to-patient crosswalk, and GSE291246 with a longitudinal exposure contrast. GSE318039 and GSE306288 supply independent lung and valve contrasts in the primary benchmark. The evidence table links the accession, original spatial observation, statistical method and study-specific limitations. The dashboard shows which analyses have actually run. Panels and subsets from one study share patients; count accessions when describing independent archive coverage. [Catalog](docs/COHORTS.md) · [Machine-readable coverage](results/public/coverage.json)
+## Public Cohorts & Reproducibility / 公开队列与实测范围
 
-GSE220442 的重建从官方计数、条码、空间比例因子和病人分组出发。32 特征面板用于跨方法比较，完整归档面板另行出报告。皮层分层指示量反映解剖组成。GSE348499 的化疗应答从 GEO 样本级元数据读取，跨方法比较子集使用每组按 GSM 排序的前三位供者。MTBLS12782 使用配对 imzML/ibd、实际像素间距、共同质量窗、全谱 TIC 和坐标漂移项。真实检查依赖每个存档的具体设计与可取得的数据层。
+The curated catalog covers **20 primary human spatial cohorts** across **6 platform families** (Visium, Xenium, Stereo-seq, CosMx SMI, MERFISH, and MALDI-MSI), yielding **22 public audit reports** (including explicitly labeled panel and donor subsets for cross-method comparison). Four supplementary records preserve provenance for cohorts outside the primary independent-donor benchmark: `STDS0000056` (axolotl injury model), `GSE346380` (unresolved donor independence), `GSE225475` (unverified biopsy-to-patient crosswalk), and `GSE291246` (longitudinal paired exposure contrast). Independent COPD (`GSE318039`) and aortic valve (`GSE306288`) contrasts are included in the primary suite.
+
+Full provenance, donor crosswalks, coordinate calibrations, and SHA-256 receipts are documented in [docs/COHORTS.md](docs/COHORTS.md) and [results/public/coverage.json](results/public/coverage.json).
+
+### Archive Preparation Commands
 
 ```sh
+# Visium AD cortex (GSE220442) & Xenium TNBC chemotherapy response (GSE348499)
 python scripts/prepare_gse220442.py --download --raw-dir work/ad-raw --out work/ad
 spatial-audit run --manifest work/ad/manifest.json --out work/measured
 python scripts/prepare_gse348499.py --download --verify-geo --raw-dir work/xenium-raw --out work/xenium
+
+# MALDI-MSI PDAC (MTBLS12782)
 python scripts/fetch_and_verify.py --accession MTBLS12782 --role metadata --out work/msi
 python scripts/fetch_and_verify.py --accession MTBLS12782 --role data --out work/msi
 python scripts/prepare_msi.py --cache work/msi --manifest work/msi.json --provenance work/msi-inputs.json
+
+# Additional platforms (MERFISH, Stereo-seq, CosMx, Visium, Xenium)
 python scripts/prepare_merfish.py --cache work/merfish --manifest work/merfish.json --provenance work/merfish-inputs.json
 python scripts/prepare_stereo.py --fetch --cache work/stereo --manifest work/stereo.json --counts-manifest work/stereo-counts.json --provenance work/stereo-inputs.json
 python scripts/prepare_cosmx.py --cache work/cosmx --manifest work/cosmx.json --provenance work/cosmx-inputs.json
@@ -41,42 +72,34 @@ python scripts/prepare_colitis.py --cache work/colitis --manifest work/colitis.j
 python scripts/prepare_renal.py --cache work/kidney --manifest work/kidney.json --provenance work/kidney-inputs.json
 ```
 
-Additional archive adapters use `--cache DIRECTORY --manifest FILE --provenance FILE`. Run the script with `--help` for its exact interface. For staged caches, pass the asset role listed for that study in the catalog to `fetch_and_verify.py --accession ACCESSION --role ROLE --out DIRECTORY`. The catalog includes study-specific acquisition and filtering instructions.
+Additional archive adapters under `scripts/` follow the same `--cache DIRECTORY --manifest FILE --provenance FILE` convention (pass `--help` for exact flags):
 
-| Public contrast | Adapter under `scripts/` | Additional arguments |
+| Public Contrast | Adapter Script | Notes |
 |---|---|---|
-| S-BSST1410, GSE267226, Zenodo 10012934 | `prepare_biostudies_lung.py`, `prepare_pasc.py`, `prepare_ipf.py`, respectively | `--fetch` for acquisition, `--counts-manifest FILE` for R |
-| GSE336890, GSE190732, GSE206391 | `prepare_cortical_biopsies.py`, `prepare_covid_visium.py`, `prepare_skin.py`, respectively | Official assets in cache |
-| GSE250346, GSE282123 | `prepare_fibrosis.py`, `prepare_uc_xenium.py`, respectively | The fibrosis R export requires Rscript |
-| GSE318039, GSE306288 | `prepare_lung_valve.py` | `--accession GSE318039` or `--accession GSE306288` |
+| `S-BSST1410`, `GSE267226`, `Zenodo 10012934` | `prepare_biostudies_lung.py`, `prepare_pasc.py`, `prepare_ipf.py` | Supports `--fetch` and `--counts-manifest FILE` for R count comparators |
+| `GSE336890`, `GSE190732`, `GSE206391` | `prepare_cortical_biopsies.py`, `prepare_covid_visium.py`, `prepare_skin.py` | Uses official cached assets via `fetch_and_verify.py` |
+| `GSE250346`, `GSE282123` | `prepare_fibrosis.py`, `prepare_uc_xenium.py` | `prepare_fibrosis.py` R export requires `Rscript` |
+| `GSE318039`, `GSE306288` | `prepare_lung_valve.py` | Pass `--accession GSE318039` or `--accession GSE306288` |
 
-For existing prepared H5ADs, use a portable manifest or generate the compatible Visium/Xenium manifest with `scripts/run_benchmark_suite.py --visium-dir DIRECTORY --manifest FILE` or `--xenium-dir DIRECTORY --manifest FILE`. The latter command can take `--all-patients`. For an existing NPZ manifest the same runner accepts `--manifest FILE` directly. Input files are checksummed before use. To rebuild the checked-out dashboard from the results tree, run `python scripts/run_benchmark_suite.py`. Raw archive files remain in the chosen cache. See the provenance JSON in `results/public/` for actual byte counts, feature selection and biological mapping.
+For pre-prepared local H5AD or NPZ cohorts, use `scripts/run_benchmark_suite.py` (`--visium-dir`, `--xenium-dir`, or `--manifest`). Running `python scripts/run_benchmark_suite.py` with no arguments rebuilds the offline dashboard bundles from `results/`.
 
-## Methods / 方法与解释
+---
 
-| Dimension | Output |
-|---|---|
-| Exact floor | Number of legal patient allocations, doubled-tail resolution and first feasible BH rank |
-| Acquisition design | Patient-weighted categorical association, independent binary Fisher tests, stage support, rank and local-coordinate diagnostics |
-| Pseudoreplication | Pooled rank-test BH calls, patient-level moderated permutation calls, rate gap and ratio |
-| Multiscale composition | Finite-volume graph diffusion in µm, shared Chebyshev bands, within-band orthogonal projection |
-| HF nugget | Two-lag short-range noise estimate, projected filter gain, raw and corrected patient-level fine energy |
+## Methods Claim Check / 论文方法学文本核对
 
-Statistical flags describe the declared contrast, panel, coordinate scale, endpoint and assumptions. Discovery-rate differences can reflect changes in estimand and sampling weight. Biological signal, tissue boundaries and correlated instrument noise can contribute to short-lag variation. Exact enumeration assumes exchangeable independent patients. A reproducible Monte Carlo test is explicitly labeled when the assignment space exceeds the budget. See the exact implementation thresholds and output contract. [Methods](docs/INPUTS.md)
-
-统一学术表述为“基于公开存档数据，在患者/生物学重复级去混杂框架下的可复现性、统计功效与混杂敏感性审计”。输入缺少可核验的患者映射、空间单位或对照定义时，保留证据缺口。固定夹具的命中情况仅适用于列明的构造。
-
-## Methods claim check / 原文核对
+Extract explicit unit counts and statistical strategy mentions from UTF-8 text or text-layer PDFs and compare them against a measured audit report:
 
 ```sh
 spatial-audit claim-check --methods examples/GSE348499_excerpt.txt --report results/public/GSE348499-subset.json --out work/claim-matrix.json
 ```
 
-The rule-based English extractor accepts UTF-8 text and PDFs with a text layer. It preserves a local quotation and page index for explicit numerical units and mentions of statistical strategies. Comparison with the audited subset includes a scope-review state. Review the original figure, cohort, negation and modality before interpreting a difference. [Subset requiring scope review](results/public/claim_check.json) · [Full-cohort numerical agreement](results/public/claim_check_full.json)
+Each match preserves its local quotation and page index, flagging scope differences for human review. See [subset scope review](results/public/claim_check.json) and [full-cohort agreement](results/public/claim_check_full.json).
 
-## AI agents
+---
 
-安装 agent extra 后，可让支持 MCP stdio 的客户端以本地用户身份启动 `spatial-audit-mcp`。配置示例适用于使用 `mcpServers` 键的客户端。Specify the installed executable from the desired environment if the program is outside the client's PATH. Use trusted local manifests.
+## AI Agent Integration (MCP)
+
+With the `agent` extra installed, `spatial-audit-mcp` exposes the audit engine over local **MCP stdio** for any compatible AI client:
 
 ```json
 {
@@ -86,33 +109,34 @@ The rule-based English extractor accepts UTF-8 text and PDFs with a text layer. 
 }
 ```
 
-| Tool | Arguments |
-|---|---|
-| audit_cohort | manifest, cohort_id |
-| check_design_collinearity | manifest, cohort_id |
-| compute_exact_p_floor | n0, n1, features, alpha |
-| simulate_trap_cohort | trap = null, pseudorep, composition or stage (a string) |
+| MCP Tool | Arguments | Purpose |
+|---|---|---|
+| `audit_cohort` | `manifest`, `cohort_id` | Run the full 5-dimension audit on a trusted local manifest |
+| `check_design_collinearity` | `manifest`, `cohort_id` | Inspect acquisition-stage separation and categorical aliasing |
+| `compute_exact_p_floor` | `n0`, `n1`, `features`, `alpha` | Compute exact permutation resolution and minimum feasible BH rank |
+| `simulate_trap_cohort` | `trap` (`null`, `pseudorep`, `composition`, or `stage`) | Generate and audit a deterministic synthetic control |
 
-## Benchmark, validation and manuscript
+---
+
+## Benchmarks, Validation & Manuscript / 基准验证与论文构建
 
 ```sh
-python scripts/run_phase_diagram.py
-python scripts/measure_memory.py
-python scripts/verify_dois.py
-python scripts/run_benchmark_suite.py
-python scripts/verify_release_gate.py
+python scripts/run_phase_diagram.py     # 10,080 design states / 1,935,360 synthetic cohorts
+python scripts/measure_memory.py        # 1M-observation sparse CPU memory profile (0.278 GiB peak RSS)
+python scripts/verify_dois.py           # Bibliographic registry verification (33 references)
+python scripts/run_benchmark_suite.py   # Rebuild docs/data/ JSON and offline JS bundles
+python scripts/verify_release_gate.py   # Full release gate: pytest, ruff, mypy, JSON, LaTeX, wheel/sdist
 ```
 
-The phase diagram uses independent synthetic realizations at each specified design cell. The lookup returns the smallest *tested* donor count satisfying the reported uncertainty rule, or a blank when none qualifies. The memory measurement covers a fresh process from backed file loading through all five dimensions and serialization. Its empirical bound applies to the documented shape, sparsity and host. [Lookup CSV](docs/data/synthetic/sample_size_lookup.csv) · [Memory evidence](results/synthetic/memory.json)
+- **Cross-language R benchmark**: Runs original `edgeR`, `DESeq2`, `DESpace2`, `nnSVG`, `SPARK-X`, and `Cardinal` implementations in isolated R subprocesses with independent BH reconstruction from raw $p$-values ([docs/SOTA.md](docs/SOTA.md)).
+- **Browser QA**: Install `.[browser]` and run `python -m playwright install chromium` before running `pytest` to execute offline Chromium checks on `docs/index.html`.
+- **Manuscript**: Requires `pdflatex` and `bibtex` on `PATH` to compile [paper/main.pdf](paper/main.pdf) and [paper/supplement.pdf](paper/supplement.pdf) with auto-generated metrics and vector figures.
 
-The R benchmark needs R and its version-compatible Bioconductor libraries. The driver records successful runs, applicability, tested families, wall time, process-tree RSS and method versions. Its estimands include marginal group effects, within-section spatial variability and differential spatial patterns. [Install and replicate the six methods](docs/SOTA.md)
+---
 
-For browser QA install `.[browser]` and run `python -m playwright install chromium`. The full gate additionally needs pdfLaTeX and BibTeX on PATH. The repository contains a Resource-format editable manuscript, supplement, verified bibliography, generated macros and six vector PDF figures. Manuscript authorship and journal submission details are left to the submitting team. [Manuscript PDF](paper/main.pdf) · [Supplement PDF](paper/supplement.pdf) · [Registry checks](paper/generated/doi_verification.json)
+## Deployment & License / 部署与许可
 
-## Deployment / 发布
-
-- **GitHub Pages** — push the repository to the main branch and choose **Settings → Pages → GitHub Actions**. The supplied workflow publishes the static directory. Double-clicking `docs/index.html` also works offline.
-- **Docker** — `docker build -t spatial-audit .` then `docker run --rm spatial-audit demo`. Mount an output directory and pass `--out` to keep generated reports. The Python image runs the audit and MCP dependencies. Install R packages using the separate comparator recipe.
-- **PyPI** — configure a trusted publisher for this repository and the `pypi` GitHub environment. A published GitHub Release triggers testing, wheel/sdist builds and OIDC publication. Verify package-name availability and set the intended release version before publishing.
-- **License** — software is distributed under MIT. Public data retain their archive terms, and original studies are cited in the evidence catalog. [MIT License](LICENSE)
-
+- **GitHub Pages**: Push to `main` and enable **Settings → Pages → GitHub Actions**. The workflow in `.github/workflows/pages.yml` publishes `docs/` directly.
+- **Docker**: Build with `docker build -t spatial-audit .` and run `docker run --rm spatial-audit demo` (mount a volume with `--out` to persist reports).
+- **PyPI**: Configure a Trusted Publisher for the `pypi` GitHub environment; publishing a GitHub Release triggers `.github/workflows/publish.yml`.
+- **License**: Software is released under the [MIT License](LICENSE). Public datasets remain subject to their original archive terms and citations.

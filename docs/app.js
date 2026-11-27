@@ -9,11 +9,11 @@ const localReports = new Map();
 const catalog = sources[0].catalog || [];
 const dims = ["power", "design", "pseudorep", "composition", "nugget"];
 const dimNames = [
-  "Exact floor",
+  "Exact permutation floor",
   "Acquisition design",
   "Pseudoreplication",
-  "Composition share",
-  "Nugget sensitivity",
+  "Multiscale composition",
+  "HF-nugget sensitivity",
 ];
 const esc = (x) =>
   String(x ?? "").replace(
@@ -86,12 +86,12 @@ function render() {
     rows.find((x) => x.id === selected || x.r?.id === selected) || rows[0];
   selected = current?.id;
   $("metrics").innerHTML = [
-    [catalog.length, "Archive records"],
-    [new Set(catalog.map((c) => c.platform)).size, "Platform labels"],
+    [catalog.length, "Indexed archives"],
+    [new Set(catalog.map((c) => c.platform)).size, "Platform families"],
     [reports.filter((r) => r.kind === "public").length, "Public audits"],
     [
       reports.filter((r) => r.kind === "synthetic").length,
-      "Synthetic fixtures",
+      "Synthetic controls",
     ],
   ]
     .map(
@@ -134,7 +134,7 @@ function render() {
     );
   const out = $("detail");
   if (!current) {
-    out.textContent = "No matching cohorts.";
+    out.textContent = "No cohorts match the current filter.";
     return;
   }
   const { r, c } = current;
@@ -150,29 +150,41 @@ function render() {
     "</div><h2>" +
     esc(r?.id || current.id) +
     "</h2>";
-  if (c) html += "<p>" + esc(c.contrast) + "</p>";
-  if (!r)
+  if (!r) {
+    if (c) html += "<p>" + esc(c.contrast) + "</p>";
     html +=
       "<p>Preparation status · " + esc(c?.preparation_status || c?.unit_note) + "</p>";
-  else {
+  } else {
     const d = r.dimensions;
+    const pwr = d.power || {};
+    if (Array.isArray(pwr.groups) && pwr.groups.length === 2 && Number.isFinite(pwr.n0) && Number.isFinite(pwr.n1)) {
+      html +=
+        "<p><b>Audited contrast:</b> " +
+        esc(pwr.groups[0]) + " (n=" + num(pwr.n0) + ") vs " +
+        esc(pwr.groups[1]) + " (n=" + num(pwr.n1) + ")</p>";
+    }
+    if (r.provenance?.selection) {
+      html += '<p class="muted">' + esc(r.provenance.selection) + "</p>";
+    }
     const evidence = (sources[0].evidence || {})[r.id];
+    const links = [];
     if ($("kind").value !== "local" && /^[A-Za-z0-9_.-]+$/.test(r.id))
-      html += '<p><a download href="data/' + r.kind + '/' + esc(r.id) + '.json">Download full audit JSON</a></p>';
+      links.push('<a download href="data/' + r.kind + '/' + esc(r.id) + '.json">Download audit JSON ↓</a>');
     if ($("kind").value !== "local" && r.kind === "public" && /^[A-Za-z0-9_.-]+\.json$/.test(evidence || ""))
-      html += '<p><a href="data/public/' + esc(evidence) + '">Input receipts, mapping and calibration ↗</a></p>';
+      links.push('<a href="data/public/' + esc(evidence) + '">Input receipts, mapping &amp; calibration ↗</a>');
+    if (links.length)
+      html += '<div class="detail-links">' + links.join("") + "</div>";
     html +=
-      "<p>" +
-      num(r.n_patients) +
-      " biological units · " +
-      num(r.n_observations) +
-      " observations · " +
-      num(r.n_features) +
-      " features</p>" +
-      (Array.isArray(d.design.reasons) && d.design.reasons.length ? "<p>Design flag · " + esc(d.design.reasons.map(
+      '<div class="stat-strip">' +
+      '<span class="stat-pill"><b>' + num(r.n_patients) + "</b> biological units</span>" +
+      (Number.isFinite(r.n_sections) ? '<span class="stat-pill"><b>' + num(r.n_sections) + "</b> sections</span>" : "") +
+      '<span class="stat-pill"><b>' + num(r.n_observations) + "</b> observations</span>" +
+      '<span class="stat-pill"><b>' + num(r.n_features) + "</b> features</span>" +
+      "</div>" +
+      (Array.isArray(d.design.reasons) && d.design.reasons.length ? "<p><b>Design flags:</b> " + esc(d.design.reasons.map(
         (k) => k === "batch" ? (d.design.categorical?.batch?.label || k) : k
       ).join(", ")) + "</p>" : "") +
-      '<div class="chart"><h3>Discovery rate by sampling unit</h3>' +
+      '<div class="chart"><h3>BH discovery rate by unit of analysis</h3>' +
       svg(
         [
           ["Pooled spots", d.pseudorep.spot_rate, "#db9674"],
@@ -183,11 +195,11 @@ function render() {
               txt(2, 29 + 44 * i, name) +
               '<rect x="98" y="' +
               (14 + i * 44) +
-              '" width="248" height="18" fill="#edf1ef"/><rect x="98" y="' +
+              '" width="248" height="18" rx="2" fill="#edf1ef"/><rect x="98" y="' +
               (14 + i * 44) +
               '" width="' +
               248 * v +
-              '" height="18" fill="' +
+              '" height="18" rx="2" fill="' +
               color +
               '"/>' +
               txt(350, 29 + i * 44, pct(v)),
@@ -198,7 +210,7 @@ function render() {
       "</div>";
     const bands = d.composition.bands || [];
     html +=
-      '<div class="chart"><h3>Composition share by wavelength</h3>' +
+      '<div class="chart"><h3>Covariate share across physical wavelengths</h3>' +
       svg(
         bands.slice(1).map((b, i) => Number.isFinite(b.share) && Number.isFinite(bands[i].share)
           ? line([[42 + 140 * i, 81 - bands[i].share * 60], [182 + 140 * i, 81 - b.share * 60]], "#387c70")
@@ -213,7 +225,7 @@ function render() {
                     (42 + 140 * i) +
                     '" cy="' +
                     (81 - 60 * b.share) +
-                    '" r="4" fill="#34786c"/>'
+                    '" r="4.5" fill="#34786c"/>'
                   : ""),
             )
             .join(""),
@@ -222,7 +234,7 @@ function render() {
       (bands.every(b => Number.isInteger(b.interpretable_patients)) ?
         "<small>Patients with interpretable covariate projections by band: " +
         bands.map(b => num(b.interpretable_patients) + "/" + num(r.n_patients)).join(" · ") +
-        ". Missing shares can reflect field size, grid resolution, missing covariates or projection saturation.</small>" : "") +
+        ". Unassessed bands reflect footprint size, grid resolution, missing covariates, or projection saturation.</small>" : "") +
       "</div>";
     const pts = d.design.points || [],
       groups = [...new Set(pts.map((p) => p.group))];
@@ -268,7 +280,7 @@ function render() {
         )
         .join("") +
       "</div>" +
-      "<details><summary>Audit interpretations</summary><ul>" +
+      "<details><summary>Dimension-by-dimension audit notes</summary><ul>" +
       dims
         .map(
           (k, i) =>
@@ -276,7 +288,7 @@ function render() {
             dot(d[k].status) +
             " <b>" +
             dimNames[i] +
-            "</b> " +
+            ":</b> " +
             esc(d[k].message) +
             (k === "nugget" && d[k].measurement_scope ? " " + esc(d[k].measurement_scope.interpretation) : "") +
             "</li>",
@@ -287,7 +299,7 @@ function render() {
       "</p></details>";
     const power = d.power;
     if (Number.isFinite(power.effective_p_floor) && Number.isFinite(power.p_floor)) {
-      html += "<p>Permutation resolution · exhaustive " + esc(power.p_floor.toPrecision(3)) +
+      html += "<p><b>Permutation resolution:</b> exhaustive " + esc(power.p_floor.toPrecision(3)) +
         " · executed " + esc(power.effective_p_floor.toPrecision(3)) + " (" +
         esc(power.executed_mode) + "). First feasible BH rank under the executed budget: " +
         esc(power.effective_minimum_bh_rank ?? "none") + ".</p>";
@@ -295,19 +307,21 @@ function render() {
   }
   if (c)
     html +=
-      "<details><summary>Archive and publication evidence</summary><p>" +
+      "<details><summary>Archive &amp; publication provenance</summary>" +
+      (r && c.contrast ? "<p><b>Broader study design:</b> " + esc(c.contrast) + "</p>" : "") +
+      "<p>" +
       esc(c.claim) +
       "</p><p>" +
       esc(c.method) +
-      '</p><a href="' +
+      '</p><div class="detail-links"><a href="' +
       safeURL(c.source) +
-      '" rel="noreferrer">Official archive ↗</a> ' +
+      '" rel="noreferrer">Official archive ↗</a>' +
       (safeURL(c.paper)
         ? '<a href="' +
           safeURL(c.paper) +
-          '" rel="noreferrer">Publication ↗</a>'
+          '" rel="noreferrer">Original publication ↗</a>'
         : "") +
-      "</details>";
+      "</div></details>";
   out.innerHTML = html;
 }
 $("kind").onchange = render;
@@ -367,14 +381,14 @@ function benchmarks() {
     .join("");
   const draw = () => {
     $("benchplot").innerHTML = arr.length
-      ? "<table><thead><tr><th>Method / target</th><th>BH calls</th><th>Spot gap</th><th>Wall (s)</th><th>RSS (MiB)</th><th>Outcome</th></tr></thead><tbody>" +
+      ? "<table><thead><tr><th>Method &amp; estimand</th><th>BH calls</th><th>Spot gap</th><th>Wall (s)</th><th>Peak RSS (MiB)</th><th>Status</th></tr></thead><tbody>" +
         arr
           .filter((b) => b.cohort_id === $("benchselect").value)
           .map(
             (b) =>
-              "<tr><td>" +
+              "<tr><td><b>" +
               esc(b.method) +
-              "<small>" +
+              "</b><small>" +
               esc(b.estimand) +
               "</small></td><td>" +
               pct(b.call_rate) +
@@ -399,7 +413,7 @@ function benchmarks() {
           )
           .join("") +
         "</tbody></table>"
-      : "No measured runs available.";
+      : "No measured comparator runs available.";
   };
   $("benchselect").onchange = draw;
   draw();
@@ -409,8 +423,8 @@ function sandbox() {
     ["n", "Patients per group", 2, 30, 6, 1],
     ["cells", "Cells per patient", 10, 1000, 150, 10],
     ["share", "Composition share", 0, 1, 0.4, 0.05],
-    ["mean", "Mean multiplier", 1, 4, 1.5, 0.1],
-    ["icc", "Within-patient correlation", 0, 1, 0.15, 0.01],
+    ["mean", "Baseline mean multiplier", 1, 4, 1.5, 0.1],
+    ["icc", "Within-patient correlation (ICC)", 0, 1, 0.15, 0.01],
   ];
   $("sliders").innerHTML = controls
     .map(
@@ -460,9 +474,9 @@ function sandbox() {
     const raw = 1 + m,
       corrected = raw - r - m;
     $("readouts").innerHTML = [
-      ["Exact floor", floorAt(n).toPrecision(3)],
-      ["Naive null rejection", pct(err(c))],
-      ["Residual energy", corrected.toFixed(2) + " / " + raw.toFixed(2)],
+      ["Exact permutation floor", floorAt(n).toPrecision(3)],
+      ["Naive pooled null rejection", pct(err(c))],
+      ["Adjusted / raw energy", corrected.toFixed(2) + " / " + raw.toFixed(2)],
     ]
       .map(
         ([label, v]) => "<span>" + label + "<strong>" + v + "</strong></span>",
@@ -488,12 +502,12 @@ function sandbox() {
           txt(250, 110, c + " cells per patient"),
         "Naive null rejection curve and nominal five-percent reference",
       ) +
-      "<small>Orange shows analytic Gaussian null rejection under the selected intrapatient correlation. Green marks nominal 5%. The energy illustration splits unit biological energy by the selected composition share and adds a Poisson noise term equal to the mean multiplier. The empirical simulation grid below uses the spatial estimator.</small>";
+      "<small>Orange shows analytic Gaussian null rejection under the selected intrapatient correlation; green marks the nominal 5% level. The illustrative energy model partitions unit biological energy by composition share and adds a Poisson noise term equal to the mean multiplier. The empirical simulation grid below evaluates the full spatial estimator.</small>";
     const floorY = (k) => 16 - 4.3 * Math.log10(floorAt(k));
     const donorX = (k) => 25 + (360 * (k - 2)) / 28;
     $("curve").insertAdjacentHTML(
       "beforeend",
-      '<div class="chart"><h3>Permutation resolution</h3>' +
+      '<div class="chart"><h3>Permutation resolution by donor count</h3>' +
         svg(
           line(
             Array.from({ length: 29 }, (_, i) => [
@@ -508,11 +522,11 @@ function sandbox() {
             floorY(n) +
             '" r="5" fill="#b56b47"/>' +
             txt(15, 108, "2 per group") +
-            txt(215, 108, "30 per group · log p scale"),
+            txt(215, 108, "30 per group · log10 p scale"),
           "Exact floor by biological sample size",
         ) +
         "</div>" +
-        '<div class="chart"><h3>Fine-scale energy illustration</h3>' +
+        '<div class="chart"><h3>Illustrative fine-scale energy decomposition</h3>' +
         svg(
           [
             ["Raw", raw],
@@ -525,7 +539,7 @@ function sandbox() {
                 (14 + i * 40) +
                 '" width="' +
                 (245 * v) / 5 +
-                '" height="18" fill="' +
+                '" height="18" rx="2" fill="' +
                 (i ? "#34786c" : "#bd7957") +
                 '"/>' +
                 txt(345, 30 + 40 * i, v.toFixed(2)),
@@ -541,9 +555,9 @@ function sandbox() {
   const phase = sources[1].phase;
   if (phase)
     $("phase").innerHTML =
-      '<a href="data/synthetic/sample_size_lookup.csv" download>Download full minimum-N table (CSV)</a><img src="data/synthetic/phase_diagram.svg" alt="Synthetic phase diagram for design and confounding"><p>' +
+      '<p><a href="data/synthetic/sample_size_lookup.csv" download>Download full minimum-donor lookup table (CSV) ↓</a></p><img src="data/synthetic/phase_diagram.svg" alt="Synthetic phase diagram for design and confounding"><p>' +
       num(phase.simulated_cohorts) +
-      " synthetic cohorts. Raw rejection uses total fine-band energy. Adjusted rejection uses energy after composition projection and noise subtraction. The null holds latent biological amplitude constant in distribution while mean, composition or batch settings may vary by group. " +
+      " synthetic cohorts. Raw rejection evaluates total fine-band energy; adjusted rejection evaluates residual energy after composition projection and noise subtraction. Under the null, latent biological amplitude is matched across groups while baseline mean, composition, or batch alignment may vary. " +
       esc(phase.lookup_rule) +
       "</p><table><thead><tr><th>Composition</th><th>Dispersion</th><th>Mean</th><th>Batch alignment</th><th>Minimum N / arm</th></tr></thead><tbody>" +
       phase.minimum_n

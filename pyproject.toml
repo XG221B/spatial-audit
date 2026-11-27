@@ -7,6 +7,7 @@ name = "spatial-audit"
 version = "0.1.0"
 description = "Patient-level reproducibility and confounding audits for spatial omics"
 readme = "README.md"
+authors = [{ name = "Chaohao Liu" }]
 requires-python = ">=3.13"
 license = "MIT"
 dependencies = [
@@ -19,6 +20,11 @@ archives = ["pyarrow>=18"]
 agent = ["mcp>=1.12,<2"]
 browser = ["playwright>=1.50"]
 dev = ["pytest>=8", "ruff>=0.11", "mypy>=1.15", "build", "matplotlib>=3.10"]
+
+[project.urls]
+Homepage = "https://xg221b.github.io/spatial-audit/"
+Repository = "https://github.com/XG221B/spatial-audit"
+Issues = "https://github.com/XG221B/spatial-audit/issues"
 
 [project.scripts]
 spatial-audit = "spatial_audit.cli:main"
