@@ -556,3 +556,23 @@ footer {
     gap: 8px;
   }
 }
+
+#language, .svg-download, .feature-pages button, .feature-diagnostics th button {
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  background: transparent;
+  border: 1px solid #bacfc4;
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+#language { margin-left: auto; white-space: nowrap; }
+header .upload { margin-left: 0; }
+.feature-diagnostics { border-top: 1px solid #dbe3df; margin-top: 16px; padding-top: 14px; }
+.feature-diagnostics input { max-width: 100%; margin: 6px 0; }
+.feature-diagnostics th button { border: 0; text-align: inherit; }
+.feature-diagnostics th[aria-sort="ascending"] button::after { content: " ↑"; }
+.feature-diagnostics th[aria-sort="descending"] button::after { content: " ↓"; }
+.feature-pages { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.svg-download, .feature-pages { font-size: 12px; }
+.detail { overflow-wrap: anywhere; }

@@ -58,6 +58,9 @@ def test_stdio_all_tools_and_error_recovery(tmp_path):
                 "compute_exact_p_floor",
                 "simulate_trap_cohort",
                 "audit_cohort",
+                "quick_audit_h5ad",
+                "claim_check_methods",
+                "list_manifest_cohorts",
                 "check_design_collinearity",
             }
 
@@ -72,6 +75,32 @@ def test_stdio_all_tools_and_error_recovery(tmp_path):
             args = {"manifest": str(manifest), "cohort_id": "synthetic-protocol"}
             audit = await run("audit_cohort", args)
             assert audit["n_patients"] == 4 and len(audit["dimensions"]) == 5
+            import anndata as ad
+            import pandas as pd
+
+            listed = await run("list_manifest_cohorts", {"manifest": str(manifest)})
+            assert listed["cohorts"][0]["id"] == audit["id"]
+            report_file = tmp_path / "audit.json"
+            write_json(report_file, audit)
+            methods = tmp_path / "methods.txt"
+            methods.write_text("Four patients.", encoding="utf-8")
+            check = await run(
+                "claim_check_methods", {"methods": str(methods), "report": str(report_file)}
+            )
+            assert check["matrix"][0]["claimed"] == 4
+            obs = pd.DataFrame(
+                {"donor": np.repeat(list("abcd"), 16), "condition": np.repeat(["A", "B"], 32)},
+                index=list(map(str, range(64))),
+            )
+            h5ad = tmp_path / "input.h5ad"
+            ad.AnnData(
+                np.ones((64, 1)), obs=obs, obsm={"spatial": np.tile(xy * 100.0, (4, 1))}
+            ).write_h5ad(h5ad)
+            quick = await run(
+                "quick_audit_h5ad",
+                {"path": str(h5ad), "patient_col": "donor", "group_col": "condition"},
+            )
+            assert quick["kind"] == "local" and quick["n_patients"] == 4
             result = await run("check_design_collinearity", args)
             assert result["code"] == "UNIDENTIFIABLE_DESIGN"
             failed = await sess.call_tool("compute_exact_p_floor", {"n0": 0, "n1": 3})

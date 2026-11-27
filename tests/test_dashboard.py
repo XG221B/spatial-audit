@@ -57,3 +57,42 @@ def test_file_dashboard_upload_sandbox_and_mobile(tmp_path):
         assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth")
         assert not errors
         browser.close()
+
+
+def test_diagnostic_table_sort_search_svg_language_and_mobile(tmp_path):
+    import xml.etree.ElementTree as ET
+
+    browser_api = pytest.importorskip("playwright.sync_api")
+    with browser_api.sync_playwright() as pw:
+        if not Path(pw.chromium.executable_path).is_file():
+            pytest.skip("Chromium binary not available")
+        browser = pw.chromium.launch()
+        page = browser.new_page(viewport={"width": 375, "height": 740})
+        page.goto((ROOT / "docs/index.html").as_uri())
+        page.locator("#kind").select_option("synthetic")
+        page.get_by_role("button", name="synthetic-composition", exact=True).click()
+        table = page.locator(".feature-diagnostics")
+        assert table.locator("tbody tr").count() == 8
+        table.get_by_role("button", name="Pooled q").click()
+        assert table.locator("th").nth(1).get_attribute("aria-sort") == "ascending"
+        sort = table.get_by_role("button", name="Raw energy Δ")
+        sort.click()
+        ascending = table.locator("tbody td:nth-child(4)").all_text_contents()
+        assert list(map(float, ascending)) == sorted(map(float, ascending))
+        sort.click()
+        assert table.locator("tbody td:nth-child(4)").all_text_contents() == ascending[::-1]
+        page.get_by_role("searchbox", name="Search features").fill("F2")
+        assert table.locator("tbody tr").count() == 1
+        assert table.locator("tbody td").first.inner_text() == "F2"
+        with page.expect_download() as pending:
+            page.get_by_role("button", name="Export SVG").first.click()
+        dest = tmp_path / pending.value.suggested_filename
+        pending.value.save_as(dest)
+        root = ET.parse(dest).getroot()
+        assert root.tag == "{http://www.w3.org/2000/svg}svg" and len(root) > 1
+        for expected, heading in [("zh-CN", "逐特征诊断"), ("en", "Per-feature Diagnostics")]:
+            page.locator("#language").click()
+            assert page.locator("html").get_attribute("lang") == expected
+            assert table.get_by_role("heading", name=heading).is_visible()
+            assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth")
+        browser.close()

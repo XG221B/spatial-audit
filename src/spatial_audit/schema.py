@@ -104,16 +104,31 @@ class Cohort:
     source: str = ""
     provenance: dict = field(default_factory=dict)
 
+    design: str = "independent"
+    stratum: str = "batch"
+
+    def patient_strata(self):
+        if self.stratum not in {"batch", "slide_id"}:
+            raise ValueError("stratum must be batch or slide_id")
+        strata: dict = {}
+        for section in self.sections:
+            level = getattr(section, self.stratum)
+            if level is None or strata.setdefault(section.patient_id, level) != level:
+                raise ValueError("Stratification requires one observed stratum per patient")
+        return strata
+
     def validate(self) -> Cohort:
         if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,119}", self.id):
             raise ValueError("Use a portable cohort ID")
-        if self.kind not in {"public", "synthetic"} or (
+        if self.kind not in {"public", "synthetic", "local"} or (
             self.kind == "public" and not self.source.startswith(("https://", "http://"))
         ):
             raise ValueError("Public cohorts require a source URL; declare provenance kind")
         if not self.features or len(set(self.features)) != len(self.features):
             raise ValueError("Feature names must be nonempty and unique")
-        assignments: dict[str, str] = {}
+        if self.design not in {"independent", "paired", "stratified"}:
+            raise ValueError("Unknown permutation design")
+        assignments: dict[str, set] = {}
         for s in self.sections:
             if (
                 not isinstance(s.patient_id, str)
@@ -122,7 +137,9 @@ class Cohort:
                 or not s.group.strip()
             ):
                 raise ValueError("Missing patient or group")
-            if assignments.setdefault(s.patient_id, s.group) != s.group:
+            membership = assignments.setdefault(s.patient_id, set())
+            membership.add(s.group)
+            if len(membership) > 1 and self.design != "paired":
                 raise ValueError("Within-patient contrasts require a paired design")
             n = s.X.shape[0]
             if not n or s.X.shape != (n, len(self.features)) or np.shape(s.coords) != (n, 2):
@@ -148,13 +165,17 @@ class Cohort:
                     raise ValueError(
                         "Library size must be finite, nonnegative and aligned to observations"
                     )
-        counts = list(assignments.values())
+        if self.design == "paired" and any(len(g) != 2 for g in assignments.values()):
+            raise ValueError("Paired design requires both conditions for every patient")
+        if self.design == "stratified":
+            self.patient_strata()
+        counts = [g for membership in assignments.values() for g in membership]
         if len(set(counts)) != 2 or min(counts.count(g) for g in set(counts)) < 2:
             raise ValueError("Need two independent groups with at least two patients each")
         return self
 
 
-def load_manifest(path: Path) -> list[Cohort]:
+def load_manifest(path: Path, *, design=None, stratum=None) -> list[Cohort]:
     path = Path(path).resolve()
     manifest = strict_read(path)
     cohorts = []
@@ -249,6 +270,8 @@ def load_manifest(path: Path) -> list[Cohort]:
                         "selection", "manifest-defined feature and section selection"
                     ),
                 },
+                design or spec.get("design", "independent"),
+                stratum or spec.get("stratum", "batch"),
             ).validate()
         )
     if not cohorts or len({c.id for c in cohorts}) != len(cohorts):

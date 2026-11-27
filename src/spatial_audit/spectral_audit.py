@@ -5,11 +5,12 @@ it. Edge conductance is shared-face length / centre distance = 1. Dividing flux 
 volume area h² gives the reflecting (zero outward flux) finite-volume Laplacian.
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
+from itertools import combinations
 
 import numpy as np
 from scipy import sparse
-from scipy.spatial import cKDTree
+from scipy.spatial import ConvexHull, Delaunay, cKDTree
 from scipy.special import ive
 
 from .schema import Cohort
@@ -27,6 +28,7 @@ class Grid:
     laplacian: sparse.csr_matrix
     width: float
     centers: np.ndarray
+    voronoi: bool = False
 
     def average(self, values):
         """Bin one small feature block without forming a dense observation matrix."""
@@ -96,16 +98,109 @@ def build_grid(coords, finest_um):
     )
 
 
+def recommend_wavelengths(pitch_um, max_span_um):
+    """Log-space up to three physical bands between the axial limit and tissue span."""
+    if not np.isfinite([pitch_um, max_span_um]).all() or min(pitch_um, max_span_um) <= 0:
+        raise ValueError("Positive finite pitch and footprint span are required")
+    shortest = np.pi * pitch_um
+    if shortest > max_span_um * (1 + 1e-10):
+        raise ValueError("Footprint cannot resolve a physical band at the measured pitch")
+    if np.isclose(shortest, max_span_um):
+        return (float(max_span_um),)
+    return tuple(map(float, np.geomspace(shortest, max_span_um, 3)))
+
+
+def _minimum_width(points):
+    if len(points) < 3 or np.linalg.matrix_rank(points - points.mean(0)) < 2:
+        return 0.0
+    hull = points[ConvexHull(points).vertices]
+    edges = np.roll(hull, -1, axis=0) - hull
+    normals = np.column_stack((-edges[:, 1], edges[:, 0])) / np.linalg.norm(edges, axis=1)[:, None]
+    return float(min(np.ptp(hull @ normal) for normal in normals))
+
+
+def _clip_cell(polygon, normal, midpoint):
+    """Clip a convex polygon by a bisector, retaining the nearer half-plane."""
+    signed = (polygon - midpoint) @ normal
+    inside = signed <= 0
+    if inside.all():
+        return polygon
+    vertices = []
+    for i, point in enumerate(polygon):
+        if inside[i] != inside[i - 1]:
+            weight = signed[i - 1] / (signed[i - 1] - signed[i])
+            vertices.append(polygon[i - 1] + weight * (point - polygon[i - 1]))
+        if inside[i]:
+            vertices.append(point)
+    return np.array(vertices)
+
+
+def build_voronoi(coords):
+    """No-flux FV graph on Voronoi cells clipped to the convex hull of sampled sites."""
+    coords = np.asarray(coords, float)
+    # Preserve first-site order so seeded probes follow sites under rigid motion.
+    _, first, inverse, counts = np.unique(
+        coords, axis=0, return_index=True, return_inverse=True, return_counts=True
+    )
+    order = np.argsort(first)
+    ids = np.argsort(order)[inverse]
+    points = coords[first[order]] - coords[first[order][0]]
+    if len(points) < 3 or np.linalg.matrix_rank(points) < 2:
+        raise ValueError("Voronoi graph requires at least three noncollinear sites")
+    hull = points[ConvexHull(points).vertices]
+    offsets, indices = Delaunay(points).vertex_neighbor_vertices
+    pitch = float(np.median(cKDTree(points).query(points, k=2)[0][:, 1]))
+    left, right, conductance, areas = [], [], [], []
+    triples = []
+    for i, point in enumerate(points):
+        neighbors = indices[offsets[i] : offsets[i + 1]]
+        cell = hull
+        for j in neighbors:
+            cell = _clip_cell(cell, points[j] - point, (point + points[j]) / 2)
+        local = cell - point
+        next_vertex = np.roll(local, -1, axis=0)
+        areas.append(
+            abs(np.sum(local[:, 0] * next_vertex[:, 1] - local[:, 1] * next_vertex[:, 0])) / 2
+        )
+        adjacent = []
+        for j in neighbors:
+            direction = points[j] - point
+            dist = np.linalg.norm(direction)
+            on_face = np.abs(local @ (direction / dist) - dist / 2) <= 1e-9 * dist
+            lengths = np.linalg.norm(next_vertex - local, axis=1)
+            face = lengths[on_face & np.roll(on_face, -1)].sum()
+            if face <= 1e-10 * dist:
+                continue
+            adjacent.append(j)
+            if j > i:
+                left.append(i)
+                right.append(j)
+                conductance.append(face / dist)
+        for a, b in combinations(adjacent, 2):
+            if np.linalg.norm(points[a] + points[b] - 2 * point) <= 1e-8 * pitch:
+                triples.append((a, i, b))
+    a, b = np.asarray(left, int), np.asarray(right, int)
+    matrix = sparse.csr_matrix(
+        (np.tile(conductance, 2), (np.r_[a, b], np.r_[b, a])), shape=(len(points), len(points))
+    )
+    lap = sparse.diags(1 / np.asarray(areas)) @ (
+        sparse.diags(np.asarray(matrix.sum(1)).ravel()) - matrix
+    )
+    far, mid, end = np.asarray(triples, int).reshape(-1, 3).T
+    return Grid(ids, counts[order], a, b, far, mid, end, lap.tocsr(), pitch, points, True)
+
+
 def coefficients(wavelengths, width, tol=2e-10):
     """Expand two heat kernels exactly in the Chebyshev basis, truncating their tails."""
     waves = np.asarray(wavelengths, dtype=float)
     if (
-        waves.shape != (3,)
+        waves.ndim != 1
+        or not waves.size
         or not np.isfinite(waves).all()
         or (waves <= 0).any()
         or (np.diff(waves) <= 0).any()
     ):
-        raise ValueError("specify three strictly increasing positive finite wavelengths")
+        raise ValueError("specify one or more strictly increasing positive finite wavelengths")
     # Enclose all spectra of the four-neighbour FV stencil in [0, 8/h²].
     scaled_time = 4 * np.log(4) / (3 * (2 * np.pi * width / waves) ** 2)
     # Beyond this point the scaled Bessel tail is negligible; limit work for
@@ -129,10 +224,10 @@ def filter_bands(grid, values, weights, reference_width=None):
     previous = values - values.mean(axis=0)
     width = grid.width if reference_width is None else reference_width
     current = grid.laplacian @ previous * (width**2 / 4) - previous
-    out = [weights[0, b] * previous + weights[1, b] * current for b in range(3)]
+    out = [weights[0, b] * previous + weights[1, b] * current for b in range(weights.shape[1])]
     for row in weights[2:]:
         following = (width**2 / 2) * (grid.laplacian @ current) - 2 * current - previous
-        for b in range(3):
+        for b in range(weights.shape[1]):
             out[b] += row[b] * following
         previous, current = current, following
     return out
@@ -179,6 +274,8 @@ def component_support(grid, coords, waves):
         centered = points - points.mean(axis=0)
         _, axes = np.linalg.eigh(centered.T @ centered)
         footprints[k] = min(footprints[k], np.ptp(centered @ axes[:, 0]))
+    if grid.voronoi:
+        footprints = np.array([_minimum_width(grid.centers[labels == k]) for k in range(count)])
     masks = []
     counts = []
     for wave in waves:
@@ -192,7 +289,7 @@ def transfer_diagnostics(grid, weights, qs, masks, component_counts, reference_w
     """Trace of in-band white noise, transfer participation ratio and fit saturation."""
     n = len(grid.count)
     exact = n <= 144
-    probes = np.eye(n) if exact else np.random.default_rng(819).choice([-1.0, 1.0], (n, 12))
+    probes = np.eye(n) if exact else np.random.default_rng(819).choice([-1.0, 1.0], (n, 48))
     filtered = filter_bands(grid, probes, weights, reference_width)
     records = []
     for h, q, mask, n_components in zip(filtered, qs, masks, component_counts, strict=True):
@@ -205,6 +302,7 @@ def transfer_diagnostics(grid, weights, qs, masks, component_counts, reference_w
             "projected_white_fraction": None,
             "saturated": False,
             "residual_white_gain": None,
+            "residual_white_gain_se": None,
         }
         if size:
             z = h[mask]
@@ -227,6 +325,11 @@ def transfer_diagnostics(grid, weights, qs, masks, component_counts, reference_w
                 fraction = float(np.clip(np.sum(projected * projected) / total, 0, 1))
                 residual = z - q @ projected
                 record.update(
+                    residual_white_gain_se=(
+                        0.0
+                        if exact
+                        else float(np.std(np.mean(residual**2, axis=0), ddof=1) / np.sqrt(divisor))
+                    ),
                     effective_spectral_dimension=dim,
                     projected_white_fraction=fraction,
                     saturated=bool(q.shape[1] >= 0.8 * dim and fraction >= 0.8),
@@ -239,16 +342,80 @@ def transfer_diagnostics(grid, weights, qs, masks, component_counts, reference_w
 def trace_gain(grid, weights, q, reference_width=None):
     """Mean fine-band white energy after projecting out q."""
     n = len(grid.count)
-    qs = [q, np.empty((n, 0)), np.empty((n, 0))]
+    k = weights.shape[1]
+    qs = [q] + [np.empty((n, 0)) for _ in range(k - 1)]
     return transfer_diagnostics(
-        grid, weights, qs, [np.ones(n, bool)] * 3, [1, 1, 1], reference_width
+        grid, weights, qs, [np.ones(n, bool)] * k, [1] * k, reference_width
     )[0]["residual_white_gain"]
 
 
-def section_statistics(section, waves, block=16, shared_weights=None):
-    grid = build_grid(section.coords, waves[0])
+def section_statistics(
+    section,
+    waves,
+    block=16,
+    shared_weights=None,
+    *,
+    nugget_mode="raw",
+    graph_mode="grid",
+    leave_one_out_tic=False,
+):
+    if nugget_mode not in {"raw", "vst"} or graph_mode not in {"grid", "voronoi"}:
+        raise ValueError("Unknown graph or nugget mode")
+    grid = (
+        build_grid(section.coords, waves[0])
+        if graph_mode == "grid"
+        else build_voronoi(section.coords)
+    )
     reference_width = waves[0] / 8
+    if grid.voronoi:
+        # Gershgorin bound for the area-normalized flux operator.
+        reference_width = np.sqrt(4 / max(grid.laplacian.diagonal()))
+        shared_weights = None
     weight = coefficients(waves, reference_width) if shared_weights is None else shared_weights
+    if not leave_one_out_tic:
+        return _section_values(section, waves, block, grid, weight, reference_width, nugget_mode)
+    if section.C is None or not section.C.shape[1]:
+        raise ValueError(
+            "Leave-one-ion-out projection requires total ion current in covariate column zero"
+        )
+    columns, diagnostics = [], []
+    for j in range(section.X.shape[1]):
+        ion = section.X[:, j : j + 1]
+        ion = ion.toarray() if sparse.issparse(ion) else np.asarray(ion)
+        covariates = np.array(section.C, dtype=float, copy=True)
+        tic = covariates[:, 0]
+        if np.any(ion < 0) or np.any(ion[:, 0] > tic + 1e-6 * np.abs(tic)):
+            raise ValueError("Ion abundance must be nonnegative and included in total ion current")
+        covariates[:, 0] = np.maximum(tic - ion[:, 0], 0)
+        values, info = _section_values(
+            replace(section, X=ion, C=covariates),
+            waves,
+            block,
+            grid,
+            weight,
+            reference_width,
+            nugget_mode,
+        )
+        columns.append(values)
+        diagnostics.append(info)
+    info = diagnostics[0].copy()
+    info["feature_bands"] = [d["bands"] for d in diagnostics]
+    info["bands"] = [dict(b) for b in info["bands"]]
+    for i, band in enumerate(info["bands"]):
+        for key in band:
+            vals = [d["bands"][i][key] for d in diagnostics]
+            band[key] = (
+                all(vals) if key == "saturated" else vals[0] if len(set(vals)) == 1 else None
+            )
+    for i, band in enumerate(info["bands"]):
+        band["saturated_features"] = sum(bool(d["bands"][i]["saturated"]) for d in diagnostics)
+    info["projection_ranks"] = [b["projection_rank"] for b in info["bands"]]
+    info["fine_noise_gain"] = info["bands"][0]["residual_white_gain"]
+    return np.column_stack(columns), info
+
+
+def _section_values(section, waves, block, grid, weight, reference_width, nugget_mode):
+    k = len(waves)
     n = len(grid.count)
     masks, counts, n_components, max_span = component_support(grid, section.coords, waves)
     c = (
@@ -269,11 +436,18 @@ def section_statistics(section, waves, block=16, shared_weights=None):
     records = transfer_diagnostics(grid, weight, qs, masks, counts, reference_width)
     gain = records[0]["residual_white_gain"]
     p = section.X.shape[1]
-    values = np.full((10, p), np.nan)
+    values = np.full((2 * k + 4, p), np.nan)
     fine_ok = gain is not None and not records[0]["saturated"]
     for start in range(0, p, block):
         idx = slice(start, start + block)
         x = grid.average(section.X[:, idx])
+        if nugget_mode == "vst":
+            if np.any(x < 0):
+                raise ValueError("Anscombe stabilization requires nonnegative volume means")
+            fine_x = 2 * np.sqrt(x + 3 / 8)
+            fine_band = filter_bands(grid, fine_x, weight[:, :1], reference_width)[0]
+        else:
+            fine_x = x
         bands = filter_bands(grid, x, weight, reference_width)
         for i, mask in enumerate(masks):
             if not mask.any():
@@ -290,21 +464,24 @@ def section_statistics(section, waves, block=16, shared_weights=None):
             fit = qs[i].T @ z
             values[i, idx] = np.mean(z * z, axis=0)
             if c.shape[1] and not records[i]["saturated"]:
-                values[3 + i, idx] = np.sum(fit * fit, axis=0) / len(z)
+                values[k + i, idx] = np.sum(fit * fit, axis=0) / len(z)
             if i == 0 and fine_ok:
-                residual = z - qs[i] @ fit
-                values[6, idx] = np.mean(residual * residual, axis=0)
-                values[8, idx] = x[mask].mean(axis=0)
+                fine_z = fine_band[mask] if nugget_mode == "vst" else z
+                residual = fine_z - qs[i] @ (qs[i].T @ fine_z)
+                values[-4, idx] = np.mean(residual * residual, axis=0)
+                values[-2, idx] = fine_x[mask].mean(axis=0)
         if fine_ok:
             mask = masks[0]
             if qc.shape[1]:
-                x[mask] -= qc @ (qc.T @ (x[mask] - x[mask].mean(axis=0)))
-            eta = nugget_variance(grid, x, mask)
+                fine_x[mask] -= qc @ (qc.T @ (fine_x[mask] - fine_x[mask].mean(axis=0)))
+            eta = nugget_variance(grid, fine_x, mask)
             if eta is not None:
-                values[9, idx] = eta * gain
-                values[7, idx] = values[6, idx] - values[9, idx]
+                values[-1, idx] = eta * gain
+                values[-3, idx] = values[-4, idx] - values[-1, idx]
     info = {
         "volumes": n,
+        "chebyshev_degree": len(weight) - 1,
+        "spectral_bound_per_um2": 8 / reference_width**2,
         "pitch_um": float(grid.width),
         "edges": len(grid.left),
         "connected_components": n_components,
@@ -313,7 +490,7 @@ def section_statistics(section, waves, block=16, shared_weights=None):
         "nyquist_wavelength_um": 2 * grid.width,
         "axial_limit_um": np.pi * grid.width,
         "fine_noise_gain": gain,
-        "trace_probes": 0 if n <= 144 else 12,
+        "trace_probes": 0 if n <= 144 else 48,
         "trace_method": "exact" if n <= 144 else "seeded Rademacher",
         "projection_ranks": [q.shape[1] for q in qs],
         "two_step_edges": int(np.sum(masks[0][grid.far_left])),
@@ -335,15 +512,35 @@ def finite_value(value):
     return float(value) if np.isfinite(value) else None
 
 
-def spectral_audit(cohort: Cohort, wavelengths=(250.0, 600.0, 1400.0)):
+def spectral_audit(
+    cohort: Cohort,
+    wavelengths=(250.0, 600.0, 1400.0),
+    *,
+    nugget_mode="raw",
+    graph_mode="grid",
+    leave_one_out_tic=False,
+):
+    if isinstance(wavelengths, str) and wavelengths == "auto":
+        geometries = [np.unique(s.coords, axis=0) for s in cohort.sections]
+        pitches = [np.median(cKDTree(x).query(x, k=2)[0][:, 1]) for x in geometries if len(x) > 1]
+        if not pitches:
+            raise ValueError("Cannot estimate pitch from single-site sections")
+        wavelengths = recommend_wavelengths(max(pitches), min(map(_minimum_width, geometries)))
     waves = tuple(float(x) for x in wavelengths)
-    if len(waves) != 3:
-        raise ValueError("three wavelengths are required")
+    if not waves:
+        raise ValueError("At least one wavelength is required")
     shared_weights = coefficients(waves, max(waves[0] / 8, 1e-100))
     patients: dict = {}
     diagnostics = []
     for section in cohort.sections:
-        values, info = section_statistics(section, waves, shared_weights=shared_weights)
+        values, info = section_statistics(
+            section,
+            waves,
+            shared_weights=shared_weights,
+            nugget_mode=nugget_mode,
+            graph_mode=graph_mode,
+            leave_one_out_tic=leave_one_out_tic,
+        )
         diagnostics.append(
             dict(
                 section_id=section.section_id,
@@ -375,6 +572,10 @@ def spectral_audit(cohort: Cohort, wavelengths=(250.0, 600.0, 1400.0)):
             pairs = np.array([data_for_band(patients[k], i) for k in subset])
             totals, explained = available_mean(pairs)
             eligible = totals > np.finfo(float).tiny
+            if leave_one_out_tic:
+                covered = np.isfinite(pairs[:, 1])
+                for group in groups:
+                    eligible &= covered[[g == group for _, g in subset]].any(axis=0)
             valid = int(eligible.sum())
             if valid:
                 share = float(np.clip(np.mean(explained[eligible] / totals[eligible]), 0, 1))
@@ -389,8 +590,9 @@ def spectral_audit(cohort: Cohort, wavelengths=(250.0, 600.0, 1400.0)):
                     str(g): len({d["patient_id"] for d in good if d["group"] == g}) for g in groups
                 },
                 "interpretable_sections": len(interpretable),
-                "interpretable_patients": len(subset),
-                "full_coverage": len(interpretable) == len(diagnostics),
+                "interpretable_patients": len({p for p, _ in subset}),
+                "full_coverage": len(interpretable) == len(diagnostics)
+                and not any(d["bands"][i].get("saturated_features", 0) for d in good),
                 "saturated_sections": sum(d["bands"][i]["saturated"] for d in good),
             }
         )
@@ -401,24 +603,33 @@ def spectral_audit(cohort: Cohort, wavelengths=(250.0, 600.0, 1400.0)):
     composition = {
         "bands": bands,
         "sections": diagnostics,
-        "total_patients": len(patients),
+        "total_patients": len({p for p, _ in patients}),
         "total_patients_by_group": {str(g): int(np.sum(labels == g)) for g in groups},
         "total_sections": len(diagnostics),
         "covariate_sections": sum(d["has_covariates"] for d in diagnostics),
-        "chebyshev_degree": len(shared_weights) - 1,
-        "shared_spectral_bound_per_um2": 8 / (waves[0] / 8) ** 2,
+        "graph_mode": graph_mode,
+        "leave_one_out_tic": leave_one_out_tic,
+        "chebyshev_degree": max(d["chebyshev_degree"] for d in diagnostics),
+        "shared_spectral_bound_per_um2": max(d["spectral_bound_per_um2"] for d in diagnostics),
         "status": "red" if high else "yellow" if uncertain else "green",
         "message": "Feature-averaged explained energy on matched supporting sections, equally weighted within patient and across patients. A connected 2-D footprint must span a wavelength, with wavelength at least pi times the occupied square-grid pitch. Regridding can alter native geometry. Missing covariates, saturated fits and partial coverage limit interpretation.",
     }
+    if graph_mode == "voronoi":
+        composition["message"] = (
+            "Voronoi control volumes are clipped to the convex hull with reflecting boundaries. "
+            "Energy shares use equal site weights. Hull edges may bridge gaps in sampling. "
+            "Support requires a two-dimensional span of at least one wavelength."
+        )
     a, b = (available_mean(data[labels == g]) for g in groups)
     features = []
     for j, name in enumerate(cohort.features):
-        raw = b[6, j] - a[6, j] if np.isfinite(data[:, 6, j]).all() else np.nan
-        adj = b[7, j] - a[7, j] if np.isfinite(data[:, 7, j]).all() else np.nan
-        mean_shift = b[8, j] - a[8, j]
-        bias_shift = b[9, j] - a[9, j]
-        scale = max(a[6, j], b[6, j])
-        material = abs(raw) > max(0.25 * scale, 1e-10 * max(a[0, j], b[0, j], 1e-100))
+        raw = b[-4, j] - a[-4, j] if np.isfinite(data[:, -4, j]).all() else np.nan
+        adj = b[-3, j] - a[-3, j] if np.isfinite(data[:, -3, j]).all() else np.nan
+        mean_shift = b[-2, j] - a[-2, j]
+        bias_shift = b[-1, j] - a[-1, j]
+        scale = max(a[-4, j], b[-4, j])
+        reference = scale if nugget_mode == "vst" else max(a[0, j], b[0, j])
+        material = abs(raw) > max(0.25 * scale, 1e-10 * max(reference, 1e-100))
         flag = bool(
             np.isfinite(adj)
             and material
@@ -431,8 +642,10 @@ def spectral_audit(cohort: Cohort, wavelengths=(250.0, 600.0, 1400.0)):
                 "feature": str(name),
                 "raw_delta": finite_value(raw),
                 "debiased_delta": finite_value(adj),
-                "raw_energy": [float(a[6, j]), float(b[6, j])] if np.isfinite(raw) else None,
-                "corrected_energy": [float(a[7, j]), float(b[7, j])] if np.isfinite(adj) else None,
+                "raw_energy": [float(a[-4, j]), float(b[-4, j])] if np.isfinite(raw) else None,
+                "corrected_energy": [float(a[-3, j]), float(b[-3, j])]
+                if np.isfinite(adj)
+                else None,
                 "mean_delta": finite_value(mean_shift) if np.isfinite(raw) else None,
                 "estimated_noise_delta": finite_value(bias_shift) if np.isfinite(adj) else None,
                 "mean_noise_sensitive": flag,
@@ -444,13 +657,14 @@ def spectral_audit(cohort: Cohort, wavelengths=(250.0, 600.0, 1400.0)):
         {
             "patient_id": str(key[0]),
             "group": str(key[1]),
-            "raw": list(map(finite_value, row[6])),
-            "corrected": list(map(finite_value, row[7])),
+            "raw": list(map(finite_value, row[-4])),
+            "corrected": list(map(finite_value, row[-3])),
         }
         for key, row in zip(patients, data, strict=True)
     ]
     incomplete = any(not d["two_step_edges"] or d["bands"][0]["saturated"] for d in diagnostics)
     nugget = {
+        "nugget_mode": nugget_mode,
         "groups": list(map(str, groups)),
         "features": features,
         "flagged": flagged,
@@ -467,6 +681,8 @@ def spectral_audit(cohort: Cohort, wavelengths=(250.0, 600.0, 1400.0)):
 
 
 def data_for_band(section_rows, band):
-    values = np.asarray(section_rows)[:, [band, 3 + band]]
+    data = np.asarray(section_rows)
+    k = (data.shape[1] - 4) // 2
+    values = data[:, [band, k + band]]
     valid = np.isfinite(values[:, 1])
     return available_mean(np.where(valid[:, None, :], values, np.nan))

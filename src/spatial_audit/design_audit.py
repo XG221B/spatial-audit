@@ -1,19 +1,39 @@
 """Design diagnostics for independent biological units."""
 
 from collections import Counter, defaultdict
-from math import comb, floor, log2
+from math import comb, floor, log2, prod
 
 import numpy as np
 from scipy import sparse
 from scipy.optimize import linprog
 from scipy.sparse.linalg import lsqr
-from scipy.stats import fisher_exact, rankdata
+from scipy.stats import binomtest, fisher_exact, rankdata
+
+from .permutation import cohort_test_options, exchangeability_blocks
 
 
-def exact_floor(n0: int, n1: int, m: int = 1, alpha: float = 0.05) -> dict:
+def exact_floor(
+    n0: int, n1: int, m: int = 1, alpha: float = 0.05, *, design="independent", stratum_counts=None
+) -> dict:
     if any(type(i) is not int or i < 1 for i in (n0, n1, m)) or not 0 < alpha < 1:
         raise ValueError("Positive integer counts and 0 < alpha < 1 required")
-    M = comb(n0 + n1, n0)
+    if design == "paired":
+        if n0 != n1:
+            raise ValueError("Paired groups must contain equal numbers of patients")
+        M = 2**n0
+    elif design == "stratified":
+        if not stratum_counts or any(
+            type(a) is not int or type(b) is not int or min(a, b) < 0 or a + b == 0
+            for a, b in stratum_counts
+        ):
+            raise ValueError("Valid per-stratum counts are required")
+        if tuple(map(sum, zip(*stratum_counts))) != (n0, n1):
+            raise ValueError("Stratum counts disagree with the group totals")
+        M = prod(comb(a + b, b) for a, b in stratum_counts)
+    elif design == "independent":
+        M = comb(n0 + n1, n0)
+    else:
+        raise ValueError("Unknown permutation design")
     p = min(1.0, 2 / M)
     # Strict BH q<alpha; use rational arithmetic at exact boundaries.
     from fractions import Fraction
@@ -23,6 +43,7 @@ def exact_floor(n0: int, n1: int, m: int = 1, alpha: float = 0.05) -> dict:
     return {
         "status": status,
         "message": "Two-sided doubled-tail permutation resolution.",
+        "design": design,
         "n0": n0,
         "n1": n1,
         "assignments": str(M),
@@ -98,6 +119,74 @@ def _joint_design(sections, groups):
     }
 
 
+_CATEGORICAL_DRAWS = 999
+_CATEGORICAL_SEED = 819
+
+
+def _categorical_mc(visits, labels, paired, draws=_CATEGORICAL_DRAWS):
+    """Shuffle whole patient profiles, preserving multi-level visits and paired membership."""
+    levels = {v: i for i, v in enumerate(sorted(set.union(*visits.values())))}
+    rows, cols, data = [], [], []
+    for i, observed in enumerate(visits.values()):
+        for v in observed:
+            rows.append(i)
+            cols.append(levels[v])
+            data.append(1 / len(observed))
+    profiles = sparse.csr_matrix((data, (cols, rows)), shape=(len(levels), len(visits)))
+    y = np.asarray([g == labels[1] for _, g in visits], float)
+    sizes = np.asarray(profiles.sum(axis=1)).ravel()
+    expected = sizes * y.mean()
+    variance = expected * (1 - y.mean())
+
+    def chisq(assignments):
+        return np.sum((profiles @ assignments - expected[:, None]) ** 2 / variance[:, None], axis=0)
+
+    observed_stat = chisq(y[:, None])[0]
+    rng = np.random.default_rng(_CATEGORICAL_SEED)
+    if paired:
+        blocks = exchangeability_blocks(y, "paired", [p for p, _ in visits])
+        pairs = np.array([rows for rows, _ in blocks])
+    exceed = 0
+    for start in range(0, draws, 32):
+        count = min(32, draws - start)
+        samples = np.tile(y[:, None], (1, count))
+        if paired:
+            flips = rng.integers(2, size=(len(pairs), count))
+            samples[pairs[:, 0]] = flips
+            samples[pairs[:, 1]] = 1 - flips
+        else:
+            samples = rng.permuted(samples, axis=0)
+        exceed += int((chisq(samples) >= observed_stat - 1e-10).sum())
+    return (exceed + 1) / (draws + 1)
+
+
+def _patient_coordinates(sections, points, labels, section_diagnostics):
+    visits: dict = defaultdict(list)
+    for s, xy in zip(sections, points, strict=True):
+        visits[s.patient_id, s.group].append(xy)
+    x = np.array([np.mean(v, axis=0) for v in visits.values()])
+    y = np.array([g == labels[1] for _, g in visits], int)
+    pids = np.array([p for p, _ in visits])
+    separation = np.linalg.norm(x[y == 0].mean(0) - x[y == 1].mean(0))
+    predictions = np.zeros(len(y))
+    # Each fold excludes all conditions and sections from the held-out patient.
+    for pid in set(pids):
+        train = pids != pid
+        center, scale = x[train].mean(0), x[train].std(0)
+        z = (x - center) / np.where(scale > 0, scale, 1)
+        z = np.column_stack((np.ones(len(z)), z))
+        predictions[~train] = z[~train] @ np.linalg.lstsq(z[train], y[train], rcond=None)[0]
+    n0, n1 = np.bincount(y)
+    auc = (rankdata(predictions)[y == 1].sum() - n1 * (n1 + 1) / 2) / (n0 * n1)
+    patient_fit = section_diagnostics if len(x) == len(sections) else _stage(x, y)
+    return {
+        "patient_centroid_separation_um": float(separation),
+        "patient_centroid_linear_separation": patient_fit["linear_separation"],
+        "patient_descriptive_auc": patient_fit["descriptive_auc"],
+        "lopo_cv_auc": float(auc),
+    }
+
+
 def design_audit(cohort):
     labels = sorted({s.group for s in cohort.sections})
     details: dict = {}
@@ -111,9 +200,42 @@ def design_audit(cohort):
             if getattr(s, field) is not None:
                 visits[s.patient_id, s.group].add(getattr(s, field))
         if missing or not visits:
-            details[field] = {"status": "missing_or_partial"}
+            missing_units: dict = defaultdict(bool)
+            for s in cohort.sections:
+                missing_units[s.patient_id, s.group] |= getattr(s, field) is None
+            p_missing = None
+            if visits:
+                if cohort.design == "paired":
+                    differences = [
+                        int(missing_units[p, labels[1]]) - int(missing_units[p, labels[0]])
+                        for p in {p for p, _ in missing_units}
+                    ]
+                    discordant = sum(abs(v) for v in differences)
+                    p_missing = (
+                        binomtest(differences.count(1), discordant).pvalue if discordant else 1.0
+                    )
+                else:
+                    counts = [
+                        [
+                            sum(g == group and v == flag for (_, g), v in missing_units.items())
+                            for flag in (False, True)
+                        ]
+                        for group in labels
+                    ]
+                    p_missing = float(fisher_exact(counts).pvalue)
+            details[field] = {
+                "status": "missing_or_partial",
+                "missing_fraction": sum(getattr(s, field) is None for s in cohort.sections)
+                / len(cohort.sections),
+                "missingness_group_p": p_missing,
+                "missingness_unit": "patient-condition with any missing section",
+            }
             warning = True
-            continue
+            if cohort.design == "paired":
+                complete = {p for p, _ in visits if all((p, group) in visits for group in labels)}
+                visits = {key: levels for key, levels in visits.items() if key[0] in complete}
+            if len({g for _, g in visits}) < 2:
+                continue
         table: dict = defaultdict(lambda: np.zeros(2))
         sizes: Counter = Counter()
         for (_, g), levels in visits.items():
@@ -128,18 +250,32 @@ def design_audit(cohort):
         entropy = -sum(v * log2(v) for v in baseline)
         separate = bool(np.all((t > 0).sum(axis=1) == 1))
         fisher = None
-        if t.shape == (2, 2) and all(len(v) == 1 for v in visits.values()):
+        if (
+            t.shape == (2, 2)
+            and cohort.design != "paired"
+            and all(len(v) == 1 for v in visits.values())
+        ):
             fisher = float(fisher_exact(t.astype(int)).pvalue)
         details[field] = {
             "status": "observed",
-            "label": cohort.provenance.get("batch_label", "acquisition batch") if field == "batch" else "slide",
+            "label": cohort.provenance.get("batch_label", "acquisition batch")
+            if field == "batch"
+            else "slide",
             "levels": len(t),
             "normalized_mi": mi / entropy,
             "complete_alias": separate,
             "fisher_p": fisher,
+            "permutation_p": _categorical_mc(visits, labels, cohort.design == "paired")
+            if len(t) > 2
+            else None,
+            "permutation_draws": _CATEGORICAL_DRAWS if len(t) > 2 else None,
+            "permutation_seed": _CATEGORICAL_SEED if len(t) > 2 else None,
+            "missing_fraction": 0.0,
             "all_levels_patient_specific": max(sizes.values()) == 1,
+            "observed_patient_conditions": len(visits),
+            **details.get(field, {}),
         }
-        if separate:
+        if separate and not missing:
             reasons.append(field)
         warning |= mi / entropy >= 0.5
     points = []
@@ -156,6 +292,7 @@ def design_audit(cohort):
         ]
         yy = [labels.index(s.group) for s in cohort.sections]
         diag = _stage(xy, yy)
+        diag.update(_patient_coordinates(cohort.sections, xy, labels, diag))
         flags[field] = diag
         if field == "stage" or not measured:
             points = [
@@ -187,13 +324,33 @@ def design_audit(cohort):
     }
 
 
-def power_audit(cohort, max_exact=50000, draws=4095):
-    patients = {s.patient_id: s.group for s in cohort.sections}
-    counts = Counter(patients.values())
+def power_audit(cohort, max_exact=50000, draws=4095, alpha=0.05):
+    patients = list(dict.fromkeys((s.patient_id, s.group) for s in cohort.sections))
+    counts = Counter(g for _, g in patients)
     groups = sorted(counts)
+    options = cohort_test_options(cohort, [p for p, _ in patients])
+    blocks = exchangeability_blocks([g for _, g in patients], **options)
     result = dict(
-        exact_floor(counts[groups[0]], counts[groups[1]], len(cohort.features)), groups=groups
+        exact_floor(
+            counts[groups[0]],
+            counts[groups[1]],
+            len(cohort.features),
+            alpha,
+            design=cohort.design,
+            stratum_counts=[(len(rows) - k, k) for rows, k in blocks],
+        ),
+        groups=groups,
     )
+    if cohort.design == "paired":
+        result["n_pairs"] = len(blocks)
+    elif cohort.design == "stratified":
+        result["stratum"] = cohort.stratum
+        result["stratum_counts"] = [
+            {"level": options["strata"][rows[0]], "n0": len(rows) - k, "n1": k}
+            for rows, k in blocks
+        ]
+    if max_exact < 1 or draws < 1:
+        raise ValueError("Positive permutation budgets required")
     simulated = int(result["assignments"]) > max_exact
     if simulated:
         from fractions import Fraction

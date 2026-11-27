@@ -214,6 +214,8 @@ def read_sections(path, entry, spec, features):
             column = spec.get("columns", {}).get(name, name)
             if column in obs:
                 values = obs_col(column)
+                if name in {"slide_id", "batch"}:
+                    return np.array([None if pd.isna(v) else str(v) for v in values], dtype=object)
                 if pd.isna(values).any():
                     raise ValueError(f"Missing values in {column}")
                 return values.astype(str)
@@ -227,6 +229,9 @@ def read_sections(path, entry, spec, features):
         )
         if frame.isna().any().any():
             raise ValueError("Missing patient_id, group or section_id mapping")
+        if spec.get("infer_section_ids") and spec["columns"]["section_id"] not in obs:
+            indices = frame.groupby(["patient_id", "group"], sort=False).ngroup()
+            frame["section_id"] = "section-" + indices.astype(str)
         slides, batches = field("slide_id"), field("batch")
         stages = (
             np.column_stack([obs_col(k) for k in spec["stage_columns"]])
