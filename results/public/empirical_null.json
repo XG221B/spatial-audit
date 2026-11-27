@@ -1,0 +1,3390 @@
+{
+  "kind": "public",
+  "record_type": "empirical_null",
+  "accession": "GSE348499",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE348499",
+  "reconstruction_sha256": "7ef403884362619395200d27a103103705bf6957b02a4ab7d2f057dfe4417d0b",
+  "prepared_inputs": [
+    {
+      "file": "GSM10073485_P10-0baa8f29af56517b.h5ad",
+      "sha256": "0baa8f29af56517b83c29a8be5422156fbf631ce54f503f0dc4ea606e384ea8a",
+      "bytes": 3948511
+    },
+    {
+      "file": "GSM10073486_P102-9d0675059d31c34d.h5ad",
+      "sha256": "9d0675059d31c34dc2fa1a37f4fdcc28a65d23372dd0f38c009c2067912499fc",
+      "bytes": 1135307
+    },
+    {
+      "file": "GSM10073487_P103-15c7dad4c0f52f69.h5ad",
+      "sha256": "15c7dad4c0f52f698f0c87dbec530df5af88772db835de60abfe65829b730c76",
+      "bytes": 3251499
+    },
+    {
+      "file": "GSM10073488_P104-f1897afa723f2afe.h5ad",
+      "sha256": "f1897afa723f2afeeb2ed64251075580298b4101fab2168f633e156de3b90b01",
+      "bytes": 3848445
+    },
+    {
+      "file": "GSM10073489_P105-0232302f31d59861.h5ad",
+      "sha256": "0232302f31d5986117e52122cc1d2661ec4a241478797b2538dc75b81052bce6",
+      "bytes": 2351135
+    },
+    {
+      "file": "GSM10073490_P106-e02ce51426d913d4.h5ad",
+      "sha256": "e02ce51426d913d4717627fd86444582c58092ce0b35e6f5da7d598ef43a270c",
+      "bytes": 2219178
+    },
+    {
+      "file": "GSM10073491_P107-d460bba4df852fef.h5ad",
+      "sha256": "d460bba4df852fef19cd7c151d63d55a4ba4b5add091cbce897baa944125b346",
+      "bytes": 1473888
+    },
+    {
+      "file": "GSM10073492_P108-eddc2ed3bd459a73.h5ad",
+      "sha256": "eddc2ed3bd459a73a29794acf4461098d5aaca3b0ab4eca6cc99a922befe7a14",
+      "bytes": 1300053
+    },
+    {
+      "file": "GSM10073493_P11-e6f15306042e4bc0.h5ad",
+      "sha256": "e6f15306042e4bc0d5d7c6737a82d32b26a3cff8d19c6ffecaf50e64a66062e6",
+      "bytes": 3054565
+    },
+    {
+      "file": "GSM10073494_P12-f9fb545dbebc775a.h5ad",
+      "sha256": "f9fb545dbebc775a4a8a07d437096a89c2700f2363d12f16a9047970427f5e4f",
+      "bytes": 967795
+    },
+    {
+      "file": "GSM10073495_P23-2709f1c4869b6d33.h5ad",
+      "sha256": "2709f1c4869b6d332b626cb2e4a1e6183e22e8350b2159ea9cc2d5ee18f9abde",
+      "bytes": 2044214
+    },
+    {
+      "file": "GSM10073496_P27-a30861f15cf6115d.h5ad",
+      "sha256": "a30861f15cf6115d6609f6665522bc75f276365cf374f872bf561fdec105b58d",
+      "bytes": 5600161
+    },
+    {
+      "file": "GSM10073497_P28-a052422d9126025d.h5ad",
+      "sha256": "a052422d9126025db6839ae8b07180e0198cd521bad9e3d1bdeed4c06fe3b7dd",
+      "bytes": 3269701
+    },
+    {
+      "file": "GSM10073498_P31-8945cfe397f96106.h5ad",
+      "sha256": "8945cfe397f96106bc2efbcdc08728e814880fabb8da6f94a071b416dac031f3",
+      "bytes": 5314615
+    },
+    {
+      "file": "GSM10073499_P35-5754dfcd6af82e0e.h5ad",
+      "sha256": "5754dfcd6af82e0e2eaff6af50f1dc8583632140c55f7943b9bfb104e569d347",
+      "bytes": 3015178
+    },
+    {
+      "file": "GSM10073500_P4-c4b9f66c64517097.h5ad",
+      "sha256": "c4b9f66c64517097775e1754c5bbfa761247915d6f2605c882cb28c86d40b86c",
+      "bytes": 2029325
+    },
+    {
+      "file": "GSM10073501_P40-04ba164f68dad1c1.h5ad",
+      "sha256": "04ba164f68dad1c196871f42fdbf006e310963fb787ccfe509c64e9ba3eceb10",
+      "bytes": 2036598
+    },
+    {
+      "file": "GSM10073502_P45-371570a7498bf6bb.h5ad",
+      "sha256": "371570a7498bf6bb1310720ace52f25003f8f757d623d28bae01a2a0efd4ca90",
+      "bytes": 1883182
+    },
+    {
+      "file": "GSM10073503_P47-08c92552a568a4cf.h5ad",
+      "sha256": "08c92552a568a4cfdea72f852b68ba204e0fdbdd4c59757ae9097e525e32afe9",
+      "bytes": 4302612
+    },
+    {
+      "file": "GSM10073504_P49-337604d598e41447.h5ad",
+      "sha256": "337604d598e41447584f158c913f050410d816c942e02f3365db576cb453c947",
+      "bytes": 4124037
+    },
+    {
+      "file": "GSM10073505_P53-7ce05033e3db4598.h5ad",
+      "sha256": "7ce05033e3db45989dec7bf698f6871ea82a96b57b6d184963acaabe2b6d6fff",
+      "bytes": 2160543
+    },
+    {
+      "file": "GSM10073506_P54-a6707f9b53cad263.h5ad",
+      "sha256": "a6707f9b53cad263331f9a578fbcf32dfff217ac28b301048e307f106147f3c5",
+      "bytes": 4784008
+    },
+    {
+      "file": "GSM10073507_P59-9eafae54904da5b6.h5ad",
+      "sha256": "9eafae54904da5b6ae86b1aa4adebcaf5352f1aa141e04e4794c33c65f41962f",
+      "bytes": 3977647
+    },
+    {
+      "file": "GSM10073508_P64-dad1932c7f903e3b.h5ad",
+      "sha256": "dad1932c7f903e3b8e0339721df5c41e1a921a55a1092238331c453fd9d06c6b",
+      "bytes": 9499452
+    },
+    {
+      "file": "GSM10073509_P65-b13cbd4f189f7cad.h5ad",
+      "sha256": "b13cbd4f189f7cad98f1e9bd57fc6cd650ed8477d23fc9a05508fb8cea5b671d",
+      "bytes": 2615126
+    },
+    {
+      "file": "GSM10073510_P66-ce41a2e04a4775c7.h5ad",
+      "sha256": "ce41a2e04a4775c71971d160e61ed704d42d5c1d55075deb5e67f544aa01802e",
+      "bytes": 7456471
+    },
+    {
+      "file": "GSM10073511_P69-1f44e41d14c1e7de.h5ad",
+      "sha256": "1f44e41d14c1e7ded7261ec4f973bfb910f4f6441004838aa402442f1ec1a093",
+      "bytes": 6176259
+    },
+    {
+      "file": "GSM10073512_P7-d8e308ca01f92e5c.h5ad",
+      "sha256": "d8e308ca01f92e5c9ebccc90ec237a67f774ef6b06ddc65d45c91dfc26b7c373",
+      "bytes": 1164446
+    },
+    {
+      "file": "GSM10073513_P71-08bc391dd4d35769.h5ad",
+      "sha256": "08bc391dd4d35769b26c12f6f3fb8ae5f3b982d5b0ea922a5d283b26063d807a",
+      "bytes": 1932779
+    },
+    {
+      "file": "GSM10073514_P72-593d9375abce9684.h5ad",
+      "sha256": "593d9375abce96847c300701aa1425fc8e0cc0e13c9ba066608a8eab37a177eb",
+      "bytes": 3967651
+    },
+    {
+      "file": "GSM10073515_P73-77d08c701c0c9265.h5ad",
+      "sha256": "77d08c701c0c9265f2475bfbd9b19592b160df4dc2778051de691f8648ef0928",
+      "bytes": 3988675
+    },
+    {
+      "file": "GSM10073516_P77-8cd7b14ba6206e88.h5ad",
+      "sha256": "8cd7b14ba6206e8810aeeb9d63a52858b2b2d13215a50f652ff7c7bc4a8b16c4",
+      "bytes": 5600790
+    },
+    {
+      "file": "GSM10073517_P78-ca77023646eacd3b.h5ad",
+      "sha256": "ca77023646eacd3b2879b8cc0ba05d99d1061c4331897aff37febb8474d925a9",
+      "bytes": 2038624
+    },
+    {
+      "file": "GSM10073518_P80-eb33268ee320e047.h5ad",
+      "sha256": "eb33268ee320e047e468a02cf721ad0b082ca804b37a6bedb609628901223ffc",
+      "bytes": 4481416
+    },
+    {
+      "file": "GSM10073519_P81-a607ca4c7ab93d5a.h5ad",
+      "sha256": "a607ca4c7ab93d5a6797b942ec02d3468af5cb6c9423444649bfdbf0b91196cd",
+      "bytes": 4397956
+    },
+    {
+      "file": "GSM10073520_P84-a1a76a7925e75534.h5ad",
+      "sha256": "a1a76a7925e75534d905b64dba644049380243b58fff4cd92f74bd485d58f2b2",
+      "bytes": 3134146
+    },
+    {
+      "file": "GSM10073521_P87-fb8a8e7f0b9eabb9.h5ad",
+      "sha256": "fb8a8e7f0b9eabb9fa2d25bc8fe678a3dedc59d66f6238de5ffa2154ee41665d",
+      "bytes": 7011808
+    },
+    {
+      "file": "GSM10073522_P88-cc3e5db6ea9fc1b9.h5ad",
+      "sha256": "cc3e5db6ea9fc1b9979f62fff951f41f84e3413cf9adf720d938e54a1767002b",
+      "bytes": 2505176
+    },
+    {
+      "file": "GSM10073523_P89-1e32608b5e4e8b12.h5ad",
+      "sha256": "1e32608b5e4e8b1296722f8c56ce3fdeed248c449139326631b85bea89787ee6",
+      "bytes": 2451967
+    },
+    {
+      "file": "GSM10073524_P9-749cec66a1a369f6.h5ad",
+      "sha256": "749cec66a1a369f6fb3010afa17c21102572cc6266bf2b4a5700a18151aad2c8",
+      "bytes": 2806489
+    },
+    {
+      "file": "GSM10073525_P90-d8ba8c7a8b61518f.h5ad",
+      "sha256": "d8ba8c7a8b61518ffc499f0dffaa8cc85fc8d75e79c54621db14ef283a4a6b80",
+      "bytes": 3996409
+    },
+    {
+      "file": "GSM10073526_P92-e0ac5466a6c607e3.h5ad",
+      "sha256": "e0ac5466a6c607e3d36b1084dab4a5fc07b7621eaa9aa31aaa563fd3a063a5ee",
+      "bytes": 2962994
+    },
+    {
+      "file": "GSM10073527_P93-3369ea30cc481269.h5ad",
+      "sha256": "3369ea30cc4812695a5336741f499a84843a80bdc57fc3f70c1a8814d6a162ac",
+      "bytes": 785061
+    },
+    {
+      "file": "GSM10073528_P99-3482c1f9439ae573.h5ad",
+      "sha256": "3482c1f9439ae573bfd99f3cbafad2832e9a21fc68a0081f567c106d56490bf4",
+      "bytes": 2583958
+    }
+  ],
+  "seed": 9721,
+  "splits_per_arm": 50,
+  "permutation_draws": 2047,
+  "alpha": 0.05,
+  "arms": [
+    {
+      "group": "RD",
+      "donors": [
+        "P102",
+        "P103",
+        "P12",
+        "P27",
+        "P28",
+        "P35",
+        "P4",
+        "P45",
+        "P47",
+        "P64",
+        "P65",
+        "P7",
+        "P72",
+        "P73",
+        "P78",
+        "P84",
+        "P88",
+        "P89",
+        "P99"
+      ],
+      "n_cells": 1285917,
+      "group_sizes": [
+        9,
+        10
+      ],
+      "families": {
+        "pooled": [
+          "A2ML1",
+          "AAMP",
+          "AAR2",
+          "AARSD1",
+          "ABAT",
+          "ABCA1",
+          "ABCA3",
+          "ABCA4",
+          "ABCA7",
+          "ABCB1",
+          "ABCB4",
+          "ABCB6",
+          "ABCC1",
+          "ABCC12",
+          "ABCC2",
+          "ABCC3",
+          "ABCC4",
+          "ABCC6",
+          "ABCC8",
+          "ABCC9",
+          "ABCD1",
+          "ABCD3",
+          "ABCD4",
+          "ABCF3",
+          "ABCG1",
+          "ABCG2",
+          "ABHD11",
+          "ABHD6",
+          "ABI3",
+          "ABI3BP",
+          "ABL1",
+          "ABL2"
+        ],
+        "patient_mean": [
+          "A2ML1",
+          "AAMP",
+          "AAR2",
+          "AARSD1",
+          "ABAT",
+          "ABCA1",
+          "ABCA3",
+          "ABCA4",
+          "ABCA7",
+          "ABCB1",
+          "ABCB4",
+          "ABCB6",
+          "ABCC1",
+          "ABCC12",
+          "ABCC2",
+          "ABCC3",
+          "ABCC4",
+          "ABCC6",
+          "ABCC8",
+          "ABCC9",
+          "ABCD1",
+          "ABCD3",
+          "ABCD4",
+          "ABCF3",
+          "ABCG1",
+          "ABCG2",
+          "ABHD11",
+          "ABHD6",
+          "ABI3",
+          "ABI3BP",
+          "ABL1",
+          "ABL2"
+        ],
+        "raw_corrected": [
+          "A2ML1",
+          "AAMP",
+          "AAR2",
+          "AARSD1",
+          "ABAT",
+          "ABCA1",
+          "ABCA3",
+          "ABCA4",
+          "ABCA7",
+          "ABCB1",
+          "ABCB4",
+          "ABCB6",
+          "ABCC1",
+          "ABCC12",
+          "ABCC2",
+          "ABCC3",
+          "ABCC4",
+          "ABCC6",
+          "ABCC8",
+          "ABCC9",
+          "ABCD1",
+          "ABCD3",
+          "ABCD4",
+          "ABCF3",
+          "ABCG1",
+          "ABCG2",
+          "ABHD11",
+          "ABHD6",
+          "ABI3",
+          "ABI3BP",
+          "ABL1",
+          "ABL2"
+        ],
+        "vst_corrected": [
+          "A2ML1",
+          "AAMP",
+          "AAR2",
+          "AARSD1",
+          "ABAT",
+          "ABCA1",
+          "ABCA3",
+          "ABCA4",
+          "ABCA7",
+          "ABCB1",
+          "ABCB4",
+          "ABCB6",
+          "ABCC1",
+          "ABCC12",
+          "ABCC2",
+          "ABCC3",
+          "ABCC4",
+          "ABCC6",
+          "ABCC8",
+          "ABCC9",
+          "ABCD1",
+          "ABCD3",
+          "ABCD4",
+          "ABCF3",
+          "ABCG1",
+          "ABCG2",
+          "ABHD11",
+          "ABHD6",
+          "ABI3",
+          "ABI3BP",
+          "ABL1",
+          "ABL2"
+        ]
+      },
+      "summary": {
+        "pooled": {
+          "tests": 1600,
+          "bh_calls": 1493,
+          "bh_fraction": 0.933125,
+          "splits_with_calls": 50,
+          "nominal_fraction": 0.934375
+        },
+        "patient_mean": {
+          "tests": 1600,
+          "bh_calls": 43,
+          "bh_fraction": 0.026875,
+          "splits_with_calls": 4,
+          "nominal_fraction": 0.079375
+        },
+        "raw_corrected": {
+          "tests": 1600,
+          "bh_calls": 2,
+          "bh_fraction": 0.00125,
+          "splits_with_calls": 2,
+          "nominal_fraction": 0.0625
+        },
+        "vst_corrected": {
+          "tests": 1600,
+          "bh_calls": 0,
+          "bh_fraction": 0.0,
+          "splits_with_calls": 0,
+          "nominal_fraction": 0.06625
+        }
+      },
+      "rows": [
+        {
+          "arm_a": [
+            "P12",
+            "P28",
+            "P35",
+            "P4",
+            "P64",
+            "P65",
+            "P73",
+            "P78",
+            "P84"
+          ],
+          "permutation_seed": 1975319689,
+          "bh_calls": {
+            "pooled": 26,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 26,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P64",
+            "P7",
+            "P72",
+            "P73",
+            "P78",
+            "P88",
+            "P99"
+          ],
+          "permutation_seed": 244006306,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P12",
+            "P27",
+            "P35",
+            "P45",
+            "P64",
+            "P7",
+            "P78",
+            "P84",
+            "P89"
+          ],
+          "permutation_seed": 457384776,
+          "bh_calls": {
+            "pooled": 28,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 28,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P27",
+            "P45",
+            "P65",
+            "P72",
+            "P73",
+            "P84",
+            "P88"
+          ],
+          "permutation_seed": 1727369192,
+          "bh_calls": {
+            "pooled": 28,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 28,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P27",
+            "P64",
+            "P65",
+            "P72",
+            "P73",
+            "P78",
+            "P84",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 1015862343,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 23,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 24,
+            "raw_corrected": 15,
+            "vst_corrected": 15
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P35",
+            "P4",
+            "P47",
+            "P64",
+            "P72",
+            "P78",
+            "P84"
+          ],
+          "permutation_seed": 1297966412,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P12",
+            "P27",
+            "P28",
+            "P47",
+            "P64",
+            "P65",
+            "P7",
+            "P84"
+          ],
+          "permutation_seed": 1677074368,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P12",
+            "P27",
+            "P35",
+            "P4",
+            "P64",
+            "P73",
+            "P78"
+          ],
+          "permutation_seed": 1219381592,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 21,
+            "raw_corrected": 6,
+            "vst_corrected": 10
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P28",
+            "P35",
+            "P45",
+            "P47",
+            "P64",
+            "P72",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 1990744530,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 3,
+            "raw_corrected": 2,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P28",
+            "P4",
+            "P47",
+            "P64",
+            "P65",
+            "P7",
+            "P99"
+          ],
+          "permutation_seed": 101945237,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 1,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P28",
+            "P45",
+            "P65",
+            "P72",
+            "P73",
+            "P78",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 2070484523,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 9,
+            "raw_corrected": 2,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P28",
+            "P4",
+            "P45",
+            "P64",
+            "P73",
+            "P84",
+            "P88",
+            "P99"
+          ],
+          "permutation_seed": 1852140891,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 3,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P28",
+            "P4",
+            "P45",
+            "P47",
+            "P65",
+            "P73",
+            "P88",
+            "P89"
+          ],
+          "permutation_seed": 226264431,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P12",
+            "P27",
+            "P35",
+            "P47",
+            "P64",
+            "P73",
+            "P84",
+            "P99"
+          ],
+          "permutation_seed": 186648324,
+          "bh_calls": {
+            "pooled": 26,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 26,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P27",
+            "P28",
+            "P35",
+            "P73",
+            "P88",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 1212869966,
+          "bh_calls": {
+            "pooled": 27,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 27,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P12",
+            "P28",
+            "P4",
+            "P45",
+            "P47",
+            "P7",
+            "P73",
+            "P99"
+          ],
+          "permutation_seed": 1741539941,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 1,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P12",
+            "P64",
+            "P65",
+            "P72",
+            "P73",
+            "P88",
+            "P89"
+          ],
+          "permutation_seed": 1696274986,
+          "bh_calls": {
+            "pooled": 28,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 28,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P35",
+            "P45",
+            "P73",
+            "P78",
+            "P84",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 644189320,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P12",
+            "P35",
+            "P45",
+            "P47",
+            "P65",
+            "P7",
+            "P84",
+            "P88",
+            "P89"
+          ],
+          "permutation_seed": 1145454435,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P12",
+            "P27",
+            "P45",
+            "P47",
+            "P65",
+            "P73",
+            "P84",
+            "P88",
+            "P89"
+          ],
+          "permutation_seed": 918803252,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P28",
+            "P4",
+            "P45",
+            "P47",
+            "P72",
+            "P84",
+            "P88",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 1148772483,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 3,
+            "raw_corrected": 7,
+            "vst_corrected": 8
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P28",
+            "P45",
+            "P47",
+            "P64",
+            "P65",
+            "P7",
+            "P72",
+            "P99"
+          ],
+          "permutation_seed": 609086333,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P28",
+            "P35",
+            "P4",
+            "P65",
+            "P7",
+            "P72",
+            "P88",
+            "P99"
+          ],
+          "permutation_seed": 1331010388,
+          "bh_calls": {
+            "pooled": 27,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 28,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P28",
+            "P35",
+            "P65",
+            "P73",
+            "P78",
+            "P88",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 1343682077,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 1,
+            "raw_corrected": 1,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P12",
+            "P28",
+            "P4",
+            "P65",
+            "P7",
+            "P72",
+            "P99"
+          ],
+          "permutation_seed": 1092680126,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 20,
+            "raw_corrected": 20,
+            "vst_corrected": 19
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P12",
+            "P27",
+            "P28",
+            "P35",
+            "P45",
+            "P64",
+            "P72",
+            "P73"
+          ],
+          "permutation_seed": 1863951058,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P12",
+            "P65",
+            "P7",
+            "P72",
+            "P78",
+            "P84",
+            "P89"
+          ],
+          "permutation_seed": 503265310,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 1,
+            "raw_corrected": 5,
+            "vst_corrected": 5
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P12",
+            "P27",
+            "P28",
+            "P4",
+            "P72",
+            "P73",
+            "P84",
+            "P88"
+          ],
+          "permutation_seed": 1130272887,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 1,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P35",
+            "P4",
+            "P47",
+            "P64",
+            "P7",
+            "P72",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 1865427238,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 2,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P4",
+            "P47",
+            "P64",
+            "P73",
+            "P78",
+            "P84",
+            "P88"
+          ],
+          "permutation_seed": 364618164,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P12",
+            "P28",
+            "P4",
+            "P64",
+            "P65",
+            "P73",
+            "P88",
+            "P99"
+          ],
+          "permutation_seed": 727572890,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P35",
+            "P4",
+            "P64",
+            "P65",
+            "P72",
+            "P73",
+            "P78",
+            "P84",
+            "P89"
+          ],
+          "permutation_seed": 79194345,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P35",
+            "P47",
+            "P64",
+            "P7",
+            "P72",
+            "P84",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 1766591353,
+          "bh_calls": {
+            "pooled": 28,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 28,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P27",
+            "P28",
+            "P35",
+            "P47",
+            "P64",
+            "P7",
+            "P72",
+            "P84"
+          ],
+          "permutation_seed": 1573099131,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P28",
+            "P4",
+            "P64",
+            "P7",
+            "P73",
+            "P84",
+            "P88",
+            "P89"
+          ],
+          "permutation_seed": 153327269,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P35",
+            "P45",
+            "P47",
+            "P64",
+            "P7",
+            "P84",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 1996561639,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 1,
+            "raw_corrected": 1,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 1,
+            "raw_corrected": 2,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P28",
+            "P4",
+            "P64",
+            "P72",
+            "P73",
+            "P88",
+            "P99"
+          ],
+          "permutation_seed": 344253354,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P27",
+            "P28",
+            "P4",
+            "P45",
+            "P47",
+            "P7",
+            "P73",
+            "P84"
+          ],
+          "permutation_seed": 181371220,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P12",
+            "P27",
+            "P35",
+            "P65",
+            "P72",
+            "P84",
+            "P88",
+            "P99"
+          ],
+          "permutation_seed": 1060098267,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P27",
+            "P28",
+            "P45",
+            "P47",
+            "P64",
+            "P65",
+            "P72",
+            "P78",
+            "P99"
+          ],
+          "permutation_seed": 1639496918,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 18,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 25,
+            "raw_corrected": 17,
+            "vst_corrected": 15
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P27",
+            "P35",
+            "P7",
+            "P72",
+            "P78",
+            "P88",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 586914633,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P12",
+            "P28",
+            "P45",
+            "P64",
+            "P65",
+            "P73",
+            "P99"
+          ],
+          "permutation_seed": 44484358,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P12",
+            "P27",
+            "P35",
+            "P45",
+            "P47",
+            "P64",
+            "P72",
+            "P73",
+            "P89"
+          ],
+          "permutation_seed": 860632497,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 1,
+            "raw_corrected": 2,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P4",
+            "P45",
+            "P47",
+            "P64",
+            "P72",
+            "P73",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 195786177,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P47",
+            "P7",
+            "P72",
+            "P73",
+            "P78",
+            "P84",
+            "P89"
+          ],
+          "permutation_seed": 2127500331,
+          "bh_calls": {
+            "pooled": 27,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 27,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P27",
+            "P28",
+            "P35",
+            "P64",
+            "P7",
+            "P73",
+            "P84",
+            "P99"
+          ],
+          "permutation_seed": 1968101908,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 2,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P102",
+            "P103",
+            "P12",
+            "P35",
+            "P64",
+            "P72",
+            "P78",
+            "P84",
+            "P88"
+          ],
+          "permutation_seed": 667228135,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P27",
+            "P35",
+            "P4",
+            "P47",
+            "P72",
+            "P78",
+            "P84",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 1617046468,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 2,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P27",
+            "P28",
+            "P65",
+            "P7",
+            "P72",
+            "P73",
+            "P84",
+            "P89",
+            "P99"
+          ],
+          "permutation_seed": 907392466,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 4,
+            "raw_corrected": 2,
+            "vst_corrected": 3
+          }
+        },
+        {
+          "arm_a": [
+            "P103",
+            "P27",
+            "P35",
+            "P65",
+            "P72",
+            "P73",
+            "P84",
+            "P88",
+            "P89"
+          ],
+          "permutation_seed": 946040154,
+          "bh_calls": {
+            "pooled": 26,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 26,
+            "patient_mean": 0,
+            "raw_corrected": 2,
+            "vst_corrected": 3
+          }
+        }
+      ]
+    },
+    {
+      "group": "pCR",
+      "donors": [
+        "P10",
+        "P104",
+        "P105",
+        "P106",
+        "P107",
+        "P108",
+        "P11",
+        "P23",
+        "P31",
+        "P40",
+        "P49",
+        "P53",
+        "P54",
+        "P59",
+        "P66",
+        "P69",
+        "P71",
+        "P77",
+        "P80",
+        "P81",
+        "P87",
+        "P9",
+        "P90",
+        "P92",
+        "P93"
+      ],
+      "n_cells": 1965965,
+      "group_sizes": [
+        12,
+        13
+      ],
+      "families": {
+        "pooled": [
+          "A2ML1",
+          "AAMP",
+          "AAR2",
+          "AARSD1",
+          "ABAT",
+          "ABCA1",
+          "ABCA3",
+          "ABCA4",
+          "ABCA7",
+          "ABCB1",
+          "ABCB4",
+          "ABCB6",
+          "ABCC1",
+          "ABCC12",
+          "ABCC2",
+          "ABCC3",
+          "ABCC4",
+          "ABCC6",
+          "ABCC8",
+          "ABCC9",
+          "ABCD1",
+          "ABCD3",
+          "ABCD4",
+          "ABCF3",
+          "ABCG1",
+          "ABCG2",
+          "ABHD11",
+          "ABHD6",
+          "ABI3",
+          "ABI3BP",
+          "ABL1",
+          "ABL2"
+        ],
+        "patient_mean": [
+          "A2ML1",
+          "AAMP",
+          "AAR2",
+          "AARSD1",
+          "ABAT",
+          "ABCA1",
+          "ABCA3",
+          "ABCA4",
+          "ABCA7",
+          "ABCB1",
+          "ABCB4",
+          "ABCB6",
+          "ABCC1",
+          "ABCC12",
+          "ABCC2",
+          "ABCC3",
+          "ABCC4",
+          "ABCC6",
+          "ABCC8",
+          "ABCC9",
+          "ABCD1",
+          "ABCD3",
+          "ABCD4",
+          "ABCF3",
+          "ABCG1",
+          "ABCG2",
+          "ABHD11",
+          "ABHD6",
+          "ABI3",
+          "ABI3BP",
+          "ABL1",
+          "ABL2"
+        ],
+        "raw_corrected": [
+          "A2ML1",
+          "AAMP",
+          "AAR2",
+          "AARSD1",
+          "ABAT",
+          "ABCA1",
+          "ABCA3",
+          "ABCA4",
+          "ABCA7",
+          "ABCB1",
+          "ABCB4",
+          "ABCB6",
+          "ABCC1",
+          "ABCC12",
+          "ABCC2",
+          "ABCC3",
+          "ABCC4",
+          "ABCC6",
+          "ABCC8",
+          "ABCC9",
+          "ABCD1",
+          "ABCD3",
+          "ABCD4",
+          "ABCF3",
+          "ABCG1",
+          "ABCG2",
+          "ABHD11",
+          "ABHD6",
+          "ABI3",
+          "ABI3BP",
+          "ABL1",
+          "ABL2"
+        ],
+        "vst_corrected": [
+          "A2ML1",
+          "AAMP",
+          "AAR2",
+          "AARSD1",
+          "ABAT",
+          "ABCA1",
+          "ABCA3",
+          "ABCA4",
+          "ABCA7",
+          "ABCB1",
+          "ABCB4",
+          "ABCB6",
+          "ABCC1",
+          "ABCC12",
+          "ABCC2",
+          "ABCC3",
+          "ABCC4",
+          "ABCC6",
+          "ABCC8",
+          "ABCC9",
+          "ABCD1",
+          "ABCD3",
+          "ABCD4",
+          "ABCF3",
+          "ABCG1",
+          "ABCG2",
+          "ABHD11",
+          "ABHD6",
+          "ABI3",
+          "ABI3BP",
+          "ABL1",
+          "ABL2"
+        ]
+      },
+      "summary": {
+        "pooled": {
+          "tests": 1600,
+          "bh_calls": 1521,
+          "bh_fraction": 0.950625,
+          "splits_with_calls": 50,
+          "nominal_fraction": 0.950625
+        },
+        "patient_mean": {
+          "tests": 1600,
+          "bh_calls": 27,
+          "bh_fraction": 0.016875,
+          "splits_with_calls": 1,
+          "nominal_fraction": 0.035625
+        },
+        "raw_corrected": {
+          "tests": 1600,
+          "bh_calls": 26,
+          "bh_fraction": 0.01625,
+          "splits_with_calls": 2,
+          "nominal_fraction": 0.039375
+        },
+        "vst_corrected": {
+          "tests": 1600,
+          "bh_calls": 26,
+          "bh_fraction": 0.01625,
+          "splits_with_calls": 2,
+          "nominal_fraction": 0.03625
+        }
+      },
+      "rows": [
+        {
+          "arm_a": [
+            "P104",
+            "P11",
+            "P23",
+            "P31",
+            "P40",
+            "P53",
+            "P54",
+            "P66",
+            "P69",
+            "P9",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 1045073997,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P106",
+            "P11",
+            "P31",
+            "P53",
+            "P66",
+            "P77",
+            "P80",
+            "P81",
+            "P87",
+            "P92"
+          ],
+          "permutation_seed": 1582537571,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P105",
+            "P106",
+            "P108",
+            "P11",
+            "P23",
+            "P40",
+            "P49",
+            "P59",
+            "P69",
+            "P87",
+            "P93"
+          ],
+          "permutation_seed": 1257947654,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 1,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P108",
+            "P31",
+            "P40",
+            "P49",
+            "P53",
+            "P66",
+            "P71",
+            "P77",
+            "P87",
+            "P90",
+            "P92"
+          ],
+          "permutation_seed": 804679605,
+          "bh_calls": {
+            "pooled": 27,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 27,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P104",
+            "P106",
+            "P107",
+            "P108",
+            "P11",
+            "P49",
+            "P54",
+            "P66",
+            "P71",
+            "P81",
+            "P87"
+          ],
+          "permutation_seed": 246326808,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 3,
+            "raw_corrected": 1,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P107",
+            "P11",
+            "P31",
+            "P40",
+            "P49",
+            "P54",
+            "P71",
+            "P80",
+            "P81",
+            "P9",
+            "P90",
+            "P92"
+          ],
+          "permutation_seed": 1756684250,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 2,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P105",
+            "P107",
+            "P11",
+            "P31",
+            "P59",
+            "P66",
+            "P69",
+            "P71",
+            "P77",
+            "P90",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 309774467,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P106",
+            "P11",
+            "P23",
+            "P31",
+            "P49",
+            "P59",
+            "P66",
+            "P87",
+            "P9",
+            "P90",
+            "P92"
+          ],
+          "permutation_seed": 1327587895,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P106",
+            "P107",
+            "P31",
+            "P40",
+            "P53",
+            "P59",
+            "P66",
+            "P69",
+            "P80",
+            "P81",
+            "P87",
+            "P93"
+          ],
+          "permutation_seed": 1037928658,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P106",
+            "P11",
+            "P23",
+            "P53",
+            "P59",
+            "P66",
+            "P69",
+            "P80",
+            "P81",
+            "P92"
+          ],
+          "permutation_seed": 903319023,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 1,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P108",
+            "P23",
+            "P40",
+            "P59",
+            "P69",
+            "P77",
+            "P80",
+            "P87",
+            "P9",
+            "P90",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 1274804623,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P107",
+            "P108",
+            "P11",
+            "P53",
+            "P54",
+            "P59",
+            "P71",
+            "P80",
+            "P81",
+            "P87",
+            "P90"
+          ],
+          "permutation_seed": 1173974038,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P104",
+            "P106",
+            "P107",
+            "P31",
+            "P40",
+            "P49",
+            "P53",
+            "P71",
+            "P80",
+            "P81",
+            "P9"
+          ],
+          "permutation_seed": 1232568899,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P107",
+            "P11",
+            "P40",
+            "P53",
+            "P59",
+            "P66",
+            "P69",
+            "P71",
+            "P77",
+            "P80",
+            "P90"
+          ],
+          "permutation_seed": 1931498743,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 1,
+            "raw_corrected": 3,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P104",
+            "P107",
+            "P11",
+            "P40",
+            "P53",
+            "P54",
+            "P69",
+            "P71",
+            "P77",
+            "P80",
+            "P92"
+          ],
+          "permutation_seed": 2074453314,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P108",
+            "P11",
+            "P31",
+            "P40",
+            "P66",
+            "P81",
+            "P87",
+            "P9",
+            "P90",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 1844306332,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 2,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P104",
+            "P107",
+            "P31",
+            "P40",
+            "P49",
+            "P54",
+            "P69",
+            "P71",
+            "P77",
+            "P87",
+            "P93"
+          ],
+          "permutation_seed": 1362763224,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 5,
+            "raw_corrected": 5,
+            "vst_corrected": 4
+          }
+        },
+        {
+          "arm_a": [
+            "P105",
+            "P106",
+            "P11",
+            "P40",
+            "P49",
+            "P53",
+            "P66",
+            "P71",
+            "P77",
+            "P80",
+            "P81",
+            "P90"
+          ],
+          "permutation_seed": 1883800485,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P11",
+            "P23",
+            "P49",
+            "P59",
+            "P69",
+            "P77",
+            "P81",
+            "P9",
+            "P90",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 1640238064,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 1,
+            "raw_corrected": 2,
+            "vst_corrected": 2
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P106",
+            "P107",
+            "P108",
+            "P11",
+            "P54",
+            "P59",
+            "P69",
+            "P80",
+            "P81",
+            "P87",
+            "P90"
+          ],
+          "permutation_seed": 670380138,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 3,
+            "raw_corrected": 1,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P107",
+            "P31",
+            "P40",
+            "P49",
+            "P53",
+            "P71",
+            "P81",
+            "P87",
+            "P90",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 6301169,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 2,
+            "raw_corrected": 3,
+            "vst_corrected": 3
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P108",
+            "P31",
+            "P40",
+            "P53",
+            "P54",
+            "P66",
+            "P69",
+            "P80",
+            "P81",
+            "P93"
+          ],
+          "permutation_seed": 180913067,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P105",
+            "P106",
+            "P11",
+            "P23",
+            "P31",
+            "P53",
+            "P59",
+            "P77",
+            "P80",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 1184270747,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P106",
+            "P23",
+            "P31",
+            "P66",
+            "P69",
+            "P80",
+            "P81",
+            "P87",
+            "P90",
+            "P92"
+          ],
+          "permutation_seed": 1180719967,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 2,
+            "raw_corrected": 4,
+            "vst_corrected": 4
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P11",
+            "P31",
+            "P40",
+            "P49",
+            "P69",
+            "P71",
+            "P77",
+            "P80",
+            "P81",
+            "P9"
+          ],
+          "permutation_seed": 1426691079,
+          "bh_calls": {
+            "pooled": 28,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 28,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P105",
+            "P106",
+            "P107",
+            "P108",
+            "P11",
+            "P31",
+            "P53",
+            "P69",
+            "P81",
+            "P9",
+            "P90"
+          ],
+          "permutation_seed": 1086315608,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 27,
+            "raw_corrected": 25,
+            "vst_corrected": 25
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 27,
+            "raw_corrected": 25,
+            "vst_corrected": 25
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P105",
+            "P106",
+            "P40",
+            "P49",
+            "P54",
+            "P66",
+            "P77",
+            "P9",
+            "P90",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 1989483882,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P105",
+            "P106",
+            "P107",
+            "P23",
+            "P49",
+            "P53",
+            "P59",
+            "P71",
+            "P87",
+            "P9",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 1084170966,
+          "bh_calls": {
+            "pooled": 28,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 28,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P104",
+            "P108",
+            "P31",
+            "P40",
+            "P49",
+            "P53",
+            "P54",
+            "P71",
+            "P77",
+            "P80",
+            "P93"
+          ],
+          "permutation_seed": 1415634159,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P107",
+            "P108",
+            "P53",
+            "P59",
+            "P66",
+            "P69",
+            "P77",
+            "P80",
+            "P9",
+            "P90"
+          ],
+          "permutation_seed": 1182382744,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P105",
+            "P107",
+            "P108",
+            "P23",
+            "P49",
+            "P54",
+            "P71",
+            "P77",
+            "P80",
+            "P87",
+            "P93"
+          ],
+          "permutation_seed": 1883156814,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P108",
+            "P23",
+            "P31",
+            "P40",
+            "P53",
+            "P54",
+            "P59",
+            "P71",
+            "P77",
+            "P93"
+          ],
+          "permutation_seed": 1781133862,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 5,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P105",
+            "P106",
+            "P107",
+            "P23",
+            "P40",
+            "P49",
+            "P53",
+            "P69",
+            "P80",
+            "P81",
+            "P90",
+            "P92"
+          ],
+          "permutation_seed": 935915166,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P107",
+            "P40",
+            "P49",
+            "P53",
+            "P59",
+            "P69",
+            "P77",
+            "P81",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 90334034,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P11",
+            "P23",
+            "P31",
+            "P66",
+            "P69",
+            "P71",
+            "P77",
+            "P80",
+            "P87",
+            "P92"
+          ],
+          "permutation_seed": 1379435096,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 2,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P106",
+            "P107",
+            "P11",
+            "P31",
+            "P40",
+            "P53",
+            "P54",
+            "P80",
+            "P81",
+            "P90",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 1089295086,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P106",
+            "P108",
+            "P23",
+            "P53",
+            "P54",
+            "P66",
+            "P80",
+            "P81",
+            "P90",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 1565205395,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P105",
+            "P106",
+            "P107",
+            "P49",
+            "P53",
+            "P54",
+            "P59",
+            "P66",
+            "P71",
+            "P77",
+            "P92"
+          ],
+          "permutation_seed": 1131537601,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P104",
+            "P107",
+            "P11",
+            "P31",
+            "P66",
+            "P71",
+            "P77",
+            "P80",
+            "P81",
+            "P90",
+            "P93"
+          ],
+          "permutation_seed": 762078155,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P106",
+            "P23",
+            "P49",
+            "P53",
+            "P59",
+            "P66",
+            "P69",
+            "P77",
+            "P81",
+            "P87",
+            "P9",
+            "P92"
+          ],
+          "permutation_seed": 1602197894,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 1,
+            "raw_corrected": 1,
+            "vst_corrected": 1
+          }
+        },
+        {
+          "arm_a": [
+            "P107",
+            "P108",
+            "P11",
+            "P40",
+            "P49",
+            "P53",
+            "P66",
+            "P69",
+            "P9",
+            "P90",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 1994695262,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P106",
+            "P107",
+            "P108",
+            "P11",
+            "P23",
+            "P53",
+            "P54",
+            "P59",
+            "P71",
+            "P81"
+          ],
+          "permutation_seed": 2040337019,
+          "bh_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 29,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P107",
+            "P108",
+            "P49",
+            "P54",
+            "P69",
+            "P71",
+            "P81",
+            "P87",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 750651851,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 1,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P104",
+            "P106",
+            "P108",
+            "P23",
+            "P49",
+            "P59",
+            "P77",
+            "P80",
+            "P87",
+            "P9",
+            "P93"
+          ],
+          "permutation_seed": 1234186834,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 1,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P106",
+            "P107",
+            "P108",
+            "P11",
+            "P23",
+            "P49",
+            "P53",
+            "P66",
+            "P77",
+            "P80",
+            "P87"
+          ],
+          "permutation_seed": 186263745,
+          "bh_calls": {
+            "pooled": 28,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 28,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P105",
+            "P106",
+            "P108",
+            "P23",
+            "P31",
+            "P40",
+            "P49",
+            "P66",
+            "P69",
+            "P81",
+            "P90"
+          ],
+          "permutation_seed": 1529008528,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P105",
+            "P106",
+            "P107",
+            "P31",
+            "P40",
+            "P49",
+            "P54",
+            "P69",
+            "P9",
+            "P90",
+            "P93"
+          ],
+          "permutation_seed": 550376156,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P105",
+            "P106",
+            "P107",
+            "P23",
+            "P40",
+            "P66",
+            "P69",
+            "P80",
+            "P81",
+            "P90",
+            "P92"
+          ],
+          "permutation_seed": 1986722212,
+          "bh_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 30,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P104",
+            "P107",
+            "P108",
+            "P11",
+            "P23",
+            "P66",
+            "P69",
+            "P77",
+            "P80",
+            "P81",
+            "P90",
+            "P92"
+          ],
+          "permutation_seed": 1122369217,
+          "bh_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 32,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        },
+        {
+          "arm_a": [
+            "P10",
+            "P104",
+            "P108",
+            "P49",
+            "P53",
+            "P54",
+            "P66",
+            "P69",
+            "P77",
+            "P80",
+            "P92",
+            "P93"
+          ],
+          "permutation_seed": 1869608088,
+          "bh_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          },
+          "nominal_calls": {
+            "pooled": 31,
+            "patient_mean": 0,
+            "raw_corrected": 0,
+            "vst_corrected": 0
+          }
+        }
+      ]
+    }
+  ],
+  "inference": "Random half-splits within each original outcome arm. All cells retained. Continuity- and tie-corrected pooled Mann-Whitney, or donor-level moderated permutation on mean counts and signed nugget-corrected energies in raw and Anscombe modes. BH within each split and endpoint. Repeated splits share donors and features."
+}

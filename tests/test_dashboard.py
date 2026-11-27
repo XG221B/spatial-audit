@@ -17,6 +17,8 @@ def test_file_dashboard_upload_sandbox_and_mobile(tmp_path):
         errors = []
         page.on("pageerror", lambda err: errors.append(str(err)))
         page.goto((ROOT / "docs/index.html").as_uri())
+        assert page.locator("#experiments tbody tr").count() == 2
+        assert page.locator("#experiments a[download]").count() == 6
         assert page.locator("#rows tr").count() == 20
         page.locator("#kind").select_option("supplementary")
         assert page.locator("#rows tr").count() == 4

@@ -1,4 +1,4 @@
-"""Derive manuscript statistics and six vector figures exclusively from result JSON."""
+"""Derive manuscript statistics and vector figures exclusively from result JSON."""
 
 from pathlib import Path
 
@@ -78,6 +78,9 @@ def main():
             "figure.constrained_layout.use": True,
         }
     )
+    from build_validation import build_validation
+
+    build_validation(save)
     labels = [r["id"] for r in public]
     x = np.arange(len(public))
     height = max(3.0, len(public) * 0.26 + 0.65)

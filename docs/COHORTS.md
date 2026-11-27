@@ -179,3 +179,7 @@ spatial-audit run --manifest manifests/GSE306288.json --out results
 ```
 
 The lung and valve adapter reads the official GEO sample descriptions and downloads the corresponding Visium files. The lung contrast compares advanced COPD with donor controls. The valve contrast compares female with male donors with calcific aortic valve disease and aggregates repeated sections within each patient. Each input receipt records the marker panel, donor mapping, matrix files and array geometry. [Lung receipt](../results/public/GSE318039_inputs.json) · [Valve receipt](../results/public/GSE306288_inputs.json)
+
+## Additional CosMx records screened
+
+GSE348495 supplies cell-level counts and metadata for colorectal specimens. The downloaded metadata table labels tissue groups and samples. The relationship between repeated tumour samples, adjacent tissue and individual donors could not be verified. GSE312757 describes within-specimen regions of colorectal liver metastases. The GSE311636 RNA and protein sample titles identify assays on rectal tissue. Neither of the latter two GEO family records established independent response groups. These candidates have no primary registry entry. The machine-readable screening record includes the official URLs, byte lengths and SHA-256 digests for the inspected files. [Screening evidence](../results/public/cohort_screening.json)

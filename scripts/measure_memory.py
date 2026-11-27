@@ -107,7 +107,10 @@ def main():
     p.add_argument("--patients", type=int, default=10)
     p.add_argument("--density", type=float, default=0.03)
     p.add_argument("--seed", type=int, default=9401)
-    p.add_argument("--out", type=Path, default=ROOT / "results/synthetic/memory.json")
+    p.add_argument("--out", type=Path, help="Default output depends on benchmark mode")
+    p.add_argument(
+        "--scaling-curve", action="store_true", help="Profile four sizes in fresh workers"
+    )
     p.add_argument("--worker", type=Path, help=argparse.SUPPRESS)
     args = p.parse_args()
     if args.worker:
@@ -121,9 +124,25 @@ def main():
         or args.seed < 0
     ):
         p.error("invalid sparse benchmark dimensions")
+    sizes = [10_000, 50_000, 250_000, 1_000_000] if args.scaling_curve else [args.cells]
+    if args.patients > min(sizes):
+        p.error("each size must include all patients")
+    rows = [measure(args, cells) for cells in sizes]
+    if args.scaling_curve:
+        result = {"kind": "synthetic", "record_type": "scaling_curve", "rows": rows}
+        name = "scaling_curve"
+    else:
+        result = rows[0]
+        name = "memory"
+    write_json(args.out or ROOT / f"results/synthetic/{name}.json", result)
+    if not all(row["pass_rss"] for row in rows):
+        raise SystemExit(1)
+
+
+def measure(args, cells):
     with TemporaryDirectory(prefix="spatial-audit-memory-") as work:
         folder = Path(work)
-        nnz = make_files(folder, args.cells, args.features, args.patients, args.density, args.seed)
+        nnz = make_files(folder, cells, args.features, args.patients, args.density, args.seed)
         env = dict(os.environ, OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1", MKL_NUM_THREADS="1")
         subprocess.run(
             [sys.executable, str(Path(__file__).resolve()), "--worker", str(folder)],
@@ -137,7 +156,7 @@ def main():
         record_type="memory_benchmark",
         seed=args.seed,
         nnz=nnz,
-        density=nnz / (args.cells * args.features),
+        density=nnz / (cells * args.features),
         os=platform.system(),
         machine=platform.machine(),
         python=platform.python_version(),
@@ -147,12 +166,10 @@ def main():
         "dimensions. Fixture generation in parent process excluded. "
         "Sparse count panel; peak depends on geometry, features and sparsity.",
     )
-    write_json(args.out, result)
     print(
         f"{result['n_observations']:,} observations, peak {result['peak_rss_bytes'] / 2**30:.3f} GiB"
     )
-    if not result["pass_rss"]:
-        raise SystemExit(1)
+    return result
 
 
 if __name__ == "__main__":

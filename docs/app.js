@@ -2,6 +2,7 @@
 const $ = (id) => document.getElementById(id);
 let language = "en";
 const zh = {
+  "Measured validation experiments": "实测验证实验",
   "Original-package R runs on the same registered feature panels. Pseudobulk differential expression, domain-interaction models, and within-section spatial-variability tests target distinct null hypotheses. Peak RSS records the sampled process-tree high-water mark.":
     "在相同的预注册特征面板上运行原版 R 包。伪批量差异表达、区域交互模型和切片内空间变异检验各自对应不同的零假设。峰值 RSS 为采样期间进程树的最大驻留内存。",
   "Explore how donor count, within-patient correlation, tissue composition, and baseline abundance shifts affect exact permutation resolution, naive pooled Type I error, and fine-scale energy. Adjust any slider to recalculate.":
@@ -899,6 +900,32 @@ function sandbox() {
   };
   controls.forEach(([k]) => ($(k).oninput = draw));
   draw();
+  const publicRuns = sources[0].experiments;
+  const syntheticRuns = sources[1].experiments;
+  if (publicRuns?.empirical_null && syntheticRuns?.scaling_curve) {
+    const zhView = language === "zh";
+    const rows = publicRuns.empirical_null.arms.map(arm =>
+      "<tr><td>" + esc(arm.group) + "</td>" +
+      ["pooled", "patient_mean", "raw_corrected", "vst_corrected"].map(key =>
+        "<td>" + pct(arm.summary[key].bh_fraction) + "</td>").join("") + "</tr>"
+    ).join("");
+    const labels = zhView ? ["原始组别", "合并细胞", "供体均值", "原始尺度能量", "VST 能量"] :
+      ["Outcome arm", "Pooled cells", "Donor means", "Raw-scale energy", "VST energy"];
+    const links = [
+      ["public/empirical_null", "Within-arm splits", "组内随机分组"],
+      ["public/panel_sensitivity", "Panel size", "面板大小"],
+      ["public/case_studies", "Biological cases", "生物学案例"],
+      ["public/cohort_screening", "Cohort screening", "队列筛选"],
+      ["synthetic/vst_calibration", "Nugget calibration", "块金效应校准"],
+      ["synthetic/scaling_curve", "Runtime and RSS", "运行时间与峰值内存"]
+    ];
+    $("experiments").innerHTML = "<p>GSE348499 · " +
+      publicRuns.empirical_null.splits_per_arm + (zhView ? " 次组内拆分，每组的 BH 检出比例" :
+      " donor splits per outcome arm, BH call fraction across features and splits") +
+      "</p><table><thead><tr>" + labels.map(k => "<th>"+k+"</th>").join("") +
+      "</tr></thead><tbody>" + rows + "</tbody></table><p>" +
+      links.map(([path,en,cn]) => '<a href="data/'+path+'.json" download>'+ (zhView ? cn : en) +"</a>").join(" · ") + "</p>";
+  }
   const phase = sources[1].phase;
   if (phase)
     $("phase").innerHTML =

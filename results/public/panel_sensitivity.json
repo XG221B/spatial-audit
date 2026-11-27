@@ -1,0 +1,88 @@
+{
+  "kind": "public",
+  "record_type": "panel_sensitivity",
+  "accession": "GSE220442",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE220442",
+  "n_patients": 6,
+  "n_observations": 25293,
+  "alpha": 0.05,
+  "panels": [
+    {
+      "id": "GSE220442",
+      "report_sha256": "e7c80b79c50d108824285689f20099b3d3be6e4a0d22524f36b0320034928d6a",
+      "features": 32,
+      "status": {
+        "power": "red",
+        "design": "yellow",
+        "pseudorep": "red",
+        "composition": "yellow",
+        "nugget": "yellow"
+      },
+      "pooled_rate": 0.875,
+      "patient_rate": 0.0,
+      "bands": [
+        {
+          "wavelength_um": 250.0,
+          "share": null,
+          "estimable_features": 0
+        },
+        {
+          "wavelength_um": 600.0,
+          "share": 0.022360480125567142,
+          "estimable_features": 32
+        },
+        {
+          "wavelength_um": 1400.0,
+          "share": 0.35926964839830744,
+          "estimable_features": 32
+        }
+      ],
+      "nugget_flagged": 0,
+      "nugget_evaluated": 0
+    },
+    {
+      "id": "GSE220442-full-panel",
+      "report_sha256": "73f78abaa2c5bdf458889637ecc1eefbdbdc45a3d240acbfbee2a698866b0c92",
+      "features": 2512,
+      "status": {
+        "power": "red",
+        "design": "yellow",
+        "pseudorep": "red",
+        "composition": "yellow",
+        "nugget": "yellow"
+      },
+      "pooled_rate": 0.9327229299363057,
+      "patient_rate": 0.0,
+      "bands": [
+        {
+          "wavelength_um": 250.0,
+          "share": null,
+          "estimable_features": 0
+        },
+        {
+          "wavelength_um": 600.0,
+          "share": 0.020876579621538893,
+          "estimable_features": 2512
+        },
+        {
+          "wavelength_um": 1400.0,
+          "share": 0.3391618068135243,
+          "estimable_features": 2512
+        }
+      ],
+      "nugget_flagged": 0,
+      "nugget_evaluated": 0
+    }
+  ],
+  "shared_features_with_changed_BH_call": {
+    "pooled": [],
+    "patient": []
+  },
+  "matching_dimensions": [
+    "power",
+    "design",
+    "pseudorep",
+    "composition",
+    "nugget"
+  ]
+}

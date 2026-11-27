@@ -2,12 +2,12 @@
   "status": "PASS",
   "scope": "full",
   "checks": {
-    "pytest_passed": 304,
+    "pytest_passed": 333,
     "pytest_skipped": [],
     "ruff": "PASS",
     "mypy": "PASS",
     "references": "PASS",
-    "json_files": 112,
+    "json_files": 124,
     "portable_paths": true,
     "provenance_matched": 26,
     "successful_methods": [

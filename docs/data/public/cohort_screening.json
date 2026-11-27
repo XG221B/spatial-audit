@@ -1,0 +1,225 @@
+{
+  "kind": "public",
+  "record_type": "candidate_screening",
+  "scope": "Targeted review of three human CosMx records",
+  "candidates": [
+    {
+      "accession": "GSE348495",
+      "assets": [
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE348nnn/GSE348495/soft/GSE348495_family.soft.gz",
+          "bytes": 3199,
+          "sha256": "d0c57bdccc85ecdbf2b542fec802204f881701d5f9a42e630e4037834ed8a0f8"
+        },
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE348nnn/GSE348495/suppl/GSE348495_Colorectal_cancer_metadata.csv.gz",
+          "bytes": 11089160,
+          "sha256": "5f6d1d6146222cdde3d5069c48ce1c0637e4a3e2c64f71b0cba5b9a8a734aa19"
+        }
+      ],
+      "titles": [
+        "Colorectal polyp 1",
+        "Colorectal polyp 2",
+        "Colorectal polyp 3",
+        "Stage I colorectal cancer CCP1-1",
+        "Stage I colorectal cancer CCP1-2",
+        "Stage I colorectal cancer CCP1-3",
+        "Stage I colorectal cancer CCP2-1",
+        "Stage I colorectal cancer CCP2-2",
+        "Stage I colorectal cancer CCP2-3",
+        "Stage I colorectal cancer CCP3-1",
+        "Stage I colorectal cancer CCP3-2",
+        "Stage I colorectal cancer CCP4-1",
+        "Stage I colorectal cancer CCP4-2",
+        "Stage I colorectal cancer CCP4-3",
+        "Colorectal cancer adjacent tissue 1",
+        "Colorectal cancer adjacent tissue 2",
+        "Colorectal cancer adjacent tissue 3"
+      ],
+      "characteristics": [
+        "tissue: colorectal cancer adjacent tissue",
+        "tissue: colorectal polyp",
+        "tissue: stage I colorectal cancer"
+      ],
+      "status": "unregistered",
+      "reason": "GEO titles and the cell table identify tissue specimens. Repeated CCP prefixes and adjacent tissues require an explicit specimen-to-donor and pairing crosswalk.",
+      "cell_metadata_columns": [
+        "cell",
+        "nCount_RNA",
+        "nFeature_RNA",
+        "nCount_negprobes",
+        "nFeature_negprobes",
+        "fov",
+        "Area",
+        "AspectRatio",
+        "CenterX_local_px",
+        "CenterY_local_px",
+        "Width",
+        "Height",
+        "Mean.PanCK",
+        "Max.PanCK",
+        "Mean.CD68",
+        "Max.CD68",
+        "Mean.Membrane",
+        "Max.Membrane",
+        "Mean.CD45",
+        "Max.CD45",
+        "Mean.DAPI",
+        "Max.DAPI",
+        "cell_id",
+        "assay_type",
+        "version",
+        "Run_Tissue_name",
+        "Panel",
+        "cellSegmentationSetId",
+        "cellSegmentationSetName",
+        "slide_ID",
+        "CenterX_global_px",
+        "CenterY_global_px",
+        "cell_ID",
+        "unassignedTranscripts",
+        "nCount_falsecode",
+        "nFeature_falsecode",
+        "Area.um2",
+        "propNegative",
+        "complexity",
+        "errorCtEstimate",
+        "percOfDataFromError",
+        "qcFlagsRNACounts",
+        "qcFlagsCellCounts",
+        "qcFlagsCellPropNeg",
+        "qcFlagsCellComplex",
+        "qcFlagsCellArea",
+        "qcCellsFlagged",
+        "median_negprobes",
+        "negprobes_quantile_0.9",
+        "median_RNA",
+        "RNA_quantile_0.9",
+        "nCell",
+        "nCount",
+        "nCountPerCell",
+        "nFeaturePerCell",
+        "propNegativeCellAvg",
+        "complexityCellAvg",
+        "errorCtPerCellEstimate",
+        "percOfDataFromErrorPerCell",
+        "qcFlagsFOV",
+        "organ",
+        "group",
+        "sample_name"
+      ],
+      "tissue_labels": [
+        [
+          "CA",
+          "CA-1"
+        ],
+        [
+          "CA",
+          "CA-2"
+        ],
+        [
+          "CA",
+          "CA-3"
+        ],
+        [
+          "CCP1",
+          "CCP1-1"
+        ],
+        [
+          "CCP1",
+          "CCP1-2"
+        ],
+        [
+          "CCP1",
+          "CCP1-3"
+        ],
+        [
+          "CCP2",
+          "CCP2-1"
+        ],
+        [
+          "CCP2",
+          "CCP2-2"
+        ],
+        [
+          "CCP2",
+          "CCP2-3"
+        ],
+        [
+          "CCP3",
+          "CCP3-1"
+        ],
+        [
+          "CCP3",
+          "CCP3-2"
+        ],
+        [
+          "CCP4",
+          "CCP4-1"
+        ],
+        [
+          "CCP4",
+          "CCP4-2"
+        ],
+        [
+          "CCP4",
+          "CCP4-3"
+        ],
+        [
+          "HCT",
+          "HCT-1"
+        ],
+        [
+          "HCT",
+          "HCT-2"
+        ],
+        [
+          "HCT",
+          "HCT-3"
+        ]
+      ]
+    },
+    {
+      "accession": "GSE312757",
+      "assets": [
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE312nnn/GSE312757/soft/GSE312757_family.soft.gz",
+          "bytes": 2791,
+          "sha256": "a12b60e29e61d4cc357a1ba3c40261ec63f6e5d5b730456c56e3ada9ea0e960f"
+        }
+      ],
+      "titles": [
+        "slide_ID_4",
+        "slide_ID_2",
+        "slide_ID_1",
+        "slide_ID_3"
+      ],
+      "characteristics": [
+        "tissue: colorectal liver metastasis"
+      ],
+      "status": "unregistered",
+      "reason": "Slides cover tumour and liver regions within colorectal liver metastasis specimens. The deposited sample characteristics do not define two independent donor groups."
+    },
+    {
+      "accession": "GSE311636",
+      "assets": [
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE311nnn/GSE311636/soft/GSE311636_family.soft.gz",
+          "bytes": 3393,
+          "sha256": "77ef2080052a28ab542c669ab48c7ac4edc416e8628045ccacf690143adbc48c"
+        }
+      ],
+      "titles": [
+        "rectum_UC_RNA_1",
+        "rectum_UC_RNA_2",
+        "rectum_UC_Protein_1",
+        "rectum_UC_Protein_2"
+      ],
+      "characteristics": [
+        "tissue: rectum"
+      ],
+      "status": "unregistered",
+      "reason": "RNA and protein sample titles identify assays on rectal tissue. The inspected GEO characteristics do not link these samples to independent donors and response groups."
+    }
+  ]
+}

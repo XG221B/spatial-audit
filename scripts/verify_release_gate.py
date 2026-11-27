@@ -159,6 +159,14 @@ def validate_artifacts():
         payload = json.loads(
             js.removeprefix("globalThis.SPATIAL_" + kind.upper() + "=").removesuffix(";\n")
         )
+        from run_benchmark_suite import EXPERIMENTS
+
+        for name in EXPERIMENTS[kind]:
+            source = strict_read(ROOT / "results" / kind / f"{name}.json")
+            if source != payload["experiments"][name] or source != strict_read(
+                pages / kind / f"{name}.json"
+            ):
+                raise ValueError(f"Stale offline experiment: {name}")
         if {(kind, r["id"]) for r in payload["reports"]} != {k for k in keys if k[0] == kind}:
             raise ValueError("Offline and JSON dashboard inventories differ")
         for r in payload["reports"]:

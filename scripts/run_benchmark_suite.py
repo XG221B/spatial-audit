@@ -12,6 +12,12 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs" / "data"
 
 
+EXPERIMENTS = {
+    "public": ("empirical_null", "panel_sensitivity", "case_studies", "cohort_screening"),
+    "synthetic": ("vst_calibration", "scaling_curve"),
+}
+
+
 def make_visium(folder, path):
     import os
 
@@ -99,11 +105,17 @@ def publish(results, docs):
     embedded: dict = {"reports": [], "catalog": [], "sota": [], "phase": None}
     evidence_links: dict[str, str] = {}
     evidence_by_accession = {}
+    experiments: dict[str, dict] = {"public": {}, "synthetic": {}}
     for kind in ("public", "synthetic"):
         for f in sorted((results / kind).glob("*.json")):
             data = strict_read(f)
             if data.get("kind") != kind:
                 raise ValueError(f"Provenance mismatch in {f.name}")
+            if f.stem in EXPERIMENTS[kind]:
+                folder = docs / kind
+                folder.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(f, folder / f.name)
+                experiments[kind][f.stem] = data
             if kind == "public" and f.stem.endswith(("_inputs", "_reconstruction")):
                 dest = docs / kind / f.name
                 dest.parent.mkdir(parents=True, exist_ok=True)
@@ -167,6 +179,7 @@ def publish(results, docs):
     for kind in ("public", "synthetic"):
         payload = {
             "reports": [r for r in embedded["reports"] if r["kind"] == kind],
+            "experiments": experiments[kind],
             "catalog": embedded["catalog"] if kind == "public" else [],
             "sota": embedded["sota"] if kind == "public" else [],
             "evidence": evidence_links if kind == "public" else {},

@@ -134,6 +134,42 @@ python scripts/verify_release_gate.py   # Full release gate: pytest, ruff, mypy,
 
 ---
 
+### Empirical validation
+
+<!-- BEGIN measured validation -->
+
+In 27 simulation settings with no batch alignment, each mode used the same count realizations (192 cohorts per effect state and setting). Across settings, the largest null rejection fractions were 10.9% on the raw scale and 38.5% after Anscombe transformation. The latter was 74/192 cohorts (pointwise 95% Wilson interval 31.9% to 45.6%) under Poisson sampling with seven donors per arm and a twofold case baseline. At the same donor count and mean shift with dispersion 0.35, alternative detection was 56.2% and 24.5%, respectively. A fixed additive pattern in counts changes amplitude after a square-root transformation as baseline abundance changes. These rates evaluate the original latent-amplitude null.
+
+GSE348499 supplied 50 random donor splits within each pretreatment breast cancer response group. Across splits and features, the BH call fractions for pooled cells, donor means, raw-scale corrected energy and VST corrected energy, respectively, were 93.31%, 2.69%, 0.12%, 0.00% within RD (19 donors) and 95.06%, 1.69%, 1.62%, 1.62% within pCR (25 donors). Splits reuse donor material. The fractions describe random-label sensitivity conditional on these donors.
+
+In GSE220442, expanding the same 6 cortical donors from 32 to 2,512 archived features preserved all five screening categories. Pooled BH calls rose from 87.5% to 93.3%. Both panels had zero donor-level calls. Cortical-layer covariates accounted for 35.9% and 33.9% of energy at 1,400 micrometres. Neither panel supported the 250-micrometre nugget endpoint.
+
+For cortical SDF4, the pooled adjusted p was 3e-56 and the donor-adjusted p was 1. Three donors per arm limit the smallest two-sided donor p to 0.10. In the breast cancer panel, ABAT yielded pooled and donor-adjusted p values of 1.6e-30 and 0.992. For ABCB4, the pCR-minus-RD energy difference changed from -3.68e-05 to -7.98e-06 after short-lag subtraction. The ABCB4 contrast compares pretreatment spatial variation between eventual response groups. Without measured cell-type covariates in these sections, the contribution of cellular composition to this difference remains unresolved.
+
+In pancreatic cancer, the without-minus-with-diabetes energy difference for m/z 178.00810 changed from 0.743 to 0.010. The archive identifies this feature by mass window. Across the panel, TIC and raster coordinates together accounted for 45.09% of energy at 1,400 micrometres, versus 44.88% after subtracting each target window from its own TIC covariate. The resulting share still includes spatial gradients shared by tissue and acquisition.
+
+The 35-donor lung fibrosis Xenium contrast GSE250346 yielded 9/32 donor-level BH calls, 13 edgeR calls and 16 DESeq2 calls. All three procedures called 9 shared features (ACKR1, AGER, APLNR, ATF6, AXIN2, BCL2L11, BMP4, BMPR2, CA4). AGER and CA4 link the panel to alveolar and vascular compartments, respectively. Whole-tissue summaries combine changes in compartment abundance and expression within cells. All three analyses share donors and assay data.
+
+Across 4 independently launched CPU audits with 10 donors and 64 sparse features, wall time increased from 2.7 to 34.5 seconds and peak RSS from 179.2 to 283.8 MiB between 10,000 and 1,000,000 observations. Each size has one host-specific measurement.
+
+<!-- END measured validation -->
+
+The audit supports within-donor paired sign flips, permutations within declared strata, a clipped Voronoi graph and a feature-specific leave-one-ion-out TIC covariate. The registered independent-cohort reports use the design and geometry documented in their own manifests.
+
+Reproduce the experiments from the repository root after preparing the two public manifests. Each scaling point uses a fresh worker. Candidate screening retrieves GEO metadata.
+
+```sh
+python scripts/run_vst_calibration.py
+python scripts/run_empirical_experiments.py --manifest cache/GSE348499/manifest.json
+python scripts/check_public_cases.py --msi-manifest manifests/msi.json
+python scripts/measure_memory.py --scaling-curve
+python scripts/screen_cosmx_archives.py
+python scripts/run_benchmark_suite.py
+python scripts/build_paper.py
+```
+
+[Feature-level case studies](paper/generated/validation.tex) · [CosMx screening receipts](results/public/cohort_screening.json)
+
 ## Deployment & License / 部署与许可
 
 - **GitHub Pages**: Push to `main` and enable **Settings → Pages → GitHub Actions**. The workflow in `.github/workflows/pages.yml` publishes `docs/` directly.
