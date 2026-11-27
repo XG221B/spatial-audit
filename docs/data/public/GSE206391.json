@@ -1,0 +1,2419 @@
+{
+  "schema_version": 1,
+  "id": "GSE206391",
+  "kind": "public",
+  "platform": "Visium",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE206391",
+  "accession": "GSE206391",
+  "provenance": {
+    "inputs": [
+      {
+        "file": "GSM6252913.npz",
+        "sha256": "705b5134d8c23d20cb59df37d8c663a1091ef41959ba9c8832b4bc6a0e0629de",
+        "bytes": 27945
+      },
+      {
+        "file": "GSM6252914.npz",
+        "sha256": "7b4af8aee7f7468194f687c0da5379c9a6048994f2d51bbd5e703b292591337a",
+        "bytes": 30095
+      },
+      {
+        "file": "GSM6252917.npz",
+        "sha256": "f6573409d8dc871a204460f66d29af0541d5fd55d9639515861549f9c7214eb2",
+        "bytes": 19991
+      },
+      {
+        "file": "GSM6252918.npz",
+        "sha256": "f05dd2a9c94f9e31e3372009920dfa7c27c29de250ceb7f4bbf2205cc0ad4c39",
+        "bytes": 22575
+      },
+      {
+        "file": "GSM6252929.npz",
+        "sha256": "2152d9e34fc12a636f30144230b908454f949b15ca132fbb1d0dfb50c6bbd32a",
+        "bytes": 13834
+      },
+      {
+        "file": "GSM6252930.npz",
+        "sha256": "d106a117e0bf2b2159c77e8819d0172dee78e1b6a9b70323e923977cc8a96028",
+        "bytes": 12871
+      },
+      {
+        "file": "GSM6252941.npz",
+        "sha256": "aca83d6898560e36b369264f4645ba4060864ba3ab366fb95b7fced96387c56f",
+        "bytes": 24488
+      },
+      {
+        "file": "GSM6252942.npz",
+        "sha256": "b4d4c3ae3a92abe86a8ce78784f2806aaebbf75c6a14792528928d778f43cb69",
+        "bytes": 29449
+      },
+      {
+        "file": "GSM6252949.npz",
+        "sha256": "71f8947c4cb369d04490ecf2afa68bef6854151acb0111584c3c695960c3edad",
+        "bytes": 32235
+      },
+      {
+        "file": "GSM6252950.npz",
+        "sha256": "e536fa5913fd6ecaa159ef45a74bd396a506efcf81542383c96ab77f68609223",
+        "bytes": 31645
+      },
+      {
+        "file": "GSM6252953.npz",
+        "sha256": "4d881466a29325c309b40be685c6b0eecd1bff226d960c02e4ac49e751e95688",
+        "bytes": 23079
+      },
+      {
+        "file": "GSM6252954.npz",
+        "sha256": "60f5a877f7ede8d11205a56eb9046f499e9f3fe66b40c42a13f8fda071b6238f",
+        "bytes": 29014
+      },
+      {
+        "file": "GSM6252961.npz",
+        "sha256": "22f6a621579dbc699048921fce9c6f2ff7b20a3c151c713d581e16c8b210ed75",
+        "bytes": 32431
+      },
+      {
+        "file": "GSM6252962.npz",
+        "sha256": "41e8a58b88921e41bc13a156d63b9f089b3a6c1d3ee4f235b38f3a4fadc3837d",
+        "bytes": 46155
+      },
+      {
+        "file": "GSM6252967.npz",
+        "sha256": "df39568b766bf8fbd8212dd3d72de6f397db5a6730c0f60bf7c676240ad7ca79",
+        "bytes": 18974
+      },
+      {
+        "file": "GSM6252968.npz",
+        "sha256": "25cd5282263319e699e3f7c2e442980cf007cf4062a08709528a475f5546e797",
+        "bytes": 26240
+      }
+    ],
+    "accession": "GSE206391",
+    "measurement": "counts",
+    "batch_label": "acquisition batch",
+    "coordinates": "um",
+    "layer": "X",
+    "covariates": "per-file C if available",
+    "selection": "All single-donor lesional capture areas with concordant GEO and per-spot patient assignments for psoriasis or atopic dermatitis. Repeated sections retain their donor ID. NPZ library_size sums the complete archived counts layer before panel selection; square-grid audit uses the physical Visium hex-array addresses."
+  },
+  "n_patients": 8,
+  "n_sections": 16,
+  "n_observations": 12619,
+  "n_features": 32,
+  "dimensions": {
+    "power": {
+      "status": "yellow",
+      "message": "Two-sided doubled-tail permutation resolution.",
+      "n0": 5,
+      "n1": 3,
+      "assignments": "56",
+      "p_floor": 0.03571428571428571,
+      "features": 32,
+      "alpha": 0.05,
+      "minimum_bh_rank": 23,
+      "bh_impossible": false,
+      "nominal_impossible": false,
+      "groups": [
+        "atopic dermatitis",
+        "psoriasis"
+      ],
+      "effective_p_floor": 0.03571428571428571,
+      "effective_minimum_bh_rank": 23,
+      "effective_bh_impossible": false,
+      "executed_mode": "exact",
+      "theoretical_status": "yellow"
+    },
+    "design": {
+      "status": "red",
+      "code": "UNIDENTIFIABLE_DESIGN",
+      "message": "High risk marks categorical aliasing or no observed stage overlap. The linear fixed-effect rank diagnostic is reported separately. Local bounding boxes are coordinate-frame proxies.",
+      "categorical": {
+        "slide_id": {
+          "status": "observed",
+          "label": "slide",
+          "levels": 8,
+          "normalized_mi": 0.9999999999999999,
+          "complete_alias": true,
+          "fisher_p": null,
+          "all_levels_patient_specific": true
+        },
+        "batch": {
+          "status": "observed",
+          "label": "acquisition batch",
+          "levels": 2,
+          "normalized_mi": 0.2087137558162034,
+          "complete_alias": false,
+          "fisher_p": 0.375,
+          "all_levels_patient_specific": false
+        }
+      },
+      "coordinates": {
+        "stage": {
+          "status": "missing"
+        },
+        "bbox": {
+          "linear_separation": false,
+          "descriptive_auc": 0.6666666666666666,
+          "linear_fixed_effect_alias": false
+        }
+      },
+      "joint_acquisition_design": {
+        "fields": [
+          "batch",
+          "slide_id"
+        ],
+        "status": "observed",
+        "relative_residual": 1.500425788462472e-14,
+        "fixed_effect_alias": true
+      },
+      "points": [
+        {
+          "x": 3375.0,
+          "y": 3117.6914536239788,
+          "group": "psoriasis",
+          "patient": "1"
+        },
+        {
+          "x": 1500.0,
+          "y": 3897.114317029974,
+          "group": "psoriasis",
+          "patient": "1"
+        },
+        {
+          "x": 2775.0,
+          "y": 2944.486372867091,
+          "group": "atopic dermatitis",
+          "patient": "2"
+        },
+        {
+          "x": 3075.0,
+          "y": 3334.197804570089,
+          "group": "atopic dermatitis",
+          "patient": "2"
+        },
+        {
+          "x": 1200.0,
+          "y": 3031.088913245535,
+          "group": "atopic dermatitis",
+          "patient": "5"
+        },
+        {
+          "x": 1650.0,
+          "y": 3464.1016151377544,
+          "group": "atopic dermatitis",
+          "patient": "5"
+        },
+        {
+          "x": 4025.0,
+          "y": 2901.185102677869,
+          "group": "atopic dermatitis",
+          "patient": "8"
+        },
+        {
+          "x": 3700.0,
+          "y": 3117.691453623979,
+          "group": "atopic dermatitis",
+          "patient": "8"
+        },
+        {
+          "x": 2800.0,
+          "y": 2814.5825622994253,
+          "group": "psoriasis",
+          "patient": "10"
+        },
+        {
+          "x": 3125.0,
+          "y": 3204.2939940024226,
+          "group": "psoriasis",
+          "patient": "10"
+        },
+        {
+          "x": 3200.0,
+          "y": 3031.088913245535,
+          "group": "atopic dermatitis",
+          "patient": "11"
+        },
+        {
+          "x": 3600.0,
+          "y": 2944.486372867091,
+          "group": "atopic dermatitis",
+          "patient": "11"
+        },
+        {
+          "x": 2675.0,
+          "y": 3507.402885326976,
+          "group": "psoriasis",
+          "patient": "13"
+        },
+        {
+          "x": 3650.0,
+          "y": 2641.3774815425377,
+          "group": "psoriasis",
+          "patient": "13"
+        },
+        {
+          "x": 4125.0,
+          "y": 3031.088913245535,
+          "group": "atopic dermatitis",
+          "patient": "15"
+        },
+        {
+          "x": 4025.0,
+          "y": 3940.4155872191955,
+          "group": "atopic dermatitis",
+          "patient": "15"
+        }
+      ],
+      "points_frame": "local_bbox",
+      "reasons": [
+        "slide_id"
+      ]
+    },
+    "pseudorep": {
+      "status": "red",
+      "message": "Difference in BH call rates across sampling units; true discovery status is unknown for public cohorts.",
+      "spot_rate": 0.90625,
+      "patient_rate": 0.0,
+      "gap": 0.90625,
+      "ratio": null,
+      "zero_denominator": true,
+      "groups": [
+        "atopic dermatitis",
+        "psoriasis"
+      ],
+      "features": [
+        "ACTB",
+        "GAPDH",
+        "RPLP0",
+        "PPIA",
+        "B2M",
+        "EEF1A1",
+        "RPS18",
+        "RPL13A",
+        "EPCAM",
+        "KRT5",
+        "KRT14",
+        "KRT1",
+        "KRT10",
+        "KRT16",
+        "KRT17",
+        "S100A7",
+        "S100A8",
+        "S100A9",
+        "LOR",
+        "FLG",
+        "COL1A1",
+        "COL1A2",
+        "DCN",
+        "LUM",
+        "VIM",
+        "PECAM1",
+        "VWF",
+        "PTPRC",
+        "CD3D",
+        "CD68",
+        "LYZ",
+        "HLA-DRA"
+      ],
+      "spot_p": [
+        3.76412335298829e-22,
+        2.0364024012893285e-06,
+        2.3106055413801882e-20,
+        1.7515627029157675e-22,
+        4.185795191654411e-27,
+        6.235743984564003e-48,
+        1.411298781430716e-35,
+        2.7056793531939257e-32,
+        3.891682940264865e-12,
+        4.4990929833509313e-63,
+        2.463186863998101e-47,
+        2.4822125964541972e-42,
+        3.4642344543023876e-63,
+        5.3777319946060504e-20,
+        2.3911432557267523e-91,
+        1.4239883259613831e-248,
+        0.0,
+        6.889007372645132e-302,
+        1.4113206197622793e-84,
+        1.1309490364535724e-30,
+        6.15443006826997e-109,
+        3.295186948890739e-45,
+        0.18103941620499897,
+        4.186836620915317e-31,
+        8.927450219736533e-28,
+        1.4564405041771455e-36,
+        1.0437989704420956e-12,
+        0.7846667247309473,
+        0.0008112198149193828,
+        0.9286621065054974,
+        3.1205924250954716e-16,
+        0.004816625774051869
+      ],
+      "spot_q": [
+        5.735807014077394e-22,
+        2.4135139570836487e-06,
+        3.360880787462092e-20,
+        2.802500324665228e-22,
+        7.049760322786377e-27,
+        2.2171534167338677e-47,
+        3.225825786127351e-35,
+        5.772115953480375e-32,
+        4.789763618787526e-12,
+        1.7996371933403725e-62,
+        7.882197964793923e-47,
+        6.619233590544526e-42,
+        1.58365003625252e-62,
+        7.482061905538853e-20,
+        1.5303316836651215e-90,
+        1.5189208810254755e-247,
+        0.0,
+        1.1022411796232212e-300,
+        7.527043305398823e-84,
+        2.1288452450890775e-30,
+        4.923544054615976e-108,
+        9.585998396773058e-45,
+        0.19310871061866558,
+        8.373673241830634e-31,
+        1.5871022612864947e-27,
+        3.585084317974512e-36,
+        1.3360626821658824e-12,
+        0.8099785545609779,
+        0.000927108359907866,
+        0.9286621065054974,
+        4.1607899001272954e-16,
+        0.005314897405850338
+      ],
+      "patient": {
+        "method": "exact",
+        "assignments": "56",
+        "evaluations": 56,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.8571428571428571,
+          0.6785714285714286,
+          0.5357142857142857,
+          0.8928571428571429,
+          0.6428571428571429,
+          0.4642857142857143,
+          0.2857142857142857,
+          0.42857142857142855,
+          0.32142857142857145,
+          0.2857142857142857,
+          0.5357142857142857,
+          0.5357142857142857,
+          0.5357142857142857,
+          0.5357142857142857,
+          0.39285714285714285,
+          0.07142857142857142,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.32142857142857145,
+          0.4642857142857143,
+          0.10714285714285714,
+          0.25,
+          0.7142857142857143,
+          0.35714285714285715,
+          0.07142857142857142,
+          0.10714285714285714,
+          0.35714285714285715,
+          1.0,
+          0.4642857142857143,
+          1.0,
+          0.2857142857142857,
+          0.9285714285714286
+        ],
+        "q": [
+          0.9795918367346939,
+          0.8351648351648352,
+          0.7142857142857143,
+          0.9852216748768473,
+          0.822857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.8465608465608466,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143,
+          1.0,
+          0.7142857142857143,
+          1.0,
+          0.7142857142857143,
+          0.9904761904761905
+        ],
+        "statistic": [
+          0.14645377759231343,
+          0.2790280396968772,
+          -0.7490832268815095,
+          -0.3299896639362179,
+          -0.48772145439340125,
+          -0.848882167578284,
+          -0.8589262144077088,
+          -0.7857998771664817,
+          -1.1123375029896385,
+          -1.036505566084446,
+          -0.48678269875959257,
+          -0.731699743236567,
+          -0.7357278523601237,
+          0.5506381917001347,
+          1.0778281793758497,
+          1.8057736003857894,
+          1.6474243603031367,
+          1.6551278149888349,
+          -1.0608701523795254,
+          -0.8764588933632981,
+          1.5358253810450802,
+          1.0286763314969345,
+          -0.5328168590603187,
+          1.0163430642229663,
+          -1.59328900735634,
+          -1.6646380585007148,
+          -0.9309619221729918,
+          -0.10690598340237417,
+          0.6986003457993879,
+          0.058545469187342124,
+          1.1509298002992228,
+          -0.009291681208859343
+        ]
+      }
+    },
+    "composition": {
+      "bands": [
+        {
+          "wavelength_um": 250.0,
+          "share": null,
+          "estimable_features": 0,
+          "supported_sections": 0,
+          "supported_patients": 0,
+          "supported_patients_by_group": {
+            "atopic dermatitis": 0,
+            "psoriasis": 0
+          },
+          "interpretable_sections": 0,
+          "interpretable_patients": 0,
+          "full_coverage": false,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 600.0,
+          "share": null,
+          "estimable_features": 0,
+          "supported_sections": 16,
+          "supported_patients": 8,
+          "supported_patients_by_group": {
+            "atopic dermatitis": 5,
+            "psoriasis": 3
+          },
+          "interpretable_sections": 0,
+          "interpretable_patients": 0,
+          "full_coverage": false,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 1400.0,
+          "share": null,
+          "estimable_features": 0,
+          "supported_sections": 16,
+          "supported_patients": 8,
+          "supported_patients_by_group": {
+            "atopic dermatitis": 5,
+            "psoriasis": 3
+          },
+          "interpretable_sections": 0,
+          "interpretable_patients": 0,
+          "full_coverage": false,
+          "saturated_sections": 0
+        }
+      ],
+      "sections": [
+        {
+          "section_id": "GSM6252913",
+          "patient_id": "1",
+          "group": "psoriasis",
+          "has_covariates": false,
+          "volumes": 720,
+          "pitch_um": 99.99999999999994,
+          "edges": 1230,
+          "connected_components": 5,
+          "largest_2d_span_um": 2850.0,
+          "fov_span_um": [
+            2850.0,
+            4330.127018922193
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 713,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 270.39208729301504,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.07374612421642766
+            },
+            {
+              "supported_volumes": 713,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 56.882781019187135,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.014099962361355248
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252914",
+          "patient_id": "1",
+          "group": "psoriasis",
+          "has_covariates": false,
+          "volumes": 663,
+          "pitch_um": 99.99999999999994,
+          "edges": 1231,
+          "connected_components": 2,
+          "largest_2d_span_um": 2900.0,
+          "fov_span_um": [
+            2900.0,
+            3464.101615137754
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 661,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 243.74362036823092,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06899911172272943
+            },
+            {
+              "supported_volumes": 661,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 53.73748476366949,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.010550768595042944
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252917",
+          "patient_id": "2",
+          "group": "atopic dermatitis",
+          "has_covariates": false,
+          "volumes": 462,
+          "pitch_um": 99.99999999999994,
+          "edges": 811,
+          "connected_components": 6,
+          "largest_2d_span_um": 2250.0,
+          "fov_span_um": [
+            2250.0,
+            3117.691453623979
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 457,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 183.42523191547258,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.07247738513120763
+            },
+            {
+              "supported_volumes": 457,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 39.947219936847354,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.012781761021080045
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252918",
+          "patient_id": "2",
+          "group": "atopic dermatitis",
+          "has_covariates": false,
+          "volumes": 463,
+          "pitch_um": 99.99999999999994,
+          "edges": 847,
+          "connected_components": 2,
+          "largest_2d_span_um": 2085.1186893238155,
+          "fov_span_um": [
+            2150.0,
+            2857.8838324886474
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 462,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 196.09524874176327,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06961216017858296
+            },
+            {
+              "supported_volumes": 462,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 32.62031126144025,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.01228800441202185
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252929",
+          "patient_id": "5",
+          "group": "atopic dermatitis",
+          "has_covariates": false,
+          "volumes": 380,
+          "pitch_um": 99.99999999999994,
+          "edges": 659,
+          "connected_components": 6,
+          "largest_2d_span_um": 1900.0,
+          "fov_span_um": [
+            1900.0,
+            3117.6914536239783
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 372,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 137.33350726093764,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.07394012916927789
+            },
+            {
+              "supported_volumes": 372,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 30.679893167667867,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.013476145267279945
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252930",
+          "patient_id": "5",
+          "group": "atopic dermatitis",
+          "has_covariates": false,
+          "volumes": 409,
+          "pitch_um": 99.99999999999994,
+          "edges": 712,
+          "connected_components": 9,
+          "largest_2d_span_um": 2150.0,
+          "fov_span_um": [
+            2300.0,
+            3117.6914536239783
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 395,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 200.39662211287126,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.07241009359909828
+            },
+            {
+              "supported_volumes": 395,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 37.898584647501075,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.013137371290842664
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252941",
+          "patient_id": "8",
+          "group": "atopic dermatitis",
+          "has_covariates": false,
+          "volumes": 607,
+          "pitch_um": 99.99999999999994,
+          "edges": 1111,
+          "connected_components": 2,
+          "largest_2d_span_um": 2674.3512962890954,
+          "fov_span_um": [
+            3050.0,
+            2684.67875173176
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 606,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 244.48831296997727,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06991015698252719
+            },
+            {
+              "supported_volumes": 606,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 66.4706035995528,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.0120195397881359
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252942",
+          "patient_id": "8",
+          "group": "atopic dermatitis",
+          "has_covariates": false,
+          "volumes": 631,
+          "pitch_um": 99.99999999999994,
+          "edges": 1170,
+          "connected_components": 2,
+          "largest_2d_span_um": 2704.892388785993,
+          "fov_span_um": [
+            3100.0,
+            2771.2812921102036
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 630,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 299.3185341161071,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.0674734822743606
+            },
+            {
+              "supported_volumes": 630,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 37.09448502059403,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.011851722110159254
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252949",
+          "patient_id": "10",
+          "group": "psoriasis",
+          "has_covariates": false,
+          "volumes": 892,
+          "pitch_um": 99.99999999999994,
+          "edges": 1603,
+          "connected_components": 12,
+          "largest_2d_span_um": 3248.2905036601405,
+          "fov_span_um": [
+            4500.0,
+            3550.7041555161977
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 868,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 453.35488924243634,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06934171477331984
+            },
+            {
+              "supported_volumes": 868,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 74.96236094492988,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.012266047475332815
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252950",
+          "patient_id": "10",
+          "group": "psoriasis",
+          "has_covariates": false,
+          "volumes": 889,
+          "pitch_um": 99.99999999999994,
+          "edges": 1583,
+          "connected_components": 11,
+          "largest_2d_span_um": 3150.0,
+          "fov_span_um": [
+            3350.0,
+            5369.35750346352
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 861,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 357.6239283502911,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.07074901737516108
+            },
+            {
+              "supported_volumes": 861,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 73.05624153009457,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.01292098077578629
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252953",
+          "patient_id": "11",
+          "group": "atopic dermatitis",
+          "has_covariates": false,
+          "volumes": 622,
+          "pitch_um": 99.99999999999994,
+          "edges": 1087,
+          "connected_components": 7,
+          "largest_2d_span_um": 2540.5341818641355,
+          "fov_span_um": [
+            3500.0,
+            2598.076211353316
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 616,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 298.34034173787563,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.07265920863194349
+            },
+            {
+              "supported_volumes": 616,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 39.600724091816076,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.013807209619796599
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252954",
+          "patient_id": "11",
+          "group": "atopic dermatitis",
+          "has_covariates": false,
+          "volumes": 801,
+          "pitch_um": 99.99999999999994,
+          "edges": 1512,
+          "connected_components": 1,
+          "largest_2d_span_um": 2954.8214943327193,
+          "fov_span_um": [
+            3300.0,
+            3117.691453623979
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 801,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 327.6094308703184,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06807245449383328
+            },
+            {
+              "supported_volumes": 801,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 42.45048110499289,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.01072000199420038
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252961",
+          "patient_id": "13",
+          "group": "psoriasis",
+          "has_covariates": false,
+          "volumes": 928,
+          "pitch_um": 99.99999999999994,
+          "edges": 1707,
+          "connected_components": 7,
+          "largest_2d_span_um": 3350.0,
+          "fov_span_um": [
+            3350.0,
+            3897.114317029974
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 913,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 400.09027759382934,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06766078661444098
+            },
+            {
+              "supported_volumes": 913,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 44.01684477617044,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.011591631900499465
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252962",
+          "patient_id": "13",
+          "group": "psoriasis",
+          "has_covariates": false,
+          "volumes": 1236,
+          "pitch_um": 99.99999999999994,
+          "edges": 2345,
+          "connected_components": 6,
+          "largest_2d_span_um": 3500.0,
+          "fov_span_um": [
+            3500.0,
+            4589.934640057525
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1231,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 446.42507426507456,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.0666747170047787
+            },
+            {
+              "supported_volumes": 1231,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 89.62449645141555,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.010138316005244391
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252967",
+          "patient_id": "15",
+          "group": "atopic dermatitis",
+          "has_covariates": false,
+          "volumes": 561,
+          "pitch_um": 99.99999999999994,
+          "edges": 962,
+          "connected_components": 18,
+          "largest_2d_span_um": 2338.268590217984,
+          "fov_span_um": [
+            3150.0,
+            4503.332099679081
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 530,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 215.36211477976784,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.07261288745753773
+            },
+            {
+              "supported_volumes": 530,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 39.56878390363226,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.013772243367121255
+            }
+          ]
+        },
+        {
+          "section_id": "GSM6252968",
+          "patient_id": "15",
+          "group": "atopic dermatitis",
+          "has_covariates": false,
+          "volumes": 836,
+          "pitch_um": 99.99999999999994,
+          "edges": 1473,
+          "connected_components": 18,
+          "largest_2d_span_um": 3326.9932510253598,
+          "fov_span_um": [
+            3350.0,
+            4589.934640057524
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 794,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 345.8785880591193,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06866196534771474
+            },
+            {
+              "supported_volumes": 794,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 73.6018824536928,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.013157620445451757
+            }
+          ]
+        }
+      ],
+      "total_patients": 8,
+      "total_patients_by_group": {
+        "atopic dermatitis": 5,
+        "psoriasis": 3
+      },
+      "total_sections": 16,
+      "covariate_sections": 0,
+      "chebyshev_degree": 137,
+      "shared_spectral_bound_per_um2": 0.008192,
+      "status": "yellow",
+      "message": "Feature-averaged explained energy on matched supporting sections, equally weighted within patient and across patients. A connected 2-D footprint must span a wavelength, with wavelength at least pi times the occupied square-grid pitch. Regridding can alter native geometry. Missing covariates, saturated fits and partial coverage limit interpretation."
+    },
+    "nugget": {
+      "groups": [
+        "atopic dermatitis",
+        "psoriasis"
+      ],
+      "features": [
+        {
+          "feature": "ACTB",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "GAPDH",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "RPLP0",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PPIA",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "B2M",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "EEF1A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "RPS18",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "RPL13A",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "EPCAM",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT5",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT14",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT10",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT16",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT17",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "S100A7",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "S100A8",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "S100A9",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "LOR",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "FLG",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL1A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL1A2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "DCN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "LUM",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "VIM",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PECAM1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "VWF",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PTPRC",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD3D",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD68",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "LYZ",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "HLA-DRA",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        }
+      ],
+      "flagged": 0,
+      "patient_energies": [
+        {
+          "patient_id": "1",
+          "group": "psoriasis",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "2",
+          "group": "atopic dermatitis",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "5",
+          "group": "atopic dermatitis",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "8",
+          "group": "atopic dermatitis",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "10",
+          "group": "psoriasis",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "11",
+          "group": "atopic dermatitis",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "13",
+          "group": "psoriasis",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "15",
+          "group": "atopic dermatitis",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ],
+      "evaluated": 0,
+      "status": "yellow",
+      "message": "Fine-band residual energy minus the estimated white-noise contribution is signed. Matched two-step spatial differences model locally smooth signal plus uncorrelated homoscedastic volume noise. Rough signal, heterogeneous noise and unequal occupancy affect this sensitivity screen.",
+      "measurement_scope": {
+        "measurement": "counts",
+        "layer": "X",
+        "interpretation": "Energy, semivariance and attenuation refer to the supplied measurement scale. For log-normalized inputs they describe variability after transformation. The procedure does not fit a negative-binomial count model or identify a noise cause."
+      }
+    }
+  },
+  "statement": "基于公开存档数据，在患者/生物学重复级去混杂框架下的可复现性、统计功效与混杂敏感性审计。"
+}

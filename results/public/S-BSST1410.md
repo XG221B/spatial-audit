@@ -1,0 +1,20 @@
+# S-BSST1410
+
+基于公开存档数据，在患者/生物学重复级去混杂框架下的可复现性、统计功效与混杂敏感性审计。
+
+Biological units 8 · sections 25 · observations 101907
+
+| Dimension | Status | Interpretation |
+|---|---|---|
+| power | yellow | Two-sided doubled-tail permutation resolution. |
+| design | red | High risk marks categorical aliasing or no observed stage overlap. The linear fixed-effect rank diagnostic is reported separately. Local bounding boxes are coordinate-frame proxies. |
+| pseudorep | red | Difference in BH call rates across sampling units; true discovery status is unknown for public cohorts. |
+| composition | yellow | Feature-averaged explained energy on matched supporting sections, equally weighted within patient and across patients. A connected 2-D footprint must span a wavelength, with wavelength at least pi times the occupied square-grid pitch. Regridding can alter native geometry. Missing covariates, saturated fits and partial coverage limit interpretation. |
+| nugget | yellow | Fine-band residual energy minus the estimated white-noise contribution is signed. Matched two-step spatial differences model locally smooth signal plus uncorrelated homoscedastic volume noise. Rough signal, heterogeneous noise and unequal occupancy affect this sensitivity screen. |
+
+Two-sided floor 0.0285714. Spot BH calls 100.0%, patient BH calls 68.8%.
+
+Group tests assume exchangeable patients. Inspect acquisition support before interpretation.
+Energy, semivariance and attenuation refer to the supplied measurement scale. For log-normalized inputs they describe variability after transformation. The procedure does not fit a negative-binomial count model or identify a noise cause.
+
+https://www.ebi.ac.uk/biostudies/studies/S-BSST1410

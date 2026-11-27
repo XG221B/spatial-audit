@@ -1,0 +1,14 @@
+{
+  "kind": "public",
+  "files": [
+    {
+      "name": "GSE220442_series.soft",
+      "accession": "GSE220442",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE220442&targ=self&form=text&view=brief",
+      "bytes": 4212,
+      "sha256": "010ecdfda9e9b53e9b1c7ad3d04fe9ca9483f1410f80cd5b658cc4e729c6a544",
+      "reference_digest_matched": false
+    }
+  ],
+  "checked_utc": "2026-11-27T09:11:53.911636+00:00"
+}

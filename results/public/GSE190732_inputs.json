@@ -1,0 +1,207 @@
+{
+  "kind": "public",
+  "accession": "GSE190732",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190732",
+  "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9922044/",
+  "donor_source": "Methods, Spatial transcriptomics; Fig. 1, each column represents paired consecutive sections of one donor.",
+  "selection": "Prolonged COVID-19 versus non-COVID pneumonia control cases in the deposited autopsy lung study. Predefined lung epithelial, vascular, immune, matrix and housekeeping panel. Filtered matrix barcodes joined to canonical Visium v1 addresses validated against two manufacturer datasets. Acquisition stage and cell composition unavailable.",
+  "screening": [
+    {
+      "section_id": "GSM5729897",
+      "patient_id": "control case 1",
+      "group": "non-COVID-19-related pneumonia",
+      "selected": true,
+      "file": "GSM5729897_control_case_1_filtered_feature_bc_matrix.h5",
+      "matched_barcodes": 2825
+    },
+    {
+      "section_id": "GSM5729898",
+      "patient_id": "acute case 2",
+      "group": "acute COVID-19",
+      "selected": false,
+      "file": "GSM5729898_acute_case_2_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "section_id": "GSM5729899",
+      "patient_id": "chronic case 1",
+      "group": "chronic COVID-19",
+      "selected": false,
+      "file": "GSM5729899_chronic_case_1_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "section_id": "GSM5729900",
+      "patient_id": "prolonged case 5",
+      "group": "prolonged COVID-19",
+      "selected": true,
+      "file": "GSM5729900_prolonged_case_5_filtered_feature_bc_matrix.h5",
+      "matched_barcodes": 3378
+    },
+    {
+      "section_id": "GSM5729901",
+      "patient_id": "control case 2",
+      "group": "non-COVID-19-related pneumonia",
+      "selected": true,
+      "file": "GSM5729901_control_case_2_filtered_feature_bc_matrix.h5",
+      "matched_barcodes": 2075
+    },
+    {
+      "section_id": "GSM5729902",
+      "patient_id": "acute case 1",
+      "group": "acute COVID-19",
+      "selected": false,
+      "file": "GSM5729902_acute_case_1_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "section_id": "GSM5729903",
+      "patient_id": "chronic case 5",
+      "group": "chronic COVID-19",
+      "selected": false,
+      "file": "GSM5729903_chronic_case_5_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "section_id": "GSM5729904",
+      "patient_id": "prolonged case 3",
+      "group": "prolonged COVID-19",
+      "selected": true,
+      "file": "GSM5729904_prolonged_case_3_filtered_feature_bc_matrix.h5",
+      "matched_barcodes": 3027
+    },
+    {
+      "section_id": "GSM5729905",
+      "patient_id": "control case 3",
+      "group": "non-COVID-19-related pneumonia",
+      "selected": true,
+      "file": "GSM5729905_control_case_3_filtered_feature_bc_matrix.h5",
+      "matched_barcodes": 2571
+    },
+    {
+      "section_id": "GSM5729906",
+      "patient_id": "acute case 3",
+      "group": "acute COVID-19",
+      "selected": false,
+      "file": "GSM5729906_acute_case_3_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "section_id": "GSM5729907",
+      "patient_id": "chronic case 2",
+      "group": "chronic COVID-19",
+      "selected": false,
+      "file": "GSM5729907_chronic_case_2_filtered_feature_bc_matrix.h5"
+    },
+    {
+      "section_id": "GSM5729908",
+      "patient_id": "prolonged case 4",
+      "group": "prolonged COVID-19",
+      "selected": true,
+      "file": "GSM5729908_prolonged_case_4_filtered_feature_bc_matrix.h5",
+      "matched_barcodes": 2840
+    }
+  ],
+  "physical_calibration": "https://cdn.10xgenomics.com/image/upload/v1758134784/support-documents/CG000686_VisiumHDSpatialApplicationsPerformance_TechnicalNote_RevB.pdf",
+  "reference_addresses": 4992,
+  "chemistry_verified": "Spatial 3' v1",
+  "reference_fields_used": [
+    "barcode",
+    "array_row",
+    "array_col"
+  ],
+  "panel": [
+    "ACTB",
+    "GAPDH",
+    "RPLP0",
+    "PPIA",
+    "B2M",
+    "EEF1A1",
+    "RPS18",
+    "RPL13A",
+    "EPCAM",
+    "KRT5",
+    "KRT8",
+    "KRT18",
+    "KRT19",
+    "SFTPA1",
+    "SFTPA2",
+    "SFTPB",
+    "SFTPC",
+    "AGER",
+    "COL1A1",
+    "COL1A2",
+    "COL3A1",
+    "DCN",
+    "LUM",
+    "VIM",
+    "PECAM1",
+    "VWF",
+    "ACTA2",
+    "PTPRC",
+    "CD3D",
+    "CD68",
+    "LYZ",
+    "HLA-DRA"
+  ],
+  "files": [
+    {
+      "name": "GSE190732_samples.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190732&targ=gsm&form=text&view=full",
+      "bytes": 50240,
+      "sha256": "0ecf11cdc00ed9a2fe19394699232e39952ae9f1fd5df0020e2e4b21ad67c96a",
+      "role": "audit_input"
+    },
+    {
+      "name": "V1_Breast_Cancer_Block_A_Section_1_spatial.tar.gz",
+      "url": "https://cf.10xgenomics.com/samples/spatial-exp/1.1.0/V1_Breast_Cancer_Block_A_Section_1/V1_Breast_Cancer_Block_A_Section_1_spatial.tar.gz",
+      "bytes": 9960960,
+      "sha256": "415530a9d31172f63fd358d5d1cefb0798698ef9c0e614f52825894cd45c61bf",
+      "role": "audit_input"
+    },
+    {
+      "name": "V1_Human_Lymph_Node_spatial.tar.gz",
+      "url": "https://cf.10xgenomics.com/samples/spatial-exp/1.1.0/V1_Human_Lymph_Node/V1_Human_Lymph_Node_spatial.tar.gz",
+      "bytes": 8246238,
+      "sha256": "812808883366ff9623dc8354847a7211b0d922b2bfc4c9359d6e12e993ea6a73",
+      "role": "audit_input"
+    },
+    {
+      "name": "GSM5729897_control_case_1_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5729nnn/GSM5729897/suppl/GSM5729897_control_case_1_filtered_feature_bc_matrix.h5",
+      "bytes": 3626282,
+      "sha256": "521afeda9cd86eeeef1abf385bf83d4561b2c222ddf117fc38018a814298b2d2",
+      "role": "audit_input"
+    },
+    {
+      "name": "GSM5729900_prolonged_case_5_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5729nnn/GSM5729900/suppl/GSM5729900_prolonged_case_5_filtered_feature_bc_matrix.h5",
+      "bytes": 8156907,
+      "sha256": "0ccffa3f15321cbc3d856ff80febaab53bdce56a45672a46eaa6831a6357efec",
+      "role": "audit_input"
+    },
+    {
+      "name": "GSM5729901_control_case_2_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5729nnn/GSM5729901/suppl/GSM5729901_control_case_2_filtered_feature_bc_matrix.h5",
+      "bytes": 5964398,
+      "sha256": "56be6997c04b9efba1f15981bb35a0ceff44e9712f0c6005a9b5b92ae219293c",
+      "role": "audit_input"
+    },
+    {
+      "name": "GSM5729904_prolonged_case_3_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5729nnn/GSM5729904/suppl/GSM5729904_prolonged_case_3_filtered_feature_bc_matrix.h5",
+      "bytes": 8083641,
+      "sha256": "736e8b0db78e66659cb07ed5c177ad2161526cb40e217c521a03bbd3ea43d44a",
+      "role": "audit_input"
+    },
+    {
+      "name": "GSM5729905_control_case_3_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5729nnn/GSM5729905/suppl/GSM5729905_control_case_3_filtered_feature_bc_matrix.h5",
+      "bytes": 4577216,
+      "sha256": "33c543c19d2abead780b55446eb7ac79c6b95cd07a68a4f4faf326d767b26c99",
+      "role": "audit_input"
+    },
+    {
+      "name": "GSM5729908_prolonged_case_4_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5729nnn/GSM5729908/suppl/GSM5729908_prolonged_case_4_filtered_feature_bc_matrix.h5",
+      "bytes": 8802198,
+      "sha256": "6c1791bcc0c9dd03ae777281f21434efc7aedebc9ae85c337a59811db8c5562c",
+      "role": "audit_input"
+    }
+  ]
+}

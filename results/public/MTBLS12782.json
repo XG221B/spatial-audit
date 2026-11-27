@@ -1,0 +1,2610 @@
+{
+  "schema_version": 1,
+  "id": "MTBLS12782",
+  "kind": "public",
+  "platform": "MALDI-MSI",
+  "source": "https://www.ebi.ac.uk/metabolights/MTBLS12782",
+  "accession": "MTBLS12782",
+  "provenance": {
+    "inputs": [
+      {
+        "file": "5.npz",
+        "sha256": "32c844947abf384a8a8013535679b6cf327011688ae7136ad5cb63d5ab0f65a4",
+        "bytes": 1126382
+      },
+      {
+        "file": "32.npz",
+        "sha256": "d7aea91452148c1adb1c43e0e1cdf90e28cc1edc196f93d8a15d9f58fb019750",
+        "bytes": 562179
+      },
+      {
+        "file": "37.npz",
+        "sha256": "1e8f8ff44f3d642e42e007128737a6df35848aad040edd697a8557ff9e7c6629",
+        "bytes": 844224
+      },
+      {
+        "file": "40.npz",
+        "sha256": "baa3b6a27d3e3206f64404db996a6cedf00ba5a59aa977a5a0c503963c4bd61b",
+        "bytes": 487153
+      },
+      {
+        "file": "98.npz",
+        "sha256": "75d31f58503a8ed9ec9a8d30ecc6763b3a38dfac8ffcbc0bbbd8c39e10245103",
+        "bytes": 1254455
+      },
+      {
+        "file": "7.npz",
+        "sha256": "0580ab7d36cf3707640d889dddfa8237e62b491316165ac8c0d01feac971dc4e",
+        "bytes": 971707
+      },
+      {
+        "file": "17.npz",
+        "sha256": "7ff39f2d76a42c91ac5179a61a4a9d793ecb7feb05aba7fb9ef133a4493af37b",
+        "bytes": 1247134
+      },
+      {
+        "file": "28.npz",
+        "sha256": "edfd073b75b61385719ae806c96e7ef31961e19c97d63db6515f930c966cbecd",
+        "bytes": 960631
+      },
+      {
+        "file": "29.npz",
+        "sha256": "f181f7fb86cbab991b2d4ee2c0b848014509d5613921064d33e247934b3818fb",
+        "bytes": 996939
+      },
+      {
+        "file": "33.npz",
+        "sha256": "21603c4fe8480988dad2ca04ff301a5f60b4884f5ba811d7112819a568c774ab",
+        "bytes": 1093264
+      }
+    ],
+    "preprocessing_evidence": "MTBLS12782_inputs.json",
+    "accession": "MTBLS12782",
+    "measurement": "intensity",
+    "batch_label": "acquisition batch",
+    "coordinates": "um",
+    "layer": "positive-mode centroid intensities summed in closed target windows",
+    "covariates": [
+      "full positive-spectrum total ion current",
+      "within-section centered raster x (um)",
+      "within-section centered raster y (um)"
+    ],
+    "selection": "Equally spaced rank quantiles of unique positive MAF mass_to_charge values; no labels, intensities or fold changes used in rank selection. The archive MAF itself is study-specific."
+  },
+  "preprocessing_evidence": "MTBLS12782_inputs.json",
+  "n_patients": 10,
+  "n_sections": 10,
+  "n_observations": 96401,
+  "n_features": 32,
+  "dimensions": {
+    "power": {
+      "status": "yellow",
+      "message": "Two-sided doubled-tail permutation resolution.",
+      "n0": 5,
+      "n1": 5,
+      "assignments": "252",
+      "p_floor": 0.007936507936507936,
+      "features": 32,
+      "alpha": 0.05,
+      "minimum_bh_rank": 6,
+      "bh_impossible": false,
+      "nominal_impossible": false,
+      "groups": [
+        "PDAC with diabetes",
+        "PDAC without diabetes"
+      ],
+      "effective_p_floor": 0.007936507936507936,
+      "effective_minimum_bh_rank": 6,
+      "effective_bh_impossible": false,
+      "executed_mode": "exact",
+      "theoretical_status": "yellow"
+    },
+    "design": {
+      "status": "yellow",
+      "code": null,
+      "message": "High risk marks categorical aliasing or no observed stage overlap. The linear fixed-effect rank diagnostic is reported separately. Local bounding boxes are coordinate-frame proxies.",
+      "categorical": {
+        "slide_id": {
+          "status": "missing_or_partial"
+        },
+        "batch": {
+          "status": "missing_or_partial"
+        }
+      },
+      "coordinates": {
+        "stage": {
+          "status": "missing"
+        },
+        "bbox": {
+          "linear_separation": false,
+          "descriptive_auc": 0.6,
+          "linear_fixed_effect_alias": false
+        }
+      },
+      "joint_acquisition_design": {
+        "fields": [],
+        "status": "missing",
+        "relative_residual": null,
+        "fixed_effect_alias": null
+      },
+      "points": [
+        {
+          "x": 3200.0,
+          "y": 3425.0,
+          "group": "PDAC without diabetes",
+          "patient": "PDAC_5"
+        },
+        {
+          "x": 2150.0,
+          "y": 2300.0,
+          "group": "PDAC without diabetes",
+          "patient": "PDAC_32"
+        },
+        {
+          "x": 2650.0,
+          "y": 2900.0,
+          "group": "PDAC without diabetes",
+          "patient": "PDAC_37"
+        },
+        {
+          "x": 2175.0,
+          "y": 2050.0,
+          "group": "PDAC without diabetes",
+          "patient": "PDAC_40"
+        },
+        {
+          "x": 4075.0,
+          "y": 2775.0,
+          "group": "PDAC without diabetes",
+          "patient": "PDAC_98"
+        },
+        {
+          "x": 3225.0,
+          "y": 2750.0,
+          "group": "PDAC with diabetes",
+          "patient": "PDAC_7"
+        },
+        {
+          "x": 3150.0,
+          "y": 3375.0,
+          "group": "PDAC with diabetes",
+          "patient": "PDAC_17"
+        },
+        {
+          "x": 3225.0,
+          "y": 2800.0,
+          "group": "PDAC with diabetes",
+          "patient": "PDAC_28"
+        },
+        {
+          "x": 3400.0,
+          "y": 2875.0,
+          "group": "PDAC with diabetes",
+          "patient": "PDAC_29"
+        },
+        {
+          "x": 2975.0,
+          "y": 2700.0,
+          "group": "PDAC with diabetes",
+          "patient": "PDAC_33"
+        }
+      ],
+      "points_frame": "local_bbox",
+      "reasons": []
+    },
+    "pseudorep": {
+      "status": "red",
+      "message": "Difference in BH call rates across sampling units; true discovery status is unknown for public cohorts.",
+      "spot_rate": 1.0,
+      "patient_rate": 0.0,
+      "gap": 1.0,
+      "ratio": null,
+      "zero_denominator": true,
+      "groups": [
+        "PDAC with diabetes",
+        "PDAC without diabetes"
+      ],
+      "features": [
+        "mz_124.99920",
+        "mz_153.06490",
+        "mz_178.00810",
+        "mz_199.09190",
+        "mz_224.10430",
+        "mz_253.91800",
+        "mz_268.90040",
+        "mz_289.16240",
+        "mz_318.93780",
+        "mz_350.09020",
+        "mz_369.20920",
+        "mz_413.15720",
+        "mz_461.25940",
+        "mz_485.26280",
+        "mz_508.37180",
+        "mz_534.29630",
+        "mz_553.31110",
+        "mz_576.22630",
+        "mz_611.21900",
+        "mz_652.46680",
+        "mz_688.39490",
+        "mz_724.59670",
+        "mz_747.60710",
+        "mz_782.67700",
+        "mz_804.65210",
+        "mz_830.67410",
+        "mz_873.52130",
+        "mz_889.69830",
+        "mz_926.53320",
+        "mz_963.47580",
+        "mz_1033.76450",
+        "mz_1257.78760"
+      ],
+      "spot_p": [
+        6.403365283006128e-169,
+        6.859629496843525e-24,
+        1.1036975625143698e-273,
+        2.746706713735114e-20,
+        1.5923817119392643e-06,
+        0.0,
+        0.0,
+        2.3722456884047966e-09,
+        0.0,
+        2.0737217348430405e-12,
+        7.943137435555373e-55,
+        4.503965324949039e-24,
+        8.640217656722892e-181,
+        1.2589069104395483e-295,
+        0.0,
+        0.0,
+        6.7424116618538665e-34,
+        0.0,
+        1.8502462064967497e-30,
+        0.0,
+        0.0,
+        6.55937601829774e-47,
+        0.0,
+        0.0,
+        2.3975437078586815e-133,
+        0.0004055406212464934,
+        1.0905167836043724e-283,
+        4.630930369639835e-137,
+        5.746248659803929e-42,
+        0.0,
+        0.0,
+        3.0497579411934296e-235
+      ],
+      "spot_q": [
+        1.1383760503122005e-168,
+        8.129931255518253e-24,
+        2.3545548000306553e-273,
+        3.139093387125845e-20,
+        1.643748863937305e-06,
+        0.0,
+        0.0,
+        2.5303954009651163e-09,
+        0.0,
+        2.2882446729302518e-12,
+        1.2103828473227234e-54,
+        5.543341938398817e-24,
+        1.6263939118537208e-180,
+        3.0988477795435034e-295,
+        0.0,
+        0.0,
+        8.989882215805155e-34,
+        0.0,
+        2.3683151443158396e-30,
+        0.0,
+        0.0,
+        9.54091057206944e-47,
+        0.0,
+        0.0,
+        3.83606993257389e-133,
+        0.0004055406212464934,
+        2.4926097910957086e-283,
+        7.7994616751828795e-137,
+        7.994780744075032e-42,
+        0.0,
+        0.0,
+        6.099515882386859e-235
+      ],
+      "patient": {
+        "method": "exact",
+        "assignments": "252",
+        "evaluations": 252,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.25396825396825395,
+          0.4444444444444444,
+          0.14285714285714285,
+          0.9285714285714286,
+          0.9285714285714286,
+          0.031746031746031744,
+          0.023809523809523808,
+          0.5873015873015873,
+          0.23015873015873015,
+          0.7380952380952381,
+          0.14285714285714285,
+          0.3412698412698413,
+          0.49206349206349204,
+          0.6666666666666666,
+          0.29365079365079366,
+          0.4603174603174603,
+          0.5952380952380952,
+          0.047619047619047616,
+          0.6031746031746031,
+          0.2777777777777778,
+          0.031746031746031744,
+          0.16666666666666666,
+          0.07142857142857142,
+          0.031746031746031744,
+          0.015873015873015872,
+          1.0,
+          0.031746031746031744,
+          0.46825396825396826,
+          0.9444444444444444,
+          0.40476190476190477,
+          0.5714285714285714,
+          0.23809523809523808
+        ],
+        "q": [
+          0.5804988662131519,
+          0.7135298563869993,
+          0.45714285714285713,
+          0.974910394265233,
+          0.974910394265233,
+          0.1693121693121693,
+          0.1693121693121693,
+          0.7423687423687423,
+          0.5804988662131519,
+          0.8435374149659864,
+          0.45714285714285713,
+          0.642390289449113,
+          0.7157287157287157,
+          0.7901234567901234,
+          0.5873015873015873,
+          0.7135298563869993,
+          0.7423687423687423,
+          0.21768707482993196,
+          0.7423687423687423,
+          0.5873015873015873,
+          0.1693121693121693,
+          0.4848484848484848,
+          0.2857142857142857,
+          0.1693121693121693,
+          0.1693121693121693,
+          1.0,
+          0.1693121693121693,
+          0.7135298563869993,
+          0.974910394265233,
+          0.7135298563869993,
+          0.7423687423687423,
+          0.5804988662131519
+        ],
+        "statistic": [
+          1.280042642142486,
+          -0.775941474526475,
+          1.41850923853206,
+          -0.1255069988942074,
+          -0.12242611298416942,
+          1.942525093995015,
+          2.221808725319216,
+          0.5331698377200155,
+          1.165249343721477,
+          -0.32219742231630466,
+          1.4126090213076854,
+          0.9612638307858917,
+          0.5755734867064928,
+          0.14740136305074786,
+          1.079421933986509,
+          0.8571882611121974,
+          -0.5537062666907724,
+          1.5768427763570003,
+          0.5440316916672338,
+          -1.0874000725336266,
+          2.039578513204673,
+          -1.3364484713793405,
+          1.7303676054688542,
+          -2.1130192256809024,
+          -2.0329716928726556,
+          -0.005330121295389234,
+          -2.068304059810839,
+          0.7124301967961482,
+          0.08904930431534348,
+          0.8286266945530307,
+          0.601560364813527,
+          1.2092524133840972
+        ]
+      }
+    },
+    "composition": {
+      "bands": [
+        {
+          "wavelength_um": 250.0,
+          "share": 0.09750752554882225,
+          "estimable_features": 32,
+          "supported_sections": 10,
+          "supported_patients": 10,
+          "supported_patients_by_group": {
+            "PDAC with diabetes": 5,
+            "PDAC without diabetes": 5
+          },
+          "interpretable_sections": 10,
+          "interpretable_patients": 10,
+          "full_coverage": true,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 600.0,
+          "share": 0.31999097820720984,
+          "estimable_features": 32,
+          "supported_sections": 10,
+          "supported_patients": 10,
+          "supported_patients_by_group": {
+            "PDAC with diabetes": 5,
+            "PDAC without diabetes": 5
+          },
+          "interpretable_sections": 10,
+          "interpretable_patients": 10,
+          "full_coverage": true,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 1400.0,
+          "share": 0.45091818542577183,
+          "estimable_features": 32,
+          "supported_sections": 10,
+          "supported_patients": 10,
+          "supported_patients_by_group": {
+            "PDAC with diabetes": 5,
+            "PDAC without diabetes": 5
+          },
+          "interpretable_sections": 10,
+          "interpretable_patients": 10,
+          "full_coverage": true,
+          "saturated_sections": 0
+        }
+      ],
+      "sections": [
+        {
+          "section_id": "PDAC_5",
+          "patient_id": "PDAC_5",
+          "group": "PDAC without diabetes",
+          "has_covariates": true,
+          "volumes": 11077,
+          "pitch_um": 50.0,
+          "edges": 21875,
+          "connected_components": 1,
+          "largest_2d_span_um": 6126.539118191311,
+          "fov_span_um": [
+            6400.0,
+            6850.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09704468294099383,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            3,
+            3,
+            3
+          ],
+          "two_step_edges": 21598,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 11077,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 8450.690965858601,
+              "projected_white_fraction": 0.0002842332327787527,
+              "saturated": false,
+              "residual_white_gain": 0.09704468294099383
+            },
+            {
+              "supported_volumes": 11077,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 877.7788796635892,
+              "projected_white_fraction": 0.002997671159691104,
+              "saturated": false,
+              "residual_white_gain": 0.01193118527402449
+            },
+            {
+              "supported_volumes": 11077,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 226.79902735784708,
+              "projected_white_fraction": 0.013823572895503088,
+              "saturated": false,
+              "residual_white_gain": 0.002204418693020183
+            }
+          ]
+        },
+        {
+          "section_id": "PDAC_32",
+          "patient_id": "PDAC_32",
+          "group": "PDAC without diabetes",
+          "has_covariates": true,
+          "volumes": 5611,
+          "pitch_um": 50.0,
+          "edges": 11023,
+          "connected_components": 1,
+          "largest_2d_span_um": 3843.11653077942,
+          "fov_span_um": [
+            4300.0,
+            4600.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09770149470777174,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            3,
+            3,
+            3
+          ],
+          "two_step_edges": 10825,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 5611,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 5071.5119700504665,
+              "projected_white_fraction": 0.0003497171825852788,
+              "saturated": false,
+              "residual_white_gain": 0.09770149470777174
+            },
+            {
+              "supported_volumes": 5611,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 480.3796705811232,
+              "projected_white_fraction": 0.005496721395694962,
+              "saturated": false,
+              "residual_white_gain": 0.011979888571311548
+            },
+            {
+              "supported_volumes": 5611,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 79.10520849197009,
+              "projected_white_fraction": 0.018007649454242994,
+              "saturated": false,
+              "residual_white_gain": 0.0021273453440453947
+            }
+          ]
+        },
+        {
+          "section_id": "PDAC_37",
+          "patient_id": "PDAC_37",
+          "group": "PDAC without diabetes",
+          "has_covariates": true,
+          "volumes": 8320,
+          "pitch_um": 50.0,
+          "edges": 16409,
+          "connected_components": 1,
+          "largest_2d_span_um": 5300.0,
+          "fov_span_um": [
+            5300.0,
+            5800.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09737910161463496,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            3,
+            3,
+            3
+          ],
+          "two_step_edges": 16182,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 8320,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 8319.0,
+              "projected_white_fraction": 0.0004649221003315,
+              "saturated": false,
+              "residual_white_gain": 0.09737910161463496
+            },
+            {
+              "supported_volumes": 8320,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 585.7500654598979,
+              "projected_white_fraction": 0.001417107391747433,
+              "saturated": false,
+              "residual_white_gain": 0.01231596113990228
+            },
+            {
+              "supported_volumes": 8320,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 113.86767858988871,
+              "projected_white_fraction": 0.011879653383412304,
+              "saturated": false,
+              "residual_white_gain": 0.0021194786728555523
+            }
+          ]
+        },
+        {
+          "section_id": "PDAC_40",
+          "patient_id": "PDAC_40",
+          "group": "PDAC without diabetes",
+          "has_covariates": true,
+          "volumes": 4783,
+          "pitch_um": 50.0,
+          "edges": 9391,
+          "connected_components": 1,
+          "largest_2d_span_um": 3447.4046114309162,
+          "fov_span_um": [
+            4350.0,
+            4100.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09697063341972387,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            3,
+            3,
+            3
+          ],
+          "two_step_edges": 9217,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 4783,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 3439.0125058412887,
+              "projected_white_fraction": 0.0004173683444739248,
+              "saturated": false,
+              "residual_white_gain": 0.09697063341972387
+            },
+            {
+              "supported_volumes": 4783,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 361.70429297320527,
+              "projected_white_fraction": 0.004814710838106528,
+              "saturated": false,
+              "residual_white_gain": 0.012145507342733945
+            },
+            {
+              "supported_volumes": 4783,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 67.88528730468558,
+              "projected_white_fraction": 0.02300955316016888,
+              "saturated": false,
+              "residual_white_gain": 0.0021730135988608733
+            }
+          ]
+        },
+        {
+          "section_id": "PDAC_98",
+          "patient_id": "PDAC_98",
+          "group": "PDAC without diabetes",
+          "has_covariates": true,
+          "volumes": 12473,
+          "pitch_um": 50.0,
+          "edges": 24609,
+          "connected_components": 1,
+          "largest_2d_span_um": 5522.496251077664,
+          "fov_span_um": [
+            8150.0,
+            5550.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09720796320484612,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            3,
+            3,
+            3
+          ],
+          "two_step_edges": 24280,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 12473,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 12472.0,
+              "projected_white_fraction": 0.00011953438781063824,
+              "saturated": false,
+              "residual_white_gain": 0.09720796320484612
+            },
+            {
+              "supported_volumes": 12473,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 676.2188037650034,
+              "projected_white_fraction": 0.001466956571789048,
+              "saturated": false,
+              "residual_white_gain": 0.01196544168458233
+            },
+            {
+              "supported_volumes": 12473,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 219.35320304788337,
+              "projected_white_fraction": 0.00639253055599279,
+              "saturated": false,
+              "residual_white_gain": 0.0021319991880257147
+            }
+          ]
+        },
+        {
+          "section_id": "PDAC_7",
+          "patient_id": "PDAC_7",
+          "group": "PDAC with diabetes",
+          "has_covariates": true,
+          "volumes": 9753,
+          "pitch_um": 50.0,
+          "edges": 19215,
+          "connected_components": 1,
+          "largest_2d_span_um": 5500.0,
+          "fov_span_um": [
+            6450.0,
+            5500.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09743789745904569,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            3,
+            3,
+            3
+          ],
+          "two_step_edges": 18926,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 9753,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 9399.344740642551,
+              "projected_white_fraction": 0.00014032068039931703,
+              "saturated": false,
+              "residual_white_gain": 0.09743789745904569
+            },
+            {
+              "supported_volumes": 9753,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 903.1157205738081,
+              "projected_white_fraction": 0.0020808117573622113,
+              "saturated": false,
+              "residual_white_gain": 0.012042725582120852
+            },
+            {
+              "supported_volumes": 9753,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 144.27661363772108,
+              "projected_white_fraction": 0.009278120677844604,
+              "saturated": false,
+              "residual_white_gain": 0.002218575202652529
+            }
+          ]
+        },
+        {
+          "section_id": "PDAC_17",
+          "patient_id": "PDAC_17",
+          "group": "PDAC with diabetes",
+          "has_covariates": true,
+          "volumes": 13014,
+          "pitch_um": 50.0,
+          "edges": 25764,
+          "connected_components": 1,
+          "largest_2d_span_um": 6252.899718673276,
+          "fov_span_um": [
+            6300.0,
+            6750.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09687861712114715,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            3,
+            3,
+            3
+          ],
+          "two_step_edges": 25500,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 13014,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 12490.450548288165,
+              "projected_white_fraction": 0.00015270910979399698,
+              "saturated": false,
+              "residual_white_gain": 0.09687861712114715
+            },
+            {
+              "supported_volumes": 13014,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 1042.9475838214519,
+              "projected_white_fraction": 0.002138221528127354,
+              "saturated": false,
+              "residual_white_gain": 0.011836564203273949
+            },
+            {
+              "supported_volumes": 13014,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 183.71286749037495,
+              "projected_white_fraction": 0.012859332981728972,
+              "saturated": false,
+              "residual_white_gain": 0.002079038598828798
+            }
+          ]
+        },
+        {
+          "section_id": "PDAC_28",
+          "patient_id": "PDAC_28",
+          "group": "PDAC with diabetes",
+          "has_covariates": true,
+          "volumes": 10211,
+          "pitch_um": 50.0,
+          "edges": 20147,
+          "connected_components": 1,
+          "largest_2d_span_um": 5600.0,
+          "fov_span_um": [
+            6450.0,
+            5600.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09721228089148466,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            3,
+            3,
+            3
+          ],
+          "two_step_edges": 19878,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 10211,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 9228.84538896951,
+              "projected_white_fraction": 0.00028389805273578767,
+              "saturated": false,
+              "residual_white_gain": 0.09721228089148466
+            },
+            {
+              "supported_volumes": 10211,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 755.5323307256497,
+              "projected_white_fraction": 0.0011893260924581716,
+              "saturated": false,
+              "residual_white_gain": 0.011927973454732418
+            },
+            {
+              "supported_volumes": 10211,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 184.80707946359772,
+              "projected_white_fraction": 0.0051138960537900815,
+              "saturated": false,
+              "residual_white_gain": 0.002093628222335285
+            }
+          ]
+        },
+        {
+          "section_id": "PDAC_29",
+          "patient_id": "PDAC_29",
+          "group": "PDAC with diabetes",
+          "has_covariates": true,
+          "volumes": 10335,
+          "pitch_um": 50.0,
+          "edges": 20394,
+          "connected_components": 2,
+          "largest_2d_span_um": 5710.874737022438,
+          "fov_span_um": [
+            6800.0,
+            5750.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09673617238101859,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            3,
+            3,
+            3
+          ],
+          "two_step_edges": 20125,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 10333,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 10332.0,
+              "projected_white_fraction": 0.0002445943529634098,
+              "saturated": false,
+              "residual_white_gain": 0.09673617238101859
+            },
+            {
+              "supported_volumes": 10333,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 844.3113765940277,
+              "projected_white_fraction": 0.0033535094124966963,
+              "saturated": false,
+              "residual_white_gain": 0.012157281845620323
+            },
+            {
+              "supported_volumes": 10333,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 148.2049111233157,
+              "projected_white_fraction": 0.007919087783663197,
+              "saturated": false,
+              "residual_white_gain": 0.002207244445569016
+            }
+          ]
+        },
+        {
+          "section_id": "PDAC_33",
+          "patient_id": "PDAC_33",
+          "group": "PDAC with diabetes",
+          "has_covariates": true,
+          "volumes": 10824,
+          "pitch_um": 50.0,
+          "edges": 21403,
+          "connected_components": 1,
+          "largest_2d_span_um": 5400.0,
+          "fov_span_um": [
+            5950.0,
+            5400.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09705621232400422,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            3,
+            3,
+            3
+          ],
+          "two_step_edges": 21160,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 10824,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 10823.0,
+              "projected_white_fraction": 0.0002315819557880728,
+              "saturated": false,
+              "residual_white_gain": 0.09705621232400422
+            },
+            {
+              "supported_volumes": 10824,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 1012.5353122404478,
+              "projected_white_fraction": 0.002523891651367522,
+              "saturated": false,
+              "residual_white_gain": 0.011948972715832843
+            },
+            {
+              "supported_volumes": 10824,
+              "supported_components": 1,
+              "projection_rank": 3,
+              "effective_spectral_dimension": 150.99721760792292,
+              "projected_white_fraction": 0.011874210327863828,
+              "saturated": false,
+              "residual_white_gain": 0.0020118901933954907
+            }
+          ]
+        }
+      ],
+      "total_patients": 10,
+      "total_patients_by_group": {
+        "PDAC with diabetes": 5,
+        "PDAC without diabetes": 5
+      },
+      "total_sections": 10,
+      "covariate_sections": 10,
+      "chebyshev_degree": 137,
+      "shared_spectral_bound_per_um2": 0.008192,
+      "status": "yellow",
+      "message": "Feature-averaged explained energy on matched supporting sections, equally weighted within patient and across patients. A connected 2-D footprint must span a wavelength, with wavelength at least pi times the occupied square-grid pitch. Regridding can alter native geometry. Missing covariates, saturated fits and partial coverage limit interpretation."
+    },
+    "nugget": {
+      "groups": [
+        "PDAC with diabetes",
+        "PDAC without diabetes"
+      ],
+      "features": [
+        {
+          "feature": "mz_124.99920",
+          "raw_delta": 4.482290138695767,
+          "debiased_delta": 3.4379788238640545,
+          "raw_energy": [
+            48.31076171468672,
+            52.79305185338249
+          ],
+          "corrected_energy": [
+            2.063811079794509,
+            5.501789903658564
+          ],
+          "mean_delta": 4.631179618657086,
+          "estimated_noise_delta": 1.0443113148317167,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_153.06490",
+          "raw_delta": -0.2236412426035137,
+          "debiased_delta": -0.01854743518016337,
+          "raw_energy": [
+            1.7599187450306304,
+            1.5362775024271167
+          ],
+          "corrected_energy": [
+            -0.006049443375667351,
+            -0.024596878555830724
+          ],
+          "mean_delta": -0.3232079538902317,
+          "estimated_noise_delta": -0.20509380742335015,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_178.00810",
+          "raw_delta": 0.7425000697367454,
+          "debiased_delta": 0.010040678909804401,
+          "raw_energy": [
+            2.1171721559551617,
+            2.859672225691907
+          ],
+          "corrected_energy": [
+            -0.01966056560820979,
+            -0.009619886698405388
+          ],
+          "mean_delta": 1.0726962343396382,
+          "estimated_noise_delta": 0.7324593908269401,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "mz_199.09190",
+          "raw_delta": -0.47145099531799417,
+          "debiased_delta": 0.10320474956372327,
+          "raw_energy": [
+            8.545332514332527,
+            8.073881519014533
+          ],
+          "corrected_energy": [
+            0.6452676161222465,
+            0.7484723656859698
+          ],
+          "mean_delta": -0.2668243815845379,
+          "estimated_noise_delta": -0.5746557448817171,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_224.10430",
+          "raw_delta": 2.5448922372854597,
+          "debiased_delta": 3.283633444618617,
+          "raw_energy": [
+            57.241304714714055,
+            59.786196951999514
+          ],
+          "corrected_energy": [
+            3.6195424910716825,
+            6.9031759356902995
+          ],
+          "mean_delta": -1.253127827125553,
+          "estimated_noise_delta": -0.7387412073331703,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_253.91800",
+          "raw_delta": 2.734290204518638,
+          "debiased_delta": 0.4240267597994213,
+          "raw_energy": [
+            2.9192998496646148,
+            5.653590054183253
+          ],
+          "corrected_energy": [
+            0.05047486059687549,
+            0.4745016203962968
+          ],
+          "mean_delta": 6.876863252157737,
+          "estimated_noise_delta": 2.3102634447192174,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "mz_268.90040",
+          "raw_delta": 2.8916059862151915,
+          "debiased_delta": 0.44724577986317016,
+          "raw_energy": [
+            2.369903933616314,
+            5.261509919831505
+          ],
+          "corrected_energy": [
+            0.05067446944382133,
+            0.49792024930699147
+          ],
+          "mean_delta": 7.774797939027266,
+          "estimated_noise_delta": 2.444360206352021,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "mz_289.16240",
+          "raw_delta": -0.05676369059540143,
+          "debiased_delta": 0.07279026881357993,
+          "raw_energy": [
+            2.546248084936319,
+            2.4894843943409177
+          ],
+          "corrected_energy": [
+            -0.029779840344996967,
+            0.04301042846858296
+          ],
+          "mean_delta": 0.6606080931570295,
+          "estimated_noise_delta": -0.12955395940898162,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_318.93780",
+          "raw_delta": 0.769044523961862,
+          "debiased_delta": 0.06080661600257846,
+          "raw_energy": [
+            3.412970052468206,
+            4.182014576430068
+          ],
+          "corrected_energy": [
+            -0.016730434301138252,
+            0.04407618170144021
+          ],
+          "mean_delta": 3.802553296739484,
+          "estimated_noise_delta": 0.7082379079592838,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_350.09020",
+          "raw_delta": 0.04124103598282369,
+          "debiased_delta": 0.0016704865693424331,
+          "raw_energy": [
+            2.0888484377071186,
+            2.1300894736899423
+          ],
+          "corrected_energy": [
+            -0.028103469471799335,
+            -0.0264329829024569
+          ],
+          "mean_delta": -0.13235208741381488,
+          "estimated_noise_delta": 0.039570549413481704,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_369.20920",
+          "raw_delta": 0.49080263566231497,
+          "debiased_delta": 0.010258815920462357,
+          "raw_energy": [
+            1.708119550049436,
+            2.198922185711751
+          ],
+          "corrected_energy": [
+            -0.06083506452499234,
+            -0.050576248604529986
+          ],
+          "mean_delta": 0.7825909474529387,
+          "estimated_noise_delta": 0.48054381974185256,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_413.15720",
+          "raw_delta": 0.7226905490633988,
+          "debiased_delta": -0.08136656337903059,
+          "raw_energy": [
+            2.7367667800367346,
+            3.4594573291001334
+          ],
+          "corrected_energy": [
+            -0.028845672305903135,
+            -0.11021223568493373
+          ],
+          "mean_delta": 0.5769534611681069,
+          "estimated_noise_delta": 0.804057112442429,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_461.25940",
+          "raw_delta": 2.2981330551823635,
+          "debiased_delta": 1.9796831878513523,
+          "raw_energy": [
+            10.607673101287507,
+            12.90580615646987
+          ],
+          "corrected_energy": [
+            0.9173309885332017,
+            2.897014176384554
+          ],
+          "mean_delta": 8.360928338902966,
+          "estimated_noise_delta": 0.31844986733101166,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_485.26280",
+          "raw_delta": -8.377112005871979,
+          "debiased_delta": -3.8011089087851317,
+          "raw_energy": [
+            76.16362383855065,
+            67.78651183267867
+          ],
+          "corrected_energy": [
+            40.58067615328385,
+            36.779567244498715
+          ],
+          "mean_delta": 7.3431315641442865,
+          "estimated_noise_delta": -4.576003097086858,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_508.37180",
+          "raw_delta": 2.1251093161743033,
+          "debiased_delta": 1.0877577320113188,
+          "raw_energy": [
+            3.9413504552581045,
+            6.066459771432408
+          ],
+          "corrected_energy": [
+            0.1170510907093421,
+            1.2048088227206608
+          ],
+          "mean_delta": 8.458198726627105,
+          "estimated_noise_delta": 1.0373515841629852,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_534.29630",
+          "raw_delta": 7206.257400799845,
+          "debiased_delta": 6201.5280489050165,
+          "raw_energy": [
+            1456.6137455056937,
+            8662.871146305539
+          ],
+          "corrected_energy": [
+            1187.972274122683,
+            7389.5003230277
+          ],
+          "mean_delta": 579.6809964318263,
+          "estimated_noise_delta": 1004.7293518948288,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_553.31110",
+          "raw_delta": 0.2960144287772266,
+          "debiased_delta": -0.10546177141316751,
+          "raw_energy": [
+            7.359330903637887,
+            7.655345332415114
+          ],
+          "corrected_energy": [
+            0.04712157030658783,
+            -0.05834020110657967
+          ],
+          "mean_delta": -1.0679017398566693,
+          "estimated_noise_delta": 0.40147620019039465,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_576.22630",
+          "raw_delta": 6.277733271630339,
+          "debiased_delta": 1.257184495500736,
+          "raw_energy": [
+            5.6305777174900165,
+            11.908310989120356
+          ],
+          "corrected_energy": [
+            -0.13723257984677212,
+            1.119951915653964
+          ],
+          "mean_delta": 14.840269899228328,
+          "estimated_noise_delta": 5.020548776129603,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "mz_611.21900",
+          "raw_delta": 0.8671593776379938,
+          "debiased_delta": 0.0065611358368886236,
+          "raw_energy": [
+            3.9076468641873854,
+            4.774806241825379
+          ],
+          "corrected_energy": [
+            -0.09607524492986119,
+            -0.08951410909297257
+          ],
+          "mean_delta": 0.6564516612996405,
+          "estimated_noise_delta": 0.860598241801104,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_652.46680",
+          "raw_delta": -1.0847878456520945,
+          "debiased_delta": -0.19186495609591458,
+          "raw_energy": [
+            6.694615127603602,
+            5.609827281951508
+          ],
+          "corrected_energy": [
+            0.32995266905063597,
+            0.1380877129547214
+          ],
+          "mean_delta": -6.716597435038768,
+          "estimated_noise_delta": -0.8929228895561803,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_688.39490",
+          "raw_delta": -18.760934095766167,
+          "debiased_delta": 2.7414144508564036,
+          "raw_energy": [
+            51.790504021417306,
+            33.02956992565114
+          ],
+          "corrected_energy": [
+            2.825083722523435,
+            5.566498173379839
+          ],
+          "mean_delta": 34.71702755258573,
+          "estimated_noise_delta": -21.502348546622564,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_724.59670",
+          "raw_delta": -0.310694425507549,
+          "debiased_delta": 0.013649284904121785,
+          "raw_energy": [
+            1.169303658361429,
+            0.8586092328538799
+          ],
+          "corrected_energy": [
+            -0.017140957943771552,
+            -0.0034916730396497677
+          ],
+          "mean_delta": -0.5138047545757005,
+          "estimated_noise_delta": -0.32434371041167065,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "mz_747.60710",
+          "raw_delta": 1.7554087005844297,
+          "debiased_delta": 0.7618324044862393,
+          "raw_energy": [
+            4.222779967559452,
+            5.978188668143882
+          ],
+          "corrected_energy": [
+            0.18822412251271717,
+            0.9500565269989565
+          ],
+          "mean_delta": 8.592300690671028,
+          "estimated_noise_delta": 0.9935762960981904,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "mz_782.67700",
+          "raw_delta": -0.8557294711246031,
+          "debiased_delta": 0.02676524340533004,
+          "raw_energy": [
+            2.1742656595357097,
+            1.3185361884111066
+          ],
+          "corrected_energy": [
+            -0.04336243220007439,
+            -0.016597188794744346
+          ],
+          "mean_delta": -1.83584130303263,
+          "estimated_noise_delta": -0.8824947145299329,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "mz_804.65210",
+          "raw_delta": -0.7880533596104009,
+          "debiased_delta": -0.05749306754699222,
+          "raw_energy": [
+            2.6346747813954807,
+            1.8466214217850798
+          ],
+          "corrected_energy": [
+            -0.0024567659446112166,
+            -0.05994983349160343
+          ],
+          "mean_delta": -0.9813692652821491,
+          "estimated_noise_delta": -0.7305602920634087,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "mz_830.67410",
+          "raw_delta": 0.00029530511661679526,
+          "debiased_delta": -0.001681184987155404,
+          "raw_energy": [
+            1.218907428345228,
+            1.2192027334618447
+          ],
+          "corrected_energy": [
+            -0.0046346866321599345,
+            -0.006315871619315338
+          ],
+          "mean_delta": -0.0015757922813732783,
+          "estimated_noise_delta": 0.0019764901037717664,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_873.52130",
+          "raw_delta": -1.6366427463403372,
+          "debiased_delta": 0.12348343782814517,
+          "raw_energy": [
+            10.051335975217727,
+            8.41469322887739
+          ],
+          "corrected_energy": [
+            -0.1963608485856012,
+            -0.07287741075745605
+          ],
+          "mean_delta": -2.1556863965783437,
+          "estimated_noise_delta": -1.760126184168481,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_889.69830",
+          "raw_delta": 2.579249018320854,
+          "debiased_delta": 0.507982787668988,
+          "raw_energy": [
+            6.807013285579113,
+            9.386262303899967
+          ],
+          "corrected_energy": [
+            0.6362946336506712,
+            1.1442774213196591
+          ],
+          "mean_delta": 8.281977841551456,
+          "estimated_noise_delta": 2.071266230651867,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "mz_926.53320",
+          "raw_delta": 1.2297271621854797,
+          "debiased_delta": 0.6887916130346444,
+          "raw_energy": [
+            18.832368469275053,
+            20.062095631460533
+          ],
+          "corrected_energy": [
+            0.2907318472371653,
+            0.9795234602718097
+          ],
+          "mean_delta": 0.46825547897199726,
+          "estimated_noise_delta": 0.5409355491508343,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_963.47580",
+          "raw_delta": 1.7314231523715886,
+          "debiased_delta": 0.6200127498370397,
+          "raw_energy": [
+            11.566620033098499,
+            13.298043185470087
+          ],
+          "corrected_energy": [
+            0.6216193264413569,
+            1.2416320762783966
+          ],
+          "mean_delta": 8.889077608156256,
+          "estimated_noise_delta": 1.1114104025345455,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "mz_1033.76450",
+          "raw_delta": 0.8663137074242764,
+          "debiased_delta": 0.23476564198210403,
+          "raw_energy": [
+            1.4116524469029788,
+            2.277966154327255
+          ],
+          "corrected_energy": [
+            0.27254748942078955,
+            0.5073131314028936
+          ],
+          "mean_delta": 2.7985957809939146,
+          "estimated_noise_delta": 0.6315480654421721,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "mz_1257.78760",
+          "raw_delta": 0.17871561348690534,
+          "debiased_delta": -0.020799418089649212,
+          "raw_energy": [
+            0.6612574451384378,
+            0.8399730586253431
+          ],
+          "corrected_energy": [
+            -0.008574571934387898,
+            -0.02937399002403711
+          ],
+          "mean_delta": 0.4497034303326868,
+          "estimated_noise_delta": 0.1995150315765546,
+          "mean_noise_sensitive": false
+        }
+      ],
+      "flagged": 10,
+      "patient_energies": [
+        {
+          "patient_id": "PDAC_5",
+          "group": "PDAC without diabetes",
+          "raw": [
+            58.76039044771421,
+            2.4675986103981646,
+            4.234186529983456,
+            9.384325501351471,
+            64.17465608428121,
+            5.678181065628539,
+            5.584634547955987,
+            3.7781593155394897,
+            4.1454122334112835,
+            2.884122011309323,
+            2.676865714770877,
+            4.141470073220656,
+            15.088569613459482,
+            78.20182491760627,
+            5.692001673369018,
+            2842.5176407447557,
+            11.536692367811458,
+            6.9701303081817345,
+            6.403250343745799,
+            5.903451991185501,
+            33.39423252779768,
+            0.8281774774647805,
+            7.231699645762811,
+            1.2882187660360715,
+            1.9223892321530611,
+            1.5289854903170437,
+            9.439032112135964,
+            5.28869912052853,
+            23.78863725832419,
+            15.77614295266644,
+            1.168446362638008,
+            0.9321799288415051
+          ],
+          "corrected": [
+            6.244394205197011,
+            -0.053774109497327416,
+            0.09486552466371023,
+            1.3158388068750195,
+            5.794323905925957,
+            0.45654304910480636,
+            0.4464694533495672,
+            0.022210534972054052,
+            -0.03351942947765707,
+            0.04838860484499552,
+            -0.03749362789667954,
+            -0.12368850323679315,
+            3.106123563106692,
+            48.343439539668346,
+            0.4692167745952709,
+            2344.9360163237156,
+            -0.04407637594818681,
+            -0.2885939067253549,
+            -0.06803239515967352,
+            -0.039227689518336106,
+            6.1210449689229804,
+            -0.03154183646436315,
+            1.1221023153214889,
+            -0.044366135675491414,
+            -0.056306199968366055,
+            -0.004027571833146615,
+            -0.06660066266631048,
+            0.27495523053243076,
+            0.6602382738034613,
+            1.5119589390538177,
+            0.07240555374837299,
+            -0.04770517899672155
+          ]
+        },
+        {
+          "patient_id": "PDAC_32",
+          "group": "PDAC without diabetes",
+          "raw": [
+            50.382433678976405,
+            0.9047589804149588,
+            0.7844934675689906,
+            5.259084077221037,
+            45.05264475068018,
+            2.1824152779411325,
+            2.596084091136053,
+            2.355563910793841,
+            1.9886328628633765,
+            1.4829673647966044,
+            3.0618961841180523,
+            4.722696926564851,
+            26.69567522215671,
+            176.222422053464,
+            14.037696040413845,
+            39532.54455816014,
+            6.14532646429007,
+            20.207109437125496,
+            2.6953499163819075,
+            2.9822437495339806,
+            16.3859375338389,
+            0.387094610299247,
+            3.4847964607340582,
+            0.6478047658163795,
+            0.9289374095842198,
+            0.48258709430752217,
+            4.221710692381198,
+            4.656520842974074,
+            9.58482905489787,
+            7.058185514694555,
+            1.0223817875999293,
+            0.5348036278226423
+          ],
+          "corrected": [
+            13.703779972045751,
+            -0.006172133494718901,
+            0.012122932139506104,
+            0.9975193603534613,
+            12.536293312058277,
+            0.14884588299698231,
+            0.5131701185878894,
+            0.13814037880201857,
+            0.006342580044974344,
+            -0.07114440872482031,
+            -0.026133940452667037,
+            -0.20445223605580853,
+            10.03522675441927,
+            107.4116408364225,
+            5.309435449006651,
+            33944.47677607659,
+            0.06086829442499653,
+            6.309003369245733,
+            -0.1600110769929759,
+            0.16252797281570341,
+            5.3680343134856905,
+            -0.022766748973092943,
+            0.7532041976268107,
+            0.0024334993211123646,
+            -0.06724845474119079,
+            -0.012419651735321613,
+            0.06555554659287655,
+            1.0508906844042731,
+            0.6483489891929715,
+            1.1376543803164036,
+            0.10735239331673763,
+            -0.042431231384439716
+          ]
+        },
+        {
+          "patient_id": "PDAC_37",
+          "group": "PDAC without diabetes",
+          "raw": [
+            50.767293274305636,
+            1.3877436572017354,
+            1.1833425019101267,
+            9.472888290901153,
+            59.13708608644166,
+            5.018310349402606,
+            5.658500962239305,
+            2.4054034807465814,
+            5.584141955689427,
+            2.227299458819417,
+            1.7032990875364282,
+            2.847216580023261,
+            6.462749319210343,
+            22.202380153943277,
+            3.5502026016973613,
+            87.87084617977764,
+            6.218476345590623,
+            4.04546335678755,
+            5.4248917504027565,
+            5.871492117199411,
+            29.119554245254005,
+            1.0288807844742422,
+            9.019965328087588,
+            1.3821979460079017,
+            2.1510133350669913,
+            1.543308159389784,
+            10.55776468788277,
+            16.5340910112098,
+            23.904371152727776,
+            14.805185300508674,
+            0.8748958782506778,
+            0.6974257878084462
+          ],
+          "corrected": [
+            3.4079308302340365,
+            -0.017696300401100373,
+            -0.05648154042146203,
+            0.26380333040395065,
+            3.1712784075669305,
+            0.19675797113799742,
+            0.4099118589260824,
+            -0.05268731981307351,
+            0.11083204040719874,
+            0.016398565808315002,
+            -0.09425484397873851,
+            0.015965331936619975,
+            0.004944616600582208,
+            3.874503712550869,
+            0.12366231164324182,
+            28.0099752412477,
+            -0.009737643921140737,
+            0.13872690731137194,
+            0.0033142332512436923,
+            0.29550203546333087,
+            3.8310961578090144,
+            0.005529066167744956,
+            1.8789663552731737,
+            0.0049538558274551114,
+            -0.045983022613811375,
+            0.007944495235457039,
+            0.016056703241948966,
+            2.4401837190748026,
+            1.50302171063462,
+            1.8933540511444331,
+            -0.017430083522501305,
+            -0.02526237621621963
+          ]
+        },
+        {
+          "patient_id": "PDAC_40",
+          "group": "PDAC without diabetes",
+          "raw": [
+            48.34436467174681,
+            1.659417889537881,
+            3.27331623756257,
+            8.210670788907274,
+            61.671117287356836,
+            4.497121213001318,
+            4.401797251489326,
+            2.1851452064102617,
+            4.543725955548248,
+            1.9983099596209313,
+            1.90514103142559,
+            2.855496801047596,
+            6.83471404715132,
+            16.521855004545696,
+            2.756341171588673,
+            211.82853548493182,
+            7.842155210356933,
+            17.615455849071896,
+            4.753748932557504,
+            5.707554372166729,
+            29.87231522955214,
+            0.792403887316141,
+            3.9806652555266737,
+            1.261713981783761,
+            1.76927749945566,
+            0.9816353651720736,
+            8.842590139640913,
+            13.947670937742824,
+            18.76980987537379,
+            14.181290231042077,
+            0.2646669656581149,
+            0.5949224262794848
+          ],
+          "corrected": [
+            -0.5984007973639436,
+            -0.011244316275942579,
+            0.017020641686944504,
+            0.4541986884276481,
+            4.507319330315454,
+            0.1613328374831271,
+            0.16175548997689848,
+            0.0875104871458019,
+            -0.0022855102188739096,
+            -0.07820769017869345,
+            -0.08205366381138757,
+            -0.23468574298320766,
+            0.1643427269798865,
+            3.027842325186146,
+            -0.04169979970319693,
+            137.61315470688106,
+            -0.1958111692839113,
+            -0.6396510356637783,
+            -0.1554389586541154,
+            0.06403090871695127,
+            3.1687887001696105,
+            0.05686348842500755,
+            0.2526699636254106,
+            0.018831558294444495,
+            -0.1202528976961661,
+            -0.017260864216906868,
+            0.11159349802495555,
+            1.4745950862581179,
+            1.4445773474352848,
+            -0.0803112496480356,
+            -0.010243721470617972,
+            -0.023201200124489674
+          ]
+        },
+        {
+          "patient_id": "PDAC_98",
+          "group": "PDAC without diabetes",
+          "raw": [
+            55.71077719416936,
+            1.2618683745828438,
+            4.8230223914343915,
+            8.042438936691731,
+            68.89548055123767,
+            10.89192236494267,
+            8.066532746336852,
+            1.7231500582144146,
+            4.648159874638004,
+            2.0577485739034365,
+            1.6474089107078058,
+            2.7304062646443006,
+            9.447322580371495,
+            45.784077033834116,
+            4.296057370093143,
+            639.5941509580864,
+            6.5340762740264875,
+            10.703395994435104,
+            4.596790266038926,
+            7.584394179671914,
+            56.37581009181297,
+            1.256489404714989,
+            6.173816650608281,
+            2.012745482411419,
+            2.4614896326654674,
+            1.5594975581228006,
+            9.012368512346109,
+            6.504329607044604,
+            24.262830815979044,
+            14.66941192843868,
+            8.059439777489544,
+            1.4405335223746374
+          ],
+          "corrected": [
+            4.751245308179961,
+            -0.03409753311006436,
+            -0.11562699156072576,
+            0.7110016423697694,
+            8.50666472258488,
+            1.4090283612585708,
+            0.9582943256945198,
+            0.019878061236113798,
+            0.13901122775155894,
+            -0.047599986262081284,
+            -0.012945166883177261,
+            -0.004200028085479257,
+            1.17443322081634,
+            21.240409808665685,
+            0.16342937806133673,
+            492.46569279006206,
+            -0.10294411080465604,
+            0.08027424410184736,
+            -0.06740234790934174,
+            0.20760533729595743,
+            9.343526726511897,
+            -0.02554233435354525,
+            0.743339803147899,
+            -0.06483872174124228,
+            -0.00995859243848285,
+            -0.0058157655466586355,
+            -0.4909921389807508,
+            0.48076238632867163,
+            0.6414309802927107,
+            1.7455042605253634,
+            2.3844815149424763,
+            -0.008269963398314983
+          ]
+        },
+        {
+          "patient_id": "PDAC_7",
+          "group": "PDAC with diabetes",
+          "raw": [
+            50.639616992365106,
+            1.9881560998535364,
+            0.857164126556826,
+            7.281420698941539,
+            54.5628325910848,
+            3.254065335065445,
+            2.9880818847635555,
+            2.8296244629766525,
+            2.85181383662811,
+            1.892547484549365,
+            1.6908923207970203,
+            2.4874356285624772,
+            6.141371273680282,
+            12.083245216576554,
+            3.19104379829602,
+            100.16462131404117,
+            7.439935251405017,
+            3.778634138832205,
+            4.080161708073453,
+            7.363600006265812,
+            32.636041709170385,
+            0.8947040620745823,
+            4.681303495708125,
+            1.50804022465191,
+            2.0326966945944442,
+            0.9947989166390244,
+            7.958468898891751,
+            3.093382549995205,
+            19.091943343115307,
+            10.03489580116471,
+            4.3620109771331235,
+            0.940297046416393
+          ],
+          "corrected": [
+            4.158214667191466,
+            0.018347715620671723,
+            -0.012210533802570867,
+            0.8091050402836766,
+            6.132873088388216,
+            0.06967106705230552,
+            0.10953967718765112,
+            -0.08945334754215928,
+            0.05596050620585302,
+            -0.0470502810568898,
+            -0.088072961237885,
+            0.07199592692278634,
+            -0.10832467643543442,
+            1.4162448786463049,
+            2.7287627157868144e-06,
+            31.075605898764792,
+            0.24137247470287004,
+            -0.040806900373266064,
+            0.08417574802087024,
+            0.5863767611633808,
+            6.920260078814874,
+            -0.045005449253362806,
+            0.40257595811639924,
+            -0.026194620800042312,
+            -0.010430235148078282,
+            0.0007208036487446057,
+            -0.07915845703518531,
+            0.2394814380517052,
+            0.3413596155658887,
+            0.5309968368153495,
+            1.2769857252862655,
+            -0.005288153079828217
+          ]
+        },
+        {
+          "patient_id": "PDAC_17",
+          "group": "PDAC with diabetes",
+          "raw": [
+            45.18024456079819,
+            1.595476772866288,
+            1.6579800434740255,
+            9.553933545285961,
+            55.13344989561766,
+            1.8085989728383585,
+            2.0134326548713117,
+            2.3323947111790333,
+            4.297063398575129,
+            2.178768648494267,
+            1.2219352726674872,
+            1.5872575741954411,
+            6.470379331956624,
+            12.611888027675425,
+            2.137271461942155,
+            46.59061566442549,
+            3.1228256992283594,
+            3.1508193506678,
+            2.360621115985451,
+            2.3591644605868765,
+            18.13610291723981,
+            0.6271978845833152,
+            3.24160108752078,
+            1.4280684709544733,
+            2.271299809770269,
+            1.1245665639272955,
+            7.089925255992332,
+            12.360620096851806,
+            13.429091178423528,
+            11.360000575940099,
+            0.5884260951243401,
+            0.36573005177510054
+          ],
+          "corrected": [
+            3.720447731028557,
+            0.004697639895703487,
+            0.002063699001966013,
+            1.0734712662850079,
+            4.41584085581156,
+            -0.04550797683205299,
+            0.07960444879342865,
+            0.03324978405471013,
+            0.04989496258848192,
+            -0.056428522164949424,
+            -0.012755164637705985,
+            -0.03914161886108625,
+            0.1629058490786086,
+            0.618683597042974,
+            -0.06968903274975391,
+            9.89584801713282,
+            0.0416219433516396,
+            -0.02894339777649435,
+            -0.10392173137104921,
+            -0.07444921203257415,
+            2.9800068552079377,
+            -0.010457826348746035,
+            0.010262199163776575,
+            0.00518441724523977,
+            0.036512517914610854,
+            0.009197660457611168,
+            -0.09995772010087833,
+            1.420075033654106,
+            0.7879109346380506,
+            1.524395729809262,
+            -0.006610964064150848,
+            -0.009786835751900813
+          ]
+        },
+        {
+          "patient_id": "PDAC_28",
+          "group": "PDAC with diabetes",
+          "raw": [
+            44.528720287565456,
+            1.4997305125075204,
+            4.064231297131707,
+            8.439673993298406,
+            51.97772682654903,
+            2.422437719021117,
+            0.9586085648724191,
+            2.038600266124031,
+            2.042880822344166,
+            1.5966991745850938,
+            1.45831634887393,
+            2.4490834918343363,
+            7.199503560353609,
+            17.807082285352365,
+            2.80563497636473,
+            16.725982206437287,
+            8.584065193893695,
+            8.481790123411047,
+            3.677127515727508,
+            9.025004712143566,
+            87.85359319237189,
+            1.4223745847265838,
+            3.624950372236785,
+            2.2814308543738346,
+            2.814337933436399,
+            1.280969457774893,
+            10.900539777456009,
+            3.4502165265846174,
+            21.633108529751105,
+            8.56049318644681,
+            0.3718827839744081,
+            0.5167247291072754
+          ],
+          "corrected": [
+            0.3483092978353213,
+            -0.0007600665555849151,
+            -0.025765797699583537,
+            0.2645964443879194,
+            1.6215732696404714,
+            0.015112074405034814,
+            -0.0018106335292934483,
+            0.019465026629938986,
+            -0.06996353165071278,
+            -0.006631541886517489,
+            -0.040514099529807224,
+            -0.024679661783860052,
+            -0.1230664068854379,
+            0.6821339340211487,
+            -0.07765628752187759,
+            1.3971357601246446,
+            -0.24498185764714187,
+            -0.15949997384709036,
+            -0.08225416022877363,
+            0.44491383604647616,
+            1.5062121390995316,
+            -0.020748677847195696,
+            0.05181508581441285,
+            -0.0402204595460014,
+            -0.02631696300629649,
+            0.03559220896740878,
+            -0.5575640511763371,
+            0.1963737784429589,
+            -0.7500196427626875,
+            -0.058392492881450764,
+            -0.00665719708261614,
+            0.0006102838299631985
+          ]
+        },
+        {
+          "patient_id": "PDAC_29",
+          "group": "PDAC with diabetes",
+          "raw": [
+            49.57965625778644,
+            1.8277044007780368,
+            1.7017089343191847,
+            8.22475873649803,
+            66.18925706933793,
+            2.7936307210585896,
+            1.4603766215568728,
+            2.5739944014790175,
+            2.64210592669384,
+            2.178196105853311,
+            1.7794398808449807,
+            3.320441600033959,
+            8.307222751816646,
+            27.226345682483085,
+            3.769603617455595,
+            42.87097258185914,
+            9.514344544188587,
+            4.368148963868248,
+            4.521085527496864,
+            8.18899129295564,
+            92.92509635783887,
+            1.543161960624166,
+            4.725697154706156,
+            2.775985441504659,
+            2.8043109331613136,
+            1.330784179508287,
+            11.824665961818335,
+            6.554252025341858,
+            22.826520475078983,
+            9.383752134371923,
+            0.24821221838895632,
+            0.6133311177842786
+          ],
+          "corrected": [
+            2.7360958505451975,
+            -0.01963286460618452,
+            -0.044424831726231684,
+            0.7105856327658273,
+            6.336302661850908,
+            0.09061716429068944,
+            0.051034896021725284,
+            0.017220888697617287,
+            -0.04960234525655016,
+            0.0032717368464640906,
+            -0.05570712108313458,
+            -0.19039872709830208,
+            -0.36443062237206547,
+            6.63094301136708,
+            0.14239969074964787,
+            10.820183136495615,
+            0.2074521582020008,
+            -0.0892704933682591,
+            -0.20276945162102233,
+            0.6424484030424198,
+            -0.0687647154616684,
+            0.0009059851390207374,
+            0.32072900941059945,
+            -0.04283645329957686,
+            0.0075473517503632515,
+            -0.03693807433987617,
+            0.11977188940875294,
+            0.7351473349098843,
+            0.4423210780566613,
+            0.46612457634526017,
+            -0.002145344827949175,
+            -0.011208518977328441
+          ]
+        },
+        {
+          "patient_id": "PDAC_33",
+          "group": "PDAC with diabetes",
+          "raw": [
+            51.62557047491842,
+            1.8885259391477704,
+            2.3047763782940662,
+            9.226875597638701,
+            58.34325719098089,
+            4.317766500339565,
+            4.429019942017412,
+            2.956626582922862,
+            5.230986278099784,
+            2.598030775053555,
+            2.3900139270637606,
+            3.8396156055574586,
+            24.919888588630375,
+            311.08955798066586,
+            7.803198422232024,
+            7076.716535761705,
+            8.135483829473777,
+            8.373496010670781,
+            4.899238453653652,
+            6.536315166066116,
+            27.401685930465558,
+            1.3590797997984965,
+            4.840347727625417,
+            2.8778033061936705,
+            3.2507285360149796,
+            1.3634180238766398,
+            12.483079981930212,
+            8.576595229122075,
+            17.181178820006345,
+            18.493958467568962,
+            1.4877301598940655,
+            0.8702042806091413
+          ],
+          "corrected": [
+            -0.644012147627997,
+            -0.032899641232942534,
+            -0.017965363814628876,
+            0.3685796968888013,
+            -0.4088774203327432,
+            0.12248197406840067,
+            0.015003958745595014,
+            -0.12938155356509196,
+            -0.06994176339276326,
+            -0.03367873909710406,
+            -0.10712597613642894,
+            0.03799571929094636,
+            5.019570799280338,
+            193.5553753453417,
+            0.5901983543059783,
+            5886.672597800898,
+            -0.00985686707642941,
+            -0.3676421338687508,
+            -0.17560662944933103,
+            0.050473557033477334,
+            2.787704254956502,
+            -0.010398821408573955,
+            0.1557383600583977,
+            -0.11274504459999113,
+            -0.019596501233655417,
+            -0.031746031894688054,
+            -0.36489590402435823,
+            0.5903955831947014,
+            0.6320872506879134,
+            0.6449719821183635,
+            0.10116522779239845,
+            -0.017199635692845217
+          ]
+        }
+      ],
+      "evaluated": 32,
+      "status": "red",
+      "message": "Fine-band residual energy minus the estimated white-noise contribution is signed. Matched two-step spatial differences model locally smooth signal plus uncorrelated homoscedastic volume noise. Rough signal, heterogeneous noise and unequal occupancy affect this sensitivity screen.",
+      "raw_test": {
+        "features": [
+          "mz_124.99920",
+          "mz_153.06490",
+          "mz_178.00810",
+          "mz_199.09190",
+          "mz_224.10430",
+          "mz_253.91800",
+          "mz_268.90040",
+          "mz_289.16240",
+          "mz_318.93780",
+          "mz_350.09020",
+          "mz_369.20920",
+          "mz_413.15720",
+          "mz_461.25940",
+          "mz_485.26280",
+          "mz_508.37180",
+          "mz_534.29630",
+          "mz_553.31110",
+          "mz_576.22630",
+          "mz_611.21900",
+          "mz_652.46680",
+          "mz_688.39490",
+          "mz_724.59670",
+          "mz_747.60710",
+          "mz_782.67700",
+          "mz_804.65210",
+          "mz_830.67410",
+          "mz_873.52130",
+          "mz_889.69830",
+          "mz_926.53320",
+          "mz_963.47580",
+          "mz_1033.76450",
+          "mz_1257.78760"
+        ],
+        "method": "exact",
+        "assignments": "252",
+        "evaluations": 252,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.12698412698412698,
+          0.4444444444444444,
+          0.4603174603174603,
+          0.6190476190476191,
+          0.6031746031746031,
+          0.07936507936507936,
+          0.03968253968253968,
+          0.9047619047619048,
+          0.3968253968253968,
+          0.8809523809523809,
+          0.19047619047619047,
+          0.23015873015873015,
+          0.5396825396825397,
+          0.9523809523809523,
+          0.4603174603174603,
+          0.4523809523809524,
+          0.8412698412698413,
+          0.10317460317460317,
+          0.2698412698412698,
+          0.4365079365079365,
+          0.31746031746031744,
+          0.20634920634920634,
+          0.14285714285714285,
+          0.047619047619047616,
+          0.047619047619047616,
+          1.0,
+          0.3253968253968254,
+          0.373015873015873,
+          0.7301587301587301,
+          0.46825396825396826,
+          0.6190476190476191,
+          0.42063492063492064
+        ],
+        "q": [
+          0.6530612244897959,
+          0.6810966810966811,
+          0.6810966810966811,
+          0.761904761904762,
+          0.761904761904762,
+          0.6349206349206349,
+          0.5079365079365079,
+          0.9650793650793651,
+          0.6810966810966811,
+          0.9650793650793651,
+          0.6810966810966811,
+          0.6810966810966811,
+          0.7508626639061421,
+          0.9831029185867896,
+          0.6810966810966811,
+          0.6810966810966811,
+          0.9614512471655329,
+          0.6530612244897959,
+          0.6810966810966811,
+          0.6810966810966811,
+          0.6810966810966811,
+          0.6810966810966811,
+          0.6530612244897959,
+          0.5079365079365079,
+          0.5079365079365079,
+          1.0,
+          0.6810966810966811,
+          0.6810966810966811,
+          0.8653733098177542,
+          0.6810966810966811,
+          0.761904761904762,
+          0.6810966810966811
+        ],
+        "statistic": [
+          1.575892738239226,
+          -0.7839439372779466,
+          0.7486117069766424,
+          -0.5450882577300223,
+          0.5377289780055498,
+          1.5553331225767588,
+          1.965829129150962,
+          -0.15038480376688496,
+          0.8859463249811972,
+          0.1487140979104464,
+          1.288451864954198,
+          1.1833808410868454,
+          0.44121803023391837,
+          -0.129190198916814,
+          0.8964120765417742,
+          0.8838642051102977,
+          0.19862716320083448,
+          1.604507106032106,
+          1.0839521151684681,
+          -0.7693163730898588,
+          -1.0300483141618968,
+          -1.25181019450363,
+          1.430383538748082,
+          -1.8005373415135606,
+          -1.829319257885612,
+          0.0013302814904340955,
+          -1.015175290295751,
+          0.8369248585567632,
+          0.3780804379198405,
+          0.7113812425406667,
+          0.5248942659113924,
+          0.8761995110181732
+        ]
+      },
+      "corrected_test": {
+        "features": [
+          "mz_124.99920",
+          "mz_153.06490",
+          "mz_178.00810",
+          "mz_199.09190",
+          "mz_224.10430",
+          "mz_253.91800",
+          "mz_268.90040",
+          "mz_289.16240",
+          "mz_318.93780",
+          "mz_350.09020",
+          "mz_369.20920",
+          "mz_413.15720",
+          "mz_461.25940",
+          "mz_485.26280",
+          "mz_508.37180",
+          "mz_534.29630",
+          "mz_553.31110",
+          "mz_576.22630",
+          "mz_611.21900",
+          "mz_652.46680",
+          "mz_688.39490",
+          "mz_724.59670",
+          "mz_747.60710",
+          "mz_782.67700",
+          "mz_804.65210",
+          "mz_830.67410",
+          "mz_873.52130",
+          "mz_889.69830",
+          "mz_926.53320",
+          "mz_963.47580",
+          "mz_1033.76450",
+          "mz_1257.78760"
+        ],
+        "method": "exact",
+        "assignments": "252",
+        "evaluations": 252,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.18253968253968253,
+          0.16666666666666666,
+          0.7777777777777778,
+          0.6587301587301587,
+          0.16666666666666666,
+          0.007936507936507936,
+          0.007936507936507936,
+          0.15079365079365079,
+          0.1984126984126984,
+          0.9603174603174603,
+          0.6190476190476191,
+          0.24603174603174602,
+          0.4444444444444444,
+          0.9603174603174603,
+          0.23015873015873015,
+          0.4523809523809524,
+          0.2857142857142857,
+          0.47619047619047616,
+          0.9285714285714286,
+          0.2222222222222222,
+          0.1111111111111111,
+          0.5238095238095238,
+          0.023809523809523808,
+          0.30952380952380953,
+          0.023809523809523808,
+          0.8888888888888888,
+          0.42063492063492064,
+          0.29365079365079366,
+          0.05555555555555555,
+          0.16666666666666666,
+          0.5952380952380952,
+          0.031746031746031744
+        ],
+        "q": [
+          0.48677248677248675,
+          0.4848484848484848,
+          0.888888888888889,
+          0.7807172251616696,
+          0.4848484848484848,
+          0.12698412698412698,
+          0.12698412698412698,
+          0.4848484848484848,
+          0.4884004884004884,
+          0.9603174603174603,
+          0.761904761904762,
+          0.49206349206349204,
+          0.658008658008658,
+          0.9603174603174603,
+          0.491005291005291,
+          0.658008658008658,
+          0.5213032581453634,
+          0.6625258799171843,
+          0.9603174603174603,
+          0.491005291005291,
+          0.4848484848484848,
+          0.6984126984126985,
+          0.19047619047619047,
+          0.5213032581453634,
+          0.19047619047619047,
+          0.9603174603174603,
+          0.658008658008658,
+          0.5213032581453634,
+          0.2962962962962963,
+          0.4848484848484848,
+          0.7619047619047619,
+          0.20317460317460317
+        ],
+        "statistic": [
+          1.2760607513091162,
+          -1.3636741717790042,
+          0.284714387021145,
+          0.4444003296037256,
+          1.4153542584038963,
+          1.5503179847924113,
+          2.2669771221272383,
+          1.4260891904602901,
+          1.2820594936521934,
+          0.06308113120379369,
+          0.45583758192841306,
+          -1.146934371297601,
+          0.9183081748015042,
+          -0.09214252779001578,
+          1.0240354992443852,
+          0.9092273811039637,
+          -1.0529625632863284,
+          0.9486737468611448,
+          0.11593650340556003,
+          -1.17571323171568,
+          1.5359797110163949,
+          0.7575111211705617,
+          2.0392997563451467,
+          1.0369163634439094,
+          -2.040974099480332,
+          -0.12393670445112005,
+          0.7711830795658344,
+          1.1010285740303785,
+          1.7206298984037869,
+          1.3203219422903503,
+          0.4530002432562761,
+          -2.034444169046738
+        ]
+      },
+      "measurement_scope": {
+        "measurement": "intensity",
+        "layer": "positive-mode centroid intensities summed in closed target windows",
+        "interpretation": "Energy, semivariance and attenuation refer to the supplied measurement scale. For log-normalized inputs they describe variability after transformation. The procedure does not fit a negative-binomial count model or identify a noise cause."
+      }
+    }
+  },
+  "statement": "基于公开存档数据，在患者/生物学重复级去混杂框架下的可复现性、统计功效与混杂敏感性审计。"
+}

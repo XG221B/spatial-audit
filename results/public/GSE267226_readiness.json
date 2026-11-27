@@ -1,0 +1,30 @@
+{
+  "kind": "public",
+  "record_type": "archive_readiness",
+  "accession": "GSE267226",
+  "files": [
+    {
+      "name": "GSE267226_RAW.tar",
+      "accession": "GSE267226",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE267nnn/GSE267226/suppl/GSE267226_RAW.tar",
+      "bytes": 152811520,
+      "sha256": "777fdc8223da43898c4aeea9fe6b617b6bf2d73f2da3ce307e2469e89a93cf5a",
+      "reference_digest_matched": false
+    }
+  ],
+  "archive_members": [
+    "GSM8262701_21-035_S5_filtered_feature_bc_matrix.h5",
+    "GSM8262701_21-035_tissue_hires_image.png.gz",
+    "GSM8262702_BB-22001_S3_filtered_feature_bc_matrix.h5",
+    "GSM8262702_BB-22001_tissue_hires_image.png.gz",
+    "GSM8262703_LIBB-0093_S2_filtered_feature_bc_matrix.h5",
+    "GSM8262703_LIBB093_tissue_hires_image.png.gz",
+    "GSM8262704_CC005-19_S4_filtered_feature_bc_matrix.h5",
+    "GSM8262704_cc000-19_tissue_hires_image.png.gz",
+    "GSM8262705_CC003-20_S1_filtered_feature_bc_matrix.h5",
+    "GSM8262705_cc003-20_tissue_hires_image.png.gz"
+  ],
+  "preparation_status": "Completed. All matrix barcodes match two independent official manufacturer Visium V4 capture-address tables. Clinical group and biological sample counts were cross-checked against GEO metadata and the published human lung spatial experiment.",
+  "preprocessing_evidence": "GSE267226_inputs.json",
+  "audit_report": "GSE267226.json"
+}

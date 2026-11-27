@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=25mm]{geometry}
+\usepackage{graphicx,booktabs,amsmath,hyperref,microtype}
+\hypersetup{hidelinks}
+\input{generated/metrics}
+\title{Spatial Audit: a reproducible resource for patient-level design and confounding assessment in spatial omics}
+\author{Spatial Audit contributors}
+\date{}
+\newcommand{\auditfigure}[3]{\begin{figure}[htbp]\centering\includegraphics[width=.83\linewidth]{figures/#1.pdf}\caption{\textbf{#2} #3}\label{fig:#1}\end{figure}}
+\begin{document}
+\maketitle
+\begin{abstract}
+Spatial assays measure many locations in a limited number of individuals. We built an open resource that connects biological replication, acquisition support and structure at physical wavelengths. The evidence catalog covers \ArchiveCount{} human archive records. We report \PublicRuns{} public-data audits, including explicitly identified panel and cohort subsets, and \FixtureCount{} designed software controls. A separate simulation evaluates \SimCohorts{} synthetic cohorts. The package retains unresolved metadata, distinguishes enumeration from random sampling, and supplies machine-readable provenance, local interactive visualization and agent tools. Its outputs characterize sensitivity under a specified analysis design. An independent, replicated simulation makes departures from nominal null calibration visible.
+\end{abstract}
+
+\section*{Introduction}
+Within-patient correlation changes the information available for comparing patient groups \cite{pseudorep}. Spatial aggregation and tissue composition can also change which structures appear differentially abundant. A patient-aware benchmark should identify what was measured together, how positions were calibrated and what null hypothesis each comparator tests. Spatial Audit makes these choices explicit and preserves the observations from which each numerical summary is derived.
+
+\section*{Results}
+\subsection*{The archive and the analyzable contrast}
+Our catalog records the archive accession, group definition, primary paper, a scoped methods statement and the unit-mapping caveat for each study. The supplementary catalog retains an animal injury series, a lung series with unresolved donor independence, a kidney series with an unverified biopsy-to-patient crosswalk, and a longitudinal exposure series. The primary collection includes independent chronic obstructive pulmonary disease and aortic valve comparisons. Each audit requires a contrast with two independent biological groups. A catalog record without an analysis carries an unassessed state on the dashboard.
+
+\begin{center}\small
+\begin{tabular}{lrrrrrr}\toprule
+Public input & Units & Positions & Features & Floor & Spot \% & Unit \%\\\midrule
+\input{generated/cohorts}
+\end{tabular}
+\end{center}
+The Alzheimer disease cortex panel comprises \ADUnits{} donors and \ADFeatures{} archived features \cite{chenAD}. The exact two-sided floor is \ADFloor{}. Pooled observations yielded \ADSpot{}\% BH calls, compared with \ADPatient{}\% under the patient-level analysis. This endpoint uses untransformed archived counts. Sampling depth, anatomical composition and the change from pooled ranks to donor means all contribute to its interpretation. The response cohort uses pretreatment Xenium tissue from patients with triple-negative breast cancer \cite{yanTNBC}. Subsets in the table identify design exercises and overlap with their parent series.
+
+The measured runs span \MeasuredArchives{} archive accessions and \MeasuredPlatforms{} platform families. In the CosMx lung contrast, case and reference tissue occupy distinct slides \cite{geo327879}. Fitting a separate fixed effect for those slides absorbs the group contrast. The MALDI-MSI analysis uses archived physical pixel spacing and a shared mass window panel \cite{msiPDAC}; its covariate share includes total ion current, which also contains the measured ions.
+
+\auditfigure{exact-floor}{Patient-level resolution.}{Each point is the theoretical two-sided floor under exhaustive enumeration for the observed group sizes. A finite Monte Carlo budget can impose a higher executed floor, which is recorded in each report. The line marks the nominal threshold.}
+\auditfigure{replication}{Sensitivity to the unit of analysis.}{BH fractions refer to each declared feature panel. Exact results and finite Monte Carlo tests are identified in the JSON.}
+\auditfigure{composition}{Covariate share across physical bands.}{Each point uses the patients and sections with interpretable physical and covariate support at that wavelength. These denominators can differ across wavelengths and are reported in the data. Cortical anatomical labels quantify regional composition. Other tissue or assay covariates have their own meaning.}
+\auditfigure{nugget}{Changes after a short-distance noise correction.}{Each point represents a feature, normalized by its larger group energy before correction. Groups follow the lexical order recorded in the report. The diagonal marks an unchanged contrast.}
+
+\subsection*{Simulation and computational comparisons}
+The synthetic operating-characteristic grid contains \PhaseCells{} design states. It varies independent donor count, composition, count overdispersion, baseline mean and batch alignment. The simulation uses a single-feature absolute mean-energy contrast and its own Monte Carlo allocation budget. It evaluates conditional calibration of this endpoint. Each state has \RepeatCount{} cohorts under each effect condition. Independently drawn tissue realizations allow a conditional sensitivity and null-rejection estimate. The lookup table applies explicit uncertainty and identifiability criteria. With zero batch alignment, adjusted rejection under a null biological contrast reached \MaxUnalignedNull{}\% in the simulated grid. Composition-dependent noise variance and group-level mean shifts can therefore preclude nominal calibration; signed correction alone does not establish a calibrated test of latent biological structure. Figure~\ref{fig:phase-diagram} shows one prespecified slice.
+\auditfigure{phase-diagram}{Conditional operating characteristics in simulation.}{Panels show adjusted null rejection and detection under the specified alternative. The highest adjusted null rejection on this displayed slice was \MaxNullSlice{}\%. The figure uses the slice parameters recorded in the simulation JSON. Interpolation between evaluated grid points is for display.}
+The comparator harness generated \SOTARuns{} successful runs across \SOTAMethods{} software methods. Results for expression, spatial variability and differential spatial patterns occupy separate estimands. Each row also identifies the tested features and the available acquisition units.
+\auditfigure{benchmark}{Observed computational cost.}{Successful subprocesses with measurable runtime and resident memory are shown. Each point represents one method applied to one public input, with shared colors for each method. The processes include R startup and method-specific work.}
+In a fresh CPU process the sparse synthetic memory workload contained \MemoryCells{} observations, \MemoryPatients{} patients and \MemoryFeatures{} features at \DensityPct{}\% nonzero density. Peak resident memory was \RSSGiB{} GiB under the recorded operating system. Larger feature sets, greater spatial extent and concurrent jobs change this bound.
+
+\section*{Discussion}
+Missing stage coordinates, uncertain slide identifiers and unmeasured cell composition limit identifiability. Observational group contrasts require a defensible exchangeability argument. The audit does not estimate the truth status of a published finding. Some Xenium assays use the first archived targets in a fixed order. A lack of calls on such a panel cannot establish a lack of response-associated biology. Public availability of a usable donor crosswalk, calibrated spatial data and an independent two-group contrast influenced inclusion. This convenience sample cannot estimate the prevalence of design problems across the spatial-omics literature. Fixed panels, small clinical groups and the specified synthetic generative family also limit generalization. The resource supports transparent inspection and rerunning on alternate designs, feature panels, covariates and physical scales.
+
+\section*{Methods}
+\paragraph{Exchangeability and resolution.}
+We require one group label per individual and aggregate sections within individuals. For group sizes $n_a,n_b$ there are $M=\binom{n_a+n_b}{n_a}$ allocations. Our two-sided convention doubles the smaller inclusive single-tail probability and caps it at one. Its theoretical floor is $\min(1,2/M)$. With $m$ features and threshold $\alpha$, the first possible strict BH rank is $\lfloor m p_{\min}/\alpha\rfloor+1$. Multiple testing follows the step-up procedure \cite{bh}. Reported BH calls use the registered panel. Their usual FDR interpretation requires valid individual probabilities and suitable dependence among tests; the public-data call fractions do not estimate realized false-discovery proportions. Beyond the enumeration budget, we draw reproducible random allocations and include the observation in each tail's numerator and denominator.
+
+\paragraph{Design and pseudoreplication.}
+Patient weights are divided over observed acquisition categories to summarize mutual information. Binary independent contingency tables additionally receive a Fisher test. Linear feasibility identifies separation on observed stage coordinates. Local bounding boxes are explicitly labeled when the acquisition frame is missing. The pooled test is a two-sided tie-corrected Mann--Whitney test. The patient test compares equal-section patient averages and moderates feature variances with a scaled inverse-chi-squared prior estimated by log-moment matching \cite{limma}. We divide each feature by its label-blind marginal standard deviation before fitting a cross-feature variance prior and refit that prior after each label assignment. A constant pooled feature receives unit tail probability. The report records the theoretical and executed Monte Carlo resolution separately. Complete separation limits interpretation of an association regardless of its calculated tail area.
+
+\paragraph{Spatial scale and confounding.}
+Occupied square control volumes carry a no-flux boundary. Their graph Laplacian has shared-face conductance divided by area in square micrometres. Local occupancy and discretization therefore enter the analysis explicitly. A shared Chebyshev approximation evaluates a difference of heat kernels at each prespecified wavelength \cite{wavelets}. Within each band we project the expression signal onto an orthonormal basis for the filtered covariates. Equal-patient aggregation of energies precedes feature-wise fraction averaging. Fine-band residual energies are adjusted using a two-lag semivariogram intercept and the gain of the projected filter for white noise. Signed corrections enter patient-level inference. A negative corrected estimate is possible when estimated noise exceeds observed energy. The correction assumes locally smooth signal and approximately independent noise with stable variance. Strong abundance-dependent heteroscedasticity can change the null distribution.
+
+\paragraph{External methods.}
+The benchmark calls the original R implementations of edgeR, DESeq2, DESpace, nnSVG, SPARK-X and Cardinal when their inputs meet each method's contract \cite{edger,deseq2,despace2,nnsvg,sparkx,cardinal}. When full-library depth is available, its use is recorded per fit. Panel-relative normalization alone can induce a negative spatial association for a constant-abundance feature when another panel member varies. Small-panel size factors, mean--dispersion estimation and asymptotic reference distributions affect comparisons with patient randomization. The adapter records applicability, exclusions, versions, sampling units and method-level resource use. A paired set of rate summaries is interpretable only for compatible endpoints. Additional details are given in the supplement and individual benchmark rows.
+
+\section*{Data availability}
+The evidence catalog lists official archive accessions, original publications and the selected public data products. Each measured report links its inputs to the source archive through checksums and a study-specific record of donor mapping, coordinate calibration and panel selection. Public audit results and synthetic benchmark outputs are distributed in separate directories. The original data remain subject to their archive terms.
+
+\section*{Code availability}
+The accompanying MIT-licensed distribution includes the Python engine, original-package R adapters, acquisition scripts, simulation generator, interactive dashboard and manuscript build scripts. The supplement describes the reproduction procedure. A release-gate record gives the software versions and checks executed on the measured release.
+
+\section*{Author declarations}
+The analyses use public archive products and generated software fixtures. Authorship, affiliations, contributions, funding and competing-interest declarations require confirmation by the submitting authors.
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+

@@ -1,0 +1,3533 @@
+{
+  "schema_version": 1,
+  "id": "GSE294965",
+  "kind": "public",
+  "platform": "Xenium",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE294965",
+  "accession": "GSE294965",
+  "provenance": {
+    "inputs": [
+      {
+        "file": "biopsy-11.npz",
+        "sha256": "f3b7d31beda241372e464981bb60c87305b54adc004da8c20268bf20b44da244",
+        "bytes": 1398
+      },
+      {
+        "file": "biopsy-17.npz",
+        "sha256": "e3cc7045e56b910b5b26f700be3a8f0476b8c91ff57be26e87b3abf2ef17eb6b",
+        "bytes": 4684667
+      },
+      {
+        "file": "biopsy-31.npz",
+        "sha256": "2de91b4e74a10ca82ab976acedb73cd7cc9c1e7724da3dc9e6515df70fbd9d7c",
+        "bytes": 1037469
+      },
+      {
+        "file": "biopsy-34.npz",
+        "sha256": "370d118811dcefb789002ddcae378d28ef1fc04a82b463c64c56cb328d792522",
+        "bytes": 415514
+      },
+      {
+        "file": "biopsy-35.npz",
+        "sha256": "b3c93f251a76c8f5b86496337aa2cb904fa080885506a5504eeb9defa58dacdd",
+        "bytes": 409249
+      },
+      {
+        "file": "biopsy-36.npz",
+        "sha256": "f5d0ac5a13ee894b9af7f7985d70fe9ae09e368da05752feda62efdd395fb255",
+        "bytes": 235641
+      },
+      {
+        "file": "biopsy-67.npz",
+        "sha256": "e38c1e7ed931ff421e9ee878d95d239d4359525ae58a5d2c43983b01edebe65d",
+        "bytes": 1474
+      },
+      {
+        "file": "biopsy-68.npz",
+        "sha256": "e6c000715ae0f8f74767bdbbd01a041eab1b93042894c975a1e05541f5922170",
+        "bytes": 1984914
+      },
+      {
+        "file": "biopsy-69.npz",
+        "sha256": "5867b2ef36f27e711779fbf7a8fb1b661e73fff46fa272369539e7adff0c7cba",
+        "bytes": 475901
+      },
+      {
+        "file": "biopsy-76.npz",
+        "sha256": "dc93c9b79eab905d3e887124f9a03b4a896f48c520a1f052166094b36b49b1f7",
+        "bytes": 603986
+      },
+      {
+        "file": "biopsy-77.npz",
+        "sha256": "5934269af6f5f31bd1ef1623f5eea164717502e51a1bf278c01be013143ad4eb",
+        "bytes": 817385
+      },
+      {
+        "file": "biopsy-94.npz",
+        "sha256": "8337d95a40df5163bc651106b5954dea92a4b35425f91e0fe94142242a4cbfcb",
+        "bytes": 295377
+      },
+      {
+        "file": "biopsy-95.npz",
+        "sha256": "b7e22768826ffbf13a248339410e2c4ae2eb0fc89b047eddc3e80232758587f9",
+        "bytes": 610595
+      },
+      {
+        "file": "biopsy-100.npz",
+        "sha256": "6c2bd0d4a0e7c2faa261d1715b6a0fa579b2f088488281f82c8935e60d633ec9",
+        "bytes": 420006
+      },
+      {
+        "file": "biopsy-101.npz",
+        "sha256": "8f18fa54a3e5b79dcf46654a9068698a1e7f5c26001522d5d465b0da34dd7f40",
+        "bytes": 407184
+      },
+      {
+        "file": "biopsy-118.npz",
+        "sha256": "5eab7e51f92b90a588d0095a60687075cddd36ac482f3d810360ea98cd2d93e9",
+        "bytes": 480292
+      },
+      {
+        "file": "biopsy-124.npz",
+        "sha256": "cd680dced5809e476e1b5529ce2ae3b0474a092b1620f98c06e78e361fd23ff6",
+        "bytes": 251998
+      },
+      {
+        "file": "biopsy-125.npz",
+        "sha256": "986bc29b5a1fd39a3cdb2877c477078ae74b044a8949aa3c40e0ac28341f1007",
+        "bytes": 360871
+      },
+      {
+        "file": "biopsy-126.npz",
+        "sha256": "3c166c77cb9b52a9622c19c6f3dcd4743437fb9141537f50d815490f28b8b743",
+        "bytes": 1893447
+      },
+      {
+        "file": "biopsy-133.npz",
+        "sha256": "a92302cca3de6c3576af5f02769dc41ef1719f4439b17f43a13190052260d621",
+        "bytes": 701219
+      },
+      {
+        "file": "biopsy-142.npz",
+        "sha256": "d5d6a28aca4475743580c0e27e05805fed3457de91f567d70066f91cdda2e413",
+        "bytes": 1728297
+      }
+    ],
+    "accession": "GSE294965",
+    "measurement": "counts",
+    "batch_label": "acquisition batch",
+    "coordinates": "um",
+    "layer": "X",
+    "covariates": "per-file C if available",
+    "selection": "All anti-GBM and control patients; first 32 archived biological panel targets, Xenium micrometre centroids, one-hot archived cell types."
+  },
+  "n_patients": 12,
+  "n_sections": 21,
+  "n_observations": 846950,
+  "n_features": 32,
+  "dimensions": {
+    "power": {
+      "status": "yellow",
+      "message": "Two-sided doubled-tail permutation resolution.",
+      "n0": 6,
+      "n1": 6,
+      "assignments": "924",
+      "p_floor": 0.0021645021645021645,
+      "features": 32,
+      "alpha": 0.05,
+      "minimum_bh_rank": 2,
+      "bh_impossible": false,
+      "nominal_impossible": false,
+      "groups": [
+        "Cntrl",
+        "GBM"
+      ],
+      "effective_p_floor": 0.0021645021645021645,
+      "effective_minimum_bh_rank": 2,
+      "effective_bh_impossible": false,
+      "executed_mode": "exact",
+      "theoretical_status": "yellow"
+    },
+    "design": {
+      "status": "yellow",
+      "code": null,
+      "message": "High risk marks categorical aliasing or no observed stage overlap. The linear fixed-effect rank diagnostic is reported separately. Local bounding boxes are coordinate-frame proxies.",
+      "categorical": {
+        "slide_id": {
+          "status": "observed",
+          "label": "slide",
+          "levels": 7,
+          "normalized_mi": 0.3741854163060887,
+          "complete_alias": false,
+          "fisher_p": null,
+          "all_levels_patient_specific": false
+        },
+        "batch": {
+          "status": "observed",
+          "label": "acquisition batch",
+          "levels": 2,
+          "normalized_mi": 0.08880563947945652,
+          "complete_alias": false,
+          "fisher_p": 1.0,
+          "all_levels_patient_specific": false
+        }
+      },
+      "coordinates": {
+        "stage": {
+          "status": "missing"
+        },
+        "bbox": {
+          "linear_separation": true,
+          "descriptive_auc": 1.0,
+          "linear_fixed_effect_alias": false
+        }
+      },
+      "joint_acquisition_design": {
+        "fields": [
+          "batch",
+          "slide_id"
+        ],
+        "status": "observed",
+        "relative_residual": 0.7606388292556648,
+        "fixed_effect_alias": false
+      },
+      "points": [
+        {
+          "x": 4458.104881867284,
+          "y": 5703.851326590637,
+          "group": "GBM",
+          "patient": "X21_GBM"
+        },
+        {
+          "x": 6475.5791902122655,
+          "y": 8283.96913479021,
+          "group": "GBM",
+          "patient": "X21_GBM"
+        },
+        {
+          "x": 7024.604262051282,
+          "y": 18936.957391447366,
+          "group": "Cntrl",
+          "patient": "X41_Cntrl"
+        },
+        {
+          "x": 1475.9531803755867,
+          "y": 8209.928348846153,
+          "group": "GBM",
+          "patient": "X46_GBM"
+        },
+        {
+          "x": 2788.3048979358546,
+          "y": 8462.170981003039,
+          "group": "GBM",
+          "patient": "X46_GBM"
+        },
+        {
+          "x": 3699.4824521339942,
+          "y": 7999.9089020860065,
+          "group": "GBM",
+          "patient": "X46_GBM"
+        },
+        {
+          "x": 6990.685447988504,
+          "y": 9779.4948045977,
+          "group": "GBM",
+          "patient": "X13_GBM"
+        },
+        {
+          "x": 2931.3527913286707,
+          "y": 19296.434211038963,
+          "group": "Cntrl",
+          "patient": "X10_Cntrl"
+        },
+        {
+          "x": 6232.756968571428,
+          "y": 18415.89290357143,
+          "group": "Cntrl",
+          "patient": "X9_Cntrl"
+        },
+        {
+          "x": 6081.3837115277765,
+          "y": 7877.445668206522,
+          "group": "GBM",
+          "patient": "X13_GBM"
+        },
+        {
+          "x": 8502.497924125073,
+          "y": 6971.454162222222,
+          "group": "GBM",
+          "patient": "X13_GBM"
+        },
+        {
+          "x": 1999.3398300609754,
+          "y": 9072.72369933555,
+          "group": "GBM",
+          "patient": "X38_GBM"
+        },
+        {
+          "x": 3696.6325667891115,
+          "y": 8578.691465001166,
+          "group": "GBM",
+          "patient": "X38_GBM"
+        },
+        {
+          "x": 7029.619810366301,
+          "y": 7340.673905555555,
+          "group": "GBM",
+          "patient": "X29_GBM"
+        },
+        {
+          "x": 8370.578215858799,
+          "y": 7258.283888888889,
+          "group": "GBM",
+          "patient": "X29_GBM"
+        },
+        {
+          "x": 5556.3554242499995,
+          "y": 7610.405490099625,
+          "group": "GBM",
+          "patient": "X29_GBM"
+        },
+        {
+          "x": 1294.871034716749,
+          "y": 19349.60781944444,
+          "group": "Cntrl",
+          "patient": "X2_Cntrl"
+        },
+        {
+          "x": 4150.985311363637,
+          "y": 18986.798416666665,
+          "group": "Cntrl",
+          "patient": "X2_Cntrl"
+        },
+        {
+          "x": 9037.458467187502,
+          "y": 19638.48562301587,
+          "group": "Cntrl",
+          "patient": "X1_Cntrl"
+        },
+        {
+          "x": 10249.457320334757,
+          "y": 7663.167588221586,
+          "group": "GBM",
+          "patient": "X5_GBM"
+        },
+        {
+          "x": 5214.9168045710785,
+          "y": 19533.687769820972,
+          "group": "Cntrl",
+          "patient": "X57_Cntrl"
+        }
+      ],
+      "points_frame": "local_bbox",
+      "reasons": []
+    },
+    "pseudorep": {
+      "status": "red",
+      "message": "Difference in BH call rates across sampling units; true discovery status is unknown for public cohorts.",
+      "spot_rate": 1.0,
+      "patient_rate": 0.5625,
+      "gap": 0.4375,
+      "ratio": 1.7777777777777777,
+      "zero_denominator": false,
+      "groups": [
+        "Cntrl",
+        "GBM"
+      ],
+      "features": [
+        "ABCC3",
+        "ABR",
+        "ACKR3",
+        "ACSM3",
+        "ACTA2",
+        "ADAM17",
+        "ADAMTS5",
+        "AFDN",
+        "AHR",
+        "ALDH1A2",
+        "ANGPT2",
+        "APBB1IP",
+        "AQP1",
+        "AQP2",
+        "AREG",
+        "ARG1",
+        "ARHGAP15",
+        "ASCL2",
+        "ATF3",
+        "ATF4",
+        "ATF5",
+        "ATF6",
+        "ATP6V0D2",
+        "BATF3",
+        "BCL11B",
+        "BCL6",
+        "BHLHE40",
+        "BMP7",
+        "BNC2",
+        "BTLA",
+        "C1QB",
+        "C1QC"
+      ],
+      "spot_p": [
+        0.0,
+        1.247926331523812e-143,
+        0.0036948620535087236,
+        1.6491055611807292e-84,
+        0.0,
+        0.0,
+        2.503076631701633e-115,
+        0.0,
+        0.0,
+        0.0,
+        5.971840973886009e-89,
+        0.0,
+        4.4928209858145336e-259,
+        6.408610991509377e-309,
+        3.45278692529983e-288,
+        1.1020734586333762e-54,
+        0.0,
+        1.7125468531243767e-120,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.3503134493917177e-07,
+        0.0,
+        0.0,
+        1.169190257434898e-171,
+        1.9632244950899762e-08,
+        2.593307231929707e-78,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spot_q": [
+        0.0,
+        1.7362453308157385e-143,
+        0.0036948620535087236,
+        1.9544954799179011e-84,
+        0.0,
+        0.0,
+        3.20393808857809e-115,
+        0.0,
+        0.0,
+        0.0,
+        7.349958121705857e-89,
+        0.0,
+        6.84620340695548e-259,
+        1.0793450090963163e-308,
+        5.524459080479728e-288,
+        1.2160810578023462e-54,
+        0.0,
+        2.2833958041658354e-120,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.4583880767914503e-07,
+        0.0,
+        0.0,
+        1.7006403744507605e-171,
+        2.0941061280959745e-08,
+        2.963779693633951e-78,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patient": {
+        "method": "exact",
+        "assignments": "924",
+        "evaluations": 924,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.0021645021645021645,
+          0.26406926406926406,
+          0.8787878787878788,
+          0.15151515151515152,
+          0.012987012987012988,
+          0.030303030303030304,
+          0.10822510822510822,
+          0.7229437229437229,
+          0.0021645021645021645,
+          0.0021645021645021645,
+          0.004329004329004329,
+          0.0021645021645021645,
+          0.010822510822510822,
+          0.9393939393939394,
+          0.09307359307359307,
+          0.5909090909090909,
+          0.0021645021645021645,
+          0.017316017316017316,
+          0.0021645021645021645,
+          0.0021645021645021645,
+          0.0021645021645021645,
+          0.0021645021645021645,
+          0.11904761904761904,
+          0.8095238095238095,
+          0.0021645021645021645,
+          0.006493506493506494,
+          0.14502164502164502,
+          0.3852813852813853,
+          0.03463203463203463,
+          0.004329004329004329,
+          0.0021645021645021645,
+          0.0021645021645021645
+        ],
+        "q": [
+          0.005772005772005772,
+          0.325008325008325,
+          0.9071358748778103,
+          0.19393939393939394,
+          0.02444614209320092,
+          0.051036682615629984,
+          0.15741833923652104,
+          0.7977310046275563,
+          0.005772005772005772,
+          0.005772005772005772,
+          0.009894867037724181,
+          0.005772005772005772,
+          0.021645021645021644,
+          0.9393939393939394,
+          0.14182642754071326,
+          0.6753246753246753,
+          0.005772005772005772,
+          0.030784030784030785,
+          0.005772005772005772,
+          0.005772005772005772,
+          0.005772005772005772,
+          0.005772005772005772,
+          0.16563146997929606,
+          0.8634920634920635,
+          0.005772005772005772,
+          0.013852813852813855,
+          0.19336219336219337,
+          0.4566297899631233,
+          0.05541125541125541,
+          0.009894867037724181,
+          0.005772005772005772,
+          0.005772005772005772
+        ],
+        "statistic": [
+          3.6070615068160046,
+          -1.094250065917451,
+          0.165136847105689,
+          1.4894494949521309,
+          2.213000356819533,
+          2.12081533570944,
+          1.6565410573345691,
+          0.337035590804965,
+          4.018251091039928,
+          2.330301397277831,
+          1.7672251093883997,
+          2.786412725273827,
+          2.482778211088123,
+          0.22033273387277913,
+          1.6446305968441455,
+          0.5274394362694202,
+          2.6866378933433097,
+          2.151444488018454,
+          -3.274226700038194,
+          3.4866282683918732,
+          3.383057367055754,
+          3.5607420605944426,
+          -1.477399514822261,
+          0.2482651867010336,
+          2.9187706913608666,
+          2.702977969214595,
+          -1.4162738870785319,
+          0.9320274275609836,
+          2.0851831661046494,
+          2.7284932279336656,
+          2.2015392337673436,
+          2.140228557597059
+        ]
+      }
+    },
+    "composition": {
+      "bands": [
+        {
+          "wavelength_um": 250.0,
+          "share": 0.23791251332998314,
+          "estimable_features": 32,
+          "supported_sections": 19,
+          "supported_patients": 12,
+          "supported_patients_by_group": {
+            "Cntrl": 6,
+            "GBM": 6
+          },
+          "interpretable_sections": 19,
+          "interpretable_patients": 12,
+          "full_coverage": false,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 600.0,
+          "share": 0.47780801003146667,
+          "estimable_features": 32,
+          "supported_sections": 19,
+          "supported_patients": 12,
+          "supported_patients_by_group": {
+            "Cntrl": 6,
+            "GBM": 6
+          },
+          "interpretable_sections": 19,
+          "interpretable_patients": 12,
+          "full_coverage": false,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 1400.0,
+          "share": 0.5127833358263283,
+          "estimable_features": 32,
+          "supported_sections": 7,
+          "supported_patients": 7,
+          "supported_patients_by_group": {
+            "Cntrl": 4,
+            "GBM": 3
+          },
+          "interpretable_sections": 5,
+          "interpretable_patients": 5,
+          "full_coverage": false,
+          "saturated_sections": 2
+        }
+      ],
+      "sections": [
+        {
+          "section_id": "0011216 - X3",
+          "patient_id": "X21_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 4,
+          "pitch_um": 31.25,
+          "edges": 1,
+          "connected_components": 3,
+          "largest_2d_span_um": 4.871753036029077,
+          "fov_span_um": [
+            156.65813873456682,
+            5.796359063625459
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": null,
+          "trace_probes": 0,
+          "trace_method": "exact",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            3
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011216 - X9",
+          "patient_id": "X21_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 24406,
+          "pitch_um": 31.25,
+          "edges": 47835,
+          "connected_components": 6,
+          "largest_2d_span_um": 4981.479315584417,
+          "fov_span_um": [
+            5444.79735542453,
+            5055.528615034965
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.03008252481024993,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            29
+          ],
+          "two_step_edges": 46911,
+          "occupancy_range": [
+            1,
+            25
+          ],
+          "bands": [
+            {
+              "supported_volumes": 24401,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 5169.91704252846,
+              "projected_white_fraction": 0.0058463844010402735,
+              "saturated": false,
+              "residual_white_gain": 0.03008252481024993
+            },
+            {
+              "supported_volumes": 24401,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 708.2690796782738,
+              "projected_white_fraction": 0.03468230297942879,
+              "saturated": false,
+              "residual_white_gain": 0.004431181592283661
+            },
+            {
+              "supported_volumes": 24401,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 125.69850450795869,
+              "projected_white_fraction": 0.18378392916066463,
+              "saturated": false,
+              "residual_white_gain": 0.0006804633908894304
+            }
+          ]
+        },
+        {
+          "section_id": "0011284 - X21",
+          "patient_id": "X41_Cntrl",
+          "group": "Cntrl",
+          "has_covariates": true,
+          "volumes": 15059,
+          "pitch_um": 31.25,
+          "edges": 25722,
+          "connected_components": 168,
+          "largest_2d_span_um": 4158.757774991141,
+          "fov_span_um": [
+            6329.971604102564,
+            4873.637467105265
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.0401341437532271,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            29
+          ],
+          "two_step_edges": 22356,
+          "occupancy_range": [
+            1,
+            17
+          ],
+          "bands": [
+            {
+              "supported_volumes": 14732,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 4714.803985218309,
+              "projected_white_fraction": 0.00807247107327373,
+              "saturated": false,
+              "residual_white_gain": 0.0401341437532271
+            },
+            {
+              "supported_volumes": 14732,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 701.7346638165791,
+              "projected_white_fraction": 0.03683796821304936,
+              "saturated": false,
+              "residual_white_gain": 0.007889279535144915
+            },
+            {
+              "supported_volumes": 14732,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 198.2546653949876,
+              "projected_white_fraction": 0.1481916998558384,
+              "saturated": false,
+              "residual_white_gain": 0.0015787159085815575
+            }
+          ]
+        },
+        {
+          "section_id": "0011284 - X5",
+          "patient_id": "X46_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 2601,
+          "pitch_um": 31.25,
+          "edges": 4941,
+          "connected_components": 4,
+          "largest_2d_span_um": 1443.3503120456257,
+          "fov_span_um": [
+            1839.5322674178399,
+            3256.264917692308
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.03058958256158605,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            29
+          ],
+          "two_step_edges": 4712,
+          "occupancy_range": [
+            1,
+            21
+          ],
+          "bands": [
+            {
+              "supported_volumes": 2597,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 655.1560617773414,
+              "projected_white_fraction": 0.04513183028712833,
+              "saturated": false,
+              "residual_white_gain": 0.03058958256158605
+            },
+            {
+              "supported_volumes": 2597,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 93.02721245437426,
+              "projected_white_fraction": 0.2490973043553665,
+              "saturated": false,
+              "residual_white_gain": 0.004276576011436684
+            },
+            {
+              "supported_volumes": 2597,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 27.347277989616778,
+              "projected_white_fraction": 0.8727273974612011,
+              "saturated": true,
+              "residual_white_gain": 0.00016389449304722714
+            }
+          ]
+        },
+        {
+          "section_id": "0011284 - X6",
+          "patient_id": "X46_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 2765,
+          "pitch_um": 31.25,
+          "edges": 5273,
+          "connected_components": 4,
+          "largest_2d_span_um": 926.0578165408233,
+          "fov_span_um": [
+            1456.34211149671,
+            3682.667323708206
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.031046445511486644,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            28,
+            28,
+            0
+          ],
+          "two_step_edges": 5030,
+          "occupancy_range": [
+            1,
+            18
+          ],
+          "bands": [
+            {
+              "supported_volumes": 2763,
+              "supported_components": 2,
+              "projection_rank": 28,
+              "effective_spectral_dimension": 640.2914978323195,
+              "projected_white_fraction": 0.04208103760316912,
+              "saturated": false,
+              "residual_white_gain": 0.031046445511486644
+            },
+            {
+              "supported_volumes": 2763,
+              "supported_components": 2,
+              "projection_rank": 28,
+              "effective_spectral_dimension": 133.4438765928151,
+              "projected_white_fraction": 0.24828724295426274,
+              "saturated": false,
+              "residual_white_gain": 0.0038620741642658094
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011284 - X7",
+          "patient_id": "X46_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 1195,
+          "pitch_um": 31.25,
+          "edges": 2223,
+          "connected_components": 8,
+          "largest_2d_span_um": 730.1565563323938,
+          "fov_span_um": [
+            968.3072273449125,
+            2585.2722568035924
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.030664323746160137,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            0
+          ],
+          "two_step_edges": 2082,
+          "occupancy_range": [
+            1,
+            24
+          ],
+          "bands": [
+            {
+              "supported_volumes": 1184,
+              "supported_components": 2,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 247.64123743186857,
+              "projected_white_fraction": 0.1036479411009043,
+              "saturated": false,
+              "residual_white_gain": 0.030664323746160137
+            },
+            {
+              "supported_volumes": 1184,
+              "supported_components": 2,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 60.52275308541435,
+              "projected_white_fraction": 0.508765889461452,
+              "saturated": false,
+              "residual_white_gain": 0.0029409098351284805
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011546 - X14",
+          "patient_id": "X13_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 7,
+          "pitch_um": 31.25,
+          "edges": 6,
+          "connected_components": 2,
+          "largest_2d_span_um": 31.789499999997133,
+          "fov_span_um": [
+            258.23286264367835,
+            39.43605747126276
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": null,
+          "trace_probes": 0,
+          "trace_method": "exact",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            3
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011546 - X15",
+          "patient_id": "X10_Cntrl",
+          "group": "Cntrl",
+          "has_covariates": true,
+          "volumes": 23226,
+          "pitch_um": 31.25,
+          "edges": 44474,
+          "connected_components": 5,
+          "largest_2d_span_um": 4350.0528946153845,
+          "fov_span_um": [
+            4402.262171888111,
+            6479.247850649352
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.03227843024742761,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            29
+          ],
+          "two_step_edges": 42647,
+          "occupancy_range": [
+            1,
+            17
+          ],
+          "bands": [
+            {
+              "supported_volumes": 23219,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 6435.9677470228535,
+              "projected_white_fraction": 0.006112628556783879,
+              "saturated": false,
+              "residual_white_gain": 0.03227843024742761
+            },
+            {
+              "supported_volumes": 23219,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 924.6136616323631,
+              "projected_white_fraction": 0.032773434647348526,
+              "saturated": false,
+              "residual_white_gain": 0.0049392040390488735
+            },
+            {
+              "supported_volumes": 23219,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 198.36918953799287,
+              "projected_white_fraction": 0.18935737050578777,
+              "saturated": false,
+              "residual_white_gain": 0.0007775974713584994
+            }
+          ]
+        },
+        {
+          "section_id": "0011546 - X16",
+          "patient_id": "X9_Cntrl",
+          "group": "Cntrl",
+          "has_covariates": true,
+          "volumes": 5477,
+          "pitch_um": 31.25,
+          "edges": 9524,
+          "connected_components": 32,
+          "largest_2d_span_um": 1295.3514650699713,
+          "fov_span_um": [
+            1777.1724771428562,
+            6570.916892857149
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.038530196825184417,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            0
+          ],
+          "two_step_edges": 8333,
+          "occupancy_range": [
+            1,
+            19
+          ],
+          "bands": [
+            {
+              "supported_volumes": 5386,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 1943.5068833031758,
+              "projected_white_fraction": 0.02255868356768609,
+              "saturated": false,
+              "residual_white_gain": 0.038530196825184417
+            },
+            {
+              "supported_volumes": 5386,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 282.3162861439285,
+              "projected_white_fraction": 0.1029954974223397,
+              "saturated": false,
+              "residual_white_gain": 0.006625259509024285
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011546 - X8",
+          "patient_id": "X13_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 2728,
+          "pitch_um": 31.25,
+          "edges": 5076,
+          "connected_components": 22,
+          "largest_2d_span_um": 1082.8777847222227,
+          "fov_span_um": [
+            1196.7306480555553,
+            3613.4120114130437
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.03246305498409004,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            0
+          ],
+          "two_step_edges": 4778,
+          "occupancy_range": [
+            1,
+            27
+          ],
+          "bands": [
+            {
+              "supported_volumes": 2697,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 770.8405903731258,
+              "projected_white_fraction": 0.04705076255829368,
+              "saturated": false,
+              "residual_white_gain": 0.03246305498409004
+            },
+            {
+              "supported_volumes": 2697,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 123.72951234338252,
+              "projected_white_fraction": 0.24672474405246977,
+              "saturated": false,
+              "residual_white_gain": 0.004065325623695973
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011546 - X9",
+          "patient_id": "X13_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 3094,
+          "pitch_um": 31.25,
+          "edges": 5969,
+          "connected_components": 1,
+          "largest_2d_span_um": 909.4196966268133,
+          "fov_span_um": [
+            945.1043422260464,
+            3990.9959644444452
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.030151747542104475,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            0
+          ],
+          "two_step_edges": 5771,
+          "occupancy_range": [
+            1,
+            29
+          ],
+          "bands": [
+            {
+              "supported_volumes": 3094,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 596.9805939608231,
+              "projected_white_fraction": 0.04259202160973207,
+              "saturated": false,
+              "residual_white_gain": 0.030151747542104475
+            },
+            {
+              "supported_volumes": 3094,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 140.59656531425793,
+              "projected_white_fraction": 0.22481670195126385,
+              "saturated": false,
+              "residual_white_gain": 0.0037892079821323353
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011695 - X5",
+          "patient_id": "X38_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 1521,
+          "pitch_um": 31.25,
+          "edges": 2844,
+          "connected_components": 7,
+          "largest_2d_span_um": 896.7037515403993,
+          "fov_span_um": [
+            1171.776930121951,
+            2123.653112956811
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.03109053725794124,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            0
+          ],
+          "two_step_edges": 2676,
+          "occupancy_range": [
+            1,
+            24
+          ],
+          "bands": [
+            {
+              "supported_volumes": 1503,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 425.241615943893,
+              "projected_white_fraction": 0.08286662160583935,
+              "saturated": false,
+              "residual_white_gain": 0.03109053725794124
+            },
+            {
+              "supported_volumes": 1503,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 70.04866493623604,
+              "projected_white_fraction": 0.4072631011863175,
+              "saturated": false,
+              "residual_white_gain": 0.0034915592251100152
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011695 - X6",
+          "patient_id": "X38_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 2832,
+          "pitch_um": 31.25,
+          "edges": 5381,
+          "connected_components": 6,
+          "largest_2d_span_um": 1794.2082966413327,
+          "fov_span_um": [
+            2157.9916042369055,
+            3095.589852872283
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.031224857135685572,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            29
+          ],
+          "two_step_edges": 5127,
+          "occupancy_range": [
+            1,
+            29
+          ],
+          "bands": [
+            {
+              "supported_volumes": 2826,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 486.20191063108234,
+              "projected_white_fraction": 0.04253181041026099,
+              "saturated": false,
+              "residual_white_gain": 0.031224857135685572
+            },
+            {
+              "supported_volumes": 2826,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 132.56908015565335,
+              "projected_white_fraction": 0.2621448399243223,
+              "saturated": false,
+              "residual_white_gain": 0.0038333446608187728
+            },
+            {
+              "supported_volumes": 2826,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 33.45259654106778,
+              "projected_white_fraction": 0.8886746377246947,
+              "saturated": true,
+              "residual_white_gain": 0.00012303717650524395
+            }
+          ]
+        },
+        {
+          "section_id": "0011707 - X10",
+          "patient_id": "X29_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 2091,
+          "pitch_um": 31.25,
+          "edges": 3940,
+          "connected_components": 6,
+          "largest_2d_span_um": 939.7992025917771,
+          "fov_span_um": [
+            1186.8157526007335,
+            3208.119300000001
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.031167150953874703,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            0
+          ],
+          "two_step_edges": 3722,
+          "occupancy_range": [
+            1,
+            26
+          ],
+          "bands": [
+            {
+              "supported_volumes": 2079,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 510.59448314908883,
+              "projected_white_fraction": 0.061762494519285185,
+              "saturated": false,
+              "residual_white_gain": 0.031167150953874703
+            },
+            {
+              "supported_volumes": 2079,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 88.45322372222334,
+              "projected_white_fraction": 0.3437400260667232,
+              "saturated": false,
+              "residual_white_gain": 0.003648266108691121
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011707 - X11",
+          "patient_id": "X29_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 1910,
+          "pitch_um": 31.25,
+          "edges": 3565,
+          "connected_components": 17,
+          "largest_2d_span_um": 736.4462264470585,
+          "fov_span_um": [
+            1112.9277221285593,
+            3654.4075555555573
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.03013385597266706,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            0
+          ],
+          "two_step_edges": 3288,
+          "occupancy_range": [
+            1,
+            25
+          ],
+          "bands": [
+            {
+              "supported_volumes": 1824,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 480.1694208651447,
+              "projected_white_fraction": 0.07851821133700908,
+              "saturated": false,
+              "residual_white_gain": 0.03013385597266706
+            },
+            {
+              "supported_volumes": 1824,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 91.07481613807026,
+              "projected_white_fraction": 0.39677984208249967,
+              "saturated": false,
+              "residual_white_gain": 0.003472181623632825
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011707 - X9",
+          "patient_id": "X29_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 2327,
+          "pitch_um": 31.25,
+          "edges": 4424,
+          "connected_components": 7,
+          "largest_2d_span_um": 934.0987537391384,
+          "fov_span_um": [
+            1221.3318235000015,
+            3284.7573074719794
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.030104476138481325,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            0
+          ],
+          "two_step_edges": 4222,
+          "occupancy_range": [
+            1,
+            25
+          ],
+          "bands": [
+            {
+              "supported_volumes": 2320,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 580.9525700838393,
+              "projected_white_fraction": 0.0541165230742013,
+              "saturated": false,
+              "residual_white_gain": 0.030104476138481325
+            },
+            {
+              "supported_volumes": 2320,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 78.07647338567236,
+              "projected_white_fraction": 0.3358214722909042,
+              "saturated": false,
+              "residual_white_gain": 0.0036371292468546593
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011762 - X14",
+          "patient_id": "X2_Cntrl",
+          "group": "Cntrl",
+          "has_covariates": true,
+          "volumes": 2558,
+          "pitch_um": 31.25,
+          "edges": 4609,
+          "connected_components": 16,
+          "largest_2d_span_um": 1149.3564404431381,
+          "fov_span_um": [
+            2532.8732822906404,
+            4432.471861111113
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.034825540972169,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            28,
+            28,
+            0
+          ],
+          "two_step_edges": 4190,
+          "occupancy_range": [
+            1,
+            22
+          ],
+          "bands": [
+            {
+              "supported_volumes": 2531,
+              "supported_components": 1,
+              "projection_rank": 28,
+              "effective_spectral_dimension": 558.5477370100359,
+              "projected_white_fraction": 0.04580373257189108,
+              "saturated": false,
+              "residual_white_gain": 0.034825540972169
+            },
+            {
+              "supported_volumes": 2531,
+              "supported_components": 1,
+              "projection_rank": 28,
+              "effective_spectral_dimension": 114.74650183264386,
+              "projected_white_fraction": 0.25818143013287004,
+              "saturated": false,
+              "residual_white_gain": 0.004837801115423368
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011762 - X15",
+          "patient_id": "X2_Cntrl",
+          "group": "Cntrl",
+          "has_covariates": true,
+          "volumes": 4593,
+          "pitch_um": 31.25,
+          "edges": 8090,
+          "connected_components": 34,
+          "largest_2d_span_um": 1171.6902874224731,
+          "fov_span_um": [
+            2324.6223227272735,
+            5440.576833333329
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.03759442730765715,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            0
+          ],
+          "two_step_edges": 7201,
+          "occupancy_range": [
+            1,
+            17
+          ],
+          "bands": [
+            {
+              "supported_volumes": 4530,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 1251.3856122310683,
+              "projected_white_fraction": 0.02452352356712256,
+              "saturated": false,
+              "residual_white_gain": 0.03759442730765715
+            },
+            {
+              "supported_volumes": 4530,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 186.0821806859134,
+              "projected_white_fraction": 0.1371213931014864,
+              "saturated": false,
+              "residual_white_gain": 0.005891536690146229
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0011762 - X16",
+          "patient_id": "X1_Cntrl",
+          "group": "Cntrl",
+          "has_covariates": true,
+          "volumes": 19016,
+          "pitch_um": 31.25,
+          "edges": 36071,
+          "connected_components": 15,
+          "largest_2d_span_um": 4647.338760561786,
+          "fov_span_um": [
+            4846.622596875002,
+            6205.908468253972
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.032782550908188636,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            29
+          ],
+          "two_step_edges": 34292,
+          "occupancy_range": [
+            1,
+            30
+          ],
+          "bands": [
+            {
+              "supported_volumes": 19000,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 4063.7155231502243,
+              "projected_white_fraction": 0.007295143501037264,
+              "saturated": false,
+              "residual_white_gain": 0.032782550908188636
+            },
+            {
+              "supported_volumes": 19000,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 854.6947215966053,
+              "projected_white_fraction": 0.044232202951356624,
+              "saturated": false,
+              "residual_white_gain": 0.0051236691101058975
+            },
+            {
+              "supported_volumes": 19000,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 126.90516173989809,
+              "projected_white_fraction": 0.20723587347928768,
+              "saturated": false,
+              "residual_white_gain": 0.0007961207290090807
+            }
+          ]
+        },
+        {
+          "section_id": "0011762 - X8",
+          "patient_id": "X5_GBM",
+          "group": "GBM",
+          "has_covariates": true,
+          "volumes": 3460,
+          "pitch_um": 31.25,
+          "edges": 6464,
+          "connected_components": 6,
+          "largest_2d_span_um": 1314.0009657827502,
+          "fov_span_um": [
+            1700.902455484329,
+            3819.200484713845
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.03329214178415379,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            28,
+            28,
+            0
+          ],
+          "two_step_edges": 6057,
+          "occupancy_range": [
+            1,
+            23
+          ],
+          "bands": [
+            {
+              "supported_volumes": 3451,
+              "supported_components": 1,
+              "projection_rank": 28,
+              "effective_spectral_dimension": 795.5328500993862,
+              "projected_white_fraction": 0.03601004615193757,
+              "saturated": false,
+              "residual_white_gain": 0.03329214178415379
+            },
+            {
+              "supported_volumes": 3451,
+              "supported_components": 1,
+              "projection_rank": 28,
+              "effective_spectral_dimension": 119.34886852756573,
+              "projected_white_fraction": 0.2178900439272777,
+              "saturated": false,
+              "residual_white_gain": 0.00448729849005317
+            },
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            }
+          ]
+        },
+        {
+          "section_id": "0018775 - X16",
+          "patient_id": "X57_Cntrl",
+          "group": "Cntrl",
+          "has_covariates": true,
+          "volumes": 31028,
+          "pitch_um": 31.25,
+          "edges": 50600,
+          "connected_components": 444,
+          "largest_2d_span_um": 7121.737938963208,
+          "fov_span_um": [
+            8807.952351642156,
+            7288.2985690537025
+          ],
+          "nyquist_wavelength_um": 62.5,
+          "axial_limit_um": 98.17477042468103,
+          "fine_noise_gain": 0.04329392806068305,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            29,
+            29,
+            29
+          ],
+          "two_step_edges": 41977,
+          "occupancy_range": [
+            1,
+            17
+          ],
+          "bands": [
+            {
+              "supported_volumes": 29959,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 10312.915092988369,
+              "projected_white_fraction": 0.0033065392283627777,
+              "saturated": false,
+              "residual_white_gain": 0.04329392806068305
+            },
+            {
+              "supported_volumes": 29959,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 1726.38015041823,
+              "projected_white_fraction": 0.016478733099091272,
+              "saturated": false,
+              "residual_white_gain": 0.009353642009705683
+            },
+            {
+              "supported_volumes": 29959,
+              "supported_components": 1,
+              "projection_rank": 29,
+              "effective_spectral_dimension": 610.5623956513967,
+              "projected_white_fraction": 0.062161164242440524,
+              "saturated": false,
+              "residual_white_gain": 0.002211968368463011
+            }
+          ]
+        }
+      ],
+      "total_patients": 12,
+      "total_patients_by_group": {
+        "Cntrl": 6,
+        "GBM": 6
+      },
+      "total_sections": 21,
+      "covariate_sections": 21,
+      "chebyshev_degree": 137,
+      "shared_spectral_bound_per_um2": 0.008192,
+      "status": "yellow",
+      "message": "Feature-averaged explained energy on matched supporting sections, equally weighted within patient and across patients. A connected 2-D footprint must span a wavelength, with wavelength at least pi times the occupied square-grid pitch. Regridding can alter native geometry. Missing covariates, saturated fits and partial coverage limit interpretation."
+    },
+    "nugget": {
+      "groups": [
+        "Cntrl",
+        "GBM"
+      ],
+      "features": [
+        {
+          "feature": "ABCC3",
+          "raw_delta": 0.0031928272995352955,
+          "debiased_delta": 0.001440512020200509,
+          "raw_energy": [
+            0.0012476627846110724,
+            0.004440490084146368
+          ],
+          "corrected_energy": [
+            0.00040168427857764367,
+            0.0018421962987781525
+          ],
+          "mean_delta": 0.2067781363071157,
+          "estimated_noise_delta": 0.0017523152793347866,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "ABR",
+          "raw_delta": -0.0026600513366949264,
+          "debiased_delta": -0.00024270674030002016,
+          "raw_energy": [
+            0.0039747516195259725,
+            0.001314700282831046
+          ],
+          "corrected_energy": [
+            0.0007734723323437601,
+            0.00053076559204374
+          ],
+          "mean_delta": -0.03211484130744857,
+          "estimated_noise_delta": -0.002417344596394906,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "ACKR3",
+          "raw_delta": -0.0004293237833235355,
+          "debiased_delta": -0.00020203463020198703,
+          "raw_energy": [
+            0.0006392741223559531,
+            0.00020995033903241754
+          ],
+          "corrected_energy": [
+            0.00028065433730237594,
+            7.861970710038893e-05
+          ],
+          "mean_delta": 0.002328944367110064,
+          "estimated_noise_delta": -0.0002272891531215485,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ACSM3",
+          "raw_delta": 0.0014627102211341413,
+          "debiased_delta": 0.0009579909695995042,
+          "raw_energy": [
+            0.0008573481980274446,
+            0.002320058419161586
+          ],
+          "corrected_energy": [
+            9.593130001403723e-05,
+            0.0010539222696135415
+          ],
+          "mean_delta": 0.06535691064161066,
+          "estimated_noise_delta": 0.0005047192515346372,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ACTA2",
+          "raw_delta": 0.004550012365530473,
+          "debiased_delta": 0.002864132101185011,
+          "raw_energy": [
+            0.003603834985327003,
+            0.008153847350857476
+          ],
+          "corrected_energy": [
+            0.0014783355979669027,
+            0.0043424676991519135
+          ],
+          "mean_delta": 0.15199776221622785,
+          "estimated_noise_delta": 0.0016858802643454625,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ADAM17",
+          "raw_delta": -0.0001874988642454247,
+          "debiased_delta": 3.3639533845905e-05,
+          "raw_energy": [
+            0.0011689324912435388,
+            0.000981433626998114
+          ],
+          "corrected_energy": [
+            0.0002928832678242809,
+            0.0003265228016701859
+          ],
+          "mean_delta": 0.05445169982414012,
+          "estimated_noise_delta": -0.0002211383980913296,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ADAMTS5",
+          "raw_delta": 8.934413246322864e-05,
+          "debiased_delta": 0.00011228711312242552,
+          "raw_energy": [
+            0.0003163684299211712,
+            0.0004057125623843998
+          ],
+          "corrected_energy": [
+            5.458940763291094e-05,
+            0.00016687652075533647
+          ],
+          "mean_delta": 0.019664471395781927,
+          "estimated_noise_delta": -2.2942980659196912e-05,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "AFDN",
+          "raw_delta": -0.0014132326283885347,
+          "debiased_delta": 0.0002481470023116606,
+          "raw_energy": [
+            0.004144317853923804,
+            0.002731085225535269
+          ],
+          "corrected_energy": [
+            0.0007041277402461379,
+            0.0009522747425577985
+          ],
+          "mean_delta": 0.03035429253081834,
+          "estimated_noise_delta": -0.0016613796307001951,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "AHR",
+          "raw_delta": 0.0016625930307148503,
+          "debiased_delta": 0.0008172517059714549,
+          "raw_energy": [
+            0.000664366484000478,
+            0.0023269595147153285
+          ],
+          "corrected_energy": [
+            0.00018283280797233507,
+            0.00100008451394379
+          ],
+          "mean_delta": 0.14774560395144304,
+          "estimated_noise_delta": 0.0008453413247433955,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "ALDH1A2",
+          "raw_delta": 0.0005252479108228681,
+          "debiased_delta": 0.00034838278213644713,
+          "raw_energy": [
+            0.0005154054188238516,
+            0.0010406533296467198
+          ],
+          "corrected_energy": [
+            9.928768570629353e-05,
+            0.0004476704678427407
+          ],
+          "mean_delta": 0.051719407097712264,
+          "estimated_noise_delta": 0.0001768651286864209,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ANGPT2",
+          "raw_delta": 2.7072150675348664e-06,
+          "debiased_delta": -4.9380777517141e-06,
+          "raw_energy": [
+            0.00011475346768134855,
+            0.00011746068274888342
+          ],
+          "corrected_energy": [
+            3.1844869128934995e-05,
+            2.6906791377220895e-05
+          ],
+          "mean_delta": 0.007204060200847755,
+          "estimated_noise_delta": 7.64529281924899e-06,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "APBB1IP",
+          "raw_delta": 0.0013568667402310292,
+          "debiased_delta": 0.0007794471130691711,
+          "raw_energy": [
+            0.0006946379440940787,
+            0.002051504684325108
+          ],
+          "corrected_energy": [
+            0.0001835660343301889,
+            0.00096301314739936
+          ],
+          "mean_delta": 0.1198608401189782,
+          "estimated_noise_delta": 0.0005774196271618582,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "AQP1",
+          "raw_delta": 0.08374720730611868,
+          "debiased_delta": 0.04893582316760106,
+          "raw_energy": [
+            0.015349528565043664,
+            0.09909673587116234
+          ],
+          "corrected_energy": [
+            0.004342770699798539,
+            0.0532785938673996
+          ],
+          "mean_delta": 0.8840882337420244,
+          "estimated_noise_delta": 0.0348113841385176,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "AQP2",
+          "raw_delta": 0.02781447995791828,
+          "debiased_delta": 0.02120111256136563,
+          "raw_energy": [
+            0.026105210292941775,
+            0.053919690250860054
+          ],
+          "corrected_energy": [
+            0.011600382701588162,
+            0.03280149526295379
+          ],
+          "mean_delta": 0.16897720434971136,
+          "estimated_noise_delta": 0.006613367396552659,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "AREG",
+          "raw_delta": 9.605220439761917e-06,
+          "debiased_delta": 6.973977852585009e-05,
+          "raw_energy": [
+            0.00023422520191320663,
+            0.00024383042235296855
+          ],
+          "corrected_energy": [
+            5.033340781899733e-05,
+            0.00012007318634484742
+          ],
+          "mean_delta": 0.007184737757217993,
+          "estimated_noise_delta": -6.0134558086088184e-05,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ARG1",
+          "raw_delta": -3.849575062251311e-05,
+          "debiased_delta": -1.308762416366624e-06,
+          "raw_energy": [
+            8.398599156314958e-05,
+            4.5490240940636474e-05
+          ],
+          "corrected_energy": [
+            1.9405231654067153e-05,
+            1.809646923770053e-05
+          ],
+          "mean_delta": 0.001889563167345407,
+          "estimated_noise_delta": -3.718698820614649e-05,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ARHGAP15",
+          "raw_delta": 4.022258371460913e-05,
+          "debiased_delta": 1.109122017543908e-05,
+          "raw_energy": [
+            3.923366821769405e-05,
+            7.945625193230318e-05
+          ],
+          "corrected_energy": [
+            1.1474274530521875e-05,
+            2.2565494705960955e-05
+          ],
+          "mean_delta": 0.013135341278341846,
+          "estimated_noise_delta": 2.9131363539170053e-05,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "ASCL2",
+          "raw_delta": 1.7518937123450865e-06,
+          "debiased_delta": 2.4605066769541535e-06,
+          "raw_energy": [
+            5.1855653907443456e-05,
+            5.360754761978854e-05
+          ],
+          "corrected_energy": [
+            1.08304983429469e-05,
+            1.3291005019901053e-05
+          ],
+          "mean_delta": 0.0051434061202406955,
+          "estimated_noise_delta": -7.086129646090771e-07,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ATF3",
+          "raw_delta": -0.005538171160105436,
+          "debiased_delta": -0.0021860023351793537,
+          "raw_energy": [
+            0.005943286978051752,
+            0.0004051158179463165
+          ],
+          "corrected_energy": [
+            0.0024095837072548977,
+            0.0002235813720755439
+          ],
+          "mean_delta": -0.07951831449374143,
+          "estimated_noise_delta": -0.0033521688249260814,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "ATF4",
+          "raw_delta": 0.0040947327303769284,
+          "debiased_delta": 0.003185529983413765,
+          "raw_energy": [
+            0.005046817721258993,
+            0.009141550451635921
+          ],
+          "corrected_energy": [
+            0.0009030621948689668,
+            0.004088592178282732
+          ],
+          "mean_delta": 0.3489245673161851,
+          "estimated_noise_delta": 0.0009092027469631636,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ATF5",
+          "raw_delta": 0.0003917079738515219,
+          "debiased_delta": 0.00014866138284436452,
+          "raw_energy": [
+            0.0002401797872812921,
+            0.000631887761132814
+          ],
+          "corrected_energy": [
+            2.8572440384529326e-05,
+            0.00017723382322889386
+          ],
+          "mean_delta": 0.054865669505487255,
+          "estimated_noise_delta": 0.00024304659100715746,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "ATF6",
+          "raw_delta": 0.0006633237891171821,
+          "debiased_delta": 0.0005543049748776006,
+          "raw_energy": [
+            0.0016910029935701771,
+            0.0023543267826873593
+          ],
+          "corrected_energy": [
+            0.0002955173165965508,
+            0.0008498222914741513
+          ],
+          "mean_delta": 0.1430378891742147,
+          "estimated_noise_delta": 0.00010901881423958115,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ATP6V0D2",
+          "raw_delta": -0.00024984413632571194,
+          "debiased_delta": 0.0012718009844781438,
+          "raw_energy": [
+            0.004464268152790287,
+            0.004214424016464575
+          ],
+          "corrected_energy": [
+            0.0002602499133537743,
+            0.001532050897831918
+          ],
+          "mean_delta": -0.009456558766288481,
+          "estimated_noise_delta": -0.0015216451208038555,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "BATF3",
+          "raw_delta": -4.0405110993462566e-05,
+          "debiased_delta": -2.7144241793448554e-06,
+          "raw_energy": [
+            0.000107684715086382,
+            6.727960409291944e-05
+          ],
+          "corrected_energy": [
+            3.437642747840809e-05,
+            3.1662003299063235e-05
+          ],
+          "mean_delta": 0.0013666980010857673,
+          "estimated_noise_delta": -3.769068681411771e-05,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "BCL11B",
+          "raw_delta": 7.446788898720968e-05,
+          "debiased_delta": 2.9933336638006702e-05,
+          "raw_energy": [
+            0.0001241600709952463,
+            0.000198627959982456
+          ],
+          "corrected_energy": [
+            2.4146425064280034e-05,
+            5.4079761702286736e-05
+          ],
+          "mean_delta": 0.024411592164438996,
+          "estimated_noise_delta": 4.453455234920296e-05,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "BCL6",
+          "raw_delta": 0.0008810016076363151,
+          "debiased_delta": 0.0005757314115114522,
+          "raw_energy": [
+            0.001194774071680831,
+            0.002075775679317146
+          ],
+          "corrected_energy": [
+            0.00031851783999229814,
+            0.0008942492515037504
+          ],
+          "mean_delta": 0.116067440537276,
+          "estimated_noise_delta": 0.0003052701961248626,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "BHLHE40",
+          "raw_delta": -0.008103505025983032,
+          "debiased_delta": -0.0029854569697027955,
+          "raw_energy": [
+            0.011571262842580246,
+            0.003467757816597213
+          ],
+          "corrected_energy": [
+            0.004502505971931311,
+            0.0015170490022285157
+          ],
+          "mean_delta": -0.0395150676496811,
+          "estimated_noise_delta": -0.0051180480562802375,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "BMP7",
+          "raw_delta": 2.767222273639602e-05,
+          "debiased_delta": 6.359989307070814e-05,
+          "raw_energy": [
+            0.00019119485046207346,
+            0.00021886707319846948
+          ],
+          "corrected_energy": [
+            3.473399821917581e-05,
+            9.833389128988395e-05
+          ],
+          "mean_delta": 0.008581531531972166,
+          "estimated_noise_delta": -3.5927670334312144e-05,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "BNC2",
+          "raw_delta": -0.00038178166507668674,
+          "debiased_delta": 0.0003276112142547781,
+          "raw_energy": [
+            0.002738179506243553,
+            0.0023563978411668663
+          ],
+          "corrected_energy": [
+            0.0005181569900292996,
+            0.0008457682042840777
+          ],
+          "mean_delta": 0.055059850194796894,
+          "estimated_noise_delta": -0.0007093928793314652,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "BTLA",
+          "raw_delta": 3.413367717921233e-06,
+          "debiased_delta": 1.2278887272806161e-05,
+          "raw_energy": [
+            9.566952893843681e-05,
+            9.908289665635805e-05
+          ],
+          "corrected_energy": [
+            2.5065005930941984e-05,
+            3.7343893203748145e-05
+          ],
+          "mean_delta": 0.009244468428959825,
+          "estimated_noise_delta": -8.865519554884931e-06,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "C1QB",
+          "raw_delta": 0.002162235793851464,
+          "debiased_delta": 0.0011239777827219348,
+          "raw_energy": [
+            0.00010442883175687653,
+            0.0022666646256083406
+          ],
+          "corrected_energy": [
+            5.6670281089749714e-05,
+            0.0011806480638116845
+          ],
+          "mean_delta": 0.11517122566288351,
+          "estimated_noise_delta": 0.001038258011129529,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "C1QC",
+          "raw_delta": 0.0026476197510961618,
+          "debiased_delta": 0.0009371986795690485,
+          "raw_energy": [
+            0.0001702608972279342,
+            0.002817880648324096
+          ],
+          "corrected_energy": [
+            0.00010290058699159602,
+            0.0010400992665606445
+          ],
+          "mean_delta": 0.15029152089061637,
+          "estimated_noise_delta": 0.0017104210715271134,
+          "mean_noise_sensitive": true
+        }
+      ],
+      "flagged": 9,
+      "patient_energies": [
+        {
+          "patient_id": "X21_GBM",
+          "group": "GBM",
+          "raw": [
+            0.003087051172680457,
+            0.0006225989146933283,
+            4.676598002471397e-05,
+            0.0005795313210243123,
+            0.0024776873331545405,
+            0.0007398738674684113,
+            0.00011177513752162792,
+            0.0008519824716260353,
+            0.0012698931916451713,
+            0.0005147223038617005,
+            7.847652855322931e-05,
+            0.0006620966430483547,
+            0.06976185762748564,
+            0.03858453296820976,
+            0.00045876678480475183,
+            3.606011492081415e-05,
+            3.82430213416692e-05,
+            1.516524861631371e-05,
+            0.0008329459814744344,
+            0.005636862897658013,
+            0.0010349851479912959,
+            0.0010806774029882193,
+            0.0007123885185124015,
+            2.0081401733457528e-05,
+            0.00012139343918627697,
+            0.0007620240117454034,
+            0.0017856812247360736,
+            7.254976580595038e-05,
+            0.001337795667485011,
+            6.120729456727044e-05,
+            0.0006365123292436604,
+            0.0007703769262341904
+          ],
+          "corrected": [
+            0.001158167933272779,
+            0.00017151023083696525,
+            4.527595318831597e-06,
+            0.0001676715972333995,
+            0.001090618327625591,
+            0.00020651132695324913,
+            1.4729835929124045e-05,
+            0.00016679654744283171,
+            0.00037227199923878945,
+            0.0001540775614587692,
+            2.1399723892818128e-05,
+            0.0001970712273755605,
+            0.03971188251818504,
+            0.024999050089890305,
+            0.00021075901940035635,
+            2.265567860838199e-06,
+            1.2357972647922646e-05,
+            1.966150843377878e-06,
+            0.0005895956530361895,
+            0.0023749481025871796,
+            0.0003120621377866611,
+            0.0002053890010231417,
+            0.00017497258404331655,
+            3.676774376054474e-08,
+            9.540176293908637e-06,
+            0.00017309958758463277,
+            0.0006021057959303784,
+            2.142181907027162e-05,
+            0.00032926775460105466,
+            7.09780267871133e-06,
+            0.00015047833146597593,
+            0.0001586528333950122
+          ]
+        },
+        {
+          "patient_id": "X41_Cntrl",
+          "group": "Cntrl",
+          "raw": [
+            0.0010719142674976354,
+            0.004935497112441155,
+            0.00037311440101267626,
+            0.0012058260295896561,
+            0.0029459415065362167,
+            0.0013427231972973454,
+            0.00026443428304501583,
+            0.006061160715893043,
+            0.0008131892214701035,
+            0.0006807966692529371,
+            0.00011118922208162273,
+            0.00041225122603949884,
+            0.00858440101926037,
+            0.060080766477713765,
+            0.00020265258750492107,
+            0.00017514125481189041,
+            4.699271041817265e-05,
+            5.490112599249625e-05,
+            0.0036267907400140205,
+            0.00512959223279018,
+            0.00021004106102016584,
+            0.0019193926620573534,
+            0.0037610246364666805,
+            7.369560921484969e-05,
+            0.0001347361222637078,
+            0.0010267735667826912,
+            0.003951803381695372,
+            0.00019164006031822058,
+            0.0036806397740690856,
+            0.0001664541062888586,
+            5.449306307936916e-05,
+            7.86153641936795e-05
+          ],
+          "corrected": [
+            0.00029784944632601357,
+            0.0011405993270127402,
+            0.0001064475918376825,
+            0.00022955612912034496,
+            0.001034324144227198,
+            0.000338661997361349,
+            4.734591718440521e-05,
+            0.0011310420732223315,
+            0.00020218235538473333,
+            0.00014122758933709611,
+            1.8617485452910253e-05,
+            0.00015051351162228974,
+            0.00316917618360414,
+            0.03790642347829265,
+            3.9024275318073106e-05,
+            4.380422984865328e-05,
+            -1.6561908458755738e-06,
+            1.13230756221269e-05,
+            0.0022237760748369953,
+            0.0006250740499848311,
+            3.5043909430286404e-07,
+            0.00029545246825095676,
+            0.0005756590634363882,
+            3.4286142303642113e-06,
+            2.2402884517452087e-05,
+            0.00024886857344346325,
+            0.00166043802971812,
+            2.3845009412078172e-05,
+            0.0010209856489678745,
+            4.1994970067785816e-05,
+            2.1304001338459526e-05,
+            4.184970211462232e-05
+          ]
+        },
+        {
+          "patient_id": "X46_GBM",
+          "group": "GBM",
+          "raw": [
+            0.007373301721975212,
+            0.0015863643133717873,
+            0.00024230788665538253,
+            0.00695038899817457,
+            0.011432161365086686,
+            0.0011470632819257636,
+            0.0006878053773957455,
+            0.005290698506170074,
+            0.002205631321060697,
+            0.002844814401152465,
+            0.00028167298631901963,
+            0.0011730143932173532,
+            0.20400061034564276,
+            0.20282244597677535,
+            0.0003321548990203902,
+            4.402930629812765e-05,
+            5.291915452531391e-05,
+            0.00014265922773124432,
+            0.00024243185774585016,
+            0.013872382521742546,
+            0.0006200939057507374,
+            0.0037859666687386916,
+            0.011177311881597445,
+            7.65193582882356e-05,
+            0.00027145708630063484,
+            0.004110694901486521,
+            0.004102363795180211,
+            0.0004978290011681143,
+            0.002183740279020165,
+            8.025733839993426e-05,
+            0.0011078861799255655,
+            0.0019667066984284582
+          ],
+          "corrected": [
+            0.0027978247968680372,
+            0.0004432926485426648,
+            6.36604983086253e-05,
+            0.003716067427831888,
+            0.006893015689492035,
+            0.00018971034925694156,
+            0.00022180972097697206,
+            0.0016429231991254142,
+            0.0007149718801500341,
+            0.0011994828360943667,
+            5.852647087022599e-05,
+            0.0004533065391965261,
+            0.09237943620168505,
+            0.1281080381579038,
+            0.00018193865824731728,
+            8.336432012878016e-06,
+            1.1258970771286197e-05,
+            4.69351125293874e-05,
+            4.3073018975089585e-05,
+            0.0054216068311447735,
+            0.00016454574994171224,
+            0.0010467009058614907,
+            0.0031022750702220992,
+            3.164603669392226e-05,
+            5.471425890374245e-05,
+            0.001823310359080511,
+            0.001741344917352584,
+            0.00020603973161089894,
+            0.0008611503121901498,
+            1.3648690850764586e-05,
+            0.0004312437906764193,
+            0.0008046857768013054
+          ]
+        },
+        {
+          "patient_id": "X13_GBM",
+          "group": "GBM",
+          "raw": [
+            0.0033377156359677314,
+            0.0011833451325062411,
+            0.00016329849463370344,
+            0.0014207638832422658,
+            0.014210946015495267,
+            0.0007421558779811353,
+            0.0003513245909305539,
+            0.0014555995145773756,
+            0.0025385156938531727,
+            0.0006921475997536489,
+            7.836025811967787e-05,
+            0.001556473806062991,
+            0.041170477915419716,
+            0.02000916268652334,
+            0.0001992018035818512,
+            8.371339887677348e-05,
+            0.00010955456477375575,
+            2.8310682567190962e-05,
+            0.00013445583951563706,
+            0.009941592668532201,
+            0.0004077925565574024,
+            0.001995657891998009,
+            0.0064938081714251295,
+            2.1892486334569967e-05,
+            0.00021125738540434143,
+            0.0022230846013006787,
+            0.002441028223794036,
+            6.174428021372123e-05,
+            0.0024037487744644394,
+            0.00010674707383868393,
+            0.0008219967997543145,
+            0.001513057163245583
+          ],
+          "corrected": [
+            0.0011761681868800535,
+            0.0004695562939507862,
+            9.421476746883697e-05,
+            0.0005200270569645067,
+            0.0076633006522024505,
+            0.00022366348688795417,
+            0.00015325877865320366,
+            0.0004316515819811505,
+            0.0015455627902189696,
+            0.00040329337419275674,
+            2.586831515734368e-05,
+            0.0007787856254489519,
+            0.017313943593369522,
+            0.011373272835665556,
+            7.47220093511956e-05,
+            4.983454313275871e-05,
+            3.581147604342822e-05,
+            3.665912545495384e-06,
+            3.381497147956943e-05,
+            0.004802574268020297,
+            8.377814658843799e-05,
+            0.0005802158720928844,
+            0.0027665820416751512,
+            1.3267209115808423e-06,
+            8.930886446574803e-05,
+            0.0012024368569940433,
+            0.0010693400131115507,
+            1.4644960329398604e-05,
+            0.0008501055952183933,
+            3.718116484621971e-05,
+            0.000412709558034924,
+            0.0006752199231989244
+          ]
+        },
+        {
+          "patient_id": "X10_Cntrl",
+          "group": "Cntrl",
+          "raw": [
+            0.0008646474441649142,
+            0.0036768293871280986,
+            0.0001761562962064181,
+            0.0008080357087635274,
+            0.001516656047117908,
+            0.000726194546187138,
+            0.00015989843604236636,
+            0.003519825651295066,
+            0.0003435047842415845,
+            0.0002595675307646508,
+            6.39173445316262e-05,
+            0.00018563009547322242,
+            0.037927608040334564,
+            0.015724542423929403,
+            4.572599260837355e-05,
+            2.6649149424522274e-05,
+            1.4043915285016589e-05,
+            2.0414069471125733e-05,
+            0.007505671911469454,
+            0.004210951821861719,
+            0.00021811869333419374,
+            0.0013766317973788068,
+            0.0030133199891722957,
+            2.8888737631332465e-05,
+            3.3202590529825165e-05,
+            0.0008698807365761622,
+            0.018315291515816397,
+            0.0001558943838991449,
+            0.0023465541899457946,
+            3.355425652352779e-05,
+            2.120791058077582e-05,
+            2.7330867712449203e-05
+          ],
+          "corrected": [
+            0.0002550296447100473,
+            0.0005019320174574193,
+            4.891090226377074e-06,
+            5.8608651918175725e-05,
+            0.0007228236168897963,
+            0.00012281793727260458,
+            1.7542301742132097e-05,
+            0.00030479298268615935,
+            1.963922184332773e-05,
+            1.9831234156870346e-05,
+            8.532954009465981e-06,
+            2.4573230212927318e-05,
+            0.009536210521738964,
+            0.0052513072816344,
+            1.558211156890041e-05,
+            -3.3634958312070605e-07,
+            1.669220918473194e-06,
+            -4.3944589482856447e-07,
+            0.0030652184598533826,
+            0.0002986921525509152,
+            1.3802888136604422e-05,
+            0.00013702310351326806,
+            0.00022819715257980456,
+            7.678545473567163e-07,
+            6.953492141346494e-06,
+            0.00020905562411874853,
+            0.0090631495663769,
+            2.9865756203006802e-05,
+            0.00040227862594973676,
+            -2.7870696086335873e-06,
+            -5.500721123192184e-07,
+            1.801058370615001e-06
+          ]
+        },
+        {
+          "patient_id": "X9_Cntrl",
+          "group": "Cntrl",
+          "raw": [
+            0.0022563303816375843,
+            0.006493241140375491,
+            0.002329021921276023,
+            0.0007734896147845885,
+            0.0036146065437298435,
+            0.00160591935387799,
+            0.0004527138971718187,
+            0.005476366886320559,
+            0.0011227147754718707,
+            0.0006942931188050163,
+            6.557531121197331e-05,
+            0.0006721470455761215,
+            0.015861037439909534,
+            0.03055266122836194,
+            0.000295624000082998,
+            7.829609039084548e-05,
+            5.378512511929147e-05,
+            6.416399274989785e-05,
+            0.007609486187672426,
+            0.007718533669086315,
+            0.0002194264587817487,
+            0.0023641126653430244,
+            0.007040971581202139,
+            0.00018561909282144442,
+            0.0001374188684155514,
+            0.001542278234610852,
+            0.014265457336925226,
+            0.00023660996668373258,
+            0.0030110233414731287,
+            5.4493598476653186e-05,
+            0.00039980392137036326,
+            0.0006775759841200154
+          ],
+          "corrected": [
+            0.0008962330637838538,
+            0.0015070192025590217,
+            0.0014345391728274029,
+            -3.957675759146844e-05,
+            0.0007921269748946084,
+            0.0006209227391154189,
+            9.939783514937385e-05,
+            0.0015464273427105565,
+            0.0005733771686018691,
+            0.00019318883309300513,
+            3.5873055731138603e-05,
+            0.00031244005365701366,
+            0.005207567217525293,
+            0.009843904329098464,
+            0.00020753794916156016,
+            5.2105495941786665e-05,
+            3.9262344116934036e-05,
+            1.196457307760033e-05,
+            0.0037679037235064596,
+            0.002435461386988143,
+            3.7476226817090925e-05,
+            0.000839666971909877,
+            -0.0009630712201732288,
+            0.00011162636595918555,
+            1.3612316786560448e-05,
+            0.000494193651568728,
+            0.005753565262326971,
+            9.812912943169e-05,
+            0.0007423346530439456,
+            3.154016020606318e-05,
+            0.0002995145763790403,
+            0.0005246387105469152
+          ]
+        },
+        {
+          "patient_id": "X38_GBM",
+          "group": "GBM",
+          "raw": [
+            0.005324672378981331,
+            0.0010147313223616745,
+            0.0003911345638741632,
+            0.002883098699128859,
+            0.015026183848242228,
+            0.001317025251998039,
+            0.0006176357470654549,
+            0.003503728544273353,
+            0.0022616195046794452,
+            0.0012788755578440401,
+            7.302117660676009e-05,
+            0.0022350179984498967,
+            0.1414332376238634,
+            0.043371635318310564,
+            8.413715097508277e-05,
+            2.8375200108000145e-05,
+            6.328722920179622e-05,
+            5.375663369549367e-05,
+            0.0008383331675792854,
+            0.007915434385450643,
+            0.0005515201879095632,
+            0.0032928408207188353,
+            0.0034600605285637926,
+            2.1566592459715656e-05,
+            0.00023901489369538642,
+            0.0018300002818546451,
+            0.00801384300876808,
+            0.0004467082774268077,
+            0.003749451678176666,
+            0.00010510112276379966,
+            0.00020981404751889884,
+            0.00039020379200915806
+          ],
+          "corrected": [
+            0.002724780682007221,
+            0.0004003004017568503,
+            0.0001864201166693018,
+            0.0012735320659207228,
+            0.008064304003479981,
+            0.0005848697705455833,
+            0.00024796941804633633,
+            0.0014786521270666745,
+            0.0010892594101405669,
+            0.0005734416235239745,
+            2.7890398429224216e-06,
+            0.0011576762686060123,
+            0.07900466173377554,
+            0.021468175082263223,
+            2.964195680048305e-05,
+            2.5674767414312387e-06,
+            9.278638857193311e-07,
+            4.719587134296744e-06,
+            0.0004816645690596233,
+            0.0033933168204350007,
+            0.00011733555954999454,
+            0.0018016036924110184,
+            0.0016912459104764144,
+            2.473085154865435e-06,
+            6.787913591533384e-05,
+            0.0007472148461963493,
+            0.003991982547567351,
+            0.00024935853230233934,
+            0.0014916044564834247,
+            3.32658052004358e-05,
+            7.958583938856123e-05,
+            0.0001584630832550749
+          ]
+        },
+        {
+          "patient_id": "X29_GBM",
+          "group": "GBM",
+          "raw": [
+            0.005203879317908277,
+            0.0013766469864672979,
+            0.00014714256390923602,
+            0.0018241143226264964,
+            0.0034876793037819168,
+            0.0011729677273568512,
+            0.00011024949371978239,
+            0.004327204774720688,
+            0.0012183641963034657,
+            0.0006669747056859662,
+            0.00010848402671701886,
+            0.0032334860013203334,
+            0.12850115747093294,
+            0.017586081742804256,
+            0.0001145003759133524,
+            2.9584919303339795e-05,
+            5.9007907844751766e-05,
+            4.4924356951276106e-05,
+            0.0002915211101166795,
+            0.010010195384010148,
+            0.0005239349043763533,
+            0.0018893899313928186,
+            0.002599739291580458,
+            0.00010683141872892172,
+            5.9759521091423905e-05,
+            0.0017463258300196424,
+            0.0023736598260529107,
+            0.00016882067194882585,
+            0.0026899532967689485,
+            6.991713871560365e-05,
+            0.001022722426113562,
+            0.0007059890641573165
+          ],
+          "corrected": [
+            0.0024143599241893874,
+            0.000692553207384099,
+            4.811100230406912e-05,
+            0.0006510780214110426,
+            0.0011708960423516934,
+            0.000530351464279021,
+            2.8778643839305164e-05,
+            0.0016975493570939159,
+            0.0005223028829384959,
+            0.0002801367269735198,
+            2.3490937336908622e-05,
+            0.001950088921029323,
+            0.08662587077554618,
+            0.01018549141722764,
+            1.7592861720572577e-05,
+            2.175881812142933e-05,
+            3.8847421875018835e-05,
+            2.014725003199677e-05,
+            0.00018315090062353753,
+            0.00465410158673175,
+            0.00023928142407636348,
+            0.0006791450130465632,
+            0.0009760561681211727,
+            6.695576034308257e-05,
+            2.538654618577719e-05,
+            0.0007192816931028432,
+            0.0009215110726025176,
+            6.289685316076658e-05,
+            0.0008753452062025092,
+            4.908381512222997e-05,
+            0.0005784323519975707,
+            0.0003279238987124793
+          ]
+        },
+        {
+          "patient_id": "X2_Cntrl",
+          "group": "Cntrl",
+          "raw": [
+            0.0017105267730546615,
+            0.004489938003142288,
+            0.0002898558140364552,
+            0.0007490247509234786,
+            0.00305115898436143,
+            0.0011723796161732922,
+            0.00011270552022206082,
+            0.003901446763367911,
+            0.0005329343164828722,
+            0.00047123348670725777,
+            0.00011649954467048108,
+            0.000513664998366376,
+            0.006348851468139769,
+            0.008839516775927984,
+            0.0005734493529906469,
+            7.770825450014338e-05,
+            5.3516739434712666e-05,
+            5.8376365100964826e-05,
+            0.009518988586441925,
+            0.005311155924598155,
+            0.000172458013207805,
+            0.001597439892304691,
+            0.00229391195774467,
+            8.150546750892776e-05,
+            0.00013033535900549008,
+            0.001728928689488399,
+            0.01796878895754915,
+            0.00012476434057417224,
+            0.0018740608454328438,
+            0.00011097990678708515,
+            3.444161627938116e-05,
+            3.7020622879207456e-05
+          ],
+          "corrected": [
+            0.0004009551077860953,
+            0.0008304101111745448,
+            6.855540813428831e-05,
+            8.418796710580811e-05,
+            0.0013317376452728423,
+            0.000363919106695513,
+            1.8733155492079253e-06,
+            0.0005540629660615902,
+            0.00015006522814321643,
+            0.000146382075747824,
+            4.2168527071568194e-05,
+            0.00011828709396375715,
+            0.001607249103401297,
+            0.002035228606107919,
+            1.2037893792318877e-05,
+            1.1241755874705326e-06,
+            2.4134314026953e-05,
+            1.164296658384282e-05,
+            0.003670549367113191,
+            0.0011932591773626475,
+            1.927345176906037e-05,
+            0.00022440671268693542,
+            0.0006919895371608078,
+            1.3816918142285878e-05,
+            3.088329148719225e-05,
+            0.0004885659671084907,
+            0.007177346488885681,
+            -1.1442054456408123e-05,
+            0.0002534044738976447,
+            3.090846106386419e-05,
+            6.74328750194269e-06,
+            2.8063231946351152e-06
+          ]
+        },
+        {
+          "patient_id": "X1_Cntrl",
+          "group": "Cntrl",
+          "raw": [
+            0.0008038781359080018,
+            0.0029989745530597926,
+            0.0004510887286085698,
+            0.0009291634151284427,
+            0.009183316821419055,
+            0.0008087358298169923,
+            0.00052184104800267,
+            0.003825731580590031,
+            0.0004287061936925208,
+            0.00048431465917702385,
+            0.00019157032229621203,
+            0.0018212141680915912,
+            0.016055542692879083,
+            0.019261881665041346,
+            2.7785477564578312e-05,
+            2.862899408195699e-05,
+            2.6093466826055736e-05,
+            3.914711960293893e-05,
+            0.003732214679686964,
+            0.00527323063287898,
+            0.00032525349506144996,
+            0.0015519239334363282,
+            0.007803986717422205,
+            6.38771558795175e-05,
+            6.043203531044653e-05,
+            0.0010297591410582524,
+            0.006466277690374258,
+            0.00024557083058770926,
+            0.004088719571272863,
+            3.8749684945609695e-05,
+            6.733023982861052e-05,
+            0.00011202716815652469
+          ],
+          "corrected": [
+            0.0002733217354090867,
+            0.0004945250862988387,
+            6.133549657949956e-05,
+            0.00013957622481412747,
+            0.004673194123014506,
+            7.367548766021434e-05,
+            9.034273896866467e-05,
+            0.0003801120339318358,
+            6.140667802615645e-05,
+            7.456789674278657e-05,
+            3.731263282542223e-05,
+            0.00042469637160866616,
+            0.004784622982544241,
+            0.00729240588324663,
+            2.0564688957182484e-06,
+            6.783536173033065e-06,
+            3.5886553727508027e-06,
+            1.5188704492303169e-05,
+            0.0010858834485028904,
+            0.0005893572717415975,
+            4.9729620734349105e-05,
+            8.55437138413892e-05,
+            0.0010414764104583118,
+            1.753084450145967e-05,
+            1.073187747737928e-05,
+            0.00027820255370875513,
+            0.002062466117223171,
+            5.107323423157937e-05,
+            0.00041918181723344565,
+            4.662595940476482e-06,
+            8.500641162193714e-06,
+            3.991129157425461e-05
+          ]
+        },
+        {
+          "patient_id": "X5_GBM",
+          "group": "GBM",
+          "raw": [
+            0.0023163202773651983,
+            0.0021045150275859465,
+            0.0002690525450973062,
+            0.0002624532907730118,
+            0.0022884262393842183,
+            0.0007695157552584838,
+            0.000555485027673234,
+            0.0009572975418440888,
+            0.004467733180750019,
+            0.0002463854095824973,
+            8.474912017759487e-05,
+            0.003448939263851717,
+            0.009713074243629554,
+            0.0011442828125371126,
+            0.0002742215198223829,
+            5.1178506136763635e-05,
+            0.00015372563390653226,
+            3.682913615721244e-05,
+            9.100695124601291e-05,
+            0.007472834852421978,
+            0.000652999864211532,
+            0.0020814279802875814,
+            0.0008432357071082201,
+            0.0001567863670126161,
+            0.0002888854342166723,
+            0.0017825244494959855,
+            0.0020899708210519678,
+            6.555044262739724e-05,
+            0.0017736973510859666,
+            0.00017126741165285632,
+            0.009801055971094041,
+            0.01156095024586987
+          ],
+          "corrected": [
+            0.0007818762694514376,
+            0.001007380769791074,
+            7.478426253266883e-05,
+            -4.842551680311533e-06,
+            0.0011726714797597306,
+            0.00022403041209836624,
+            0.0003347127270870776,
+            0.0002960756426368035,
+            0.0017561381209758838,
+            7.559068481305674e-05,
+            2.9366261163106545e-05,
+            0.001241150302739785,
+            0.0046357683818362885,
+            0.0006749439947722094,
+            0.00020578461254915965,
+            2.3815977556867683e-05,
+            3.61892630123905e-05,
+            2.312017034852147e-06,
+            1.0189119279254097e-05,
+            0.0038850054607773893,
+            0.00014639992143019372,
+            0.0007858792644098095,
+            0.00048117361245335284,
+            8.753364894716776e-05,
+            7.764958844921034e-05,
+            0.0007001521660641237,
+            0.0007760096668067132,
+            3.564145126562861e-05,
+            0.000667135901008934,
+            8.378608052412749e-05,
+            0.005431438511306656,
+            0.004115650084001071
+          ]
+        },
+        {
+          "patient_id": "X57_Cntrl",
+          "group": "Cntrl",
+          "raw": [
+            0.000778679705403637,
+            0.0012540295210090085,
+            0.00021640757299557577,
+            0.0006785496689749735,
+            0.0013113300087975676,
+            0.0013576424041084748,
+            0.0003866173950430951,
+            0.0020813755260762124,
+            0.000745149612643916,
+            0.0005022270482362239,
+            0.00013976906129617602,
+            0.0005629201310176624,
+            0.007319730729738666,
+            0.02217189318667622,
+            0.000260113800727722,
+            0.00011749220616953903,
+            4.097005222291522e-05,
+            7.413125052723715e-05,
+            0.0036665697630257183,
+            0.0026374420463386077,
+            0.00029578100228238945,
+            0.0013365170109008596,
+            0.0028723940347337314,
+            0.00021252222746222018,
+            0.0002488354504464569,
+            0.0009710240615686289,
+            0.008459958173121073,
+            0.00019268952070946118,
+            0.0014280793152676025,
+            0.00016978562060888643,
+            4.9296239402759366e-05,
+            8.899537630572879e-05
+          ],
+          "corrected": [
+            0.00028671667345076554,
+            0.00016634824955999612,
+            8.157264209005216e-06,
+            0.00010323558471723559,
+            0.0003158070835024649,
+            0.00023730233884058558,
+            7.10343372036819e-05,
+            0.0003083290428643544,
+            9.032619583470756e-05,
+            2.052848516017903e-05,
+            4.856455968310469e-05,
+            7.088594491647929e-05,
+            0.0017517981899773044,
+            0.007273026631148904,
+            2.576174817741313e-05,
+            1.2950301956580077e-05,
+            1.8473035938957957e-06,
+            1.530311617663675e-05,
+            0.0006441711697164677,
+            0.0002765291305856666,
+            5.080201575576829e-05,
+            0.00019101092937687833,
+            -1.2751463339437646e-05,
+            5.908796748979649e-05,
+            6.029468797574963e-05,
+            0.0001922206700056034,
+            0.001298070367057022,
+            1.6932914493108646e-05,
+            0.00027075672108315026,
+            4.407091791609584e-05,
+            4.5092522691812936e-06,
+            6.3964361485339125e-06
+          ]
+        }
+      ],
+      "evaluated": 32,
+      "status": "yellow",
+      "message": "Fine-band residual energy minus the estimated white-noise contribution is signed. Matched two-step spatial differences model locally smooth signal plus uncorrelated homoscedastic volume noise. Rough signal, heterogeneous noise and unequal occupancy affect this sensitivity screen.",
+      "raw_test": {
+        "features": [
+          "ABCC3",
+          "ABR",
+          "ACKR3",
+          "ACSM3",
+          "ACTA2",
+          "ADAM17",
+          "ADAMTS5",
+          "AFDN",
+          "AHR",
+          "ALDH1A2",
+          "ANGPT2",
+          "APBB1IP",
+          "AQP1",
+          "AQP2",
+          "AREG",
+          "ARG1",
+          "ARHGAP15",
+          "ASCL2",
+          "ATF3",
+          "ATF4",
+          "ATF5",
+          "ATF6",
+          "ATP6V0D2",
+          "BATF3",
+          "BCL11B",
+          "BCL6",
+          "BHLHE40",
+          "BMP7",
+          "BNC2",
+          "BTLA",
+          "C1QB",
+          "C1QC"
+        ],
+        "method": "exact",
+        "assignments": "924",
+        "evaluations": 924,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.0021645021645021645,
+          0.004329004329004329,
+          0.025974025974025976,
+          0.07142857142857142,
+          0.0735930735930736,
+          0.22510822510822512,
+          0.42424242424242425,
+          0.12987012987012986,
+          0.0021645021645021645,
+          0.1341991341991342,
+          0.9437229437229437,
+          0.012987012987012988,
+          0.004329004329004329,
+          0.44372294372294374,
+          0.9199134199134199,
+          0.10606060606060606,
+          0.010822510822510822,
+          0.9567099567099567,
+          0.0021645021645021645,
+          0.004329004329004329,
+          0.0021645021645021645,
+          0.1341991341991342,
+          0.9069264069264069,
+          0.25757575757575757,
+          0.11038961038961038,
+          0.021645021645021644,
+          0.004329004329004329,
+          0.670995670995671,
+          0.4393939393939394,
+          0.9047619047619048,
+          0.0021645021645021645,
+          0.0021645021645021645
+        ],
+        "q": [
+          0.011544011544011544,
+          0.013852813852813853,
+          0.059369202226345084,
+          0.1471861471861472,
+          0.1471861471861472,
+          0.3274301456119638,
+          0.5461205461205462,
+          0.20449391877963308,
+          0.011544011544011544,
+          0.20449391877963308,
+          0.9567099567099567,
+          0.03463203463203463,
+          0.013852813852813853,
+          0.5461205461205462,
+          0.9567099567099567,
+          0.19624819624819623,
+          0.03148366784730421,
+          0.9567099567099567,
+          0.011544011544011544,
+          0.013852813852813853,
+          0.011544011544011544,
+          0.20449391877963308,
+          0.9567099567099567,
+          0.35836627140974964,
+          0.19624819624819623,
+          0.05328005328005328,
+          0.013852813852813853,
+          0.7952541285874619,
+          0.5461205461205462,
+          0.9567099567099567,
+          0.011544011544011544,
+          0.011544011544011544
+        ],
+        "statistic": [
+          2.7615605770056697,
+          -2.6205666669991214,
+          -1.2958701482444146,
+          1.4762223598066027,
+          1.6425040738726204,
+          -1.1317393806081921,
+          0.7865758428200428,
+          -1.4759460358903116,
+          2.5645468170949877,
+          1.3768837729248447,
+          0.07825250825892693,
+          2.2560045460860274,
+          2.345832323693434,
+          0.9542300604060575,
+          0.10752391774912885,
+          -1.5709037496959322,
+          1.9654809776635918,
+          0.09668535706226347,
+          -3.0150838151599806,
+          2.449158707789874,
+          2.844384306388264,
+          1.5268931121666955,
+          -0.14672456325929098,
+          -1.1275082524344402,
+          1.5580553939405202,
+          1.786016855570428,
+          -2.4385341351008365,
+          0.364899720268421,
+          -0.7650794105425812,
+          0.1257727211295933,
+          1.4526120317687543,
+          1.510539853111255
+        ]
+      },
+      "corrected_test": {
+        "features": [
+          "ABCC3",
+          "ABR",
+          "ACKR3",
+          "ACSM3",
+          "ACTA2",
+          "ADAM17",
+          "ADAMTS5",
+          "AFDN",
+          "AHR",
+          "ALDH1A2",
+          "ANGPT2",
+          "APBB1IP",
+          "AQP1",
+          "AQP2",
+          "AREG",
+          "ARG1",
+          "ARHGAP15",
+          "ASCL2",
+          "ATF3",
+          "ATF4",
+          "ATF5",
+          "ATF6",
+          "ATP6V0D2",
+          "BATF3",
+          "BCL11B",
+          "BCL6",
+          "BHLHE40",
+          "BMP7",
+          "BNC2",
+          "BTLA",
+          "C1QB",
+          "C1QC"
+        ],
+        "method": "exact",
+        "assignments": "924",
+        "evaluations": 924,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.0021645021645021645,
+          0.2554112554112554,
+          0.46320346320346323,
+          0.004329004329004329,
+          0.06277056277056277,
+          0.7532467532467533,
+          0.04329004329004329,
+          0.41125541125541126,
+          0.004329004329004329,
+          0.010822510822510822,
+          0.5714285714285714,
+          0.006493506493506494,
+          0.0021645021645021645,
+          0.25757575757575757,
+          0.08441558441558442,
+          0.9199134199134199,
+          0.20346320346320346,
+          0.816017316017316,
+          0.0021645021645021645,
+          0.004329004329004329,
+          0.0021645021645021645,
+          0.02813852813852814,
+          0.02813852813852814,
+          0.8809523809523809,
+          0.04112554112554113,
+          0.010822510822510822,
+          0.04329004329004329,
+          0.16233766233766234,
+          0.09740259740259741,
+          0.35064935064935066,
+          0.004329004329004329,
+          0.010822510822510822
+        ],
+        "q": [
+          0.017316017316017316,
+          0.3434343434343434,
+          0.5489818823152157,
+          0.017316017316017316,
+          0.11159211159211159,
+          0.8311688311688312,
+          0.08148714031066973,
+          0.5061605061605061,
+          0.017316017316017316,
+          0.02886002886002886,
+          0.6530612244897959,
+          0.023088023088023088,
+          0.017316017316017316,
+          0.3434343434343434,
+          0.1421736158578264,
+          0.9199134199134199,
+          0.2959464777646596,
+          0.8704184704184704,
+          0.017316017316017316,
+          0.017316017316017316,
+          0.017316017316017316,
+          0.06431663574520717,
+          0.06431663574520717,
+          0.9093701996927803,
+          0.08148714031066973,
+          0.02886002886002886,
+          0.08148714031066973,
+          0.24737167594310452,
+          0.15584415584415584,
+          0.44883116883116886,
+          0.017316017316017316,
+          0.02886002886002886
+        ],
+        "statistic": [
+          2.740789740188004,
+          -1.1249741199927004,
+          -0.9464913842485811,
+          1.692252842782694,
+          1.7775856157968517,
+          0.3467413570302505,
+          1.9602410149302603,
+          0.7542425976145672,
+          2.5993912085384583,
+          1.9480272405550707,
+          -0.5721791212692102,
+          2.4400844914125464,
+          2.5268697599547374,
+          1.1301021372401192,
+          1.4793127347984854,
+          -0.12449717013186502,
+          1.2430025922823158,
+          0.36101224621429073,
+          -2.7964107166699725,
+          3.1230179422484525,
+          2.8554263624919245,
+          2.0622230090240197,
+          2.0611957476192746,
+          -0.1306842209828643,
+          1.9088529509699657,
+          2.186711229881693,
+          -1.9626835875046407,
+          1.472172225883419,
+          1.657885212389106,
+          0.9688290218530394,
+          1.3720689094411234,
+          1.520548112262107
+        ]
+      },
+      "measurement_scope": {
+        "measurement": "counts",
+        "layer": "X",
+        "interpretation": "Energy, semivariance and attenuation refer to the supplied measurement scale. For log-normalized inputs they describe variability after transformation. The procedure does not fit a negative-binomial count model or identify a noise cause."
+      }
+    }
+  },
+  "statement": "基于公开存档数据，在患者/生物学重复级去混杂框架下的可复现性、统计功效与混杂敏感性审计。"
+}

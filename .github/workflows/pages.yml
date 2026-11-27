@@ -1,0 +1,45 @@
+name: Deploy Pages
+on:
+  push:
+    branches: [main]
+    paths: ['docs/**', '.github/workflows/pages.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Link manuals to their rendered revision
+        env:
+          REPOSITORY_REVISION: ${{ github.server_url }}/${{ github.repository }}/blob/${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          base = os.environ["REPOSITORY_REVISION"]
+          index = Path("docs/index.html")
+          html = index.read_text(encoding="utf-8")
+          html = re.sub(r'href="([A-Za-z_]+\.md)"', lambda m: f'href="{base}/docs/{m[1]}"', html)
+          index.write_text(html, encoding="utf-8")
+          for doc in Path("docs").glob("*.md"):
+              text = doc.read_text(encoding="utf-8").replace("](../", f"]({base}/")
+              doc.write_text(text, encoding="utf-8")
+          PY
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - uses: actions/deploy-pages@v4
+        id: deploy

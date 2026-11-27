@@ -1,0 +1,31 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,booktabs,hyperref,microtype}
+\hypersetup{hidelinks}
+\input{generated/metrics}
+\title{Spatial Audit: supplementary methods and reproducibility notes}
+\author{Spatial Audit contributors}
+\date{}
+\begin{document}
+\maketitle
+\section*{Input and study selection}
+Public archives were selected for a spatial measurement, identifiable biological groups or an explicitly scoped tissue comparison, and a retrievable official accession. The evidence table records exceptions to donor identifiability. Original conclusions and statistical methods are scoped to the modality and figure or Methods passage in the source paper. No counts are inferred from file counts. Public results and synthetic fixtures reside in separate directories; a report carries its input kind and source. The portal combines indices for navigation and keeps unavailable dimensions unassessed.
+
+\section*{Discrete diffusion}
+Let $h$ be the control-volume width and $A$ the four-neighbour adjacency among occupied volumes. The cell-centred operator is $L=(D-A)/h^2$. The constant field has zero flux. Removing an empty volume removes its interfaces. An observed cell, spot or pixel contributes to the mean in its occupied volume. The chosen grid origin and averaging change resolution below one volume. A rotation need not preserve the discretized graph. Binning a staggered hexagonal array onto square volumes merges nearby spots with unequal occupancy. Near the grid cutoff the response is direction-dependent, so nominal wavelengths require checks of spatial support and grid dispersion. The common spectral interval bounds all section Laplacians. A difference of heat kernels gives a frequency-selective response; truncation of the Chebyshev expansion controls its numerical approximation.
+
+\section*{Projection and noise gain}
+Let $H$ denote the fine-band response and $Q$ the numerical basis for $HC$. We compute $B=(I-QQ^\top)H$. The gain for independent unit-variance noise is $\mathrm{tr}(B^\top B)/n$, where $n$ is the number of occupied volumes in connected components supporting the fine wavelength. The implementation uses direct evaluation on small grids and fixed-seed trace probes on larger grids. For a matched straight path with values $(x_a,x_m,x_b)$, the two-lag intercept equals the path average of $(x_a-2x_m+x_b)^2/6$. It is nonnegative and reduces to the white-noise variance in expectation for a locally linear field with independent equal-variance noise. We retain the sign of the noise-adjusted residual energy in patient tests to avoid truncation bias under unequal precision. Strong discontinuities, anisotropy, correlated noise, varying volume occupancy and TIC self-inclusion can affect this approximation. On log-normalized input this measures sensitivity on the transformed scale. It cannot diagnose a negative-binomial count mechanism. The record contains projection ranks, effective band dimension, grid widths, edges and trace settings per section. A connected two-dimensional footprint must span the wavelength, and the wavelength must be at least $\pi h$. The diagnostic estimates the spectral participation ratio $(\mathrm{tr}\,H^2)^2/\mathrm{tr}\,H^4$ on that support. It excludes a fit when both the ratio of projection rank to effective dimension and the fraction of projected white-noise energy meet the prespecified saturation threshold.
+
+\section*{Detection and scope of the calls}
+Traffic-light cutoffs are descriptive screening rules. They do not set universal disease-effect or false-positive thresholds. The exact floor assumes inclusive doubled tails. Missing information is recorded separately from a tested null finding. Group assignments for a Monte Carlo test are regenerated with the same seed and group sizes. The simulation phase diagram estimates operating characteristics under its documented generator and energy contrast. The simulated raw endpoint is total filtered energy before projection. The adjusted endpoint is residual energy after both covariate projection and nugget subtraction. In the cohort nugget reports, raw instead denotes energy after projection and before nugget subtraction. The simulation uses an absolute mean-contrast permutation tail for one feature. Replicates in a grid cell share one allocation set, so their Wilson intervals condition on that reference. The reported null fixes the latent biological amplitude across arms in distribution; covariate, mean or batch differences can still change the measured energy under that null. An arbitrary archive or alternative simulation family can yield a different minimum donor count.
+
+\section*{Software controls and resource measurement}
+The four fixture designs include a balanced mirror null, a patient-offset pseudoreplication trap, measured composition with mean-linked noise, and complete acquisition-stage separation. The mirror null reuses random fields across arms to give a deterministic negative control for group differences. They test predeclared code paths. Inference about error rates under random cohorts comes from the separately replicated phase diagram. The synthetic resource benchmark measures a fresh audit process from backed input through report serialization. The measured \RSSGiB{} GiB figure applies to the documented \MemoryFeatures{}-feature panel. The input-generation process is outside that measurement.
+
+\section*{Reproduction and provenance}
+Install the package with its development and agent extras. Re-run the demo, select a manifest and run the audit, then rebuild the dashboard and manuscript. Scripts for archive retrieval record file size and SHA-256. The DOI verifier queries registry metadata and checks the resolved bibliographic identity. The release gate checks the scientific artifacts, portable source paths, strict JSON, tests, static analysis and manuscript compilation. Browser uploads stay local. The MCP tools use local stdio and return the same scientific records used by the command line.
+
+\end{document}
+

@@ -1,0 +1,204 @@
+{
+  "kind": "public",
+  "record_type": "archive_readiness",
+  "accession": "GSE291246",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE291246",
+  "preparation_status": "The series contains longitudinal and anatomical repeats with unequal pre/post coverage. An independent-group pooled reanalysis of the published exposure contrast would exchange the wrong units. The published contrast is retained for paired inference.",
+  "files": [
+    {
+      "name": "samples.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE291246&targ=gsm&form=text&view=full",
+      "bytes": 80944,
+      "sha256": "9a5818e6eb1d373a7800f2a455bcc3cba3e15696b8aa1e0e7d12345e78c46438"
+    }
+  ],
+  "observed_donor_sections": {
+    "su001": [
+      {
+        "gsm": "GSM8831617",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831618",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831619",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831620",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831621",
+        "exposure": "Post",
+        "site": "Node"
+      },
+      {
+        "gsm": "GSM8831622",
+        "exposure": "Post",
+        "site": "Peri"
+      },
+      {
+        "gsm": "GSM8831623",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831624",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831625",
+        "exposure": "Pre",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831626",
+        "exposure": "Pre",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831627",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831628",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831629",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831630",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831631",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831632",
+        "exposure": "Post",
+        "site": "Peri"
+      },
+      {
+        "gsm": "GSM8831633",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831634",
+        "exposure": "Pre",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831635",
+        "exposure": "Post",
+        "site": "Node"
+      },
+      {
+        "gsm": "GSM8831636",
+        "exposure": "Pre",
+        "site": "Tumor"
+      }
+    ],
+    "su005": [
+      {
+        "gsm": "GSM8831637",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831641",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831642",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831643",
+        "exposure": "Post",
+        "site": "Node"
+      },
+      {
+        "gsm": "GSM8831644",
+        "exposure": "Post",
+        "site": "Node"
+      }
+    ],
+    "su007": [
+      {
+        "gsm": "GSM8831638",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831647",
+        "exposure": "Pre",
+        "site": "Tumor"
+      }
+    ],
+    "su002": [
+      {
+        "gsm": "GSM8831639",
+        "exposure": "Pre",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831645",
+        "exposure": "Pre",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831646",
+        "exposure": "Post",
+        "site": "Tumor"
+      }
+    ],
+    "su006": [
+      {
+        "gsm": "GSM8831640",
+        "exposure": "Pre",
+        "site": "Tumor"
+      }
+    ],
+    "su008": [
+      {
+        "gsm": "GSM8831648",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831649",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831650",
+        "exposure": "Post",
+        "site": "Tumor"
+      },
+      {
+        "gsm": "GSM8831651",
+        "exposure": "Post",
+        "site": "Tumor"
+      }
+    ]
+  }
+}

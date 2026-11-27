@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "kind": "public",
+  "record_type": "claim_check",
+  "cohort": "GSE348499",
+  "methods_sha256": "cd3f02517337a05491891ec125614b883a778b2e4b84eebdcf00ea92a5352b7d",
+  "source_filename": "GSE348499_excerpt.txt",
+  "extraction": "English explicit numerical units and methods mentions; confirm negation, group, cohort and modality manually.",
+  "matrix": [
+    {
+      "field": "unit_count",
+      "unit": "patients",
+      "claimed": 44,
+      "observed": 44,
+      "comparison": "numeric_agreement_check_scope",
+      "page": 1,
+      "quoted": "0.1038/s41586-026-10469-9 Abstract, spatial modality: “spatial transcriptomic analysis of 44 patients”."
+    },
+    {
+      "field": "methods_mention",
+      "strategy": "rank test",
+      "page": 1,
+      "quoted": "Extended Data figure, Ki-67 validation: “Wilcoxon test exact P value”.",
+      "comparison": "manual_scope_review",
+      "observed": {
+        "spot_level": "Mann-Whitney U"
+      }
+    }
+  ],
+  "measured": {
+    "patients": 44,
+    "sections": 44,
+    "observations": 3251882
+  },
+  "audit_covariate_sections": 0,
+  "design_flags": []
+}

@@ -1,0 +1,353 @@
+{
+  "kind": "public",
+  "accession": "10.5281/zenodo.6578047",
+  "source": "https://zenodo.org/records/6578047",
+  "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9364862/",
+  "files": [
+    {
+      "name": "Visium_FZ_P20.h5ad",
+      "url": "https://zenodo.org/api/records/6578047/files/Visium_FZ_P20.h5ad/content",
+      "role": "data",
+      "bytes": 67983638,
+      "archive_checksum": "md5:948da408f065aa77190a9b18252691f1",
+      "accession": "10.5281/zenodo.6578047",
+      "sha256": "dec4649e554f392528af36975187990e2dd0bce0c98799879a9018d8af85e695"
+    },
+    {
+      "name": "Visium_FZ_P18.h5ad",
+      "url": "https://zenodo.org/api/records/6578047/files/Visium_FZ_P18.h5ad/content",
+      "role": "data",
+      "bytes": 66580892,
+      "archive_checksum": "md5:b708fada804fd398453f4ac91a9b2969",
+      "accession": "10.5281/zenodo.6578047",
+      "sha256": "6298d510ce2ada1833a4f99c04c5042979254b4cfeea4a211eac1060c172915d"
+    },
+    {
+      "name": "Visium_FZ_P14.h5ad",
+      "url": "https://zenodo.org/api/records/6578047/files/Visium_FZ_P14.h5ad/content",
+      "role": "data",
+      "bytes": 127876582,
+      "archive_checksum": "md5:fb27f79e7879b95363d2a345819afaaa",
+      "accession": "10.5281/zenodo.6578047",
+      "sha256": "f186b625d951a7035636875f68e203d46dd1178e8aaf765ccab09da3de57dc7e"
+    },
+    {
+      "name": "Visium_control_P8.h5ad",
+      "url": "https://zenodo.org/api/records/6578047/files/Visium_control_P8.h5ad/content",
+      "role": "data",
+      "bytes": 102015552,
+      "archive_checksum": "md5:34d5e7208824ab9d78c86ebe6a2e9d2a",
+      "accession": "10.5281/zenodo.6578047",
+      "sha256": "c0eca744ef23d05b0858b0def7eb6f980a736c903a7bfed06a4e43b49b5eb75a"
+    },
+    {
+      "name": "Visium_control_P7.h5ad",
+      "url": "https://zenodo.org/api/records/6578047/files/Visium_control_P7.h5ad/content",
+      "role": "data",
+      "bytes": 116040302,
+      "archive_checksum": "md5:7e5219cd069cb0b6309e9bff7777bd2c",
+      "accession": "10.5281/zenodo.6578047",
+      "sha256": "fb6d891966c8cbbaced295a57d03773997e9d018781c9e4eaf7568da99263aa1"
+    },
+    {
+      "name": "Visium_control_P1.h5ad",
+      "url": "https://zenodo.org/api/records/6578047/files/Visium_control_P1.h5ad/content",
+      "role": "data",
+      "bytes": 176592688,
+      "archive_checksum": "md5:b3b9da59927c008e0fdabb3188eccb25",
+      "accession": "10.5281/zenodo.6578047",
+      "sha256": "6da1eb233088630383e17efdf008aec526b0fef386d52be2d18a2a8f8224a58d"
+    },
+    {
+      "name": "Visium_control_P17.h5ad",
+      "url": "https://zenodo.org/api/records/6578047/files/Visium_control_P17.h5ad/content",
+      "role": "data",
+      "bytes": 78617594,
+      "archive_checksum": "md5:9d53f8e73dd87db9d0933cc2c18e7294",
+      "accession": "10.5281/zenodo.6578047",
+      "sha256": "71f0b306910319ddb33bf491e43f0f21e69307c6b2c49850360357d297754b1c"
+    }
+  ],
+  "sections": [
+    {
+      "patient_id": "P20",
+      "group": "MI pure fibrotic zone",
+      "section_id": "Visium_FZ_P20",
+      "source_file": "Visium_FZ_P20.h5ad",
+      "archived_title": "Visium-FZ_P20-Spatial multi-omic map of human myocardial infarction",
+      "archive_display_orientation": {
+        "array_axes": [
+          0,
+          1
+        ],
+        "reflected_display_axes": [
+          false,
+          false
+        ]
+      },
+      "validated_barcodes": 2410,
+      "section_bytes": 500598,
+      "section_sha256": "a49ad1e3dd8b8a775a32c7f20844e06ff0d226daabfdb165865384461750d35f"
+    },
+    {
+      "patient_id": "P18",
+      "group": "MI pure fibrotic zone",
+      "section_id": "Visium_FZ_P18",
+      "source_file": "Visium_FZ_P18.h5ad",
+      "archived_title": "Visium-FZ_P18-Spatial multi-omic map of human myocardial infarction",
+      "archive_display_orientation": {
+        "array_axes": [
+          0,
+          1
+        ],
+        "reflected_display_axes": [
+          false,
+          false
+        ]
+      },
+      "validated_barcodes": 2551,
+      "section_bytes": 556344,
+      "section_sha256": "984c55bf2f32dae0dd408167d8146810b87bc45dbf287422cf98459d89a3b7f8"
+    },
+    {
+      "patient_id": "P14",
+      "group": "MI pure fibrotic zone",
+      "section_id": "Visium_FZ_P14",
+      "source_file": "Visium_FZ_P14.h5ad",
+      "archived_title": "Visium-FZ_P14-Spatial multi-omic map of human myocardial infarction",
+      "archive_display_orientation": {
+        "array_axes": [
+          0,
+          1
+        ],
+        "reflected_display_axes": [
+          false,
+          false
+        ]
+      },
+      "validated_barcodes": 3175,
+      "section_bytes": 758097,
+      "section_sha256": "a0d548bcac018bbfaf5c748614ff84df7f1529c5929f92c4fb199e871bba3e40"
+    },
+    {
+      "patient_id": "P8",
+      "group": "control donor",
+      "section_id": "Visium_control_P8",
+      "source_file": "Visium_control_P8.h5ad",
+      "archived_title": "Visium-control_P8-Spatial multi-omic map of human myocardial infarction",
+      "archive_display_orientation": {
+        "array_axes": [
+          0,
+          1
+        ],
+        "reflected_display_axes": [
+          false,
+          false
+        ]
+      },
+      "validated_barcodes": 2456,
+      "section_bytes": 543607,
+      "section_sha256": "6696ba16a14eed7345d6ef37d26e47f5ad630a2fea6f25d99b32d4ffc04754c7"
+    },
+    {
+      "patient_id": "P7",
+      "group": "control donor",
+      "section_id": "Visium_control_P7",
+      "source_file": "Visium_control_P7.h5ad",
+      "archived_title": "Visium-control_P7-Spatial multi-omic map of human myocardial infarction",
+      "archive_display_orientation": {
+        "array_axes": [
+          0,
+          1
+        ],
+        "reflected_display_axes": [
+          false,
+          false
+        ]
+      },
+      "validated_barcodes": 2931,
+      "section_bytes": 651677,
+      "section_sha256": "eedda4c080e5d0f3cdcfb2d0c724676a5cce59a5e87b307756dd994924ab2052"
+    },
+    {
+      "patient_id": "P1",
+      "group": "control donor",
+      "section_id": "Visium_control_P1",
+      "source_file": "Visium_control_P1.h5ad",
+      "archived_title": "Visium-control_P1-Spatial multi-omic map of human myocardial infarction",
+      "archive_display_orientation": {
+        "array_axes": [
+          1,
+          0
+        ],
+        "reflected_display_axes": [
+          false,
+          true
+        ]
+      },
+      "validated_barcodes": 4269,
+      "section_bytes": 1015596,
+      "section_sha256": "4aafdfeee84bcede028be5c4c024bd8ca0d5e938fcd3e837ab2925617ba2d70f"
+    },
+    {
+      "patient_id": "P17",
+      "group": "control donor",
+      "section_id": "Visium_control_P17",
+      "source_file": "Visium_control_P17.h5ad",
+      "archived_title": "Visium-control_P17-Spatial multi-omic map of human myocardial infarction",
+      "archive_display_orientation": {
+        "array_axes": [
+          0,
+          1
+        ],
+        "reflected_display_axes": [
+          false,
+          false
+        ]
+      },
+      "validated_barcodes": 2043,
+      "section_bytes": 446915,
+      "section_sha256": "ccd8dc3ff0e1d2d671cb2a4e6916b06ea09ad636cf047e610138adaa8dbe5db2"
+    }
+  ],
+  "preprocessing": {
+    "selection": "All single-zone FZ files and all donor controls in Zenodo record 6578047. Mixed-zone and other MI sections excluded. Fixed housekeeping, cardiomyocyte, matrix and vascular marker panel.",
+    "candidate_genes": [
+      "ACTB",
+      "GAPDH",
+      "B2M",
+      "RPLP0",
+      "RPL13A",
+      "RPS18",
+      "RPS3",
+      "RPL10",
+      "EEF1A1",
+      "PPIA",
+      "HPRT1",
+      "CALM1",
+      "TTN",
+      "MYH7",
+      "MYH6",
+      "TNNT2",
+      "TNNI3",
+      "MYL2",
+      "MYL3",
+      "ATP2A2",
+      "PLN",
+      "NPPA",
+      "NPPB",
+      "COL1A1",
+      "COL1A2",
+      "COL3A1",
+      "DCN",
+      "LUM",
+      "PECAM1",
+      "VWF",
+      "ACTA2",
+      "TAGLN"
+    ],
+    "target_genes": [
+      "ACTB",
+      "GAPDH",
+      "B2M",
+      "EEF1A1",
+      "PPIA",
+      "HPRT1",
+      "CALM1",
+      "TTN",
+      "MYH7",
+      "MYH6",
+      "TNNT2",
+      "TNNI3",
+      "MYL2",
+      "MYL3",
+      "ATP2A2",
+      "PLN",
+      "NPPA",
+      "NPPB",
+      "COL1A1",
+      "COL1A2",
+      "COL3A1",
+      "DCN",
+      "LUM",
+      "PECAM1",
+      "VWF",
+      "ACTA2",
+      "TAGLN"
+    ],
+    "missing_candidates_by_asset": {
+      "Visium_FZ_P20.h5ad": [
+        "RPL10",
+        "RPL13A",
+        "RPLP0",
+        "RPS18",
+        "RPS3"
+      ],
+      "Visium_FZ_P18.h5ad": [
+        "RPL10",
+        "RPL13A",
+        "RPLP0",
+        "RPS18",
+        "RPS3"
+      ],
+      "Visium_FZ_P14.h5ad": [
+        "RPL10",
+        "RPL13A",
+        "RPLP0",
+        "RPS18",
+        "RPS3"
+      ],
+      "Visium_control_P8.h5ad": [
+        "RPL10",
+        "RPL13A",
+        "RPLP0",
+        "RPS18",
+        "RPS3"
+      ],
+      "Visium_control_P7.h5ad": [
+        "RPL10",
+        "RPL13A",
+        "RPLP0",
+        "RPS18",
+        "RPS3"
+      ],
+      "Visium_control_P1.h5ad": [
+        "RPL10",
+        "RPL13A",
+        "RPLP0",
+        "RPS18",
+        "RPS3"
+      ],
+      "Visium_control_P17.h5ad": [
+        "RPL10",
+        "RPL13A",
+        "RPLP0",
+        "RPS18",
+        "RPS3"
+      ]
+    },
+    "covariates": [
+      "Adipocyte",
+      "Cardiomyocyte",
+      "Cycling.cells",
+      "Endothelial",
+      "Fibroblast",
+      "Lymphoid",
+      "Mast",
+      "Myeloid",
+      "Neuronal",
+      "Pericyte",
+      "vSMCs"
+    ],
+    "composition": "The archive's spot-level cell-type weights sum to one. Estimated fractions share measurements with the outcomes.",
+    "grid_layout_reference": {
+      "name": "V1_Breast_Cancer_Block_A_Section_1_spatial.tar.gz",
+      "url": "https://cf.10xgenomics.com/samples/spatial-exp/1.1.0/V1_Breast_Cancer_Block_A_Section_1/V1_Breast_Cancer_Block_A_Section_1_spatial.tar.gz",
+      "bytes": 9960960,
+      "sha256": "415530a9d31172f63fd358d5d1cefb0798698ef9c0e614f52825894cd45c61bf"
+    },
+    "grid_design_source": "https://cdn.10xgenomics.com/image/upload/v1758134784/support-documents/CG000686_VisiumHDSpatialApplicationsPerformance_TechnicalNote_RevB.pdf",
+    "spot_pitch_um": 100.0,
+    "coordinates": "Match every barcode to the vendor capture-array layout; independently min-max rescale each array axis and compare to deposited X_spatial. Use only array-row/column addresses for nominal micrometer coordinates. Vendor image pixels and tissue identity are unused. No across-slide stage coordinates are available."
+  }
+}

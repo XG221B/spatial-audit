@@ -1,0 +1,2045 @@
+{
+  "schema_version": 1,
+  "id": "STT0000036",
+  "kind": "public",
+  "platform": "Stereo-seq",
+  "source": "https://db.cngb.org/stomics/project/STT0000036/spatialGeneExpression",
+  "accession": "STT0000036",
+  "provenance": {
+    "inputs": [
+      {
+        "file": "CRCP104_T.npz",
+        "sha256": "5ff79cca86df76dc3de765e2e3e88f0e5dc3adacfcb083d8c4dadc39a015ac68",
+        "bytes": 686720
+      },
+      {
+        "file": "CRCP112_T.npz",
+        "sha256": "bbc56e88d1612c522ddc22689677fad43524db07e3f3527152d083545f014281",
+        "bytes": 1249348
+      },
+      {
+        "file": "CRCP24_T.npz",
+        "sha256": "a4d710b04175a087f61113efcf4b41b223950eadde5bba65e329ddb13e042c83",
+        "bytes": 1155729
+      },
+      {
+        "file": "CRCP25_T.npz",
+        "sha256": "dc666d546315820d0541133f9232206b99323f21321c7e253fb8e4a180f8bc22",
+        "bytes": 1289518
+      },
+      {
+        "file": "CRCP61_T.npz",
+        "sha256": "acdac2dff49ea7aace2773e251194c78eca896d52511ba6a21f60f2b850a38c4",
+        "bytes": 912365
+      },
+      {
+        "file": "CRCP95_T.npz",
+        "sha256": "9177fe9d2aa426f58897931e51e63ab5f3d55478e5ef37605d3d42d74ad386d9",
+        "bytes": 962999
+      }
+    ],
+    "preprocessing_evidence": "STT0000036_inputs.json",
+    "accession": "STT0000036",
+    "measurement": "log_normalized",
+    "batch_label": "acquisition batch",
+    "coordinates": "um",
+    "layer": "archived log-normalized GEM MIDCounts",
+    "covariates": [
+      "Epi",
+      "Endo",
+      "CD8_Teff",
+      "Fibro_CXCL14",
+      "Mac_SPP1",
+      "B_naive"
+    ],
+    "selection": "All treated dMMR Stereo-seq sections from the study. Predefined housekeeping, immune, stromal, and epithelial marker panel. No treatment outcomes or study-derived rankings used for panel selection."
+  },
+  "preprocessing_evidence": "STT0000036_inputs.json",
+  "n_patients": 6,
+  "n_sections": 6,
+  "n_observations": 78289,
+  "n_features": 32,
+  "dimensions": {
+    "power": {
+      "status": "red",
+      "message": "Two-sided doubled-tail permutation resolution.",
+      "n0": 2,
+      "n1": 4,
+      "assignments": "15",
+      "p_floor": 0.13333333333333333,
+      "features": 32,
+      "alpha": 0.05,
+      "minimum_bh_rank": null,
+      "bh_impossible": true,
+      "nominal_impossible": true,
+      "groups": [
+        "anti-PD1 nonresponder",
+        "anti-PD1 responder"
+      ],
+      "effective_p_floor": 0.13333333333333333,
+      "effective_minimum_bh_rank": null,
+      "effective_bh_impossible": true,
+      "executed_mode": "exact",
+      "theoretical_status": "red"
+    },
+    "design": {
+      "status": "yellow",
+      "code": null,
+      "message": "High risk marks categorical aliasing or no observed stage overlap. The linear fixed-effect rank diagnostic is reported separately. Local bounding boxes are coordinate-frame proxies.",
+      "categorical": {
+        "slide_id": {
+          "status": "missing_or_partial"
+        },
+        "batch": {
+          "status": "missing_or_partial"
+        }
+      },
+      "coordinates": {
+        "stage": {
+          "status": "missing"
+        },
+        "bbox": {
+          "linear_separation": true,
+          "descriptive_auc": 1.0,
+          "linear_fixed_effect_alias": false
+        }
+      },
+      "joint_acquisition_design": {
+        "fields": [],
+        "status": "missing",
+        "relative_residual": null,
+        "fixed_effect_alias": null
+      },
+      "points": [
+        {
+          "x": 3175.0,
+          "y": 2650.0,
+          "group": "anti-PD1 nonresponder",
+          "patient": "CRCP104"
+        },
+        {
+          "x": 3575.0,
+          "y": 4475.0,
+          "group": "anti-PD1 responder",
+          "patient": "CRCP112"
+        },
+        {
+          "x": 4525.0,
+          "y": 3775.0,
+          "group": "anti-PD1 responder",
+          "patient": "CRCP24"
+        },
+        {
+          "x": 4675.0,
+          "y": 4125.0,
+          "group": "anti-PD1 responder",
+          "patient": "CRCP25"
+        },
+        {
+          "x": 4250.0,
+          "y": 2725.0,
+          "group": "anti-PD1 responder",
+          "patient": "CRCP61"
+        },
+        {
+          "x": 3325.0,
+          "y": 4675.0,
+          "group": "anti-PD1 nonresponder",
+          "patient": "CRCP95"
+        }
+      ],
+      "points_frame": "local_bbox",
+      "reasons": []
+    },
+    "pseudorep": {
+      "status": "red",
+      "message": "Difference in BH call rates across sampling units; true discovery status is unknown for public cohorts.",
+      "spot_rate": 0.84375,
+      "patient_rate": 0.0,
+      "gap": 0.84375,
+      "ratio": null,
+      "zero_denominator": true,
+      "groups": [
+        "anti-PD1 nonresponder",
+        "anti-PD1 responder"
+      ],
+      "features": [
+        "ACTB",
+        "GAPDH",
+        "B2M",
+        "RPLP0",
+        "RPL13A",
+        "RPS18",
+        "RPS3",
+        "RPL10",
+        "EEF1A1",
+        "PPIA",
+        "HPRT1",
+        "CALM1",
+        "CD3D",
+        "CD3E",
+        "CD8A",
+        "CD74",
+        "HLA-DRA",
+        "PTPRC",
+        "LST1",
+        "TYROBP",
+        "MS4A1",
+        "CD79A",
+        "COL1A1",
+        "COL1A2",
+        "DCN",
+        "LUM",
+        "PECAM1",
+        "VWF",
+        "EPCAM",
+        "KRT8",
+        "KRT18",
+        "KRT19"
+      ],
+      "spot_p": [
+        0.0,
+        0.0,
+        9.073016158303736e-56,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        3.20191967794144e-83,
+        2.40050202825175e-120,
+        1.0783513792178437e-197,
+        3.029231405372552e-108,
+        3.109000493558904e-172,
+        3.4123099721768255e-115,
+        0.0,
+        3.1642991370244113e-149,
+        3.1186296424563473e-26,
+        2.8773267466919976e-16,
+        1.4032486468260139e-94,
+        3.337809028635907e-114,
+        5.674166371116249e-100,
+        4.746450432352934e-34,
+        0.0,
+        5.4021454556034225e-84,
+        1.9306350908426484e-252,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spot_q": [
+        0.0,
+        0.0,
+        1.2097354877738313e-55,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        4.4548447693098296e-83,
+        4.8010040565035e-120,
+        2.654403394997769e-197,
+        5.101863419574825e-108,
+        7.106286842420353e-172,
+        6.423171712332848e-115,
+        0.0,
+        6.750504825652078e-149,
+        3.8383134061001196e-26,
+        3.4101650331164415e-16,
+        2.1382836523063067e-94,
+        5.9338827175749456e-114,
+        9.078666193785998e-100,
+        6.0754565534117556e-34,
+        0.0,
+        7.857666117241342e-84,
+        5.148360242247062e-252,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patient": {
+        "method": "exact",
+        "assignments": "15",
+        "evaluations": 15,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.5333333333333333,
+          0.26666666666666666,
+          0.8,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.4,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.6666666666666666,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.4,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.6666666666666666,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.8,
+          1.0,
+          0.26666666666666666,
+          0.5333333333333333,
+          0.26666666666666666,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.13333333333333333
+        ],
+        "q": [
+          0.7757575757575758,
+          0.4740740740740741,
+          0.9846153846153847,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.64,
+          0.28444444444444444,
+          0.28444444444444444,
+          0.8888888888888888,
+          0.28444444444444444,
+          0.28444444444444444,
+          0.28444444444444444,
+          0.64,
+          0.28444444444444444,
+          0.28444444444444444,
+          0.28444444444444444,
+          0.8888888888888888,
+          0.28444444444444444,
+          0.28444444444444444,
+          0.9846153846153847,
+          1.0,
+          0.4740740740740741,
+          0.7757575757575758,
+          0.4740740740740741,
+          0.28444444444444444,
+          0.28444444444444444,
+          0.28444444444444444,
+          0.28444444444444444,
+          0.28444444444444444
+        ],
+        "statistic": [
+          -0.7624081797332879,
+          -1.6384024141989313,
+          -0.19076689628583451,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -1.0302191850475628,
+          -1.842260461766455,
+          -2.0879181548470807,
+          0.741102413523453,
+          1.9774785416153782,
+          1.9872750416822405,
+          2.2603900005293296,
+          -0.9180696570583997,
+          1.2079224208218389,
+          1.8838269795645317,
+          0.7696306569716783,
+          0.4258487705014915,
+          1.4115916812130853,
+          1.689487494647587,
+          -0.23206815460899696,
+          0.0006709300626701674,
+          1.2658442505280811,
+          0.6308585437382507,
+          1.4356438350294918,
+          1.5314277360667619,
+          -1.464852551827996,
+          -1.8146162698055694,
+          -1.7724518229406472,
+          -1.486665055191076
+        ]
+      }
+    },
+    "composition": {
+      "bands": [
+        {
+          "wavelength_um": 250.0,
+          "share": 0.06872740068347075,
+          "estimable_features": 27,
+          "supported_sections": 6,
+          "supported_patients": 6,
+          "supported_patients_by_group": {
+            "anti-PD1 nonresponder": 2,
+            "anti-PD1 responder": 4
+          },
+          "interpretable_sections": 6,
+          "interpretable_patients": 6,
+          "full_coverage": true,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 600.0,
+          "share": 0.2415916056526473,
+          "estimable_features": 27,
+          "supported_sections": 6,
+          "supported_patients": 6,
+          "supported_patients_by_group": {
+            "anti-PD1 nonresponder": 2,
+            "anti-PD1 responder": 4
+          },
+          "interpretable_sections": 6,
+          "interpretable_patients": 6,
+          "full_coverage": true,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 1400.0,
+          "share": 0.48371550572832206,
+          "estimable_features": 27,
+          "supported_sections": 6,
+          "supported_patients": 6,
+          "supported_patients_by_group": {
+            "anti-PD1 nonresponder": 2,
+            "anti-PD1 responder": 4
+          },
+          "interpretable_sections": 6,
+          "interpretable_patients": 6,
+          "full_coverage": true,
+          "saturated_sections": 0
+        }
+      ],
+      "sections": [
+        {
+          "section_id": "CRCP104_T",
+          "patient_id": "CRCP104",
+          "group": "anti-PD1 nonresponder",
+          "has_covariates": true,
+          "volumes": 8326,
+          "pitch_um": 50.0,
+          "edges": 15991,
+          "connected_components": 11,
+          "largest_2d_span_um": 5071.692220654011,
+          "fov_span_um": [
+            6150.0,
+            5200.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09939474442845084,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            6,
+            6,
+            6
+          ],
+          "two_step_edges": 15398,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 8309,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 8308.0,
+              "projected_white_fraction": 0.0013966617399796323,
+              "saturated": false,
+              "residual_white_gain": 0.09939474442845084
+            },
+            {
+              "supported_volumes": 8309,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 1202.253398303603,
+              "projected_white_fraction": 0.007310267452326746,
+              "saturated": false,
+              "residual_white_gain": 0.01309539121701284
+            },
+            {
+              "supported_volumes": 8309,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 222.16944704925234,
+              "projected_white_fraction": 0.03924571570083416,
+              "saturated": false,
+              "residual_white_gain": 0.0024179133918382193
+            }
+          ]
+        },
+        {
+          "section_id": "CRCP112_T",
+          "patient_id": "CRCP112",
+          "group": "anti-PD1 responder",
+          "has_covariates": true,
+          "volumes": 14484,
+          "pitch_um": 50.0,
+          "edges": 27584,
+          "connected_components": 30,
+          "largest_2d_span_um": 5700.0,
+          "fov_span_um": [
+            7050.0,
+            8750.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09920751137030244,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            6,
+            6,
+            6
+          ],
+          "two_step_edges": 26366,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 14409,
+              "supported_components": 3,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 12045.648404410795,
+              "projected_white_fraction": 0.0006617616816658774,
+              "saturated": false,
+              "residual_white_gain": 0.09920751137030244
+            },
+            {
+              "supported_volumes": 14409,
+              "supported_components": 3,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 1198.5621158842707,
+              "projected_white_fraction": 0.0043710041006553395,
+              "saturated": false,
+              "residual_white_gain": 0.013578117840678859
+            },
+            {
+              "supported_volumes": 12674,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 195.41499751729023,
+              "projected_white_fraction": 0.028593744349434364,
+              "saturated": false,
+              "residual_white_gain": 0.0023894388858962013
+            }
+          ]
+        },
+        {
+          "section_id": "CRCP24_T",
+          "patient_id": "CRCP24",
+          "group": "anti-PD1 responder",
+          "has_covariates": true,
+          "volumes": 13909,
+          "pitch_um": 50.0,
+          "edges": 27383,
+          "connected_components": 1,
+          "largest_2d_span_um": 5315.140188603606,
+          "fov_span_um": [
+            8850.0,
+            7450.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09694441928195713,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            6,
+            6,
+            6
+          ],
+          "two_step_edges": 26954,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 13909,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 13056.247963256068,
+              "projected_white_fraction": 0.0006244375306375561,
+              "saturated": false,
+              "residual_white_gain": 0.09694441928195713
+            },
+            {
+              "supported_volumes": 13909,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 1189.6029774724527,
+              "projected_white_fraction": 0.0049879749310939615,
+              "saturated": false,
+              "residual_white_gain": 0.01228431719051928
+            },
+            {
+              "supported_volumes": 13909,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 192.131060553321,
+              "projected_white_fraction": 0.031075119409362643,
+              "saturated": false,
+              "residual_white_gain": 0.002095963727692091
+            }
+          ]
+        },
+        {
+          "section_id": "CRCP25_T",
+          "patient_id": "CRCP25",
+          "group": "anti-PD1 responder",
+          "has_covariates": true,
+          "volumes": 18035,
+          "pitch_um": 50.0,
+          "edges": 35611,
+          "connected_components": 1,
+          "largest_2d_span_um": 8150.0,
+          "fov_span_um": [
+            9150.0,
+            8150.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09693805124329133,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            6,
+            6,
+            6
+          ],
+          "two_step_edges": 35154,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 18035,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 15699.744783271442,
+              "projected_white_fraction": 0.0005463789640664307,
+              "saturated": false,
+              "residual_white_gain": 0.09693805124329133
+            },
+            {
+              "supported_volumes": 18035,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 1284.5844242922262,
+              "projected_white_fraction": 0.0028134203804757113,
+              "saturated": false,
+              "residual_white_gain": 0.0120188252691962
+            },
+            {
+              "supported_volumes": 18035,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 283.3560965434678,
+              "projected_white_fraction": 0.02334297399995862,
+              "saturated": false,
+              "residual_white_gain": 0.0021005441854287255
+            }
+          ]
+        },
+        {
+          "section_id": "CRCP61_T",
+          "patient_id": "CRCP61",
+          "group": "anti-PD1 responder",
+          "has_covariates": true,
+          "volumes": 12080,
+          "pitch_um": 50.0,
+          "edges": 23012,
+          "connected_components": 42,
+          "largest_2d_span_um": 5350.0,
+          "fov_span_um": [
+            8300.0,
+            5350.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.09921164460694291,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            6,
+            6,
+            6
+          ],
+          "two_step_edges": 22060,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 12001,
+              "supported_components": 2,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 8469.47169423698,
+              "projected_white_fraction": 0.0010365571348924705,
+              "saturated": false,
+              "residual_white_gain": 0.09921164460694291
+            },
+            {
+              "supported_volumes": 11940,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 1224.2426899472366,
+              "projected_white_fraction": 0.004308527356720855,
+              "saturated": false,
+              "residual_white_gain": 0.013522190418065589
+            },
+            {
+              "supported_volumes": 11940,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 210.1422038463734,
+              "projected_white_fraction": 0.018220489913722927,
+              "saturated": false,
+              "residual_white_gain": 0.0026805481014849767
+            }
+          ]
+        },
+        {
+          "section_id": "CRCP95_T",
+          "patient_id": "CRCP95",
+          "group": "anti-PD1 nonresponder",
+          "has_covariates": true,
+          "volumes": 11455,
+          "pitch_um": 50.0,
+          "edges": 21243,
+          "connected_components": 99,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6450.0,
+            8650.0
+          ],
+          "nyquist_wavelength_um": 100.0,
+          "axial_limit_um": 157.07963267948966,
+          "fine_noise_gain": 0.10034284624005292,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            6,
+            6,
+            6
+          ],
+          "two_step_edges": 19848,
+          "occupancy_range": [
+            1,
+            1
+          ],
+          "bands": [
+            {
+              "supported_volumes": 11187,
+              "supported_components": 4,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 9544.73616659228,
+              "projected_white_fraction": 0.0011518095073590705,
+              "saturated": false,
+              "residual_white_gain": 0.10034284624005292
+            },
+            {
+              "supported_volumes": 11051,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 1413.1509966298565,
+              "projected_white_fraction": 0.007264272769064507,
+              "saturated": false,
+              "residual_white_gain": 0.014545472424560614
+            },
+            {
+              "supported_volumes": 11051,
+              "supported_components": 1,
+              "projection_rank": 6,
+              "effective_spectral_dimension": 222.1973794045121,
+              "projected_white_fraction": 0.02508435452889478,
+              "saturated": false,
+              "residual_white_gain": 0.003032276749610446
+            }
+          ]
+        }
+      ],
+      "total_patients": 6,
+      "total_patients_by_group": {
+        "anti-PD1 nonresponder": 2,
+        "anti-PD1 responder": 4
+      },
+      "total_sections": 6,
+      "covariate_sections": 6,
+      "chebyshev_degree": 137,
+      "shared_spectral_bound_per_um2": 0.008192,
+      "status": "yellow",
+      "message": "Feature-averaged explained energy on matched supporting sections, equally weighted within patient and across patients. A connected 2-D footprint must span a wavelength, with wavelength at least pi times the occupied square-grid pitch. Regridding can alter native geometry. Missing covariates, saturated fits and partial coverage limit interpretation."
+    },
+    "nugget": {
+      "groups": [
+        "anti-PD1 nonresponder",
+        "anti-PD1 responder"
+      ],
+      "features": [
+        {
+          "feature": "ACTB",
+          "raw_delta": 0.015551706327160367,
+          "debiased_delta": -0.004136935560776031,
+          "raw_energy": [
+            0.06661762241298648,
+            0.08216932874014685
+          ],
+          "corrected_energy": [
+            0.013436520763400586,
+            0.009299585202624555
+          ],
+          "mean_delta": -0.4129415231526643,
+          "estimated_noise_delta": 0.019688641887936398,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "GAPDH",
+          "raw_delta": 0.044108165123373885,
+          "debiased_delta": -0.0036250230387851502,
+          "raw_energy": [
+            0.054604736349247826,
+            0.09871290147262171
+          ],
+          "corrected_energy": [
+            0.012706406269104636,
+            0.009081383230319486
+          ],
+          "mean_delta": -1.3625889787812042,
+          "estimated_noise_delta": 0.04773318816215904,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "B2M",
+          "raw_delta": -0.05018148407272917,
+          "debiased_delta": -0.014418408199445216,
+          "raw_energy": [
+            0.13095446486685325,
+            0.08077298079412408
+          ],
+          "corrected_energy": [
+            0.018412556978160632,
+            0.003994148778715416
+          ],
+          "mean_delta": -0.18011162017223747,
+          "estimated_noise_delta": -0.035763075873283964,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "RPLP0",
+          "raw_delta": 0.0,
+          "debiased_delta": 0.0,
+          "raw_energy": [
+            0.0,
+            0.0
+          ],
+          "corrected_energy": [
+            0.0,
+            0.0
+          ],
+          "mean_delta": 0.0,
+          "estimated_noise_delta": 0.0,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "RPL13A",
+          "raw_delta": 0.0,
+          "debiased_delta": 0.0,
+          "raw_energy": [
+            0.0,
+            0.0
+          ],
+          "corrected_energy": [
+            0.0,
+            0.0
+          ],
+          "mean_delta": 0.0,
+          "estimated_noise_delta": 0.0,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "RPS18",
+          "raw_delta": 0.0,
+          "debiased_delta": 0.0,
+          "raw_energy": [
+            0.0,
+            0.0
+          ],
+          "corrected_energy": [
+            0.0,
+            0.0
+          ],
+          "mean_delta": 0.0,
+          "estimated_noise_delta": 0.0,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "RPS3",
+          "raw_delta": 0.0,
+          "debiased_delta": 0.0,
+          "raw_energy": [
+            0.0,
+            0.0
+          ],
+          "corrected_energy": [
+            0.0,
+            0.0
+          ],
+          "mean_delta": 0.0,
+          "estimated_noise_delta": 0.0,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "RPL10",
+          "raw_delta": 0.0,
+          "debiased_delta": 0.0,
+          "raw_energy": [
+            0.0,
+            0.0
+          ],
+          "corrected_energy": [
+            0.0,
+            0.0
+          ],
+          "mean_delta": 0.0,
+          "estimated_noise_delta": 0.0,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "EEF1A1",
+          "raw_delta": 0.022081888276994685,
+          "debiased_delta": -0.003120018549233163,
+          "raw_energy": [
+            0.07349791109119139,
+            0.09557979936818607
+          ],
+          "corrected_energy": [
+            0.014609964980820019,
+            0.011489946431586856
+          ],
+          "mean_delta": -0.5906389553440174,
+          "estimated_noise_delta": 0.025201906826227846,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PPIA",
+          "raw_delta": -0.025052178499842745,
+          "debiased_delta": -0.010530655262484524,
+          "raw_energy": [
+            0.12087293196311058,
+            0.09582075346326784
+          ],
+          "corrected_energy": [
+            0.016920214231248856,
+            0.006389558968764333
+          ],
+          "mean_delta": -1.1188400804372238,
+          "estimated_noise_delta": -0.014521523237358197,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "HPRT1",
+          "raw_delta": -0.018623670385967517,
+          "debiased_delta": 0.001023112253818932,
+          "raw_energy": [
+            0.035840419875117824,
+            0.017216749489150307
+          ],
+          "corrected_energy": [
+            -0.0010938148909115514,
+            -7.070263709261929e-05
+          ],
+          "mean_delta": -0.09946029778546162,
+          "estimated_noise_delta": -0.019646782639786448,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "CALM1",
+          "raw_delta": -0.02416690382846104,
+          "debiased_delta": -0.0030602058582822247,
+          "raw_energy": [
+            0.12876261547261067,
+            0.10459571164414963
+          ],
+          "corrected_energy": [
+            0.0074798932522077005,
+            0.004419687393925476
+          ],
+          "mean_delta": 0.23694318384720736,
+          "estimated_noise_delta": -0.021106697970178778,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD3D",
+          "raw_delta": 0.0160579113221043,
+          "debiased_delta": 0.001188952112847741,
+          "raw_energy": [
+            0.004222915364668147,
+            0.020280826686772446
+          ],
+          "corrected_energy": [
+            -4.075548249972698e-05,
+            0.001148196630348014
+          ],
+          "mean_delta": 0.09734366416546701,
+          "estimated_noise_delta": 0.014868959209256558,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "CD3E",
+          "raw_delta": 0.00910083891067812,
+          "debiased_delta": 0.0004719307559643705,
+          "raw_energy": [
+            0.003252027598311217,
+            0.012352866508989337
+          ],
+          "corrected_energy": [
+            5.918195223779464e-05,
+            0.0005311127082021651
+          ],
+          "mean_delta": 0.05739176702149236,
+          "estimated_noise_delta": 0.00862890815471375,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "CD8A",
+          "raw_delta": 0.012187546155477881,
+          "debiased_delta": -0.0003106924745709702,
+          "raw_energy": [
+            0.003186223563194885,
+            0.015373769718672766
+          ],
+          "corrected_energy": [
+            0.0004980932506928443,
+            0.00018740077612187413
+          ],
+          "mean_delta": 0.0768971256037677,
+          "estimated_noise_delta": 0.012498238630048853,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "CD74",
+          "raw_delta": -0.02271114519359685,
+          "debiased_delta": -0.014647402820671451,
+          "raw_energy": [
+            0.14036259559208258,
+            0.11765145039848574
+          ],
+          "corrected_energy": [
+            0.02469639053664629,
+            0.010048987715974837
+          ],
+          "mean_delta": -0.16252706678054185,
+          "estimated_noise_delta": -0.008063742372925398,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "HLA-DRA",
+          "raw_delta": 0.038753832416300135,
+          "debiased_delta": 0.004155455489816955,
+          "raw_energy": [
+            0.003907726254132648,
+            0.04266155867043278
+          ],
+          "corrected_energy": [
+            -4.231396222845863e-05,
+            0.004113141527588496
+          ],
+          "mean_delta": 0.3377867666253086,
+          "estimated_noise_delta": 0.03459837692648318,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "PTPRC",
+          "raw_delta": 0.01345875549007095,
+          "debiased_delta": 0.00021733047931212965,
+          "raw_energy": [
+            0.007986223292046958,
+            0.02144497878211791
+          ],
+          "corrected_energy": [
+            0.00041546180100533714,
+            0.0006327922803174668
+          ],
+          "mean_delta": 0.09214672947870939,
+          "estimated_noise_delta": 0.013241425010758824,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "LST1",
+          "raw_delta": 0.0016736466166519148,
+          "debiased_delta": 5.949924181847187e-05,
+          "raw_energy": [
+            0.00027450813907532224,
+            0.001948154755727237
+          ],
+          "corrected_energy": [
+            3.1966622096639636e-06,
+            6.269590402813583e-05
+          ],
+          "mean_delta": 0.010430006821022809,
+          "estimated_noise_delta": 0.001614147374833443,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "TYROBP",
+          "raw_delta": 0.0015248155600966692,
+          "debiased_delta": -0.001030216989675811,
+          "raw_energy": [
+            0.02700558272275769,
+            0.02853039828285436
+          ],
+          "corrected_energy": [
+            0.001385676434734954,
+            0.000355459445059143
+          ],
+          "mean_delta": 0.027929797543223917,
+          "estimated_noise_delta": 0.0025550325497724832,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "MS4A1",
+          "raw_delta": 0.007729323903649075,
+          "debiased_delta": 0.0006024021034453544,
+          "raw_energy": [
+            0.00012177091105325486,
+            0.00785109481470233
+          ],
+          "corrected_energy": [
+            2.922007171710553e-05,
+            0.0006316221751624599
+          ],
+          "mean_delta": 0.045700605777815914,
+          "estimated_noise_delta": 0.007126921800203719,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "CD79A",
+          "raw_delta": 0.010533407559016703,
+          "debiased_delta": 0.0006255406069704514,
+          "raw_energy": [
+            0.0036421446740748193,
+            0.014175552233091523
+          ],
+          "corrected_energy": [
+            -9.730392256483238e-05,
+            0.000528236684405619
+          ],
+          "mean_delta": 0.06933117957626596,
+          "estimated_noise_delta": 0.00990786695204625,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "COL1A1",
+          "raw_delta": 0.004745452130649516,
+          "debiased_delta": -0.010240168935094808,
+          "raw_energy": [
+            0.1013330949376074,
+            0.10607854706825692
+          ],
+          "corrected_energy": [
+            0.01924368365587635,
+            0.009003514720781543
+          ],
+          "mean_delta": -0.12236915015338257,
+          "estimated_noise_delta": 0.014985621065744331,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL1A2",
+          "raw_delta": 0.001024731897634995,
+          "debiased_delta": -0.008495153379751565,
+          "raw_energy": [
+            0.10031371597486793,
+            0.10133844787250293
+          ],
+          "corrected_energy": [
+            0.015181990161283895,
+            0.00668683678153233
+          ],
+          "mean_delta": 0.006836363258455158,
+          "estimated_noise_delta": 0.009519885277386536,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "DCN",
+          "raw_delta": 0.034358094139635476,
+          "debiased_delta": -0.002257285749192702,
+          "raw_energy": [
+            0.05404183156069037,
+            0.08839992570032584
+          ],
+          "corrected_energy": [
+            0.006374766737204178,
+            0.004117480988011476
+          ],
+          "mean_delta": 0.5691851951808884,
+          "estimated_noise_delta": 0.036615379888828174,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "LUM",
+          "raw_delta": 0.017962067337820506,
+          "debiased_delta": -0.005216248646522944,
+          "raw_energy": [
+            0.07184132520550196,
+            0.08980339254332247
+          ],
+          "corrected_energy": [
+            0.008399092892164634,
+            0.00318284424564169
+          ],
+          "mean_delta": 0.2112939506760242,
+          "estimated_noise_delta": 0.02317831598434346,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PECAM1",
+          "raw_delta": 0.0183801928265337,
+          "debiased_delta": -0.0012470424810700704,
+          "raw_energy": [
+            0.03121865897238215,
+            0.04959885179891585
+          ],
+          "corrected_energy": [
+            0.001734866763379743,
+            0.0004878242823096726
+          ],
+          "mean_delta": 0.17267469170281208,
+          "estimated_noise_delta": 0.019627235307603776,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "VWF",
+          "raw_delta": 0.025845842878376553,
+          "debiased_delta": 0.0008971485578773523,
+          "raw_energy": [
+            0.02521194123896687,
+            0.05105778411734342
+          ],
+          "corrected_energy": [
+            0.00043195774231361873,
+            0.001329106300190971
+          ],
+          "mean_delta": 0.23266708148457313,
+          "estimated_noise_delta": 0.024948694320499197,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "EPCAM",
+          "raw_delta": -0.05493861576783897,
+          "debiased_delta": -0.01002512426432078,
+          "raw_energy": [
+            0.12273826740429133,
+            0.06779965163645237
+          ],
+          "corrected_energy": [
+            0.01378165911527899,
+            0.003756534850958208
+          ],
+          "mean_delta": -1.2003666242618878,
+          "estimated_noise_delta": -0.0449134915035182,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "KRT8",
+          "raw_delta": -0.033629283527790335,
+          "debiased_delta": -0.01261415062123818,
+          "raw_energy": [
+            0.11409742111168628,
+            0.08046813758389594
+          ],
+          "corrected_energy": [
+            0.019975484142642476,
+            0.007361333521404296
+          ],
+          "mean_delta": -1.5739431927139886,
+          "estimated_noise_delta": -0.02101513290655216,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "KRT18",
+          "raw_delta": -0.04836773807754597,
+          "debiased_delta": -0.012001239012405629,
+          "raw_energy": [
+            0.10487806864197907,
+            0.0565103305644331
+          ],
+          "corrected_energy": [
+            0.017711743839909727,
+            0.005710504827504098
+          ],
+          "mean_delta": -1.8216925180549306,
+          "estimated_noise_delta": -0.03636649906514034,
+          "mean_noise_sensitive": true
+        },
+        {
+          "feature": "KRT19",
+          "raw_delta": -0.0578164256926918,
+          "debiased_delta": -0.010535728305679452,
+          "raw_energy": [
+            0.13144039506593042,
+            0.07362396937323862
+          ],
+          "corrected_energy": [
+            0.018643862219611812,
+            0.00810813391393236
+          ],
+          "mean_delta": -1.1449452986891702,
+          "estimated_noise_delta": -0.04728069738701235,
+          "mean_noise_sensitive": true
+        }
+      ],
+      "flagged": 17,
+      "patient_energies": [
+        {
+          "patient_id": "CRCP104",
+          "group": "anti-PD1 nonresponder",
+          "raw": [
+            0.08335758838859854,
+            0.03128022447371716,
+            0.1416037953232511,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.04626270189641247,
+            0.12485091039813616,
+            0.041415962476168494,
+            0.1425927105155198,
+            0.002010494954902596,
+            0.0012083733883111866,
+            0.0008545058803220652,
+            0.13714720313789128,
+            0.00045322375726345343,
+            0.0036117341675900158,
+            0.0,
+            0.006949558390154425,
+            0.0002264055041645556,
+            0.00014460856030633733,
+            0.09929508188373946,
+            0.09703383334384606,
+            0.022326205733546052,
+            0.03411875468729239,
+            0.02436302790498653,
+            0.02577855281731775,
+            0.1326080559147425,
+            0.10997895082840331,
+            0.09184786246078727,
+            0.13026046687864695
+          ],
+          "corrected": [
+            0.012774131159631455,
+            0.005243991204579804,
+            0.012940430954324289,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.007248937347673762,
+            0.014333691642031854,
+            -0.000564502605086982,
+            0.007543386156750709,
+            -0.0002259767217479814,
+            0.00010646855702695036,
+            4.116193737547895e-06,
+            0.01884641960897289,
+            -1.952684945054719e-06,
+            -0.0001758469957771334,
+            0.0,
+            -0.00026048522010004276,
+            6.199076832089377e-05,
+            6.71548839190303e-06,
+            0.018551420978543773,
+            0.013921810603423512,
+            0.0009263176368454092,
+            0.001264004581747892,
+            9.569572550013894e-05,
+            -0.0009854068232055917,
+            0.007919136991339046,
+            0.015421932656541237,
+            0.009357651847716628,
+            0.016048402353991104
+          ]
+        },
+        {
+          "patient_id": "CRCP112",
+          "group": "anti-PD1 responder",
+          "raw": [
+            0.05820703630313412,
+            0.05749301966987849,
+            0.043749620382337706,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.08074856738171675,
+            0.09442542761833556,
+            0.020827774120644082,
+            0.11598040759546434,
+            0.024303532131572804,
+            0.011524061640757685,
+            0.015379724518835932,
+            0.11423102001961441,
+            0.0856125969399509,
+            0.023791494518138393,
+            0.007042613483995788,
+            0.024632789953975828,
+            0.008562004404817981,
+            0.011513228985872842,
+            0.09577837456136856,
+            0.08104383920843614,
+            0.021807955509540428,
+            0.04547797992917844,
+            0.030447907545377573,
+            0.021128457800808284,
+            0.10241660490464563,
+            0.1227624834963026,
+            0.10599423071729988,
+            0.12781351078435907
+          ],
+          "corrected": [
+            0.015810087160292793,
+            0.014019493387446923,
+            0.01219904292758301,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.020903092686900125,
+            0.011049378766312845,
+            -0.0006946576006282464,
+            0.013539617847205795,
+            0.0014819643549437295,
+            0.0006666416991975427,
+            -0.0006635410316352553,
+            0.015118184323762593,
+            0.010535475538004727,
+            0.000730984998619847,
+            0.0002903329048437476,
+            0.00046917467931659185,
+            0.0016566390915318824,
+            0.00025098040028653096,
+            0.015289539887090073,
+            0.01029305018146337,
+            0.0004764352493713611,
+            -0.0006849348779479972,
+            8.614739646423467e-05,
+            -0.0003394194472235365,
+            0.014247648428216908,
+            0.02034188471344972,
+            0.01866108922518954,
+            0.023171275261536242
+          ]
+        },
+        {
+          "patient_id": "CRCP24",
+          "group": "anti-PD1 responder",
+          "raw": [
+            0.08805095659375724,
+            0.10379390025214219,
+            0.10300119551995231,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.12164130106058627,
+            0.09807453976455871,
+            0.015904728539747753,
+            0.10667408071577592,
+            0.015371576183990033,
+            0.009270287061320473,
+            0.012765387652439312,
+            0.11270617393962318,
+            0.06767485337084264,
+            0.01783894717123454,
+            0.00023530359394199709,
+            0.03174556061795642,
+            0.0008630416717409724,
+            0.010939788157766776,
+            0.10054798947600847,
+            0.09420623981713579,
+            0.10066813758907864,
+            0.11115138713791597,
+            0.05933358682299422,
+            0.06070148798089253,
+            0.09574587656450845,
+            0.1001246514766823,
+            0.08163569997719658,
+            0.09353201608296986
+          ],
+          "corrected": [
+            0.008169597570246809,
+            0.003426589182398729,
+            0.0033386590664592486,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.019084326335114157,
+            0.006138207168995949,
+            0.00021263217979260868,
+            0.0031739319143645472,
+            0.0003278186426587566,
+            0.0001303485298173382,
+            0.00021989676638159948,
+            0.00897105439173028,
+            0.0050564143973474,
+            0.0006257769114986732,
+            1.8832261728675393e-06,
+            -0.00019155805790052605,
+            5.556026405290353e-05,
+            0.0003629963898113056,
+            0.003913328572353866,
+            0.004088732758521174,
+            0.007827868315420483,
+            0.005144544380256674,
+            0.0010744638936829587,
+            0.00036882933176101557,
+            0.0008988099443069247,
+            0.004873920154619488,
+            0.0019331491972891107,
+            0.00418480216252487
+          ]
+        },
+        {
+          "patient_id": "CRCP25",
+          "group": "anti-PD1 responder",
+          "raw": [
+            0.09340995700708175,
+            0.08857548148897842,
+            0.042030117105025605,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0686651579462742,
+            0.06372377383535108,
+            0.018110608894224948,
+            0.06021655896227348,
+            0.010508669115942303,
+            0.00920183477255326,
+            0.012696795474442824,
+            0.09485581764988744,
+            0.0019185746384805906,
+            0.012799417159149045,
+            0.0003571221929271005,
+            0.023790803183649806,
+            0.003941148898856471,
+            0.008118761029705738,
+            0.08715893080737455,
+            0.0934656064554602,
+            0.09478470193028801,
+            0.08071405607067948,
+            0.06056478470459509,
+            0.06333553838415526,
+            0.02786063960174905,
+            0.032515872374883736,
+            0.0049286947312418,
+            0.012622684934367266
+          ],
+          "corrected": [
+            -0.003662961579139118,
+            -0.0012720937444773983,
+            -0.005402438571865953,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.013590086828045203,
+            0.00041252124146058666,
+            0.0004265832770125322,
+            -0.0016827317127010369,
+            0.0001291330648406641,
+            9.73012503222518e-05,
+            -7.295600727754564e-05,
+            0.004852784721805392,
+            5.554838852052987e-06,
+            0.0004944228165873806,
+            -1.8871883310716566e-05,
+            0.0011396482618685339,
+            0.00011283271940593607,
+            7.675047005845613e-05,
+            0.005403889993802785,
+            0.007086256144713379,
+            0.0023517188132432115,
+            0.0033420663351681756,
+            0.00017745633171982467,
+            0.00013989265861197309,
+            -0.00024034045630414932,
+            0.0010634660572900884,
+            -3.584942104023232e-05,
+            0.0005157339487346212
+          ]
+        },
+        {
+          "patient_id": "CRCP61",
+          "group": "anti-PD1 responder",
+          "raw": [
+            0.08900936505661429,
+            0.14498920447948777,
+            0.13431099016918072,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.1112641710841671,
+            0.12705927263482603,
+            0.01402388640198444,
+            0.13551179930308485,
+            0.03093952931558464,
+            0.019415282561325936,
+            0.020653171228972998,
+            0.1488127899848179,
+            0.015440209732457008,
+            0.031350056279949655,
+            0.00015757975204406217,
+            0.03395243937583539,
+            0.01803818428339389,
+            0.026130430759020728,
+            0.14082889342827612,
+            0.13663810600897955,
+            0.1363389077723963,
+            0.12187014703551598,
+            0.048049128122696516,
+            0.059065652303517624,
+            0.04517548547490631,
+            0.06646954298771514,
+            0.03348269683199414,
+            0.06052766569125825
+          ],
+          "corrected": [
+            0.016881617659097736,
+            0.02015154409590969,
+            0.005841331692685359,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.019562453532378343,
+            0.00795812869828795,
+            -0.00022736840454737166,
+            0.0026479315268325976,
+            0.002653870458948906,
+            0.0012301593534715279,
+            0.001266203377018698,
+            0.011253927426601085,
+            0.0008551213361498063,
+            0.0006799843945639664,
+            -2.2560631593355226e-05,
+            4.572896951972327e-06,
+            0.0007014566256591179,
+            0.0014222194774661835,
+            0.011407300429879447,
+            0.005279308041431396,
+            0.005813901574010849,
+            0.004929701145089907,
+            0.0006132295073716723,
+            0.005147122657614432,
+            0.00012002148761314918,
+            0.003166063160257887,
+            0.002283630308577974,
+            0.004560724282933706
+          ]
+        },
+        {
+          "patient_id": "CRCP95",
+          "group": "anti-PD1 nonresponder",
+          "raw": [
+            0.049877656437374414,
+            0.0779292482247785,
+            0.12030513441045543,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.10073312028597031,
+            0.11689495352808499,
+            0.030264877274067147,
+            0.11493252042970152,
+            0.006435335774433697,
+            0.005295681808311248,
+            0.005517941246067705,
+            0.1435779880462739,
+            0.0073622287510018425,
+            0.0123607124165039,
+            0.0005490162781506445,
+            0.04706160705536096,
+            1.713631794195413e-05,
+            0.007139680787843302,
+            0.10337110799147535,
+            0.10359359860588982,
+            0.08575745738783468,
+            0.10956389572371152,
+            0.038074290039777775,
+            0.02464532966061599,
+            0.11286847889384016,
+            0.11821589139496926,
+            0.11790827482317087,
+            0.13262032325321388
+          ],
+          "corrected": [
+            0.014098910367169717,
+            0.020168821333629468,
+            0.023884683001996976,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.021970992613966275,
+            0.01950673682046586,
+            -0.0016231271767361208,
+            0.007416400347664692,
+            0.00014446575674852743,
+            1.1895347448638918e-05,
+            0.0009920703076481407,
+            0.030546361464319688,
+            -8.267523951186254e-05,
+            0.0010067705977878077,
+            6.393324419327927e-06,
+            0.0030318380895699507,
+            -3.5506248866827172e-06,
+            -0.00020132333352156778,
+            0.01993594633320893,
+            0.01644216971914428,
+            0.011823215837562948,
+            0.015534181202581376,
+            0.003374037801259347,
+            0.0018493223078328291,
+            0.019644181239218933,
+            0.024529035628743714,
+            0.026065835832102827,
+            0.02123932208523252
+          ]
+        }
+      ],
+      "evaluated": 32,
+      "status": "red",
+      "message": "Fine-band residual energy minus the estimated white-noise contribution is signed. Matched two-step spatial differences model locally smooth signal plus uncorrelated homoscedastic volume noise. Rough signal, heterogeneous noise and unequal occupancy affect this sensitivity screen.",
+      "raw_test": {
+        "features": [
+          "ACTB",
+          "GAPDH",
+          "B2M",
+          "RPLP0",
+          "RPL13A",
+          "RPS18",
+          "RPS3",
+          "RPL10",
+          "EEF1A1",
+          "PPIA",
+          "HPRT1",
+          "CALM1",
+          "CD3D",
+          "CD3E",
+          "CD8A",
+          "CD74",
+          "HLA-DRA",
+          "PTPRC",
+          "LST1",
+          "TYROBP",
+          "MS4A1",
+          "CD79A",
+          "COL1A1",
+          "COL1A2",
+          "DCN",
+          "LUM",
+          "PECAM1",
+          "VWF",
+          "EPCAM",
+          "KRT8",
+          "KRT18",
+          "KRT19"
+        ],
+        "method": "exact",
+        "assignments": "15",
+        "evaluations": 15,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.26666666666666666,
+          0.26666666666666666,
+          0.26666666666666666,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.4,
+          0.26666666666666666,
+          0.13333333333333333,
+          0.4,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.4,
+          0.26666666666666666,
+          0.13333333333333333,
+          0.5333333333333333,
+          0.8,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.9333333333333333,
+          0.8,
+          0.26666666666666666,
+          0.5333333333333333,
+          0.26666666666666666,
+          0.4,
+          0.13333333333333333,
+          0.4,
+          0.26666666666666666,
+          0.13333333333333333
+        ],
+        "q": [
+          0.5019607843137255,
+          0.5019607843137255,
+          0.5019607843137255,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.5818181818181819,
+          0.5019607843137255,
+          0.4740740740740741,
+          0.5818181818181819,
+          0.4740740740740741,
+          0.4740740740740741,
+          0.4740740740740741,
+          0.5818181818181819,
+          0.5019607843137255,
+          0.4740740740740741,
+          0.7111111111111111,
+          0.9846153846153847,
+          0.4740740740740741,
+          0.4740740740740741,
+          1.0,
+          0.9846153846153847,
+          0.5019607843137255,
+          0.7111111111111111,
+          0.5019607843137255,
+          0.5818181818181819,
+          0.4740740740740741,
+          0.5818181818181819,
+          0.5019607843137255,
+          0.4740740740740741
+        ],
+        "statistic": [
+          0.9681162130783197,
+          1.2808282144578642,
+          -1.2864792031395669,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.8864778616490739,
+          -1.185414615137688,
+          -2.016400422730257,
+          -0.9448777118293323,
+          1.6610282754026588,
+          1.6824472445303114,
+          1.9549100990812607,
+          -1.2201578952443997,
+          1.185215953300207,
+          1.5749364096870266,
+          0.685031660817592,
+          0.1301924386020874,
+          1.2464729633269829,
+          1.391755609198089,
+          0.2889144377089744,
+          0.06145681028476234,
+          0.8512783282699408,
+          0.5529640582444275,
+          1.389682663594651,
+          1.4343095804985675,
+          -1.5312137413198026,
+          -1.083740827308957,
+          -1.24550176162073,
+          -1.3585345767058532
+        ]
+      },
+      "corrected_test": {
+        "features": [
+          "ACTB",
+          "GAPDH",
+          "B2M",
+          "RPLP0",
+          "RPL13A",
+          "RPS18",
+          "RPS3",
+          "RPL10",
+          "EEF1A1",
+          "PPIA",
+          "HPRT1",
+          "CALM1",
+          "CD3D",
+          "CD3E",
+          "CD8A",
+          "CD74",
+          "HLA-DRA",
+          "PTPRC",
+          "LST1",
+          "TYROBP",
+          "MS4A1",
+          "CD79A",
+          "COL1A1",
+          "COL1A2",
+          "DCN",
+          "LUM",
+          "PECAM1",
+          "VWF",
+          "EPCAM",
+          "KRT8",
+          "KRT18",
+          "KRT19"
+        ],
+        "method": "exact",
+        "assignments": "15",
+        "evaluations": 15,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.8,
+          0.5333333333333333,
+          0.26666666666666666,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9333333333333333,
+          0.13333333333333333,
+          0.26666666666666666,
+          0.6666666666666666,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.8,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.6666666666666666,
+          1.0,
+          0.5333333333333333,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.13333333333333333,
+          0.6666666666666666,
+          0.5333333333333333,
+          0.5333333333333333,
+          0.9333333333333333,
+          0.26666666666666666,
+          0.26666666666666666,
+          0.26666666666666666,
+          0.4
+        ],
+        "q": [
+          1.0,
+          0.8982456140350877,
+          0.6095238095238095,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.4740740740740741,
+          0.6095238095238095,
+          0.9696969696969696,
+          0.4740740740740741,
+          0.4740740740740741,
+          1.0,
+          0.4740740740740741,
+          0.4740740740740741,
+          0.9696969696969696,
+          1.0,
+          0.8982456140350877,
+          0.4740740740740741,
+          0.4740740740740741,
+          0.4740740740740741,
+          0.4740740740740741,
+          0.9696969696969696,
+          0.8982456140350877,
+          0.8982456140350877,
+          1.0,
+          0.6095238095238095,
+          0.6095238095238095,
+          0.6095238095238095,
+          0.8533333333333334
+        ],
+        "statistic": [
+          -0.599406015205559,
+          -0.441234300623307,
+          -1.6044685349837184,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.24945750675197015,
+          -1.755698254912603,
+          1.5446631645291085,
+          -0.6468859834429526,
+          1.1992502713797288,
+          1.0877931344481844,
+          -0.48023348811154387,
+          -1.79413478895319,
+          1.0704854194022277,
+          0.6050290569153214,
+          0.5416926671468382,
+          -0.9097260673388995,
+          1.0204890811731295,
+          1.207316046056578,
+          -1.6930491001477301,
+          -1.912669560820789,
+          -0.5620138022076882,
+          -1.0226016427264228,
+          -1.0888542490657491,
+          0.4468084653054847,
+          -1.328420649333701,
+          -1.4194455028527801,
+          -1.259361803316422,
+          -1.1999515515252868
+        ]
+      },
+      "measurement_scope": {
+        "measurement": "log_normalized",
+        "layer": "archived log-normalized GEM MIDCounts",
+        "interpretation": "Energy, semivariance and attenuation refer to the supplied measurement scale. For log-normalized inputs they describe variability after transformation. The procedure does not fit a negative-binomial count model or identify a noise cause."
+      }
+    }
+  },
+  "statement": "基于公开存档数据，在患者/生物学重复级去混杂框架下的可复现性、统计功效与混杂敏感性审计。"
+}

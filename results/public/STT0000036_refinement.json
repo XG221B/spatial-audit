@@ -1,0 +1,28 @@
+{
+  "kind": "public",
+  "record_type": "rank_test_regression",
+  "accession": "STT0000036",
+  "before": {
+    "report_sha256": "c4dbe82a8e9cb753c6107049d878f1386a33c91521b4e997aa1e57ab51290557",
+    "spot_rate": 1.0,
+    "constant_feature_p": {
+      "RPLP0": 0.0,
+      "RPL13A": 0.0,
+      "RPS18": 0.0,
+      "RPS3": 0.0,
+      "RPL10": 0.0
+    }
+  },
+  "evidence": "STT0000036_inputs.json",
+  "after": {
+    "report_sha256": "b9e6ac1bdfc7da3f557ec0bace6ff3fe0722371553dfb43f579757eb6972d61a",
+    "spot_rate": 0.84375,
+    "constant_feature_p": {
+      "RPLP0": 1.0,
+      "RPL13A": 1.0,
+      "RPS18": 1.0,
+      "RPS3": 1.0,
+      "RPL10": 1.0
+    }
+  }
+}

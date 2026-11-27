@@ -1,0 +1,3051 @@
+{
+  "schema_version": 1,
+  "id": "S-BSST1410",
+  "kind": "public",
+  "platform": "Visium",
+  "source": "https://www.ebi.ac.uk/biostudies/studies/S-BSST1410",
+  "accession": "S-BSST1410",
+  "provenance": {
+    "inputs": [
+      {
+        "file": "V19S23-092-A1.h5ad",
+        "sha256": "14b134e8b7099bd4ea3798597ece9156e9acb67465cb21321cec8b9cc67a70e5",
+        "bytes": 1557556
+      },
+      {
+        "file": "V19S23-092-B1.h5ad",
+        "sha256": "d33096e23a90ac33c213d9f3600c8f03c3bb3ae291cc2f064fc6f7a0f617e4a7",
+        "bytes": 1559798
+      },
+      {
+        "file": "V19S23-092-C1.h5ad",
+        "sha256": "baa7c9ff3eeb901be4469c9f4252f83db5f6653b26154ee2ae6d10fab5b57d03",
+        "bytes": 1797361
+      },
+      {
+        "file": "V19S23-092-D1.h5ad",
+        "sha256": "888197e340943135717d96020e53fc8ffdaa0456307eaef395a25725850ce44e",
+        "bytes": 1609311
+      },
+      {
+        "file": "V10T31-015-A1.h5ad",
+        "sha256": "a0c1d4c123c2b5fa99f3aa6a6d56ffe14f840de771b3cf52f992b1c26552466c",
+        "bytes": 1248321
+      },
+      {
+        "file": "V10T31-015-B1.h5ad",
+        "sha256": "fdbce64ff836b7b1b033546db92c39cb7da13469943e8d279c92fbe7db19e67f",
+        "bytes": 1539187
+      },
+      {
+        "file": "V10T31-015-C1.h5ad",
+        "sha256": "cb2c899de39813d394389c7a0973f16ecddc630d4297a637890e2135315a00ad",
+        "bytes": 1775874
+      },
+      {
+        "file": "V10T31-015-D1.h5ad",
+        "sha256": "2096042d8bf845fa1f2f7095b1dfb9bda22bdbd421cb7d16b739b313b03078e7",
+        "bytes": 1163704
+      },
+      {
+        "file": "V10T31-019-A1.h5ad",
+        "sha256": "2d0760668abcd91b8a9dd2877078e727da64b9a59cd46dd671c04e203e5815cd",
+        "bytes": 1598441
+      },
+      {
+        "file": "V10T31-051-B1.h5ad",
+        "sha256": "c53d569c6d6bd78629127823f4de0f5ecd1d24707817feb9e79a28a61faa7b02",
+        "bytes": 1093540
+      },
+      {
+        "file": "V10T31-051-C1.h5ad",
+        "sha256": "6b9b4e7fac62f1fbcb6293348d72efb287094718081e0b4dfa58c69025482167",
+        "bytes": 1409710
+      },
+      {
+        "file": "V10T31-051-D1.h5ad",
+        "sha256": "ee43da48b33777da58885668b6fa59e25d6d11e26a44be1d8eebd9a3fea4ff2b",
+        "bytes": 1823769
+      },
+      {
+        "file": "V10T03-279-B1.h5ad",
+        "sha256": "0b729cebeb54cc39a2f403909798dddf58cd2f1f949d104b9568294bba77403f",
+        "bytes": 1543649
+      },
+      {
+        "file": "V10T03-279-C1.h5ad",
+        "sha256": "862989da838aba111cceaaf4f2d4579ff92ef1d571bb11c9f1e66079e8db7955",
+        "bytes": 1880111
+      },
+      {
+        "file": "V10T03-279-D1.h5ad",
+        "sha256": "a5084778eefa745e3bab4c2fbbff8311457595bec3d46d14e65eafd0b7330dc5",
+        "bytes": 1889990
+      },
+      {
+        "file": "V10T03-280-A1.h5ad",
+        "sha256": "b485c37c74bc4eda7fdd92ffeaf4f86533fb635117b00deeb73ff9c458568783",
+        "bytes": 1602212
+      },
+      {
+        "file": "V10T03-280-B1.h5ad",
+        "sha256": "998f8d112b55adbb628f5ae7b95e4ffb454ff811fc792f7a432418a98f14e9fd",
+        "bytes": 1704020
+      },
+      {
+        "file": "V10T03-280-C1.h5ad",
+        "sha256": "6f4eeb897156899f72fe0fec9049eefc08d19dc3fb3c34446eac045f1c61b178",
+        "bytes": 1570183
+      },
+      {
+        "file": "V10T03-280-D1.h5ad",
+        "sha256": "26a07b599e9b29b06c39f13b96962b8d2efb8d5a42c6ef1ff993837ec22dc0ef",
+        "bytes": 1177491
+      },
+      {
+        "file": "V10T03-281-A1.h5ad",
+        "sha256": "15c3f2b0b24f56f957115859ec659f2a8b1e145cf67cf0896d451b46bb0eee0f",
+        "bytes": 1345389
+      },
+      {
+        "file": "V10T03-281-B1.h5ad",
+        "sha256": "0b745f936d0e629615e58394f7c2ffc39520a95bdaaa19eb65cde374dc95a7f9",
+        "bytes": 1841006
+      },
+      {
+        "file": "V10T03-281-C1.h5ad",
+        "sha256": "ede815a4237694690dd35e9f41e5077f3f7bd6d475d87ca6f169fb8c5780cbf8",
+        "bytes": 1414602
+      },
+      {
+        "file": "V10T03-281-D1.h5ad",
+        "sha256": "76dffecf57227b7dd728072b7dd3b0d648042b18304995fe10c593286496aa48",
+        "bytes": 1322479
+      },
+      {
+        "file": "V10T03-282-A1.h5ad",
+        "sha256": "f8986a16f15133d0af83cb789cfda2f2be87049c2ecd2d9ca57fd4b582544e4e",
+        "bytes": 1582275
+      },
+      {
+        "file": "V10T03-282-B1.h5ad",
+        "sha256": "c0d515683a2b795cc5927641e2353a826d359a9b1e435ca8149d9d0b5109d515",
+        "bytes": 1223372
+      }
+    ],
+    "preprocessing_evidence": "S-BSST1410_inputs.json",
+    "accession": "S-BSST1410",
+    "measurement": "log_normalized",
+    "batch_label": "procurement category (paper-derived)",
+    "coordinates": "um",
+    "layer": "X",
+    "covariates": "composition",
+    "selection": "All human lung sections listed in the archive sample table. Each spot must have a positive filtered library, an in-tissue Space Ranger barcode and a deposited cell2location estimate. Fixed lung marker panel. The batch diagnostic represents procurement category from the primary article. Sequencing-run batch is unavailable."
+  },
+  "preprocessing_evidence": "S-BSST1410_inputs.json",
+  "n_patients": 8,
+  "n_sections": 25,
+  "n_observations": 101907,
+  "n_features": 32,
+  "dimensions": {
+    "power": {
+      "status": "yellow",
+      "message": "Two-sided doubled-tail permutation resolution.",
+      "n0": 4,
+      "n1": 4,
+      "assignments": "70",
+      "p_floor": 0.02857142857142857,
+      "features": 32,
+      "alpha": 0.05,
+      "minimum_bh_rank": 19,
+      "bh_impossible": false,
+      "nominal_impossible": false,
+      "groups": [
+        "IPF",
+        "control"
+      ],
+      "effective_p_floor": 0.02857142857142857,
+      "effective_minimum_bh_rank": 19,
+      "effective_bh_impossible": false,
+      "executed_mode": "exact",
+      "theoretical_status": "yellow"
+    },
+    "design": {
+      "status": "red",
+      "code": "UNIDENTIFIABLE_DESIGN",
+      "message": "High risk marks categorical aliasing or no observed stage overlap. The linear fixed-effect rank diagnostic is reported separately. Local bounding boxes are coordinate-frame proxies.",
+      "categorical": {
+        "slide_id": {
+          "status": "observed",
+          "label": "slide",
+          "levels": 8,
+          "normalized_mi": 0.2028195311147832,
+          "complete_alias": false,
+          "fisher_p": null,
+          "all_levels_patient_specific": false
+        },
+        "batch": {
+          "status": "observed",
+          "label": "procurement category (paper-derived)",
+          "levels": 2,
+          "normalized_mi": 1.0,
+          "complete_alias": true,
+          "fisher_p": 0.028571428571428567,
+          "all_levels_patient_specific": false
+        }
+      },
+      "coordinates": {
+        "stage": {
+          "status": "missing"
+        },
+        "bbox": {
+          "linear_separation": false,
+          "descriptive_auc": 0.6491228070175439,
+          "linear_fixed_effect_alias": false
+        }
+      },
+      "joint_acquisition_design": {
+        "fields": [
+          "batch",
+          "slide_id"
+        ],
+        "status": "observed",
+        "relative_residual": 2.162902563767773e-12,
+        "fixed_effect_alias": true
+      },
+      "points": [
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "control",
+          "patient": "HC_1"
+        },
+        {
+          "x": 3175.0,
+          "y": 3550.7041555161986,
+          "group": "IPF",
+          "patient": "IPF_1"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "IPF",
+          "patient": "IPF_1"
+        },
+        {
+          "x": 3175.0,
+          "y": 2814.5825622994253,
+          "group": "IPF",
+          "patient": "IPF_1"
+        },
+        {
+          "x": 3175.0,
+          "y": 3464.1016151377544,
+          "group": "control",
+          "patient": "HC_2"
+        },
+        {
+          "x": 3175.0,
+          "y": 3377.4990747593106,
+          "group": "IPF",
+          "patient": "IPF_2"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "IPF",
+          "patient": "IPF_2"
+        },
+        {
+          "x": 3175.0,
+          "y": 3983.7168574084176,
+          "group": "IPF",
+          "patient": "IPF_2"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "control",
+          "patient": "HC_3"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "IPF",
+          "patient": "IPF_4"
+        },
+        {
+          "x": 3175.0,
+          "y": 3550.704155516198,
+          "group": "IPF",
+          "patient": "IPF_4"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "IPF",
+          "patient": "IPF_4"
+        },
+        {
+          "x": 3175.0,
+          "y": 3810.5117766515295,
+          "group": "IPF",
+          "patient": "IPF_1"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "IPF",
+          "patient": "IPF_1"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "IPF",
+          "patient": "IPF_1"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "control",
+          "patient": "HC_3"
+        },
+        {
+          "x": 3175.0,
+          "y": 3377.4990747593106,
+          "group": "IPF",
+          "patient": "IPF_2"
+        },
+        {
+          "x": 3175.0,
+          "y": 3074.390183434757,
+          "group": "IPF",
+          "patient": "IPF_2"
+        },
+        {
+          "x": 3175.0,
+          "y": 3420.8003449485327,
+          "group": "IPF",
+          "patient": "IPF_2"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "control",
+          "patient": "HC_4"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "IPF",
+          "patient": "IPF_3"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "IPF",
+          "patient": "IPF_3"
+        },
+        {
+          "x": 3500.0,
+          "y": 3031.088913245535,
+          "group": "IPF",
+          "patient": "IPF_3"
+        },
+        {
+          "x": 3175.0,
+          "y": 3290.896534380867,
+          "group": "control",
+          "patient": "HC_1"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.197804570089,
+          "group": "IPF",
+          "patient": "IPF_4"
+        }
+      ],
+      "points_frame": "local_bbox",
+      "reasons": [
+        "batch"
+      ]
+    },
+    "pseudorep": {
+      "status": "red",
+      "message": "Difference in BH call rates across sampling units; true discovery status is unknown for public cohorts.",
+      "spot_rate": 1.0,
+      "patient_rate": 0.6875,
+      "gap": 0.3125,
+      "ratio": 1.4545454545454546,
+      "zero_denominator": false,
+      "groups": [
+        "IPF",
+        "control"
+      ],
+      "features": [
+        "ACTB",
+        "GAPDH",
+        "B2M",
+        "EEF1A1",
+        "PPIA",
+        "HPRT1",
+        "CALM1",
+        "PTPRC",
+        "CD3D",
+        "CD3E",
+        "CD8A",
+        "CD4",
+        "LST1",
+        "TYROBP",
+        "CD68",
+        "MS4A1",
+        "COL1A1",
+        "COL1A2",
+        "COL3A1",
+        "DCN",
+        "LUM",
+        "PECAM1",
+        "VWF",
+        "ACTA2",
+        "TAGLN",
+        "EPCAM",
+        "KRT5",
+        "KRT8",
+        "KRT17",
+        "KRT18",
+        "SFTPC",
+        "AGER"
+      ],
+      "spot_p": [
+        2.121379757691933e-17,
+        0.0,
+        0.0,
+        0.0,
+        1.8572040026695008e-295,
+        1.680363466817205e-134,
+        0.0,
+        0.0,
+        8.848244290668845e-275,
+        0.0,
+        9.534567560289258e-218,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.286012505088461e-113,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.1185714899789346e-120,
+        0.0,
+        0.0,
+        0.0,
+        2.3853821362854763e-95,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "spot_q": [
+        2.121379757691933e-17,
+        0.0,
+        0.0,
+        0.0,
+        2.377221123416961e-295,
+        1.9204153906482343e-134,
+        0.0,
+        0.0,
+        1.0890146819284731e-274,
+        0.0,
+        1.1300228219602083e-217,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.638413338761025e-113,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        6.751527161356066e-120,
+        0.0,
+        0.0,
+        0.0,
+        2.462329947133395e-95,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patient": {
+        "method": "exact",
+        "assignments": "70",
+        "evaluations": 70,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.22857142857142856,
+          0.02857142857142857,
+          0.14285714285714285,
+          0.05714285714285714,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.05714285714285714,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.05714285714285714,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.11428571428571428,
+          0.05714285714285714,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.37142857142857144,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.02857142857142857,
+          0.8571428571428571,
+          0.08571428571428572
+        ],
+        "q": [
+          0.2438095238095238,
+          0.04155844155844156,
+          0.15763546798029557,
+          0.07032967032967033,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.07032967032967033,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.07032967032967033,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.13061224489795917,
+          0.07032967032967033,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.38341013824884795,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.04155844155844156,
+          0.8571428571428571,
+          0.10158730158730159
+        ],
+        "statistic": [
+          -1.1254157548842982,
+          -2.87207673870059,
+          1.4336439488052122,
+          1.7274674993179069,
+          -2.2927545701701053,
+          -3.030496797572366,
+          -2.9308174088423278,
+          -1.864234642708249,
+          -2.5638463366007618,
+          -2.705484126628289,
+          -2.553078132196354,
+          -3.016863482779782,
+          -2.3716558913631216,
+          -1.90971572549878,
+          -1.591367793197029,
+          -1.9691422964803271,
+          -3.096630724895119,
+          -3.0215600118756276,
+          -3.105923145670165,
+          -2.3207214597131585,
+          -2.9350544263453684,
+          -1.5566080645453595,
+          -2.151084456286336,
+          -2.4734454462864495,
+          -2.1029251782457155,
+          -0.9451006865869195,
+          -2.7083952214075144,
+          -2.9980032607927223,
+          -2.085843249874889,
+          -2.753690497656928,
+          0.24374312690247102,
+          1.662602022570008
+        ]
+      }
+    },
+    "composition": {
+      "bands": [
+        {
+          "wavelength_um": 250.0,
+          "share": null,
+          "estimable_features": 0,
+          "supported_sections": 0,
+          "supported_patients": 0,
+          "supported_patients_by_group": {
+            "IPF": 0,
+            "control": 0
+          },
+          "interpretable_sections": 0,
+          "interpretable_patients": 0,
+          "full_coverage": false,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 600.0,
+          "share": 0.10022422190929817,
+          "estimable_features": 32,
+          "supported_sections": 25,
+          "supported_patients": 8,
+          "supported_patients_by_group": {
+            "IPF": 4,
+            "control": 4
+          },
+          "interpretable_sections": 25,
+          "interpretable_patients": 8,
+          "full_coverage": true,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 1400.0,
+          "share": 0.3580408440501952,
+          "estimable_features": 32,
+          "supported_sections": 25,
+          "supported_patients": 8,
+          "supported_patients_by_group": {
+            "IPF": 4,
+            "control": 4
+          },
+          "interpretable_sections": 25,
+          "interpretable_patients": 8,
+          "full_coverage": true,
+          "saturated_sections": 0
+        }
+      ],
+      "sections": [
+        {
+          "section_id": "V19S23-092-A1",
+          "patient_id": "HC_1",
+          "group": "control",
+          "has_covariates": true,
+          "volumes": 3669,
+          "pitch_um": 99.99999999999994,
+          "edges": 6817,
+          "connected_components": 1,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3669,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1686.8480738795906,
+              "projected_white_fraction": 0.01725146581436285,
+              "saturated": false,
+              "residual_white_gain": 0.06681072307796969
+            },
+            {
+              "supported_volumes": 3669,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 311.0944006836422,
+              "projected_white_fraction": 0.10812781704925913,
+              "saturated": false,
+              "residual_white_gain": 0.009704953955853845
+            }
+          ]
+        },
+        {
+          "section_id": "V19S23-092-B1",
+          "patient_id": "IPF_1",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 3602,
+          "pitch_um": 99.99999999999994,
+          "edges": 6885,
+          "connected_components": 1,
+          "largest_2d_span_um": 6062.17782649107,
+          "fov_span_um": [
+            6350.0,
+            6062.17782649107
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3602,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1760.8041074438752,
+              "projected_white_fraction": 0.017926524054409358,
+              "saturated": false,
+              "residual_white_gain": 0.06410845604112449
+            },
+            {
+              "supported_volumes": 3602,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 219.81202219159988,
+              "projected_white_fraction": 0.11985301374319521,
+              "saturated": false,
+              "residual_white_gain": 0.008848380012894282
+            }
+          ]
+        },
+        {
+          "section_id": "V19S23-092-C1",
+          "patient_id": "IPF_1",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 3996,
+          "pitch_um": 99.99999999999994,
+          "edges": 7705,
+          "connected_components": 2,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3994,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1623.6150009780977,
+              "projected_white_fraction": 0.017596032199075698,
+              "saturated": false,
+              "residual_white_gain": 0.06337878702426156
+            },
+            {
+              "supported_volumes": 3994,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 298.78299041392665,
+              "projected_white_fraction": 0.10577237449673928,
+              "saturated": false,
+              "residual_white_gain": 0.008852227382229919
+            }
+          ]
+        },
+        {
+          "section_id": "V19S23-092-D1",
+          "patient_id": "IPF_1",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 3470,
+          "pitch_um": 99.99999999999994,
+          "edges": 6683,
+          "connected_components": 1,
+          "largest_2d_span_um": 5629.1651245988505,
+          "fov_span_um": [
+            6350.0,
+            5629.1651245988505
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3470,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1483.702165086148,
+              "projected_white_fraction": 0.0190328909637201,
+              "saturated": false,
+              "residual_white_gain": 0.0631390275390758
+            },
+            {
+              "supported_volumes": 3470,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 209.42470971609208,
+              "projected_white_fraction": 0.1266753397003809,
+              "saturated": false,
+              "residual_white_gain": 0.00821456216457804
+            }
+          ]
+        },
+        {
+          "section_id": "V10T31-015-A1",
+          "patient_id": "HC_2",
+          "group": "control",
+          "has_covariates": true,
+          "volumes": 3173,
+          "pitch_um": 99.99999999999994,
+          "edges": 6100,
+          "connected_components": 3,
+          "largest_2d_span_um": 5538.3182643099735,
+          "fov_span_um": [
+            6350.0,
+            5542.562584220406
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3171,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1240.357788480687,
+              "projected_white_fraction": 0.02138840389117397,
+              "saturated": false,
+              "residual_white_gain": 0.06353333135208472
+            },
+            {
+              "supported_volumes": 3171,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 225.9334755933376,
+              "projected_white_fraction": 0.13280129118282014,
+              "saturated": false,
+              "residual_white_gain": 0.0082024773914544
+            }
+          ]
+        },
+        {
+          "section_id": "V10T31-015-B1",
+          "patient_id": "IPF_2",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 3587,
+          "pitch_um": 99.99999999999955,
+          "edges": 6899,
+          "connected_components": 1,
+          "largest_2d_span_um": 6235.3829072479575,
+          "fov_span_um": [
+            6350.0,
+            6235.3829072479575
+          ],
+          "nyquist_wavelength_um": 199.9999999999991,
+          "axial_limit_um": 314.1592653589779,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3587,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1504.2248143993272,
+              "projected_white_fraction": 0.01831001239984614,
+              "saturated": false,
+              "residual_white_gain": 0.06293341678944081
+            },
+            {
+              "supported_volumes": 3587,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 264.2531131100194,
+              "projected_white_fraction": 0.13624288553197686,
+              "saturated": false,
+              "residual_white_gain": 0.008771877159984011
+            }
+          ]
+        },
+        {
+          "section_id": "V10T31-015-C1",
+          "patient_id": "IPF_2",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 4133,
+          "pitch_um": 99.99999999999994,
+          "edges": 8017,
+          "connected_components": 4,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 4130,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 2159.028458512732,
+              "projected_white_fraction": 0.016931686732518124,
+              "saturated": false,
+              "residual_white_gain": 0.06280229226867778
+            },
+            {
+              "supported_volumes": 4130,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 276.0253418147497,
+              "projected_white_fraction": 0.10596974303489039,
+              "saturated": false,
+              "residual_white_gain": 0.008444195755191805
+            }
+          ]
+        },
+        {
+          "section_id": "V10T31-015-D1",
+          "patient_id": "IPF_2",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 2822,
+          "pitch_um": 99.99999999999955,
+          "edges": 5454,
+          "connected_components": 1,
+          "largest_2d_span_um": 5196.152422706632,
+          "fov_span_um": [
+            6350.0,
+            5196.152422706632
+          ],
+          "nyquist_wavelength_um": 199.9999999999991,
+          "axial_limit_um": 314.1592653589779,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2822,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1196.2492767920864,
+              "projected_white_fraction": 0.026659130378498045,
+              "saturated": false,
+              "residual_white_gain": 0.06276039694931801
+            },
+            {
+              "supported_volumes": 2822,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 130.83910328467752,
+              "projected_white_fraction": 0.16371184737280836,
+              "saturated": false,
+              "residual_white_gain": 0.007996527106509391
+            }
+          ]
+        },
+        {
+          "section_id": "V10T31-019-A1",
+          "patient_id": "HC_3",
+          "group": "control",
+          "has_covariates": true,
+          "volumes": 3833,
+          "pitch_um": 99.99999999999994,
+          "edges": 7281,
+          "connected_components": 3,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3831,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 2012.714742077527,
+              "projected_white_fraction": 0.015064010217336226,
+              "saturated": false,
+              "residual_white_gain": 0.06476754381059091
+            },
+            {
+              "supported_volumes": 3831,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 218.67865473373283,
+              "projected_white_fraction": 0.11922132726504499,
+              "saturated": false,
+              "residual_white_gain": 0.009389479717266813
+            }
+          ]
+        },
+        {
+          "section_id": "V10T31-051-B1",
+          "patient_id": "IPF_4",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 2534,
+          "pitch_um": 99.99999999999994,
+          "edges": 4672,
+          "connected_components": 3,
+          "largest_2d_span_um": 5629.1651245988505,
+          "fov_span_um": [
+            6350.0,
+            5802.370205355738
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2533,
+              "supported_components": 2,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1071.585013687069,
+              "projected_white_fraction": 0.02556321482057986,
+              "saturated": false,
+              "residual_white_gain": 0.06646735481066919
+            },
+            {
+              "supported_volumes": 2473,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 266.66779230941506,
+              "projected_white_fraction": 0.1478268046429211,
+              "saturated": false,
+              "residual_white_gain": 0.009931051568290767
+            }
+          ]
+        },
+        {
+          "section_id": "V10T31-051-C1",
+          "patient_id": "IPF_4",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 3187,
+          "pitch_um": 99.99999999999994,
+          "edges": 6092,
+          "connected_components": 1,
+          "largest_2d_span_um": 6235.3829072479575,
+          "fov_span_um": [
+            6350.0,
+            6235.3829072479575
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3187,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1418.2872775806288,
+              "projected_white_fraction": 0.020752473391601925,
+              "saturated": false,
+              "residual_white_gain": 0.0640441765513343
+            },
+            {
+              "supported_volumes": 3187,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 228.7983528057769,
+              "projected_white_fraction": 0.13466769807277254,
+              "saturated": false,
+              "residual_white_gain": 0.00844814816323889
+            }
+          ]
+        },
+        {
+          "section_id": "V10T31-051-D1",
+          "patient_id": "IPF_4",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 3918,
+          "pitch_um": 99.99999999999994,
+          "edges": 7583,
+          "connected_components": 2,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3917,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1536.5554020987356,
+              "projected_white_fraction": 0.017310672444665186,
+              "saturated": false,
+              "residual_white_gain": 0.06267514063910976
+            },
+            {
+              "supported_volumes": 3917,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 248.53364523175676,
+              "projected_white_fraction": 0.11338380359885505,
+              "saturated": false,
+              "residual_white_gain": 0.00849808018032148
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-279-B1",
+          "patient_id": "IPF_1",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 3502,
+          "pitch_um": 99.99999999999994,
+          "edges": 6765,
+          "connected_components": 1,
+          "largest_2d_span_um": 5715.767664977295,
+          "fov_span_um": [
+            6350.0,
+            5715.767664977295
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3502,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 2084.1531461502004,
+              "projected_white_fraction": 0.019994363572784616,
+              "saturated": false,
+              "residual_white_gain": 0.062908292227895
+            },
+            {
+              "supported_volumes": 3502,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 244.02415723478086,
+              "projected_white_fraction": 0.11212083298371302,
+              "saturated": false,
+              "residual_white_gain": 0.008665691378021121
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-279-C1",
+          "patient_id": "IPF_1",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 4271,
+          "pitch_um": 99.99999999999994,
+          "edges": 8292,
+          "connected_components": 1,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 4271,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 2278.3624721082665,
+              "projected_white_fraction": 0.014819597314829474,
+              "saturated": false,
+              "residual_white_gain": 0.06233766254982598
+            },
+            {
+              "supported_volumes": 4271,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 266.61424997217614,
+              "projected_white_fraction": 0.10488473231322556,
+              "saturated": false,
+              "residual_white_gain": 0.008543086759414068
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-279-D1",
+          "patient_id": "IPF_1",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 4154,
+          "pitch_um": 99.99999999999994,
+          "edges": 8063,
+          "connected_components": 1,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 4154,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 2286.893119540978,
+              "projected_white_fraction": 0.016981306883123767,
+              "saturated": false,
+              "residual_white_gain": 0.06263452407764127
+            },
+            {
+              "supported_volumes": 4154,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 233.23611942662382,
+              "projected_white_fraction": 0.12105560896661245,
+              "saturated": false,
+              "residual_white_gain": 0.00823358681057751
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-280-A1",
+          "patient_id": "HC_3",
+          "group": "control",
+          "has_covariates": true,
+          "volumes": 3851,
+          "pitch_um": 99.99999999999994,
+          "edges": 7334,
+          "connected_components": 1,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3851,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 2056.7042907169275,
+              "projected_white_fraction": 0.017330423401143442,
+              "saturated": false,
+              "residual_white_gain": 0.06511434943726693
+            },
+            {
+              "supported_volumes": 3851,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 261.93612785902627,
+              "projected_white_fraction": 0.10488400339456418,
+              "saturated": false,
+              "residual_white_gain": 0.00912783683259793
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-280-B1",
+          "patient_id": "IPF_2",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 3996,
+          "pitch_um": 99.99999999999994,
+          "edges": 7680,
+          "connected_components": 1,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6581.793068761733
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3996,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1943.462317659015,
+              "projected_white_fraction": 0.01731761456956663,
+              "saturated": false,
+              "residual_white_gain": 0.06418066169416743
+            },
+            {
+              "supported_volumes": 3996,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 250.74200993218793,
+              "projected_white_fraction": 0.10052546057782659,
+              "saturated": false,
+              "residual_white_gain": 0.008996868835265296
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-280-C1",
+          "patient_id": "IPF_2",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 3694,
+          "pitch_um": 99.99999999999994,
+          "edges": 7138,
+          "connected_components": 1,
+          "largest_2d_span_um": 6148.780366869514,
+          "fov_span_um": [
+            6350.0,
+            6148.780366869514
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3694,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1528.4125617364482,
+              "projected_white_fraction": 0.019400843176640304,
+              "saturated": false,
+              "residual_white_gain": 0.062457252820719636
+            },
+            {
+              "supported_volumes": 3694,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 218.44139404449206,
+              "projected_white_fraction": 0.1168513679485939,
+              "saturated": false,
+              "residual_white_gain": 0.008403955125204376
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-280-D1",
+          "patient_id": "IPF_2",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 2663,
+          "pitch_um": 99.99999999999955,
+          "edges": 5161,
+          "connected_components": 1,
+          "largest_2d_span_um": 5109.549882328188,
+          "fov_span_um": [
+            6350.0,
+            5109.549882328188
+          ],
+          "nyquist_wavelength_um": 199.9999999999991,
+          "axial_limit_um": 314.1592653589779,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2663,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1028.8046545578359,
+              "projected_white_fraction": 0.02830917172073932,
+              "saturated": false,
+              "residual_white_gain": 0.06179439806251865
+            },
+            {
+              "supported_volumes": 2663,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 164.90936157401947,
+              "projected_white_fraction": 0.17588464588891395,
+              "saturated": false,
+              "residual_white_gain": 0.007854451286596264
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-281-A1",
+          "patient_id": "HC_4",
+          "group": "control",
+          "has_covariates": true,
+          "volumes": 3512,
+          "pitch_um": 99.99999999999994,
+          "edges": 6712,
+          "connected_components": 6,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3507,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1774.9697304800761,
+              "projected_white_fraction": 0.018573114430559815,
+              "saturated": false,
+              "residual_white_gain": 0.0636030064612551
+            },
+            {
+              "supported_volumes": 3507,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 179.22660902888225,
+              "projected_white_fraction": 0.11520328504106121,
+              "saturated": false,
+              "residual_white_gain": 0.008714242547269805
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-281-B1",
+          "patient_id": "IPF_3",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 4190,
+          "pitch_um": 99.99999999999994,
+          "edges": 8091,
+          "connected_components": 1,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 4190,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 2216.3381932477578,
+              "projected_white_fraction": 0.015704972334157116,
+              "saturated": false,
+              "residual_white_gain": 0.06320948906278274
+            },
+            {
+              "supported_volumes": 4190,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 331.06427029899714,
+              "projected_white_fraction": 0.10989322337336538,
+              "saturated": false,
+              "residual_white_gain": 0.008655516036381991
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-281-C1",
+          "patient_id": "IPF_3",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 3295,
+          "pitch_um": 99.99999999999994,
+          "edges": 6397,
+          "connected_components": 1,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3295,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1398.4541466634582,
+              "projected_white_fraction": 0.01943654718692036,
+              "saturated": false,
+              "residual_white_gain": 0.06256563365446416
+            },
+            {
+              "supported_volumes": 3295,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 258.6362125282492,
+              "projected_white_fraction": 0.14162849252748455,
+              "saturated": false,
+              "residual_white_gain": 0.008100920355184244
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-281-D1",
+          "patient_id": "IPF_3",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 3050,
+          "pitch_um": 99.99999999999994,
+          "edges": 5900,
+          "connected_components": 1,
+          "largest_2d_span_um": 5700.0,
+          "fov_span_um": [
+            5700.0,
+            6062.17782649107
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3050,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1224.5452703326255,
+              "projected_white_fraction": 0.020403010349535625,
+              "saturated": false,
+              "residual_white_gain": 0.0625809895734176
+            },
+            {
+              "supported_volumes": 3050,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 189.1960044148614,
+              "projected_white_fraction": 0.15435499224454316,
+              "saturated": false,
+              "residual_white_gain": 0.007948769224924157
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-282-A1",
+          "patient_id": "HC_1",
+          "group": "control",
+          "has_covariates": true,
+          "volumes": 3932,
+          "pitch_um": 99.99999999999994,
+          "edges": 7575,
+          "connected_components": 1,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6581.793068761734
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3932,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1601.87960318402,
+              "projected_white_fraction": 0.018947053814360994,
+              "saturated": false,
+              "residual_white_gain": 0.06348718076404494
+            },
+            {
+              "supported_volumes": 3932,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 209.70762666896172,
+              "projected_white_fraction": 0.11057826596974021,
+              "saturated": false,
+              "residual_white_gain": 0.008638007860833631
+            }
+          ]
+        },
+        {
+          "section_id": "V10T03-282-B1",
+          "patient_id": "IPF_4",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 2834,
+          "pitch_um": 99.99999999999955,
+          "edges": 5292,
+          "connected_components": 1,
+          "largest_2d_span_um": 6148.780366869514,
+          "fov_span_um": [
+            6350.0,
+            6148.780366869514
+          ],
+          "nyquist_wavelength_um": 199.9999999999991,
+          "axial_limit_um": 314.1592653589779,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            30,
+            30
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2834,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 1201.777183219033,
+              "projected_white_fraction": 0.022076634569249805,
+              "saturated": false,
+              "residual_white_gain": 0.0655423505072647
+            },
+            {
+              "supported_volumes": 2834,
+              "supported_components": 1,
+              "projection_rank": 30,
+              "effective_spectral_dimension": 187.95826605908817,
+              "projected_white_fraction": 0.12792840447432813,
+              "saturated": false,
+              "residual_white_gain": 0.009430559043398104
+            }
+          ]
+        }
+      ],
+      "total_patients": 8,
+      "total_patients_by_group": {
+        "IPF": 4,
+        "control": 4
+      },
+      "total_sections": 25,
+      "covariate_sections": 25,
+      "chebyshev_degree": 137,
+      "shared_spectral_bound_per_um2": 0.008192,
+      "status": "yellow",
+      "message": "Feature-averaged explained energy on matched supporting sections, equally weighted within patient and across patients. A connected 2-D footprint must span a wavelength, with wavelength at least pi times the occupied square-grid pitch. Regridding can alter native geometry. Missing covariates, saturated fits and partial coverage limit interpretation."
+    },
+    "nugget": {
+      "groups": [
+        "IPF",
+        "control"
+      ],
+      "features": [
+        {
+          "feature": "ACTB",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "GAPDH",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "B2M",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "EEF1A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PPIA",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "HPRT1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CALM1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PTPRC",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD3D",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD3E",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD8A",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD4",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "LST1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "TYROBP",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD68",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "MS4A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL1A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL1A2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL3A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "DCN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "LUM",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PECAM1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "VWF",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ACTA2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "TAGLN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "EPCAM",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT5",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT8",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT17",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT18",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "SFTPC",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "AGER",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        }
+      ],
+      "flagged": 0,
+      "patient_energies": [
+        {
+          "patient_id": "HC_1",
+          "group": "control",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "IPF_1",
+          "group": "IPF",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "HC_2",
+          "group": "control",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "IPF_2",
+          "group": "IPF",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "HC_3",
+          "group": "control",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "IPF_4",
+          "group": "IPF",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "HC_4",
+          "group": "control",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "IPF_3",
+          "group": "IPF",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ],
+      "evaluated": 0,
+      "status": "yellow",
+      "message": "Fine-band residual energy minus the estimated white-noise contribution is signed. Matched two-step spatial differences model locally smooth signal plus uncorrelated homoscedastic volume noise. Rough signal, heterogeneous noise and unequal occupancy affect this sensitivity screen.",
+      "measurement_scope": {
+        "measurement": "log_normalized",
+        "layer": "X",
+        "interpretation": "Energy, semivariance and attenuation refer to the supplied measurement scale. For log-normalized inputs they describe variability after transformation. The procedure does not fit a negative-binomial count model or identify a noise cause."
+      }
+    }
+  },
+  "statement": "基于公开存档数据，在患者/生物学重复级去混杂框架下的可复现性、统计功效与混杂敏感性审计。"
+}

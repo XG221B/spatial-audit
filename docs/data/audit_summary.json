@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "reports": [
+    {
+      "id": "GSE189184",
+      "kind": "public",
+      "path": "public/GSE189184.json"
+    },
+    {
+      "id": "GSE190732",
+      "kind": "public",
+      "path": "public/GSE190732.json"
+    },
+    {
+      "id": "GSE202011",
+      "kind": "public",
+      "path": "public/GSE202011.json"
+    },
+    {
+      "id": "GSE206391",
+      "kind": "public",
+      "path": "public/GSE206391.json"
+    },
+    {
+      "id": "GSE220442-full-panel",
+      "kind": "public",
+      "path": "public/GSE220442-full-panel.json"
+    },
+    {
+      "id": "GSE220442",
+      "kind": "public",
+      "path": "public/GSE220442.json"
+    },
+    {
+      "id": "GSE250346",
+      "kind": "public",
+      "path": "public/GSE250346.json"
+    },
+    {
+      "id": "GSE267226",
+      "kind": "public",
+      "path": "public/GSE267226.json"
+    },
+    {
+      "id": "GSE282123",
+      "kind": "public",
+      "path": "public/GSE282123.json"
+    },
+    {
+      "id": "GSE284005",
+      "kind": "public",
+      "path": "public/GSE284005.json"
+    },
+    {
+      "id": "GSE294965",
+      "kind": "public",
+      "path": "public/GSE294965.json"
+    },
+    {
+      "id": "GSE306288",
+      "kind": "public",
+      "path": "public/GSE306288.json"
+    },
+    {
+      "id": "GSE318039",
+      "kind": "public",
+      "path": "public/GSE318039.json"
+    },
+    {
+      "id": "GSE327879",
+      "kind": "public",
+      "path": "public/GSE327879.json"
+    },
+    {
+      "id": "GSE336890",
+      "kind": "public",
+      "path": "public/GSE336890.json"
+    },
+    {
+      "id": "GSE348499-subset",
+      "kind": "public",
+      "path": "public/GSE348499-subset.json"
+    },
+    {
+      "id": "GSE348499",
+      "kind": "public",
+      "path": "public/GSE348499.json"
+    },
+    {
+      "id": "MTBLS12782",
+      "kind": "public",
+      "path": "public/MTBLS12782.json"
+    },
+    {
+      "id": "S-BSST1410",
+      "kind": "public",
+      "path": "public/S-BSST1410.json"
+    },
+    {
+      "id": "STT0000036",
+      "kind": "public",
+      "path": "public/STT0000036.json"
+    },
+    {
+      "id": "zenodo-10012934",
+      "kind": "public",
+      "path": "public/zenodo-10012934.json"
+    },
+    {
+      "id": "zenodo-6578047-FZ",
+      "kind": "public",
+      "path": "public/zenodo-6578047-FZ.json"
+    },
+    {
+      "id": "synthetic-composition",
+      "kind": "synthetic",
+      "path": "synthetic/synthetic-composition.json"
+    },
+    {
+      "id": "synthetic-null",
+      "kind": "synthetic",
+      "path": "synthetic/synthetic-null.json"
+    },
+    {
+      "id": "synthetic-pseudorep",
+      "kind": "synthetic",
+      "path": "synthetic/synthetic-pseudorep.json"
+    },
+    {
+      "id": "synthetic-stage",
+      "kind": "synthetic",
+      "path": "synthetic/synthetic-stage.json"
+    }
+  ]
+}

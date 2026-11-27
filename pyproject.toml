@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "spatial-audit"
+version = "0.1.0"
+description = "Patient-level reproducibility and confounding audits for spatial omics"
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+dependencies = [
+  "numpy>=2.2", "scipy>=1.15", "pandas>=2.2.3", "anndata>=0.11.4",
+  "statsmodels>=0.14.4", "psutil>=6", "pypdf>=5", "filelock>=3.13"
+]
+
+[project.optional-dependencies]
+archives = ["pyarrow>=18"]
+agent = ["mcp>=1.12,<2"]
+browser = ["playwright>=1.50"]
+dev = ["pytest>=8", "ruff>=0.11", "mypy>=1.15", "build", "matplotlib>=3.10"]
+
+[project.scripts]
+spatial-audit = "spatial_audit.cli:main"
+spatial-audit-mcp = "spatial_audit.mcp_server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+
+[tool.mypy]
+files = ["src", "scripts"]
+python_version = "3.13"
+ignore_missing_imports = true
+check_untyped_defs = true

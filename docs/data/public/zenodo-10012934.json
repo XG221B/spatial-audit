@@ -1,0 +1,1787 @@
+{
+  "schema_version": 1,
+  "id": "zenodo-10012934",
+  "kind": "public",
+  "platform": "Visium",
+  "source": "https://zenodo.org/records/10012934",
+  "accession": "10.5281/zenodo.10012934",
+  "provenance": {
+    "inputs": [
+      {
+        "file": "90_A1_H237762_IPF_processed_CM.h5ad",
+        "sha256": "3911ae6b0f85022e29ec98edc5130f2307e71474eed0d1a060633ce448efa447",
+        "bytes": 1311790
+      },
+      {
+        "file": "90_C1_RO-730_Healthy_processed_CM.h5ad",
+        "sha256": "cc57e9431b227a7610a297035b46cb4d6c932565142b81dce9e623a6204ecdbe",
+        "bytes": 1275745
+      },
+      {
+        "file": "91_A1_RO-727_Healthy_processed_CM.h5ad",
+        "sha256": "9ad87ff3c2a67272c952e5fd575e6561a656cc997e671bd7e3b0b0a786ffb936",
+        "bytes": 1130219
+      },
+      {
+        "file": "91_B1_RO-728_Healthy_processed_CM.h5ad",
+        "sha256": "ad80141b1c5edf36f2642bb1fc5538ca8b9c3b3589529e9e62bb78b8f222e18b",
+        "bytes": 1153536
+      },
+      {
+        "file": "91_D1_24513-17_IPF_processed_CM.h5ad",
+        "sha256": "6a26075ce46abfcfb7460e7441f043c1a7fd798a49ae7ee16ed6e56b02fece73",
+        "bytes": 1537954
+      },
+      {
+        "file": "92_D1_RO-3736_IPF_processed_CM.h5ad",
+        "sha256": "5dc9dd82440cd816d02efaf5b8d180c3171963a7799e14639ddc67f2fc8817ec",
+        "bytes": 897900
+      },
+      {
+        "file": "92_A1_RO-3203_Healthy_processed_CM.h5ad",
+        "sha256": "1d697f2aa278bfc4231919c7092e808abeded67811bd8e1ae73c8c5383ad759c",
+        "bytes": 1145379
+      },
+      {
+        "file": "1217_0001_processed_aligned.h5ad",
+        "sha256": "9f228c65d2582712e57afd991a134bd9f2b33938aa0f302ad138cc554b40c50d",
+        "bytes": 4841583
+      },
+      {
+        "file": "1217_0002_processed_aligned.h5ad",
+        "sha256": "3922ec7ed88e7d5d6ade8bf996d85b417d140ce273990b491dded0f004e4d8b4",
+        "bytes": 3831261
+      },
+      {
+        "file": "1217_0003_processed_aligned.h5ad",
+        "sha256": "f41262679409351ea23113becbf2bc52364023db4fbb552c62b74717cd2480bf",
+        "bytes": 5366370
+      },
+      {
+        "file": "1217_0004_processed_aligned.h5ad",
+        "sha256": "e506e1eeedc5884f5aaa24f8ce15057f15d7d7b35d3d15abd24184eb3e37e132",
+        "bytes": 3426534
+      }
+    ],
+    "preprocessing_evidence": "zenodo-10012934_inputs.json",
+    "accession": "10.5281/zenodo.10012934",
+    "measurement": "log_normalized",
+    "batch_label": "assay technology",
+    "coordinates": "um",
+    "layer": "X",
+    "covariates": "composition",
+    "selection": "All Visium and CytAssist sections and every QC-retained spot in the deposited H5AD. Each biological donor has unit weight. Predefined lung marker panel shared with the post-acute lung fibrosis adapter; ambiguous or absent symbols excluded."
+  },
+  "preprocessing_evidence": "zenodo-10012934_inputs.json",
+  "n_patients": 7,
+  "n_sections": 11,
+  "n_observations": 57787,
+  "n_features": 25,
+  "dimensions": {
+    "power": {
+      "status": "red",
+      "message": "Two-sided doubled-tail permutation resolution.",
+      "n0": 4,
+      "n1": 3,
+      "assignments": "35",
+      "p_floor": 0.05714285714285714,
+      "features": 25,
+      "alpha": 0.05,
+      "minimum_bh_rank": null,
+      "bh_impossible": true,
+      "nominal_impossible": true,
+      "groups": [
+        "Healthy",
+        "IPF"
+      ],
+      "effective_p_floor": 0.05714285714285714,
+      "effective_minimum_bh_rank": null,
+      "effective_bh_impossible": true,
+      "executed_mode": "exact",
+      "theoretical_status": "red"
+    },
+    "design": {
+      "status": "yellow",
+      "code": null,
+      "message": "High risk marks categorical aliasing or no observed stage overlap. The linear fixed-effect rank diagnostic is reported separately. Local bounding boxes are coordinate-frame proxies.",
+      "categorical": {
+        "slide_id": {
+          "status": "observed",
+          "label": "slide",
+          "levels": 5,
+          "normalized_mi": 0.039735641392309645,
+          "complete_alias": false,
+          "fisher_p": null,
+          "all_levels_patient_specific": false
+        },
+        "batch": {
+          "status": "observed",
+          "label": "assay technology",
+          "levels": 2,
+          "normalized_mi": 0.006067337305079027,
+          "complete_alias": false,
+          "fisher_p": null,
+          "all_levels_patient_specific": false
+        }
+      },
+      "coordinates": {
+        "stage": {
+          "status": "missing"
+        },
+        "bbox": {
+          "linear_separation": true,
+          "descriptive_auc": 1.0,
+          "linear_fixed_effect_alias": false
+        }
+      },
+      "joint_acquisition_design": {
+        "fields": [
+          "batch",
+          "slide_id"
+        ],
+        "status": "observed",
+        "relative_residual": 0.9888264649460885,
+        "fixed_effect_alias": false
+      },
+      "points": [
+        {
+          "x": 3175.0,
+          "y": 4243.524478543749,
+          "group": "IPF",
+          "patient": "Donor_IPF_1"
+        },
+        {
+          "x": 3175.0,
+          "y": 3117.6914536239788,
+          "group": "Healthy",
+          "patient": "Donor_Control_2"
+        },
+        {
+          "x": 2575.0,
+          "y": 2684.67875173176,
+          "group": "Healthy",
+          "patient": "Donor_Control_1"
+        },
+        {
+          "x": 3000.0,
+          "y": 3247.5952641916447,
+          "group": "Healthy",
+          "patient": "Donor_Control_4"
+        },
+        {
+          "x": 3450.0,
+          "y": 3723.9092362730858,
+          "group": "IPF",
+          "patient": "Donor_IPF_2"
+        },
+        {
+          "x": 3350.0,
+          "y": 4200.223208354527,
+          "group": "IPF",
+          "patient": "Donor_IPF_3"
+        },
+        {
+          "x": 3375.0,
+          "y": 3334.1978045700885,
+          "group": "Healthy",
+          "patient": "Donor_Control_3"
+        },
+        {
+          "x": 5525.0,
+          "y": 5196.152422706632,
+          "group": "IPF",
+          "patient": "Donor_IPF_1"
+        },
+        {
+          "x": 5575.0,
+          "y": 5066.248612138966,
+          "group": "Healthy",
+          "patient": "Donor_Control_1"
+        },
+        {
+          "x": 5575.0,
+          "y": 5109.549882328188,
+          "group": "IPF",
+          "patient": "Donor_IPF_2"
+        },
+        {
+          "x": 5575.0,
+          "y": 4330.127018922193,
+          "group": "Healthy",
+          "patient": "Donor_Control_2"
+        }
+      ],
+      "points_frame": "local_bbox",
+      "reasons": []
+    },
+    "pseudorep": {
+      "status": "red",
+      "message": "Difference in BH call rates across sampling units; true discovery status is unknown for public cohorts.",
+      "spot_rate": 1.0,
+      "patient_rate": 0.0,
+      "gap": 1.0,
+      "ratio": null,
+      "zero_denominator": true,
+      "groups": [
+        "Healthy",
+        "IPF"
+      ],
+      "features": [
+        "ACTB",
+        "B2M",
+        "HPRT1",
+        "PTPRC",
+        "CD3D",
+        "CD3E",
+        "CD8A",
+        "CD4",
+        "LST1",
+        "TYROBP",
+        "MS4A1",
+        "COL1A1",
+        "COL1A2",
+        "COL3A1",
+        "DCN",
+        "LUM",
+        "PECAM1",
+        "VWF",
+        "ACTA2",
+        "TAGLN",
+        "EPCAM",
+        "KRT5",
+        "KRT8",
+        "SFTPC",
+        "AGER"
+      ],
+      "spot_p": [
+        1.159925388828186e-78,
+        0.0,
+        0.0,
+        1.2055180301588314e-75,
+        2.0808746090761156e-33,
+        9.20489641792991e-57,
+        3.956055627595799e-16,
+        0.0,
+        2.909310883316615e-183,
+        1.1296098513274042e-180,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.384799073936254e-193,
+        1.9146225288622333e-152,
+        0.0,
+        0.0,
+        4.4960287329126835e-17,
+        0.0,
+        7.101417735272242e-11,
+        0.0,
+        0.0
+      ],
+      "spot_q": [
+        1.526217616879192e-78,
+        0.0,
+        0.0,
+        1.506897537698539e-75,
+        2.364630237586495e-33,
+        1.0958210021345133e-56,
+        4.120891278745624e-16,
+        0.0,
+        4.545798255182211e-183,
+        1.661190957834418e-180,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        7.307998456560423e-193,
+        2.659197956753102e-152,
+        0.0,
+        0.0,
+        4.88698775316596e-17,
+        0.0,
+        7.101417735272242e-11,
+        0.0,
+        0.0
+      ],
+      "patient": {
+        "method": "exact",
+        "assignments": "35",
+        "evaluations": 35,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.7428571428571429,
+          0.8571428571428571,
+          0.22857142857142856,
+          0.11428571428571428,
+          0.11428571428571428,
+          0.45714285714285713,
+          0.5714285714285714,
+          0.34285714285714286,
+          0.05714285714285714,
+          0.17142857142857143,
+          0.11428571428571428,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.2857142857142857,
+          0.7428571428571429,
+          0.05714285714285714,
+          0.11428571428571428,
+          0.45714285714285713,
+          0.05714285714285714,
+          0.22857142857142856,
+          0.05714285714285714,
+          0.05714285714285714
+        ],
+        "q": [
+          0.7738095238095238,
+          0.8571428571428571,
+          0.3361344537815126,
+          0.2040816326530612,
+          0.2040816326530612,
+          0.54421768707483,
+          0.6493506493506493,
+          0.45112781954887216,
+          0.14285714285714285,
+          0.28571428571428575,
+          0.2040816326530612,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.14285714285714285,
+          0.3968253968253968,
+          0.7738095238095238,
+          0.14285714285714285,
+          0.2040816326530612,
+          0.54421768707483,
+          0.14285714285714285,
+          0.3361344537815126,
+          0.14285714285714285,
+          0.14285714285714285
+        ],
+        "statistic": [
+          -0.38688198151046865,
+          -0.23323313873716395,
+          1.3782325347722635,
+          -1.5151161759275562,
+          1.3718594805743816,
+          0.6541069744564773,
+          0.6439288342398115,
+          1.0089691756516566,
+          -1.7333289341930773,
+          -1.4700992040687573,
+          1.6832401390856875,
+          3.6232811755906207,
+          3.1761874265309453,
+          3.5398351368681915,
+          2.673213897880208,
+          2.5391872804010456,
+          -1.2025895255624381,
+          -0.4422507847506928,
+          3.267315357474269,
+          1.9213705480364907,
+          -0.9336315227094124,
+          1.762520691514735,
+          -1.3005596524469065,
+          -3.623786541394368,
+          -3.4421494603009912
+        ]
+      }
+    },
+    "composition": {
+      "bands": [
+        {
+          "wavelength_um": 250.0,
+          "share": null,
+          "estimable_features": 0,
+          "supported_sections": 0,
+          "supported_patients": 0,
+          "supported_patients_by_group": {
+            "Healthy": 0,
+            "IPF": 0
+          },
+          "interpretable_sections": 0,
+          "interpretable_patients": 0,
+          "full_coverage": false,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 600.0,
+          "share": 0.26531928014777045,
+          "estimable_features": 25,
+          "supported_sections": 11,
+          "supported_patients": 7,
+          "supported_patients_by_group": {
+            "Healthy": 4,
+            "IPF": 3
+          },
+          "interpretable_sections": 11,
+          "interpretable_patients": 7,
+          "full_coverage": true,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 1400.0,
+          "share": 0.6136278510915847,
+          "estimable_features": 25,
+          "supported_sections": 11,
+          "supported_patients": 7,
+          "supported_patients_by_group": {
+            "Healthy": 4,
+            "IPF": 3
+          },
+          "interpretable_sections": 11,
+          "interpretable_patients": 7,
+          "full_coverage": true,
+          "saturated_sections": 0
+        }
+      ],
+      "sections": [
+        {
+          "section_id": "90_A1_H237762_IPF_processed_CM",
+          "patient_id": "Donor_IPF_1",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 2423,
+          "pitch_um": 99.99999999999994,
+          "edges": 4688,
+          "connected_components": 1,
+          "largest_2d_span_um": 4849.742261192856,
+          "fov_span_um": [
+            6350.0,
+            4849.742261192856
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            36,
+            36
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2423,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 860.6003585314413,
+              "projected_white_fraction": 0.03208480212307868,
+              "saturated": false,
+              "residual_white_gain": 0.06214307866667142
+            },
+            {
+              "supported_volumes": 2423,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 150.1410433393327,
+              "projected_white_fraction": 0.2151993058985854,
+              "saturated": false,
+              "residual_white_gain": 0.007371201819906151
+            }
+          ]
+        },
+        {
+          "section_id": "90_C1_RO-730_Healthy_processed_CM",
+          "patient_id": "Donor_Control_2",
+          "group": "Healthy",
+          "has_covariates": true,
+          "volumes": 2513,
+          "pitch_um": 99.99999999999994,
+          "edges": 4544,
+          "connected_components": 15,
+          "largest_2d_span_um": 6127.640338575516,
+          "fov_span_um": [
+            6350.0,
+            6235.3829072479575
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            36,
+            36
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2494,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 1228.7752002484494,
+              "projected_white_fraction": 0.030429956849687575,
+              "saturated": false,
+              "residual_white_gain": 0.06729767232593759
+            },
+            {
+              "supported_volumes": 2494,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 177.48285211524777,
+              "projected_white_fraction": 0.1556180594612915,
+              "saturated": false,
+              "residual_white_gain": 0.00999523877556334
+            }
+          ]
+        },
+        {
+          "section_id": "91_A1_RO-727_Healthy_processed_CM",
+          "patient_id": "Donor_Control_1",
+          "group": "Healthy",
+          "has_covariates": true,
+          "volumes": 2072,
+          "pitch_um": 99.99999999999994,
+          "edges": 3981,
+          "connected_components": 4,
+          "largest_2d_span_um": 5150.0,
+          "fov_span_um": [
+            5150.0,
+            5369.35750346352
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            36,
+            36
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2069,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 938.2707870851314,
+              "projected_white_fraction": 0.03474328615715007,
+              "saturated": false,
+              "residual_white_gain": 0.062270809450786
+            },
+            {
+              "supported_volumes": 2069,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 164.32434751403665,
+              "projected_white_fraction": 0.24860892731268994,
+              "saturated": false,
+              "residual_white_gain": 0.007179718658811917
+            }
+          ]
+        },
+        {
+          "section_id": "91_B1_RO-728_Healthy_processed_CM",
+          "patient_id": "Donor_Control_4",
+          "group": "Healthy",
+          "has_covariates": true,
+          "volumes": 2140,
+          "pitch_um": 99.99999999999994,
+          "edges": 4101,
+          "connected_components": 7,
+          "largest_2d_span_um": 5061.330210289809,
+          "fov_span_um": [
+            6000.0,
+            6495.190528383289
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            36,
+            36
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2129,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 1007.3898296143593,
+              "projected_white_fraction": 0.03923304419811494,
+              "saturated": false,
+              "residual_white_gain": 0.06284789204339387
+            },
+            {
+              "supported_volumes": 2129,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 136.72249522617295,
+              "projected_white_fraction": 0.2301527911975865,
+              "saturated": false,
+              "residual_white_gain": 0.007457790413056269
+            }
+          ]
+        },
+        {
+          "section_id": "91_D1_24513-17_IPF_processed_CM",
+          "patient_id": "Donor_IPF_2",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 2862,
+          "pitch_um": 99.99999999999994,
+          "edges": 5483,
+          "connected_components": 5,
+          "largest_2d_span_um": 5800.0,
+          "fov_span_um": [
+            5800.0,
+            5888.972745734182
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            36,
+            36
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2858,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 1623.6014154125019,
+              "projected_white_fraction": 0.02968699844361491,
+              "saturated": false,
+              "residual_white_gain": 0.06294947495151777
+            },
+            {
+              "supported_volumes": 2858,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 181.08922400531412,
+              "projected_white_fraction": 0.15335693822951657,
+              "saturated": false,
+              "residual_white_gain": 0.008004202904244419
+            }
+          ]
+        },
+        {
+          "section_id": "92_D1_RO-3736_IPF_processed_CM",
+          "patient_id": "Donor_IPF_3",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 1685,
+          "pitch_um": 99.99999999999994,
+          "edges": 3128,
+          "connected_components": 19,
+          "largest_2d_span_um": 4120.087407288667,
+          "fov_span_um": [
+            6000.0,
+            4936.3448015713
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            36,
+            36
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1653,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 603.7164249738655,
+              "projected_white_fraction": 0.0425097063463921,
+              "saturated": false,
+              "residual_white_gain": 0.06356303980850268
+            },
+            {
+              "supported_volumes": 1653,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 114.40442471885184,
+              "projected_white_fraction": 0.27127677386857985,
+              "saturated": false,
+              "residual_white_gain": 0.007897879247101704
+            }
+          ]
+        },
+        {
+          "section_id": "92_A1_RO-3203_Healthy_processed_CM",
+          "patient_id": "Donor_Control_3",
+          "group": "Healthy",
+          "has_covariates": true,
+          "volumes": 2124,
+          "pitch_um": 99.99999999999994,
+          "edges": 3768,
+          "connected_components": 36,
+          "largest_2d_span_um": 5650.0,
+          "fov_span_um": [
+            5950.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            36,
+            36
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2001,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 1101.99871227382,
+              "projected_white_fraction": 0.03975033181264755,
+              "saturated": false,
+              "residual_white_gain": 0.06726415502023655
+            },
+            {
+              "supported_volumes": 2001,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 136.71730090401147,
+              "projected_white_fraction": 0.22686232774849602,
+              "saturated": false,
+              "residual_white_gain": 0.009203979052316074
+            }
+          ]
+        },
+        {
+          "section_id": "1217_0001_processed_aligned",
+          "patient_id": "Donor_IPF_1",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 9360,
+          "pitch_um": 99.99999999999983,
+          "edges": 18212,
+          "connected_components": 4,
+          "largest_2d_span_um": 10045.894683899487,
+          "fov_span_um": [
+            11050.0,
+            10045.894683899487
+          ],
+          "nyquist_wavelength_um": 199.99999999999966,
+          "axial_limit_um": 314.15926535897876,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            36,
+            36
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 9352,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 4419.149885419859,
+              "projected_white_fraction": 0.00919422149860803,
+              "saturated": false,
+              "residual_white_gain": 0.06303899467484725
+            },
+            {
+              "supported_volumes": 9352,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 738.1437874395194,
+              "projected_white_fraction": 0.05949994899224369,
+              "saturated": false,
+              "residual_white_gain": 0.008676177605739008
+            }
+          ]
+        },
+        {
+          "section_id": "1217_0002_processed_aligned",
+          "patient_id": "Donor_Control_1",
+          "group": "Healthy",
+          "has_covariates": true,
+          "volumes": 7507,
+          "pitch_um": 99.99999999999994,
+          "edges": 14630,
+          "connected_components": 8,
+          "largest_2d_span_um": 9567.781233238335,
+          "fov_span_um": [
+            11150.0,
+            10132.497224277931
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            36,
+            36
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 7494,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 4420.744550041111,
+              "projected_white_fraction": 0.010616922859886085,
+              "saturated": false,
+              "residual_white_gain": 0.06261205762678416
+            },
+            {
+              "supported_volumes": 7494,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 391.1517043750084,
+              "projected_white_fraction": 0.07794546951065058,
+              "saturated": false,
+              "residual_white_gain": 0.008817949487902465
+            }
+          ]
+        },
+        {
+          "section_id": "1217_0003_processed_aligned",
+          "patient_id": "Donor_IPF_2",
+          "group": "IPF",
+          "has_covariates": true,
+          "volumes": 10508,
+          "pitch_um": 99.99999999999994,
+          "edges": 20683,
+          "connected_components": 8,
+          "largest_2d_span_um": 10219.099764656376,
+          "fov_span_um": [
+            11150.0,
+            10219.099764656376
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            36,
+            36
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 10492,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 4508.598869108978,
+              "projected_white_fraction": 0.007744084871508715,
+              "saturated": false,
+              "residual_white_gain": 0.06194913960475447
+            },
+            {
+              "supported_volumes": 10492,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 543.6773578068329,
+              "projected_white_fraction": 0.056917242407382634,
+              "saturated": false,
+              "residual_white_gain": 0.008455551525502604
+            }
+          ]
+        },
+        {
+          "section_id": "1217_0004_processed_aligned",
+          "patient_id": "Donor_Control_2",
+          "group": "Healthy",
+          "has_covariates": true,
+          "volumes": 7150,
+          "pitch_um": 99.99999999999955,
+          "edges": 13887,
+          "connected_components": 5,
+          "largest_2d_span_um": 8660.254037844386,
+          "fov_span_um": [
+            11150.0,
+            8660.254037844386
+          ],
+          "nyquist_wavelength_um": 199.9999999999991,
+          "axial_limit_um": 314.1592653589779,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            36,
+            36
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 7145,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 4342.734436135961,
+              "projected_white_fraction": 0.011450019072239952,
+              "saturated": false,
+              "residual_white_gain": 0.0630332424134631
+            },
+            {
+              "supported_volumes": 7145,
+              "supported_components": 1,
+              "projection_rank": 36,
+              "effective_spectral_dimension": 428.9397199020967,
+              "projected_white_fraction": 0.07909250308640334,
+              "saturated": false,
+              "residual_white_gain": 0.008624731599629447
+            }
+          ]
+        }
+      ],
+      "total_patients": 7,
+      "total_patients_by_group": {
+        "Healthy": 4,
+        "IPF": 3
+      },
+      "total_sections": 11,
+      "covariate_sections": 11,
+      "chebyshev_degree": 137,
+      "shared_spectral_bound_per_um2": 0.008192,
+      "status": "red",
+      "message": "Feature-averaged explained energy on matched supporting sections, equally weighted within patient and across patients. A connected 2-D footprint must span a wavelength, with wavelength at least pi times the occupied square-grid pitch. Regridding can alter native geometry. Missing covariates, saturated fits and partial coverage limit interpretation."
+    },
+    "nugget": {
+      "groups": [
+        "Healthy",
+        "IPF"
+      ],
+      "features": [
+        {
+          "feature": "ACTB",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "B2M",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "HPRT1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PTPRC",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD3D",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD3E",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD8A",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD4",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "LST1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "TYROBP",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "MS4A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL1A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL1A2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL3A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "DCN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "LUM",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PECAM1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "VWF",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ACTA2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "TAGLN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "EPCAM",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT5",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "KRT8",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "SFTPC",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "AGER",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        }
+      ],
+      "flagged": 0,
+      "patient_energies": [
+        {
+          "patient_id": "Donor_IPF_1",
+          "group": "IPF",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "Donor_Control_2",
+          "group": "Healthy",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "Donor_Control_1",
+          "group": "Healthy",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "Donor_Control_4",
+          "group": "Healthy",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "Donor_IPF_2",
+          "group": "IPF",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "Donor_IPF_3",
+          "group": "IPF",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "Donor_Control_3",
+          "group": "Healthy",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ],
+      "evaluated": 0,
+      "status": "yellow",
+      "message": "Fine-band residual energy minus the estimated white-noise contribution is signed. Matched two-step spatial differences model locally smooth signal plus uncorrelated homoscedastic volume noise. Rough signal, heterogeneous noise and unequal occupancy affect this sensitivity screen.",
+      "measurement_scope": {
+        "measurement": "log_normalized",
+        "layer": "X",
+        "interpretation": "Energy, semivariance and attenuation refer to the supplied measurement scale. For log-normalized inputs they describe variability after transformation. The procedure does not fit a negative-binomial count model or identify a noise cause."
+      }
+    }
+  },
+  "statement": "基于公开存档数据，在患者/生物学重复级去混杂框架下的可复现性、统计功效与混杂敏感性审计。"
+}

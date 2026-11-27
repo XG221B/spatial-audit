@@ -1,0 +1,1564 @@
+{
+  "schema_version": 1,
+  "id": "zenodo-6578047-FZ",
+  "kind": "public",
+  "platform": "Visium",
+  "source": "https://zenodo.org/records/6578047",
+  "accession": "10.5281/zenodo.6578047",
+  "provenance": {
+    "inputs": [
+      {
+        "file": "Visium_FZ_P20.npz",
+        "sha256": "a49ad1e3dd8b8a775a32c7f20844e06ff0d226daabfdb165865384461750d35f",
+        "bytes": 500598
+      },
+      {
+        "file": "Visium_FZ_P18.npz",
+        "sha256": "984c55bf2f32dae0dd408167d8146810b87bc45dbf287422cf98459d89a3b7f8",
+        "bytes": 556344
+      },
+      {
+        "file": "Visium_FZ_P14.npz",
+        "sha256": "a0d548bcac018bbfaf5c748614ff84df7f1529c5929f92c4fb199e871bba3e40",
+        "bytes": 758097
+      },
+      {
+        "file": "Visium_control_P8.npz",
+        "sha256": "6696ba16a14eed7345d6ef37d26e47f5ad630a2fea6f25d99b32d4ffc04754c7",
+        "bytes": 543607
+      },
+      {
+        "file": "Visium_control_P7.npz",
+        "sha256": "eedda4c080e5d0f3cdcfb2d0c724676a5cce59a5e87b307756dd994924ab2052",
+        "bytes": 651677
+      },
+      {
+        "file": "Visium_control_P1.npz",
+        "sha256": "4aafdfeee84bcede028be5c4c024bd8ca0d5e938fcd3e837ab2925617ba2d70f",
+        "bytes": 1015596
+      },
+      {
+        "file": "Visium_control_P17.npz",
+        "sha256": "ccd8dc3ff0e1d2d671cb2a4e6916b06ea09ad636cf047e610138adaa8dbe5db2",
+        "bytes": 446915
+      }
+    ],
+    "preprocessing_evidence": "zenodo-6578047-FZ_inputs.json",
+    "accession": "10.5281/zenodo.6578047",
+    "measurement": "log_normalized",
+    "batch_label": "acquisition batch",
+    "coordinates": "um",
+    "layer": "archived H5AD X; LogNormalization",
+    "covariates": [
+      "Adipocyte",
+      "Cardiomyocyte",
+      "Cycling.cells",
+      "Endothelial",
+      "Fibroblast",
+      "Lymphoid",
+      "Mast",
+      "Myeloid",
+      "Neuronal",
+      "Pericyte",
+      "vSMCs"
+    ],
+    "selection": "All single-zone FZ files and all donor controls in Zenodo record 6578047. Mixed-zone and other MI sections excluded. Fixed housekeeping, cardiomyocyte, matrix and vascular marker panel."
+  },
+  "preprocessing_evidence": "zenodo-6578047-FZ_inputs.json",
+  "n_patients": 7,
+  "n_sections": 7,
+  "n_observations": 19835,
+  "n_features": 27,
+  "dimensions": {
+    "power": {
+      "status": "red",
+      "message": "Two-sided doubled-tail permutation resolution.",
+      "n0": 3,
+      "n1": 4,
+      "assignments": "35",
+      "p_floor": 0.05714285714285714,
+      "features": 27,
+      "alpha": 0.05,
+      "minimum_bh_rank": null,
+      "bh_impossible": true,
+      "nominal_impossible": true,
+      "groups": [
+        "MI pure fibrotic zone",
+        "control donor"
+      ],
+      "effective_p_floor": 0.05714285714285714,
+      "effective_minimum_bh_rank": null,
+      "effective_bh_impossible": true,
+      "executed_mode": "exact",
+      "theoretical_status": "red"
+    },
+    "design": {
+      "status": "yellow",
+      "code": null,
+      "message": "High risk marks categorical aliasing or no observed stage overlap. The linear fixed-effect rank diagnostic is reported separately. Local bounding boxes are coordinate-frame proxies.",
+      "categorical": {
+        "slide_id": {
+          "status": "missing_or_partial"
+        },
+        "batch": {
+          "status": "missing_or_partial"
+        }
+      },
+      "coordinates": {
+        "stage": {
+          "status": "missing"
+        },
+        "bbox": {
+          "linear_separation": false,
+          "descriptive_auc": 0.9166666666666666,
+          "linear_fixed_effect_alias": false
+        }
+      },
+      "joint_acquisition_design": {
+        "fields": [],
+        "status": "missing",
+        "relative_residual": null,
+        "fixed_effect_alias": null
+      },
+      "points": [
+        {
+          "x": 3175.0,
+          "y": 3464.1016151377544,
+          "group": "MI pure fibrotic zone",
+          "patient": "P20"
+        },
+        {
+          "x": 2900.0,
+          "y": 2857.8838324886474,
+          "group": "MI pure fibrotic zone",
+          "patient": "P18"
+        },
+        {
+          "x": 3275.0,
+          "y": 3204.2939940024226,
+          "group": "MI pure fibrotic zone",
+          "patient": "P14"
+        },
+        {
+          "x": 2800.0,
+          "y": 3723.9092362730858,
+          "group": "control donor",
+          "patient": "P8"
+        },
+        {
+          "x": 3325.0,
+          "y": 3897.114317029974,
+          "group": "control donor",
+          "patient": "P7"
+        },
+        {
+          "x": 3175.0,
+          "y": 3334.1978045700885,
+          "group": "control donor",
+          "patient": "P1"
+        },
+        {
+          "x": 2775.0,
+          "y": 4373.428289111414,
+          "group": "control donor",
+          "patient": "P17"
+        }
+      ],
+      "points_frame": "local_bbox",
+      "reasons": []
+    },
+    "pseudorep": {
+      "status": "red",
+      "message": "Difference in BH call rates across sampling units; true discovery status is unknown for public cohorts.",
+      "spot_rate": 1.0,
+      "patient_rate": 0.0,
+      "gap": 1.0,
+      "ratio": null,
+      "zero_denominator": true,
+      "groups": [
+        "MI pure fibrotic zone",
+        "control donor"
+      ],
+      "features": [
+        "ACTB",
+        "GAPDH",
+        "B2M",
+        "EEF1A1",
+        "PPIA",
+        "HPRT1",
+        "CALM1",
+        "TTN",
+        "MYH7",
+        "MYH6",
+        "TNNT2",
+        "TNNI3",
+        "MYL2",
+        "MYL3",
+        "ATP2A2",
+        "PLN",
+        "NPPA",
+        "NPPB",
+        "COL1A1",
+        "COL1A2",
+        "COL3A1",
+        "DCN",
+        "LUM",
+        "PECAM1",
+        "VWF",
+        "ACTA2",
+        "TAGLN"
+      ],
+      "spot_p": [
+        1.9350853679551716e-226,
+        0.0,
+        4.428917533875156e-190,
+        0.0,
+        2.498904694053897e-32,
+        7.792510739235668e-29,
+        4.5832509370122683e-141,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.791141621425051e-21,
+        1.7380718787437292e-08,
+        1.7807916755145943e-33,
+        0.0
+      ],
+      "spot_q": [
+        2.6123652467394816e-226,
+        0.0,
+        5.694322543553772e-190,
+        0.0,
+        2.8112677808106343e-32,
+        8.415911598374522e-29,
+        5.62489887724233e-141,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.9754162991721686e-21,
+        1.7380718787437292e-08,
+        2.090494575604089e-33,
+        0.0
+      ],
+      "patient": {
+        "method": "exact",
+        "assignments": "35",
+        "evaluations": 35,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.17142857142857143,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.11428571428571428,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.05714285714285714,
+          0.5142857142857142,
+          0.17142857142857143,
+          0.05714285714285714
+        ],
+        "q": [
+          0.17802197802197803,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.1285714285714286,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.0670807453416149,
+          0.5142857142857142,
+          0.17802197802197803,
+          0.0670807453416149
+        ],
+        "statistic": [
+          -1.4414436512366802,
+          3.0038861999951396,
+          2.0167931695936936,
+          -3.275017480230486,
+          2.6106232818988455,
+          3.235254545549067,
+          3.1713692978256067,
+          2.752490948305253,
+          2.34189543623008,
+          2.766580445123658,
+          2.5965134076664462,
+          2.260793474989376,
+          2.523420397939121,
+          2.626152288096762,
+          3.006759775316015,
+          2.871334076093986,
+          -3.149510278882027,
+          -2.906331282113164,
+          -3.1956831587597807,
+          -3.2324677826345734,
+          -3.1792456875438364,
+          -2.6087852619460694,
+          -3.0541447377268427,
+          -1.8328070703607409,
+          0.6743709287233358,
+          -1.446691603905942,
+          -2.7399927281234846
+        ]
+      }
+    },
+    "composition": {
+      "bands": [
+        {
+          "wavelength_um": 250.0,
+          "share": null,
+          "estimable_features": 0,
+          "supported_sections": 0,
+          "supported_patients": 0,
+          "supported_patients_by_group": {
+            "MI pure fibrotic zone": 0,
+            "control donor": 0
+          },
+          "interpretable_sections": 0,
+          "interpretable_patients": 0,
+          "full_coverage": false,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 600.0,
+          "share": 0.18299435010052434,
+          "estimable_features": 27,
+          "supported_sections": 7,
+          "supported_patients": 7,
+          "supported_patients_by_group": {
+            "MI pure fibrotic zone": 3,
+            "control donor": 4
+          },
+          "interpretable_sections": 7,
+          "interpretable_patients": 7,
+          "full_coverage": true,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 1400.0,
+          "share": 0.46958005982989226,
+          "estimable_features": 27,
+          "supported_sections": 7,
+          "supported_patients": 7,
+          "supported_patients_by_group": {
+            "MI pure fibrotic zone": 3,
+            "control donor": 4
+          },
+          "interpretable_sections": 7,
+          "interpretable_patients": 7,
+          "full_coverage": true,
+          "saturated_sections": 0
+        }
+      ],
+      "sections": [
+        {
+          "section_id": "Visium_FZ_P20",
+          "patient_id": "P20",
+          "group": "MI pure fibrotic zone",
+          "has_covariates": true,
+          "volumes": 2119,
+          "pitch_um": 99.99999999999994,
+          "edges": 3481,
+          "connected_components": 79,
+          "largest_2d_span_um": 4669.187138972233,
+          "fov_span_um": [
+            6350.0,
+            6408.587988004845
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            10,
+            10
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1869,
+              "supported_components": 3,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 1146.212681029513,
+              "projected_white_fraction": 0.013146804973316707,
+              "saturated": false,
+              "residual_white_gain": 0.07092316932329677
+            },
+            {
+              "supported_volumes": 1769,
+              "supported_components": 2,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 136.99303355421097,
+              "projected_white_fraction": 0.06045934599834352,
+              "saturated": false,
+              "residual_white_gain": 0.012639848898165804
+            }
+          ]
+        },
+        {
+          "section_id": "Visium_FZ_P18",
+          "patient_id": "P18",
+          "group": "MI pure fibrotic zone",
+          "has_covariates": true,
+          "volumes": 2234,
+          "pitch_um": 99.99999999999994,
+          "edges": 4178,
+          "connected_components": 7,
+          "largest_2d_span_um": 5073.607893403048,
+          "fov_span_um": [
+            5600.0,
+            5715.767664977295
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            10,
+            10
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2225,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 1025.6801745883351,
+              "projected_white_fraction": 0.00948169445649584,
+              "saturated": false,
+              "residual_white_gain": 0.06668413366979185
+            },
+            {
+              "supported_volumes": 2225,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 186.8246127445778,
+              "projected_white_fraction": 0.05470643785723298,
+              "saturated": false,
+              "residual_white_gain": 0.010500658564867463
+            }
+          ]
+        },
+        {
+          "section_id": "Visium_FZ_P14",
+          "patient_id": "P14",
+          "group": "MI pure fibrotic zone",
+          "has_covariates": true,
+          "volumes": 2759,
+          "pitch_um": 99.99999999999994,
+          "edges": 5319,
+          "connected_components": 2,
+          "largest_2d_span_um": 5369.35750346352,
+          "fov_span_um": [
+            6150.0,
+            5369.35750346352
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            10,
+            10
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2758,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 1332.493750256136,
+              "projected_white_fraction": 0.008610790377311809,
+              "saturated": false,
+              "residual_white_gain": 0.06367877790012992
+            },
+            {
+              "supported_volumes": 2758,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 168.27170195224684,
+              "projected_white_fraction": 0.04816207240854235,
+              "saturated": false,
+              "residual_white_gain": 0.00920404850008418
+            }
+          ]
+        },
+        {
+          "section_id": "Visium_control_P8",
+          "patient_id": "P8",
+          "group": "control donor",
+          "has_covariates": true,
+          "volumes": 2142,
+          "pitch_um": 99.99999999999994,
+          "edges": 4121,
+          "connected_components": 3,
+          "largest_2d_span_um": 5369.35750346352,
+          "fov_span_um": [
+            5600.0,
+            5888.972745734182
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            10,
+            10
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2127,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 817.8777256762886,
+              "projected_white_fraction": 0.010911390684103644,
+              "saturated": false,
+              "residual_white_gain": 0.06377703631339773
+            },
+            {
+              "supported_volumes": 2127,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 140.5502287510001,
+              "projected_white_fraction": 0.06278374994418646,
+              "saturated": false,
+              "residual_white_gain": 0.008941926085581638
+            }
+          ]
+        },
+        {
+          "section_id": "Visium_control_P7",
+          "patient_id": "P7",
+          "group": "control donor",
+          "has_covariates": true,
+          "volumes": 2545,
+          "pitch_um": 99.99999999999994,
+          "edges": 4950,
+          "connected_components": 1,
+          "largest_2d_span_um": 5541.671867624361,
+          "fov_span_um": [
+            6050.0,
+            5542.562584220406
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            10,
+            10
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 2545,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 965.1280170768216,
+              "projected_white_fraction": 0.009430316495342797,
+              "saturated": false,
+              "residual_white_gain": 0.06299409291410021
+            },
+            {
+              "supported_volumes": 2545,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 162.47043754531043,
+              "projected_white_fraction": 0.06456743629893653,
+              "saturated": false,
+              "residual_white_gain": 0.008944954192926308
+            }
+          ]
+        },
+        {
+          "section_id": "Visium_control_P1",
+          "patient_id": "P1",
+          "group": "control donor",
+          "has_covariates": true,
+          "volumes": 3724,
+          "pitch_um": 99.99999999999994,
+          "edges": 7221,
+          "connected_components": 1,
+          "largest_2d_span_um": 6350.0,
+          "fov_span_um": [
+            6350.0,
+            6668.395609140177
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            10,
+            10
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 3724,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 1810.2358030082721,
+              "projected_white_fraction": 0.005168002589299231,
+              "saturated": false,
+              "residual_white_gain": 0.06311838097652568
+            },
+            {
+              "supported_volumes": 3724,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 211.9725556021345,
+              "projected_white_fraction": 0.042167482710690034,
+              "saturated": false,
+              "residual_white_gain": 0.009035327121149907
+            }
+          ]
+        },
+        {
+          "section_id": "Visium_control_P17",
+          "patient_id": "P17",
+          "group": "control donor",
+          "has_covariates": true,
+          "volumes": 1781,
+          "pitch_um": 99.99999999999994,
+          "edges": 3399,
+          "connected_components": 1,
+          "largest_2d_span_um": 4454.844204622683,
+          "fov_span_um": [
+            5550.0,
+            4589.934640057524
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            10,
+            10
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1781,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 731.0079253292455,
+              "projected_white_fraction": 0.01605718694804097,
+              "saturated": false,
+              "residual_white_gain": 0.06456086516323498
+            },
+            {
+              "supported_volumes": 1781,
+              "supported_components": 1,
+              "projection_rank": 10,
+              "effective_spectral_dimension": 148.00759141262955,
+              "projected_white_fraction": 0.0801933476351114,
+              "saturated": false,
+              "residual_white_gain": 0.009295622639967305
+            }
+          ]
+        }
+      ],
+      "total_patients": 7,
+      "total_patients_by_group": {
+        "MI pure fibrotic zone": 3,
+        "control donor": 4
+      },
+      "total_sections": 7,
+      "covariate_sections": 7,
+      "chebyshev_degree": 137,
+      "shared_spectral_bound_per_um2": 0.008192,
+      "status": "yellow",
+      "message": "Feature-averaged explained energy on matched supporting sections, equally weighted within patient and across patients. A connected 2-D footprint must span a wavelength, with wavelength at least pi times the occupied square-grid pitch. Regridding can alter native geometry. Missing covariates, saturated fits and partial coverage limit interpretation."
+    },
+    "nugget": {
+      "groups": [
+        "MI pure fibrotic zone",
+        "control donor"
+      ],
+      "features": [
+        {
+          "feature": "ACTB",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "GAPDH",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "B2M",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "EEF1A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PPIA",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "HPRT1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CALM1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "TTN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "MYH7",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "MYH6",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "TNNT2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "TNNI3",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "MYL2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "MYL3",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ATP2A2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PLN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "NPPA",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "NPPB",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL1A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL1A2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL3A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "DCN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "LUM",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PECAM1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "VWF",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ACTA2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "TAGLN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        }
+      ],
+      "flagged": 0,
+      "patient_energies": [
+        {
+          "patient_id": "P20",
+          "group": "MI pure fibrotic zone",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "P18",
+          "group": "MI pure fibrotic zone",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "P14",
+          "group": "MI pure fibrotic zone",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "P8",
+          "group": "control donor",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "P7",
+          "group": "control donor",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "P1",
+          "group": "control donor",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "P17",
+          "group": "control donor",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ],
+      "evaluated": 0,
+      "status": "yellow",
+      "message": "Fine-band residual energy minus the estimated white-noise contribution is signed. Matched two-step spatial differences model locally smooth signal plus uncorrelated homoscedastic volume noise. Rough signal, heterogeneous noise and unequal occupancy affect this sensitivity screen.",
+      "measurement_scope": {
+        "measurement": "log_normalized",
+        "layer": "archived H5AD X; LogNormalization",
+        "interpretation": "Energy, semivariance and attenuation refer to the supplied measurement scale. For log-normalized inputs they describe variability after transformation. The procedure does not fit a negative-binomial count model or identify a noise cause."
+      }
+    }
+  },
+  "statement": "基于公开存档数据，在患者/生物学重复级去混杂框架下的可复现性、统计功效与混杂敏感性审计。"
+}

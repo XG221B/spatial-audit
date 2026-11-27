@@ -1,0 +1,214 @@
+{
+  "kind": "public",
+  "record_type": "input_provenance",
+  "accession": "GSE294965",
+  "files": [
+    {
+      "name": "GSE294965_processed_data.h5ad",
+      "accession": "GSE294965",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE294nnn/GSE294965/suppl/GSE294965_processed_data.h5ad",
+      "bytes": 4216518368,
+      "sha256": "059591e5d477827cdacb477a9c61d401495ffa5cbd272d2542244b2919d79c19",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    }
+  ],
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE294965",
+  "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12571875/",
+  "features": [
+    "ABCC3",
+    "ABR",
+    "ACKR3",
+    "ACSM3",
+    "ACTA2",
+    "ADAM17",
+    "ADAMTS5",
+    "AFDN",
+    "AHR",
+    "ALDH1A2",
+    "ANGPT2",
+    "APBB1IP",
+    "AQP1",
+    "AQP2",
+    "AREG",
+    "ARG1",
+    "ARHGAP15",
+    "ASCL2",
+    "ATF3",
+    "ATF4",
+    "ATF5",
+    "ATF6",
+    "ATP6V0D2",
+    "BATF3",
+    "BCL11B",
+    "BCL6",
+    "BHLHE40",
+    "BMP7",
+    "BNC2",
+    "BTLA",
+    "C1QB",
+    "C1QC"
+  ],
+  "cells_per_biopsy": [
+    {
+      "patient": "X21_GBM",
+      "group": "GBM",
+      "slide": "0011216",
+      "observations": 8
+    },
+    {
+      "patient": "X21_GBM",
+      "group": "GBM",
+      "slide": "0011216",
+      "observations": 220817
+    },
+    {
+      "patient": "X41_Cntrl",
+      "group": "Cntrl",
+      "slide": "0011284",
+      "observations": 52394
+    },
+    {
+      "patient": "X46_GBM",
+      "group": "GBM",
+      "slide": "0011284",
+      "observations": 17900
+    },
+    {
+      "patient": "X46_GBM",
+      "group": "GBM",
+      "slide": "0011284",
+      "observations": 17956
+    },
+    {
+      "patient": "X46_GBM",
+      "group": "GBM",
+      "slide": "0011284",
+      "observations": 9838
+    },
+    {
+      "patient": "X13_GBM",
+      "group": "GBM",
+      "slide": "0011546",
+      "observations": 12
+    },
+    {
+      "patient": "X10_Cntrl",
+      "group": "Cntrl",
+      "slide": "0011546",
+      "observations": 96432
+    },
+    {
+      "patient": "X9_Cntrl",
+      "group": "Cntrl",
+      "slide": "0011546",
+      "observations": 23514
+    },
+    {
+      "patient": "X13_GBM",
+      "group": "GBM",
+      "slide": "0011546",
+      "observations": 27254
+    },
+    {
+      "patient": "X13_GBM",
+      "group": "GBM",
+      "slide": "0011546",
+      "observations": 37807
+    },
+    {
+      "patient": "X38_GBM",
+      "group": "GBM",
+      "slide": "0011695",
+      "observations": 13024
+    },
+    {
+      "patient": "X38_GBM",
+      "group": "GBM",
+      "slide": "0011695",
+      "observations": 27499
+    },
+    {
+      "patient": "X29_GBM",
+      "group": "GBM",
+      "slide": "0011707",
+      "observations": 18869
+    },
+    {
+      "patient": "X29_GBM",
+      "group": "GBM",
+      "slide": "0011707",
+      "observations": 18089
+    },
+    {
+      "patient": "X29_GBM",
+      "group": "GBM",
+      "slide": "0011707",
+      "observations": 21463
+    },
+    {
+      "patient": "X2_Cntrl",
+      "group": "Cntrl",
+      "slide": "0011762",
+      "observations": 12509
+    },
+    {
+      "patient": "X2_Cntrl",
+      "group": "Cntrl",
+      "slide": "0011762",
+      "observations": 18110
+    },
+    {
+      "patient": "X1_Cntrl",
+      "group": "Cntrl",
+      "slide": "0011762",
+      "observations": 91110
+    },
+    {
+      "patient": "X5_GBM",
+      "group": "GBM",
+      "slide": "0011762",
+      "observations": 32199
+    },
+    {
+      "patient": "X57_Cntrl",
+      "group": "Cntrl",
+      "slide": "0018775",
+      "observations": 90146
+    }
+  ],
+  "covariates": [
+    "POD",
+    "PEC",
+    "MC",
+    "Fibrotic MC",
+    "PapE",
+    "VSM/P",
+    "EC",
+    "PT",
+    "ATL",
+    "CNT",
+    "DCT",
+    "DTL",
+    "TAL",
+    "FIB",
+    "IC",
+    "NEU",
+    "PC",
+    "T",
+    "NKC/T",
+    "B",
+    "PL",
+    "N",
+    "MAC",
+    "MDC",
+    "Mono",
+    "MAST",
+    "cDC",
+    "pDC",
+    "cycMNP",
+    "cycNKC/T"
+  ],
+  "library_size": "Total raw counts across archived biological targets before the 32-gene subset.",
+  "annotation_note": "Assignments are derived from the archived molecular profiles; projection can include circularity."
+}

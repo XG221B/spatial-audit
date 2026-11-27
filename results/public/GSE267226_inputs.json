@@ -1,0 +1,272 @@
+{
+  "kind": "public",
+  "accession": "GSE267226",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE267226",
+  "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12456998/",
+  "files": [
+    {
+      "name": "GSE267226_RAW.tar",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE267nnn/GSE267226/suppl/GSE267226_RAW.tar",
+      "role": "data",
+      "accession": "GSE267226",
+      "bytes": 152811520,
+      "sha256": "777fdc8223da43898c4aeea9fe6b617b6bf2d73f2da3ce307e2469e89a93cf5a"
+    },
+    {
+      "name": "GSM8262701.soft",
+      "accession": "GSE267226",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8262701&targ=self&form=text&view=brief",
+      "bytes": 2544,
+      "sha256": "9b1a0e06aa70707ed7bc5ebbaad6d08cba01be23ca095beb9a0056e6038e14a7"
+    },
+    {
+      "name": "GSM8262702.soft",
+      "accession": "GSE267226",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8262702&targ=self&form=text&view=brief",
+      "bytes": 2548,
+      "sha256": "bf85475622fc8ce8ff088882157a2be65722977dd9d18e4b56d31fe38baefda5"
+    },
+    {
+      "name": "GSM8262703.soft",
+      "accession": "GSE267226",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8262703&targ=self&form=text&view=brief",
+      "bytes": 2548,
+      "sha256": "b7895d51c69b1676df6f78a6e289bcc214d8dd1af8fdccde315600043f1edb13"
+    },
+    {
+      "name": "GSM8262704.soft",
+      "accession": "GSE267226",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8262704&targ=self&form=text&view=brief",
+      "bytes": 2552,
+      "sha256": "8c330100db7e876374d4d7ed6c8ceea5c61bc23d9fda3fda454219443f74df9c"
+    },
+    {
+      "name": "GSM8262705.soft",
+      "accession": "GSE267226",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8262705&targ=self&form=text&view=brief",
+      "bytes": 2552,
+      "sha256": "2f244ec38012f6398c5a0d864dff5b760a769fc72e50ec3972917036a358627e"
+    }
+  ],
+  "sections": [
+    {
+      "chemistry": "Visium V4 Slide",
+      "software": "spaceranger-2.0.1",
+      "library_ids": [
+        "a21-035"
+      ],
+      "covered_array_barcodes": 4178,
+      "excluded_empty_libraries": 1,
+      "retained_spots": 4177,
+      "full_library_feature_count": 18085,
+      "total_library_counts": 59605394,
+      "missing_or_ambiguous_targets": [
+        "EEF1A1",
+        "GAPDH",
+        "KRT18"
+      ],
+      "patient_id": "COVID1",
+      "section_id": "GSM8262701",
+      "group": "PASC pulmonary fibrosis",
+      "matrix_member": "GSM8262701_21-035_S5_filtered_feature_bc_matrix.h5",
+      "member_sha256": "a1371a8f21eba504bdca652ac705b347b9dad2265d8709b8b87bc41f40fe91dc",
+      "member_bytes": 24399686,
+      "section_sha256": "437385e55221cdd404e6faf8f9f0003356abbe4494fefad58f67d497256aedd9",
+      "section_bytes": 645512
+    },
+    {
+      "chemistry": "Visium V4 Slide",
+      "software": "spaceranger-2.0.1",
+      "library_ids": [
+        "aBB-22001"
+      ],
+      "covered_array_barcodes": 4747,
+      "excluded_empty_libraries": 0,
+      "retained_spots": 4747,
+      "full_library_feature_count": 18085,
+      "total_library_counts": 40161646,
+      "missing_or_ambiguous_targets": [
+        "EEF1A1",
+        "GAPDH",
+        "KRT18"
+      ],
+      "patient_id": "COVID2",
+      "section_id": "GSM8262702",
+      "group": "PASC pulmonary fibrosis",
+      "matrix_member": "GSM8262702_BB-22001_S3_filtered_feature_bc_matrix.h5",
+      "member_sha256": "18889c33840af2c8a92706893bc00256b8251362a7714f37d9a125b7d4e4bcbf",
+      "member_bytes": 21718912,
+      "section_sha256": "06482760c1305ce5d11987fcb0df4049fe283e4399d697c49459f7188bce0f54",
+      "section_bytes": 627525
+    },
+    {
+      "chemistry": "Visium V4 Slide",
+      "software": "spaceranger-2.0.1",
+      "library_ids": [
+        "aLIBB-0093_d1"
+      ],
+      "covered_array_barcodes": 3952,
+      "excluded_empty_libraries": 0,
+      "retained_spots": 3952,
+      "full_library_feature_count": 18085,
+      "total_library_counts": 101790171,
+      "missing_or_ambiguous_targets": [
+        "EEF1A1",
+        "GAPDH",
+        "KRT18"
+      ],
+      "patient_id": "COVID3",
+      "section_id": "GSM8262703",
+      "group": "PASC pulmonary fibrosis",
+      "matrix_member": "GSM8262703_LIBB-0093_S2_filtered_feature_bc_matrix.h5",
+      "member_sha256": "45d490d1dc6e6a3044bb74df91d2dc144aabf09880324452e9b7e85b3eea0d80",
+      "member_bytes": 30411289,
+      "section_sha256": "ce9118b5ae729cf09207cd2dcfac9501cdccf2cd8f9c5e4744e809ad94007868",
+      "section_bytes": 679022
+    },
+    {
+      "chemistry": "Visium V4 Slide",
+      "software": "spaceranger-2.0.1",
+      "library_ids": [
+        "cc005_19m3"
+      ],
+      "covered_array_barcodes": 3433,
+      "excluded_empty_libraries": 0,
+      "retained_spots": 3433,
+      "full_library_feature_count": 18085,
+      "total_library_counts": 23183479,
+      "missing_or_ambiguous_targets": [
+        "EEF1A1",
+        "GAPDH",
+        "KRT18"
+      ],
+      "patient_id": "Control1",
+      "section_id": "GSM8262704",
+      "group": "control donor",
+      "matrix_member": "GSM8262704_CC005-19_S4_filtered_feature_bc_matrix.h5",
+      "member_sha256": "77bf4c26f5ec067d8d1ad0617683e25c03bc05802cb83c882c7e06eb6ddf9f60",
+      "member_bytes": 15172931,
+      "section_sha256": "6684acb55067bd57b508364c841df68faf56af26f0a5c92420ca63b07ac7553f",
+      "section_bytes": 462236
+    },
+    {
+      "chemistry": "Visium V4 Slide",
+      "software": "spaceranger-2.0.1",
+      "library_ids": [
+        "aCC003-20m3"
+      ],
+      "covered_array_barcodes": 4992,
+      "excluded_empty_libraries": 0,
+      "retained_spots": 4992,
+      "full_library_feature_count": 18085,
+      "total_library_counts": 86284229,
+      "missing_or_ambiguous_targets": [
+        "EEF1A1",
+        "GAPDH",
+        "KRT18"
+      ],
+      "patient_id": "Control2",
+      "section_id": "GSM8262705",
+      "group": "control donor",
+      "matrix_member": "GSM8262705_CC003-20_S1_filtered_feature_bc_matrix.h5",
+      "member_sha256": "771df0da840864f2d43354fce50760df88bd14c3755905694e4ac678205f8df0",
+      "member_bytes": 32714358,
+      "section_sha256": "a4bad4fa5d30dc3ddcf97d62255b488aa8242e8c53590b22220c8b793f1b4afb",
+      "section_bytes": 769169
+    }
+  ],
+  "preprocessing": {
+    "selection": "All deposited human Visium samples in GSE267226. Predefined housekeeping, immune, epithelial and stromal panel restricted to unambiguous targeted gene symbols shared by every H5. Full-library counts per ten thousand followed by log1p are used for the main audit.",
+    "candidate_genes": [
+      "ACTB",
+      "GAPDH",
+      "B2M",
+      "EEF1A1",
+      "PPIA",
+      "HPRT1",
+      "CALM1",
+      "PTPRC",
+      "CD3D",
+      "CD3E",
+      "CD8A",
+      "CD4",
+      "LST1",
+      "TYROBP",
+      "CD68",
+      "MS4A1",
+      "COL1A1",
+      "COL1A2",
+      "COL3A1",
+      "DCN",
+      "LUM",
+      "PECAM1",
+      "VWF",
+      "ACTA2",
+      "TAGLN",
+      "EPCAM",
+      "KRT5",
+      "KRT8",
+      "KRT17",
+      "KRT18",
+      "SFTPC",
+      "AGER"
+    ],
+    "genes": [
+      "ACTB",
+      "B2M",
+      "PPIA",
+      "HPRT1",
+      "CALM1",
+      "PTPRC",
+      "CD3D",
+      "CD3E",
+      "CD8A",
+      "CD4",
+      "LST1",
+      "TYROBP",
+      "CD68",
+      "MS4A1",
+      "COL1A1",
+      "COL1A2",
+      "COL3A1",
+      "DCN",
+      "LUM",
+      "PECAM1",
+      "VWF",
+      "ACTA2",
+      "TAGLN",
+      "EPCAM",
+      "KRT5",
+      "KRT8",
+      "KRT17",
+      "SFTPC",
+      "AGER"
+    ],
+    "design_source": "https://www.10xgenomics.com/support/software/space-ranger/latest/getting-started/space-ranger-glossary",
+    "geometry_source": "https://cdn.10xgenomics.com/image/upload/v1758134784/support-documents/CG000686_VisiumHDSpatialApplicationsPerformance_TechnicalNote_RevB.pdf",
+    "spot_pitch_um": 100.0,
+    "manufacturer_layouts": [
+      {
+        "name": "CytAssist_FFPE_Human_Lung_Squamous_Cell_Carcinoma_spatial.tar.gz",
+        "url": "https://cf.10xgenomics.com/samples/spatial-exp/2.0.0/CytAssist_FFPE_Human_Lung_Squamous_Cell_Carcinoma/CytAssist_FFPE_Human_Lung_Squamous_Cell_Carcinoma_spatial.tar.gz",
+        "accession": "10x-Visium-V4-layout",
+        "bytes": 32680802,
+        "sha256": "cd636c52be5493031d3f58e56162906acdec16ab711f6d8cd05d18d315cc76e0",
+        "manufacturer_assay_summary": "https://cf.10xgenomics.com/samples/spatial-exp/2.0.0/CytAssist_FFPE_Human_Lung_Squamous_Cell_Carcinoma/CytAssist_FFPE_Human_Lung_Squamous_Cell_Carcinoma_web_summary.html"
+      },
+      {
+        "name": "CytAssist_FFPE_Protein_Expression_Human_Tonsil_spatial.tar.gz",
+        "url": "https://cf.10xgenomics.com/samples/spatial-exp/2.1.0/CytAssist_FFPE_Protein_Expression_Human_Tonsil/CytAssist_FFPE_Protein_Expression_Human_Tonsil_spatial.tar.gz",
+        "accession": "10x-Visium-V4-layout",
+        "bytes": 34480354,
+        "sha256": "12027dcef2531604897ccfcaa7d64f2e8855ad9854d048a20bd6e0a77c933003",
+        "manufacturer_assay_summary": "https://cf.10xgenomics.com/samples/spatial-exp/2.1.0/CytAssist_FFPE_Protein_Expression_Human_Tonsil/CytAssist_FFPE_Protein_Expression_Human_Tonsil_web_summary.html"
+      }
+    ],
+    "layout_size": 4992,
+    "layout_validation": "Every V4 assay barcode is unique and found on two independent, mutually identical official V4 reference layouts. Rows and columns of the manufactured hexagonal capture array supply relative positions, independent of which spots contain tissue. No tissue image or image-derived alignment was transferred across datasets.",
+    "sample_mapping": "GEO sample titles and disease states are unique. Extended Data Fig. 1c–g explicitly gives the independent control and PASC-PF human lung counts for spatial profiling.",
+    "coordinate_frame": "Manufacturer capture addresses are local to each array. Per-slide image orientation, histological registration and between-slide absolute acquisition coordinates are unavailable.",
+    "composition": "No deposited cell-type fractions provided. The engine reports coverage of this dimension."
+  }
+}

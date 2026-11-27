@@ -1,0 +1,216 @@
+{
+  "kind": "public",
+  "record_type": "catalog_coverage",
+  "human_records": 20,
+  "records": 24,
+  "audited_accessions": [
+    "10.5281/zenodo.10012934",
+    "10.5281/zenodo.6578047",
+    "GSE189184",
+    "GSE190732",
+    "GSE202011",
+    "GSE206391",
+    "GSE220442",
+    "GSE250346",
+    "GSE267226",
+    "GSE282123",
+    "GSE284005",
+    "GSE294965",
+    "GSE306288",
+    "GSE318039",
+    "GSE327879",
+    "GSE336890",
+    "GSE348499",
+    "MTBLS12782",
+    "S-BSST1410",
+    "STT0000036"
+  ],
+  "by_accession": {
+    "GSE220442": {
+      "reports": [
+        "GSE220442-full-panel",
+        "GSE220442"
+      ],
+      "citation_key": "chenAD",
+      "status": "measured",
+      "preparation_note": "Preserve cortical layer and donor ID. Multiple spots within one cortical layer share a donor."
+    },
+    "GSE348499": {
+      "reports": [
+        "GSE348499-subset",
+        "GSE348499"
+      ],
+      "citation_key": "yanTNBC",
+      "status": "measured",
+      "preparation_note": "Use pretreatment spatial donors. The single-cell and spatial cohorts have different sizes."
+    },
+    "MTBLS12782": {
+      "reports": [
+        "MTBLS12782"
+      ],
+      "citation_key": "msiPDAC",
+      "status": "measured",
+      "preparation_note": "Select the imaging assay. Keep ion polarities, tissue regions and clinical cohorts distinct. An assay row is not necessarily a new patient."
+    },
+    "STT0000036": {
+      "reports": [
+        "STT0000036"
+      ],
+      "citation_key": "crcStereo",
+      "status": "measured",
+      "preparation_note": "Use the treated dMMR subset for a response comparison; treatment-naive pMMR vs dMMR is a separate contrast. The processed spatial archive includes a second tumor section for CRCP59. Resolve repeated sections before between-patient comparisons. The linked FASTQ collection has separate access conditions."
+    },
+    "GSE225475": {
+      "reports": [],
+      "citation_key": "geo225475",
+      "status": "catalog_only",
+      "preparation_note": "Supplementary Data 1 lists psoriasis demographics with numeric sample IDs. Supplementary Data 2 (Visium tab) identifies the six biopsies only by PP/NS label. No biopsy-to-donor crosswalk was identified in these sources. Patient-level inference is pending a verified crosswalk."
+    },
+    "GSE202011": {
+      "reports": [
+        "GSE202011"
+      ],
+      "citation_key": "geo202011",
+      "status": "measured",
+      "preparation_note": "Use one predefined independent-donor contrast. Paired lesion status requires a paired design."
+    },
+    "GSE189184": {
+      "reports": [
+        "GSE189184"
+      ],
+      "citation_key": "geo189184",
+      "status": "measured",
+      "preparation_note": "Distinguish activity status and therapy, with sections nested within patients. The study includes several molecular assays."
+    },
+    "GSE282123": {
+      "reports": [
+        "GSE282123"
+      ],
+      "citation_key": "geo282123",
+      "status": "measured",
+      "preparation_note": "Resolve panel, donor, segmentation and dataset before forming a contrast. Check possible participant overlap with other colitis cohorts."
+    },
+    "GSE206391": {
+      "reports": [
+        "GSE206391"
+      ],
+      "citation_key": "geo206391",
+      "status": "measured",
+      "preparation_note": "Some capture areas contain several donors; duplicates and anatomical matches require the original mapping."
+    },
+    "GSE294965": {
+      "reports": [
+        "GSE294965"
+      ],
+      "citation_key": "geo294965",
+      "status": "measured",
+      "preparation_note": "Use the original spatial paper’s data-availability statement. Each slide can contain several biopsies. The additional multimodal slide must be checked for repeat material."
+    },
+    "GSE336890": {
+      "reports": [
+        "GSE336890"
+      ],
+      "citation_key": "geo336890",
+      "status": "measured",
+      "preparation_note": "Use the per-cell biopsy assignment and distinguish cortex from medulla. Reference tissue is a small descriptive group."
+    },
+    "GSE284005": {
+      "reports": [
+        "GSE284005"
+      ],
+      "citation_key": "geo284005",
+      "status": "measured",
+      "preparation_note": "The original MERFISH results explicitly include healthy control tissues. Match to supplementary donor identifiers: run-region names alone do not establish patient identity."
+    },
+    "GSE250346": {
+      "reports": [
+        "GSE250346"
+      ],
+      "citation_key": "geo250346",
+      "status": "measured",
+      "preparation_note": "Retain donor, pathology, TMA and anatomical region identifiers. Subsamples of one lung share a donor."
+    },
+    "GSE190732": {
+      "reports": [
+        "GSE190732"
+      ],
+      "citation_key": "geo190732",
+      "status": "measured",
+      "preparation_note": "Direct-coordinate screen complete. Case-control audit completed using chemistry-specific canonical barcode addresses."
+    },
+    "GSE291246": {
+      "reports": [],
+      "citation_key": "geo291246",
+      "status": "catalog_only",
+      "preparation_note": "The series contains longitudinal and anatomical repeats with unequal pre/post coverage. An independent-group pooled reanalysis of the published exposure contrast would exchange the wrong units. The published contrast is retained for paired inference."
+    },
+    "S-BSST1410": {
+      "reports": [
+        "S-BSST1410"
+      ],
+      "citation_key": "lungHuman",
+      "status": "measured",
+      "preparation_note": "This accession is the public processed human subset. The associated mouse GEO study uses a different accession."
+    },
+    "GSE327879": {
+      "reports": [
+        "GSE327879"
+      ],
+      "citation_key": "geo327879",
+      "status": "measured",
+      "preparation_note": "GEO states that cases and controls occupy separate slides. Preserve slide labels and specimen identity."
+    },
+    "GSE267226": {
+      "reports": [
+        "GSE267226"
+      ],
+      "citation_key": "geo267226",
+      "status": "measured",
+      "preparation_note": "Completed. All matrix barcodes match two independent official manufacturer Visium V4 capture-address tables. Clinical group and biological sample counts were cross-checked against GEO metadata and the published human lung spatial experiment."
+    },
+    "10.5281/zenodo.6578047": {
+      "reports": [
+        "zenodo-6578047-FZ"
+      ],
+      "citation_key": "heartMI",
+      "status": "measured",
+      "preparation_note": "Select Visium H5AD assets and carry heart identity through infarct, border and remote regions."
+    },
+    "10.5281/zenodo.10012934": {
+      "reports": [
+        "zenodo-10012934"
+      ],
+      "citation_key": "lungIPF",
+      "status": "measured",
+      "preparation_note": "Combine technical sections only within donor. Visium and validation Xenium cover different sampling units."
+    },
+    "STDS0000056": {
+      "reports": [],
+      "citation_key": "axolotl",
+      "status": "catalog_only",
+      "preparation_note": "Animal benchmark. Multiple rostrocaudal sections can come from one brain. Map each section to an animal before between-animal inference."
+    },
+    "GSE346380": {
+      "reports": [],
+      "citation_key": null,
+      "status": "catalog_only",
+      "preparation_note": "The archive establishes specimen counts. Independent donor identities and pairing require additional documentation."
+    },
+    "GSE318039": {
+      "reports": [
+        "GSE318039"
+      ],
+      "citation_key": "lungCOPD",
+      "status": "measured",
+      "preparation_note": "GEO identifies each donor and acquisition batch. Disease status also captures the difference between donor tissue sources."
+    },
+    "GSE306288": {
+      "reports": [
+        "GSE306288"
+      ],
+      "citation_key": "valveCAVD",
+      "status": "measured",
+      "preparation_note": "Match by numbered patient, preserve A/B repeat sections, include only spatial GSMs with deposited tissue positions and restrict to diseased valves."
+    }
+  }
+}

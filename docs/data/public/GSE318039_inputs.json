@@ -1,0 +1,284 @@
+{
+  "kind": "public",
+  "record_type": "input_provenance",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318039",
+  "accession": "GSE318039",
+  "paper": "https://pubmed.ncbi.nlm.nih.gov/42351239/",
+  "selection": "All archived Visium capture areas with physical position tables. RNA counts, full RNA library depth and a mechanism-informed fixed feature panel. Repeated sections are nested within donor.",
+  "features": [
+    "EPCAM",
+    "KRT8",
+    "KRT18",
+    "SFTPA1",
+    "SFTPB",
+    "SFTPC",
+    "AGER",
+    "SCGB1A1",
+    "MUC5AC",
+    "MUC5B",
+    "CD3D",
+    "CD3E",
+    "CD8A",
+    "NKG7",
+    "GZMB",
+    "PRF1",
+    "CTSW",
+    "PDCD1",
+    "CXCL9",
+    "CXCL10",
+    "LYZ",
+    "CD68",
+    "PECAM1",
+    "COL1A1",
+    "DCN",
+    "ACTB",
+    "B2M",
+    "GAPDH"
+  ],
+  "files": [
+    {
+      "name": "gsm.soft",
+      "accession": "GSE318039",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE318039&targ=gsm&form=text&view=full",
+      "bytes": 49519,
+      "sha256": "0260b5a667485cae4d77a7be64e52afc662272f6741a012fe2089206dc5ed6ae",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485172_control1_filtered_feature_bc_matrix.h5",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485172/suppl/GSM9485172_control1_filtered_feature_bc_matrix.h5",
+      "bytes": 4121350,
+      "sha256": "ffa345df46c0031e89beab438b797dd637b7c0a80253c5b2b83a6532a0da9d62",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485172_control1_tissue_positions_list.csv.gz",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485172/suppl/GSM9485172_control1_tissue_positions_list.csv.gz",
+      "bytes": 66286,
+      "sha256": "2ac5f06da50f3f5a295a7e595683cbda9dad475f83538c8d632ecb2cebd53698",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485173_control2_filtered_feature_bc_matrix.h5",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485173/suppl/GSM9485173_control2_filtered_feature_bc_matrix.h5",
+      "bytes": 4599600,
+      "sha256": "b8bebbf55ece8398cd8ed29764dc61594a6936d651ddc5130e27e5917106a43c",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485173_control2_tissue_positions_list.csv.gz",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485173/suppl/GSM9485173_control2_tissue_positions_list.csv.gz",
+      "bytes": 66014,
+      "sha256": "b71ed0cfa8855e74bb1b71678aa6131e865f4fb8e355cdc2770fd4f644107d58",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485174_control3_filtered_feature_bc_matrix.h5",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485174/suppl/GSM9485174_control3_filtered_feature_bc_matrix.h5",
+      "bytes": 2454325,
+      "sha256": "b204ade7895011fd8d3de206f1bc5878451aff999eddecf15f9baa1ddde20922",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485174_control3_tissue_positions_list.csv.gz",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485174/suppl/GSM9485174_control3_tissue_positions_list.csv.gz",
+      "bytes": 68754,
+      "sha256": "737bfbf10b5354fc6d8af7eb8b4f5cfb616275d04d2dde76357695262754f997",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485175_COPD1_filtered_feature_bc_matrix.h5",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485175/suppl/GSM9485175_COPD1_filtered_feature_bc_matrix.h5",
+      "bytes": 3320176,
+      "sha256": "464e891f995da47d510069a972142c0a7d4f2e90c52098cbe9bced4ff4d262af",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485175_COPD1_tissue_positions_list.csv.gz",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485175/suppl/GSM9485175_COPD1_tissue_positions_list.csv.gz",
+      "bytes": 64738,
+      "sha256": "977c1432be0b39db6c701722b2781491709301bb258af57b2dd087d912185cc5",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485176_COPD2_filtered_feature_bc_matrix.h5",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485176/suppl/GSM9485176_COPD2_filtered_feature_bc_matrix.h5",
+      "bytes": 2721778,
+      "sha256": "109e865a5825f0beb37ff6283b0af8b60092bfb944ba3b68860abad8b36f9012",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485176_COPD2_tissue_positions_list.csv.gz",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485176/suppl/GSM9485176_COPD2_tissue_positions_list.csv.gz",
+      "bytes": 64973,
+      "sha256": "f8c5c85befc6905f1de706dd7fb608725467e9bea7978430e088698de3688bf7",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485177_COPD3_filtered_feature_bc_matrix.h5",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485177/suppl/GSM9485177_COPD3_filtered_feature_bc_matrix.h5",
+      "bytes": 2378167,
+      "sha256": "5b9f4795d01f702f15d6510c1b3f6363a706756c4dd17baab40f5f5f78358cc4",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485177_COPD3_tissue_positions_list.csv.gz",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485177/suppl/GSM9485177_COPD3_tissue_positions_list.csv.gz",
+      "bytes": 62896,
+      "sha256": "8ed5ed3888fa1f4ead1eb8a00234e15601e3e51fe0bde0c1027293d4cb01cb16",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485178_COPD4_filtered_feature_bc_matrix.h5",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485178/suppl/GSM9485178_COPD4_filtered_feature_bc_matrix.h5",
+      "bytes": 2501525,
+      "sha256": "fdee9e970e5ff2efe174f3dec362259b5217d32695c53ed00accf957bb21bcde",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485178_COPD4_tissue_positions_list.csv.gz",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485178/suppl/GSM9485178_COPD4_tissue_positions_list.csv.gz",
+      "bytes": 61054,
+      "sha256": "db5e0cc0a390ac758361c41e18f9183e6811d36564c261b18c8ff030fcb98de6",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485179_COPD5_filtered_feature_bc_matrix.h5",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485179/suppl/GSM9485179_COPD5_filtered_feature_bc_matrix.h5",
+      "bytes": 2012594,
+      "sha256": "c110f8fd7b0358b6f644bdf84191117bff046e756a501c05612328a8894e3105",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9485179_COPD5_tissue_positions_list.csv.gz",
+      "accession": "GSE318039",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9485nnn/GSM9485179/suppl/GSM9485179_COPD5_tissue_positions_list.csv.gz",
+      "bytes": 66768,
+      "sha256": "bb0408ae8776947e3c94c7299c3dbf45bdab89c8cbb21f6e898c0b2768557d41",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    }
+  ],
+  "samples": [
+    {
+      "section_id": "GSM9485172",
+      "patient_id": "control1",
+      "group": "healthy donor",
+      "batch": "V10T12-364",
+      "observations": 3458,
+      "members": [
+        "GSM9485172_control1_filtered_feature_bc_matrix.h5",
+        "GSM9485172_control1_tissue_positions_list.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9485173",
+      "patient_id": "control2",
+      "group": "healthy donor",
+      "batch": "V10T12-329",
+      "observations": 2599,
+      "members": [
+        "GSM9485173_control2_filtered_feature_bc_matrix.h5",
+        "GSM9485173_control2_tissue_positions_list.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9485174",
+      "patient_id": "control3",
+      "group": "healthy donor",
+      "batch": "V10T12-329",
+      "observations": 3604,
+      "members": [
+        "GSM9485174_control3_filtered_feature_bc_matrix.h5",
+        "GSM9485174_control3_tissue_positions_list.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9485175",
+      "patient_id": "COPD1",
+      "group": "COPD",
+      "batch": "V10T12-329",
+      "observations": 2129,
+      "members": [
+        "GSM9485175_COPD1_filtered_feature_bc_matrix.h5",
+        "GSM9485175_COPD1_tissue_positions_list.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9485176",
+      "patient_id": "COPD2",
+      "group": "COPD",
+      "batch": "V10T12-364",
+      "observations": 1872,
+      "members": [
+        "GSM9485176_COPD2_filtered_feature_bc_matrix.h5",
+        "GSM9485176_COPD2_tissue_positions_list.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9485177",
+      "patient_id": "COPD3",
+      "group": "COPD",
+      "batch": "V10T12-364",
+      "observations": 1945,
+      "members": [
+        "GSM9485177_COPD3_filtered_feature_bc_matrix.h5",
+        "GSM9485177_COPD3_tissue_positions_list.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9485178",
+      "patient_id": "COPD4",
+      "group": "COPD",
+      "batch": "V10T12-329",
+      "observations": 1314,
+      "members": [
+        "GSM9485178_COPD4_filtered_feature_bc_matrix.h5",
+        "GSM9485178_COPD4_tissue_positions_list.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9485179",
+      "patient_id": "COPD5",
+      "group": "COPD",
+      "batch": "V10T12-364",
+      "observations": 2867,
+      "members": [
+        "GSM9485179_COPD5_filtered_feature_bc_matrix.h5",
+        "GSM9485179_COPD5_tissue_positions_list.csv.gz"
+      ]
+    }
+  ],
+  "physical_calibration": "https://www.10xgenomics.com/support/software/space-ranger/latest/getting-started/space-ranger-glossary"
+}

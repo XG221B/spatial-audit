@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spatial Audit · Cohort observatory</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="data/public/bundle.js"></script>
+    <script defer src="data/synthetic/bundle.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="#overview"
+        ><span class="mark" aria-hidden="true">⠿</span> spatial-audit</a
+      >
+      <nav aria-label="Main">
+        <a href="#overview">Cohorts</a><a href="#benchmarks">Benchmarks</a
+        ><a href="#sandbox">Sandbox</a>
+      </nav>
+      <label class="upload"
+        >↑ Open report<input
+          type="file"
+          accept=".json,application/json"
+          id="upload"
+      /></label>
+    </header>
+    <main>
+      <p id="notice" role="status"></p>
+      <section id="overview">
+        <div class="intro">
+          <div>
+            <div class="eyebrow">Spatial omics / Reproducibility</div>
+            <h1>Cohort observatory</h1>
+            <p>
+              Explore patient-level evidence, acquisition design and spatial
+              confounding across public archives.
+            </p>
+          </div>
+          <div class="legend">
+            <span class="dot green"></span>Low flag
+            <span class="dot yellow"></span>Review
+            <span class="dot red"></span>High flag
+            <span class="dot gray"></span>Unassessed
+          </div>
+        </div>
+        <div class="metrics" id="metrics"></div>
+        <div class="workspace">
+          <article class="registry">
+            <div class="sectionline">
+              <h2>Cohort register</h2>
+              <span id="total"></span>
+            </div>
+            <div class="controls">
+              <select id="kind" aria-label="Source">
+                <option value="public">Primary human cohorts</option>
+                <option value="variants">Additional public analyses</option>
+                <option value="supplementary">Supplementary archives</option>
+                <option value="synthetic">Synthetic fixtures</option>
+              </select>
+              <input
+                id="search"
+                type="search"
+                placeholder="Search cohort or platform"
+                aria-label="Search cohorts"
+              />
+            </div>
+            <div class="scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Cohort / platform</th>
+                    <th title="Exact floor">Power</th>
+                    <th>Design</th>
+                    <th title="Pseudoreplication">Rep.</th>
+                    <th title="Composition">Comp.</th>
+                    <th>Nugget</th>
+                  </tr>
+                </thead>
+                <tbody id="rows"></tbody>
+              </table>
+            </div>
+          </article>
+          <article class="detail" id="detail" aria-live="polite"></article>
+        </div>
+      </section>
+      <section id="benchmarks" class="below">
+        <div class="sectionline">
+          <h2>Cross-method benchmarks</h2>
+          <select id="benchselect" aria-label="Benchmark cohort"></select>
+        </div>
+        <p>
+          Patient differential expression, spatial variability and domain
+          interactions have distinct null hypotheses. Peak RSS is the sampled
+          process-tree high-water mark.
+        </p>
+        <div id="benchplot"></div>
+      </section>
+      <section id="sandbox" class="below">
+        <div class="sectionline">
+          <h2>Statistical trap sandbox</h2>
+          <span class="tag">Analytic illustration</span>
+        </div>
+        <p>
+          Balanced independent patients, Gaussian random intercepts and a
+          two-sided nominal cutoff. Move a control to recalculate.
+        </p>
+        <div class="sandboxgrid">
+          <div class="sliders" id="sliders"></div>
+          <div>
+            <div id="readouts"></div>
+            <div id="curve"></div>
+          </div>
+        </div>
+        <details>
+          <summary>Simulation phase diagram and minimum-N lookup</summary>
+          <div id="phase"></div>
+        </details>
+      </section>
+    </main>
+    <footer>
+      Spatial Audit · MIT
+      <a href="AUTHOR_GUIDE_AND_DEFENSE_CN.md">中文答辩手册</a>
+      <a href="SELF_CRITIQUE_AND_REFINEMENT.md">Validation notes</a>
+    </footer>
+  </body>
+</html>

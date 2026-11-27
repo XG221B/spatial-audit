@@ -1,0 +1,1324 @@
+{
+  "kind": "public",
+  "record_type": "archive_reconstruction",
+  "accession": "GSE348499",
+  "n_patients": 44,
+  "n_observations": 3251882,
+  "features": [
+    "A2ML1",
+    "AAMP",
+    "AAR2",
+    "AARSD1",
+    "ABAT",
+    "ABCA1",
+    "ABCA3",
+    "ABCA4",
+    "ABCA7",
+    "ABCB1",
+    "ABCB4",
+    "ABCB6",
+    "ABCC1",
+    "ABCC12",
+    "ABCC2",
+    "ABCC3",
+    "ABCC4",
+    "ABCC6",
+    "ABCC8",
+    "ABCC9",
+    "ABCD1",
+    "ABCD3",
+    "ABCD4",
+    "ABCF3",
+    "ABCG1",
+    "ABCG2",
+    "ABHD11",
+    "ABHD6",
+    "ABI3",
+    "ABI3BP",
+    "ABL1",
+    "ABL2"
+  ],
+  "metadata_source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE348499&targ=gsm&form=text&view=full",
+  "metadata_snapshot_sha256": "80f3d25b4bfc812e4633ef25b02f47d6d10fc908d25590e96b7bae8cb9521616",
+  "mapping": "Each GEO Sample_title supplies a donor ID. Sample_characteristics_ch1 outcome is matched exactly to its deposited label. Each vendor H5 barcode is joined to cells.parquet cell_id.",
+  "coordinates": "Vendor x_centroid and y_centroid fields in micrometres.",
+  "patients": [
+    {
+      "gsm": "GSM10073485",
+      "patient_id": "P10",
+      "group": "pCR",
+      "cells": 89413,
+      "raw_files": [
+        {
+          "name": "GSM10073485_P10_cell_feature_matrix.h5",
+          "bytes": 6316726,
+          "sha256": "0a8495b375f8e41e256c7748f9e2f15a967d8700f5a02f41fb10397f5a7e4b93",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073485/suppl/GSM10073485_P10_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073485_P10_cells.parquet.gz",
+          "bytes": 1633978,
+          "sha256": "c30c549b49c2aa988f832adaf6197f3a77b3a0b32fd77e3f5752f2820eec8a8a",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073485/suppl/GSM10073485_P10_cells.parquet.gz"
+        }
+      ],
+      "subset_member": true,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073485_P10-0baa8f29af56517b.h5ad",
+      "prepared_sha256": "0baa8f29af56517b83c29a8be5422156fbf631ce54f503f0dc4ea606e384ea8a"
+    },
+    {
+      "gsm": "GSM10073486",
+      "patient_id": "P102",
+      "group": "RD",
+      "cells": 21659,
+      "raw_files": [
+        {
+          "name": "GSM10073486_P102_cell_feature_matrix.h5",
+          "bytes": 14144390,
+          "sha256": "887788120a994863172cdbf4babfd5cd5a5084251d43c74b3dc4bead5b956deb",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073486/suppl/GSM10073486_P102_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073486_P102_cells.parquet.gz",
+          "bytes": 477607,
+          "sha256": "71074d2d2060918e429326ccd2a0442a078421b8da0b62a1bb66cab969bc0842",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073486/suppl/GSM10073486_P102_cells.parquet.gz"
+        }
+      ],
+      "subset_member": true,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073486_P102-9d0675059d31c34d.h5ad",
+      "prepared_sha256": "9d0675059d31c34dc2fa1a37f4fdcc28a65d23372dd0f38c009c2067912499fc"
+    },
+    {
+      "gsm": "GSM10073487",
+      "patient_id": "P103",
+      "group": "RD",
+      "cells": 64923,
+      "raw_files": [
+        {
+          "name": "GSM10073487_P103_cell_feature_matrix.h5",
+          "bytes": 44853180,
+          "sha256": "5f5dd30add3592ccbf185f8c20551e3615376b15ed86fc6a1f9b4d234cfd57b7",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073487/suppl/GSM10073487_P103_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073487_P103_cells.parquet.gz",
+          "bytes": 1375867,
+          "sha256": "abec4ae1389b4e81d331f889b0df1839ec295253d53fb9ed419b11541901c205",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073487/suppl/GSM10073487_P103_cells.parquet.gz"
+        }
+      ],
+      "subset_member": true,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073487_P103-15c7dad4c0f52f69.h5ad",
+      "prepared_sha256": "15c7dad4c0f52f698f0c87dbec530df5af88772db835de60abfe65829b730c76"
+    },
+    {
+      "gsm": "GSM10073488",
+      "patient_id": "P104",
+      "group": "pCR",
+      "cells": 77072,
+      "raw_files": [
+        {
+          "name": "GSM10073488_P104_cell_feature_matrix.h5",
+          "bytes": 60655158,
+          "sha256": "a5681777f3a10777c8ebd7ed735547a117b42fbd45e6b8258db6d3b770d9b5b3",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073488/suppl/GSM10073488_P104_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073488_P104_cells.parquet.gz",
+          "bytes": 1672101,
+          "sha256": "6514a922f894beea6ca9ff28a911c9f2effdaaaa2995fdec619c06d835907d18",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073488/suppl/GSM10073488_P104_cells.parquet.gz"
+        }
+      ],
+      "subset_member": true,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073488_P104-f1897afa723f2afe.h5ad",
+      "prepared_sha256": "f1897afa723f2afeeb2ed64251075580298b4101fab2168f633e156de3b90b01"
+    },
+    {
+      "gsm": "GSM10073489",
+      "patient_id": "P105",
+      "group": "pCR",
+      "cells": 48862,
+      "raw_files": [
+        {
+          "name": "GSM10073489_P105_cell_feature_matrix.h5",
+          "bytes": 23693202,
+          "sha256": "895109af7884848878a1c129bfd8387c171a603d2fbad80165d10aa32d50dc41",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073489/suppl/GSM10073489_P105_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073489_P105_cells.parquet.gz",
+          "bytes": 1024766,
+          "sha256": "712aa9f6ee56747513609aabf018753c56e200f764d0b46e681997d22e46070c",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073489/suppl/GSM10073489_P105_cells.parquet.gz"
+        }
+      ],
+      "subset_member": true,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073489_P105-0232302f31d59861.h5ad",
+      "prepared_sha256": "0232302f31d5986117e52122cc1d2661ec4a241478797b2538dc75b81052bce6"
+    },
+    {
+      "gsm": "GSM10073490",
+      "patient_id": "P106",
+      "group": "pCR",
+      "cells": 44691,
+      "raw_files": [
+        {
+          "name": "GSM10073490_P106_cell_feature_matrix.h5",
+          "bytes": 26306059,
+          "sha256": "e9fad6761a621bef6f8a4d212ff724e97665160a4c5de8533d9c46cc2c013cf2",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073490/suppl/GSM10073490_P106_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073490_P106_cells.parquet.gz",
+          "bytes": 944332,
+          "sha256": "cf980e829d3d456df84b6ed7d13867e9a0720facdae5887cf2c843d9a73aeb02",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073490/suppl/GSM10073490_P106_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073490_P106-e02ce51426d913d4.h5ad",
+      "prepared_sha256": "e02ce51426d913d4717627fd86444582c58092ce0b35e6f5da7d598ef43a270c"
+    },
+    {
+      "gsm": "GSM10073491",
+      "patient_id": "P107",
+      "group": "pCR",
+      "cells": 29223,
+      "raw_files": [
+        {
+          "name": "GSM10073491_P107_cell_feature_matrix.h5",
+          "bytes": 20707785,
+          "sha256": "79eba127d33f323ae7b729659a00d35636508e91f6d018217188864c7398883f",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073491/suppl/GSM10073491_P107_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073491_P107_cells.parquet.gz",
+          "bytes": 633828,
+          "sha256": "fe09ee61d3b2da600808c7c4cac0ccacd59aad92b0c56842c052c6863cf223f1",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073491/suppl/GSM10073491_P107_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073491_P107-d460bba4df852fef.h5ad",
+      "prepared_sha256": "d460bba4df852fef19cd7c151d63d55a4ba4b5add091cbce897baa944125b346"
+    },
+    {
+      "gsm": "GSM10073492",
+      "patient_id": "P108",
+      "group": "pCR",
+      "cells": 24791,
+      "raw_files": [
+        {
+          "name": "GSM10073492_P108_cell_feature_matrix.h5",
+          "bytes": 20546085,
+          "sha256": "2df8deb13503a4c50fa3bf01122cdc11bf9d8dc86736aab38dca60bec65f4a68",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073492/suppl/GSM10073492_P108_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073492_P108_cells.parquet.gz",
+          "bytes": 558191,
+          "sha256": "426b907dbf058697f027e59074cd55fb7d7c68cd4d45b01df30fab02fa86ea46",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073492/suppl/GSM10073492_P108_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073492_P108-eddc2ed3bd459a73.h5ad",
+      "prepared_sha256": "eddc2ed3bd459a73a29794acf4461098d5aaca3b0ab4eca6cc99a922befe7a14"
+    },
+    {
+      "gsm": "GSM10073493",
+      "patient_id": "P11",
+      "group": "pCR",
+      "cells": 60322,
+      "raw_files": [
+        {
+          "name": "GSM10073493_P11_cell_feature_matrix.h5",
+          "bytes": 49030994,
+          "sha256": "544b2d646478ccafa9f6e28aca19d4998fe1d6f08240e77e91f1ab6d07a11fec",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073493/suppl/GSM10073493_P11_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073493_P11_cells.parquet.gz",
+          "bytes": 1296898,
+          "sha256": "00895360035923f2e5ea4fbd329a4b85c9f820e66898840aedfe2e59eb703b2f",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073493/suppl/GSM10073493_P11_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073493_P11-e6f15306042e4bc0.h5ad",
+      "prepared_sha256": "e6f15306042e4bc0d5d7c6737a82d32b26a3cff8d19c6ffecaf50e64a66062e6"
+    },
+    {
+      "gsm": "GSM10073494",
+      "patient_id": "P12",
+      "group": "RD",
+      "cells": 18029,
+      "raw_files": [
+        {
+          "name": "GSM10073494_P12_cell_feature_matrix.h5",
+          "bytes": 15255732,
+          "sha256": "074f77309daf3132477a8e98c599c693379887ecd2f004d6da01606c61af039a",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073494/suppl/GSM10073494_P12_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073494_P12_cells.parquet.gz",
+          "bytes": 405795,
+          "sha256": "3e1284278db38d8f051463366a286c9a78d3bfda9521d1fc13f3fcb3c3b83670",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073494/suppl/GSM10073494_P12_cells.parquet.gz"
+        }
+      ],
+      "subset_member": true,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073494_P12-f9fb545dbebc775a.h5ad",
+      "prepared_sha256": "f9fb545dbebc775a4a8a07d437096a89c2700f2363d12f16a9047970427f5e4f"
+    },
+    {
+      "gsm": "GSM10073495",
+      "patient_id": "P23",
+      "group": "pCR",
+      "cells": 45592,
+      "raw_files": [
+        {
+          "name": "GSM10073495_P23_cell_feature_matrix.h5",
+          "bytes": 3516108,
+          "sha256": "6e80ae0b2d0ad6fedaa2ab218a58f91714738011190feacca8cf1ba6b79a07f0",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073495/suppl/GSM10073495_P23_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073495_P23_cells.parquet.gz",
+          "bytes": 862684,
+          "sha256": "4be28ddf02a7e25fc4329548e0c00d8105c1f5a48095b9834d04641a8b2ac0f1",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073495/suppl/GSM10073495_P23_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073495_P23-2709f1c4869b6d33.h5ad",
+      "prepared_sha256": "2709f1c4869b6d332b626cb2e4a1e6183e22e8350b2159ea9cc2d5ee18f9abde"
+    },
+    {
+      "gsm": "GSM10073496",
+      "patient_id": "P27",
+      "group": "RD",
+      "cells": 122016,
+      "raw_files": [
+        {
+          "name": "GSM10073496_P27_cell_feature_matrix.h5",
+          "bytes": 43004793,
+          "sha256": "85f063677be4525231458abbe587a1a499471f02ea3edab383bf55c6371173d4",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073496/suppl/GSM10073496_P27_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073496_P27_cells.parquet.gz",
+          "bytes": 2360372,
+          "sha256": "d92f41d87de8fa0ea69bb4cb5364ce5aae7a3bcd5722bfd94a5a57b7cbf2a717",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073496/suppl/GSM10073496_P27_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073496_P27-a30861f15cf6115d.h5ad",
+      "prepared_sha256": "a30861f15cf6115d6609f6665522bc75f276365cf374f872bf561fdec105b58d"
+    },
+    {
+      "gsm": "GSM10073497",
+      "patient_id": "P28",
+      "group": "RD",
+      "cells": 71758,
+      "raw_files": [
+        {
+          "name": "GSM10073497_P28_cell_feature_matrix.h5",
+          "bytes": 17524204,
+          "sha256": "a1d657ee47729b5e0c170699fd0cdee263a74338feb71c362b5192b088598e81",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073497/suppl/GSM10073497_P28_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073497_P28_cells.parquet.gz",
+          "bytes": 1366978,
+          "sha256": "d85dc79653cad875f71a786da3c30b8295df18ea6a531844afecf525f4b08be2",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073497/suppl/GSM10073497_P28_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073497_P28-a052422d9126025d.h5ad",
+      "prepared_sha256": "a052422d9126025db6839ae8b07180e0198cd521bad9e3d1bdeed4c06fe3b7dd"
+    },
+    {
+      "gsm": "GSM10073498",
+      "patient_id": "P31",
+      "group": "pCR",
+      "cells": 118389,
+      "raw_files": [
+        {
+          "name": "GSM10073498_P31_cell_feature_matrix.h5",
+          "bytes": 23201916,
+          "sha256": "59c494efb546e53bec617585360284ae5898a2bd14c2ab42c3a9fca1b2ea74a7",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073498/suppl/GSM10073498_P31_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073498_P31_cells.parquet.gz",
+          "bytes": 2219257,
+          "sha256": "0dae4022d79a989f96702a0840e4634b15ff8d94bccb4a5e1fdb0078e2889184",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073498/suppl/GSM10073498_P31_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073498_P31-8945cfe397f96106.h5ad",
+      "prepared_sha256": "8945cfe397f96106bc2efbcdc08728e814880fabb8da6f94a071b416dac031f3"
+    },
+    {
+      "gsm": "GSM10073499",
+      "patient_id": "P35",
+      "group": "RD",
+      "cells": 66378,
+      "raw_files": [
+        {
+          "name": "GSM10073499_P35_cell_feature_matrix.h5",
+          "bytes": 13323882,
+          "sha256": "f5ac6aa2d2d8a8976e00688d4e00a36b47437b6a9b77374b7325dec1373e66af",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073499/suppl/GSM10073499_P35_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073499_P35_cells.parquet.gz",
+          "bytes": 1289566,
+          "sha256": "5fd1c59931ce555fccf07c94873c278dbda041539368921d41dbfbf78f3b5921",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073499/suppl/GSM10073499_P35_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073499_P35-5754dfcd6af82e0e.h5ad",
+      "prepared_sha256": "5754dfcd6af82e0e2eaff6af50f1dc8583632140c55f7943b9bfb104e569d347"
+    },
+    {
+      "gsm": "GSM10073500",
+      "patient_id": "P4",
+      "group": "RD",
+      "cells": 39525,
+      "raw_files": [
+        {
+          "name": "GSM10073500_P4_cell_feature_matrix.h5",
+          "bytes": 31234945,
+          "sha256": "9ea21829636e299abaf6a77b3fd8cba311437cdaad10e1fafe6c0a5ee3944e03",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073500/suppl/GSM10073500_P4_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073500_P4_cells.parquet.gz",
+          "bytes": 854559,
+          "sha256": "bebb79ec9323124f428da345029abbf48aa419ab0e55a55af91d6c46a820b3d7",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073500/suppl/GSM10073500_P4_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073500_P4-c4b9f66c64517097.h5ad",
+      "prepared_sha256": "c4b9f66c64517097775e1754c5bbfa761247915d6f2605c882cb28c86d40b86c"
+    },
+    {
+      "gsm": "GSM10073501",
+      "patient_id": "P40",
+      "group": "pCR",
+      "cells": 43865,
+      "raw_files": [
+        {
+          "name": "GSM10073501_P40_cell_feature_matrix.h5",
+          "bytes": 12226468,
+          "sha256": "c292beff80731c22d9c3e66e00893c43281675ea5f6310417fd7751e0a8ee4c7",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073501/suppl/GSM10073501_P40_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073501_P40_cells.parquet.gz",
+          "bytes": 862925,
+          "sha256": "6d51acdbdc22fbca91d90cf0476e4f927b42d4c49f91dfc1f9118f0fb344ce1d",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073501/suppl/GSM10073501_P40_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073501_P40-04ba164f68dad1c1.h5ad",
+      "prepared_sha256": "04ba164f68dad1c196871f42fdbf006e310963fb787ccfe509c64e9ba3eceb10"
+    },
+    {
+      "gsm": "GSM10073502",
+      "patient_id": "P45",
+      "group": "RD",
+      "cells": 40577,
+      "raw_files": [
+        {
+          "name": "GSM10073502_P45_cell_feature_matrix.h5",
+          "bytes": 9867618,
+          "sha256": "f76ca34cd7abf7084b866425c08649a1758eb244d5a938091222b515d2147485",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073502/suppl/GSM10073502_P45_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073502_P45_cells.parquet.gz",
+          "bytes": 790679,
+          "sha256": "3c030f4514aad469fadcc77bda9ee55dade9819902e6070d8ded07378904f7fb",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073502/suppl/GSM10073502_P45_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073502_P45-371570a7498bf6bb.h5ad",
+      "prepared_sha256": "371570a7498bf6bb1310720ace52f25003f8f757d623d28bae01a2a0efd4ca90"
+    },
+    {
+      "gsm": "GSM10073503",
+      "patient_id": "P47",
+      "group": "RD",
+      "cells": 96162,
+      "raw_files": [
+        {
+          "name": "GSM10073503_P47_cell_feature_matrix.h5",
+          "bytes": 15222943,
+          "sha256": "8999477d297e28c8596ae70b885c2ed04da2e4ce55fbe4aa8cf2cc1d6843f872",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073503/suppl/GSM10073503_P47_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073503_P47_cells.parquet.gz",
+          "bytes": 1819594,
+          "sha256": "012c4e42271840fc53423cf13b34f4c5c67454e38a2eca185f3563ba847c2211",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073503/suppl/GSM10073503_P47_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073503_P47-08c92552a568a4cf.h5ad",
+      "prepared_sha256": "08c92552a568a4cfdea72f852b68ba204e0fdbdd4c59757ae9097e525e32afe9"
+    },
+    {
+      "gsm": "GSM10073504",
+      "patient_id": "P49",
+      "group": "pCR",
+      "cells": 89680,
+      "raw_files": [
+        {
+          "name": "GSM10073504_P49_cell_feature_matrix.h5",
+          "bytes": 27941847,
+          "sha256": "fcf9cf37bb857fc072a85c689d9b21db2e5b1e1ce23b964b3e77f3ec0396db2d",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073504/suppl/GSM10073504_P49_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073504_P49_cells.parquet.gz",
+          "bytes": 1727769,
+          "sha256": "7fe63b550e96df5f29f694e2807b641dba8bdbb7f8a75cad01ed7cc57fd5aa36",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073504/suppl/GSM10073504_P49_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073504_P49-337604d598e41447.h5ad",
+      "prepared_sha256": "337604d598e41447584f158c913f050410d816c942e02f3365db576cb453c947"
+    },
+    {
+      "gsm": "GSM10073505",
+      "patient_id": "P53",
+      "group": "pCR",
+      "cells": 46844,
+      "raw_files": [
+        {
+          "name": "GSM10073505_P53_cell_feature_matrix.h5",
+          "bytes": 13632734,
+          "sha256": "521b337efa3371d32b7b0080f2de706e94f28a9f1161f0b1932447054c2dd81c",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073505/suppl/GSM10073505_P53_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073505_P53_cells.parquet.gz",
+          "bytes": 893466,
+          "sha256": "a02f95787a9723078f88b95dadde65572a59597a924d2c8c3a062294dec11104",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073505/suppl/GSM10073505_P53_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073505_P53-7ce05033e3db4598.h5ad",
+      "prepared_sha256": "7ce05033e3db45989dec7bf698f6871ea82a96b57b6d184963acaabe2b6d6fff"
+    },
+    {
+      "gsm": "GSM10073506",
+      "patient_id": "P54",
+      "group": "pCR",
+      "cells": 106605,
+      "raw_files": [
+        {
+          "name": "GSM10073506_P54_cell_feature_matrix.h5",
+          "bytes": 24346123,
+          "sha256": "8936e978a0c36f9ca2cea35ede0441bd0a99db9b7b9590e2eae99405bd9a98d0",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073506/suppl/GSM10073506_P54_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073506_P54_cells.parquet.gz",
+          "bytes": 2005475,
+          "sha256": "724db38225bc2e1d8971926fff5968ad1e04a15fffe541deaf2bb96f0316c81d",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073506/suppl/GSM10073506_P54_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073506_P54-a6707f9b53cad263.h5ad",
+      "prepared_sha256": "a6707f9b53cad263331f9a578fbcf32dfff217ac28b301048e307f106147f3c5"
+    },
+    {
+      "gsm": "GSM10073507",
+      "patient_id": "P59",
+      "group": "pCR",
+      "cells": 88589,
+      "raw_files": [
+        {
+          "name": "GSM10073507_P59_cell_feature_matrix.h5",
+          "bytes": 13878457,
+          "sha256": "bb47c4220cfc1718aef2ee95a26c2167c9fb6bb93df87a0f6bc75bc580328013",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073507/suppl/GSM10073507_P59_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073507_P59_cells.parquet.gz",
+          "bytes": 1682101,
+          "sha256": "4ff3bee5c9a499812129b452d8fa1c60d64f7d1df93cb19ba660b3347963b6c3",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073507/suppl/GSM10073507_P59_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073507_P59-9eafae54904da5b6.h5ad",
+      "prepared_sha256": "9eafae54904da5b6ae86b1aa4adebcaf5352f1aa141e04e4794c33c65f41962f"
+    },
+    {
+      "gsm": "GSM10073508",
+      "patient_id": "P64",
+      "group": "RD",
+      "cells": 209481,
+      "raw_files": [
+        {
+          "name": "GSM10073508_P64_cell_feature_matrix.h5",
+          "bytes": 57736581,
+          "sha256": "afc7d4b88405351bf97097eca1c55cb63b76e81fe7b02cc1c8204fb6b14e686d",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073508/suppl/GSM10073508_P64_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073508_P64_cells.parquet.gz",
+          "bytes": 3831205,
+          "sha256": "98377dd10d20f2b98c22d975f04393a1d68d6a22658d867d3c11314a99c286f2",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073508/suppl/GSM10073508_P64_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073508_P64-dad1932c7f903e3b.h5ad",
+      "prepared_sha256": "dad1932c7f903e3b8e0339721df5c41e1a921a55a1092238331c453fd9d06c6b"
+    },
+    {
+      "gsm": "GSM10073509",
+      "patient_id": "P65",
+      "group": "RD",
+      "cells": 57736,
+      "raw_files": [
+        {
+          "name": "GSM10073509_P65_cell_feature_matrix.h5",
+          "bytes": 10764356,
+          "sha256": "8de9f7ac88abc763c93e75fa0420777482e27ecb48a74790706e84c4b7487ac7",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073509/suppl/GSM10073509_P65_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073509_P65_cells.parquet.gz",
+          "bytes": 1118614,
+          "sha256": "da9540dd0264ea60b7c299ca91b02fb9f6f8ef363e5aa9acfb13e16837f85b31",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073509/suppl/GSM10073509_P65_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073509_P65-b13cbd4f189f7cad.h5ad",
+      "prepared_sha256": "b13cbd4f189f7cad98f1e9bd57fc6cd650ed8477d23fc9a05508fb8cea5b671d"
+    },
+    {
+      "gsm": "GSM10073510",
+      "patient_id": "P66",
+      "group": "pCR",
+      "cells": 165703,
+      "raw_files": [
+        {
+          "name": "GSM10073510_P66_cell_feature_matrix.h5",
+          "bytes": 33363864,
+          "sha256": "d67cd45653d8e0b036697d6a441de78204e4a6f66ff7c287584c435ea25e242e",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073510/suppl/GSM10073510_P66_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073510_P66_cells.parquet.gz",
+          "bytes": 3083715,
+          "sha256": "2053e3ec00f061a59e52e463aeb6c1b3f960420365dfd033d39855d504f3c6c1",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073510/suppl/GSM10073510_P66_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073510_P66-ce41a2e04a4775c7.h5ad",
+      "prepared_sha256": "ce41a2e04a4775c71971d160e61ed704d42d5c1d55075deb5e67f544aa01802e"
+    },
+    {
+      "gsm": "GSM10073511",
+      "patient_id": "P69",
+      "group": "pCR",
+      "cells": 138200,
+      "raw_files": [
+        {
+          "name": "GSM10073511_P69_cell_feature_matrix.h5",
+          "bytes": 23509580,
+          "sha256": "89c1b3bcda783d2291bbd983b0350072208e073b63456aa22a86bbb6404de022",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073511/suppl/GSM10073511_P69_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073511_P69_cells.parquet.gz",
+          "bytes": 2562251,
+          "sha256": "e33da1f5216e609c94dd1a10163c4ca43dc62c8116eaf7fbfa74f2e8446b660e",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073511/suppl/GSM10073511_P69_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073511_P69-1f44e41d14c1e7de.h5ad",
+      "prepared_sha256": "1f44e41d14c1e7ded7261ec4f973bfb910f4f6441004838aa402442f1ec1a093"
+    },
+    {
+      "gsm": "GSM10073512",
+      "patient_id": "P7",
+      "group": "RD",
+      "cells": 23123,
+      "raw_files": [
+        {
+          "name": "GSM10073512_P7_cell_feature_matrix.h5",
+          "bytes": 12930064,
+          "sha256": "984b34643ffd89fab979448dd2556e5626a3e457497b5b703487978357a9329a",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073512/suppl/GSM10073512_P7_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073512_P7_cells.parquet.gz",
+          "bytes": 503179,
+          "sha256": "eb932f9006adcab4d259c8becb601e3328a1cc2a402698bfc97e702011b29d41",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073512/suppl/GSM10073512_P7_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073512_P7-d8e308ca01f92e5c.h5ad",
+      "prepared_sha256": "d8e308ca01f92e5c9ebccc90ec237a67f774ef6b06ddc65d45c91dfc26b7c373"
+    },
+    {
+      "gsm": "GSM10073513",
+      "patient_id": "P71",
+      "group": "pCR",
+      "cells": 42785,
+      "raw_files": [
+        {
+          "name": "GSM10073513_P71_cell_feature_matrix.h5",
+          "bytes": 4773510,
+          "sha256": "b7305fc52c2f60e2b10cb8b531ffc0748a3a7e580194d43e92fbe08269d05ead",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073513/suppl/GSM10073513_P71_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073513_P71_cells.parquet.gz",
+          "bytes": 818158,
+          "sha256": "4d90cac862a694316ae29b7d051982ba6f5bda7e454a6dc568b97e8c8e670745",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073513/suppl/GSM10073513_P71_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073513_P71-08bc391dd4d35769.h5ad",
+      "prepared_sha256": "08bc391dd4d35769b26c12f6f3fb8ae5f3b982d5b0ea922a5d283b26063d807a"
+    },
+    {
+      "gsm": "GSM10073514",
+      "patient_id": "P72",
+      "group": "RD",
+      "cells": 88546,
+      "raw_files": [
+        {
+          "name": "GSM10073514_P72_cell_feature_matrix.h5",
+          "bytes": 16117444,
+          "sha256": "02bb1c062c4d43e8f28189439767e9f00c4a23e1de6dcc0a0f9f2416bce2aae1",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073514/suppl/GSM10073514_P72_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073514_P72_cells.parquet.gz",
+          "bytes": 1695645,
+          "sha256": "ba0a88c70471be89916cdb1120227f7fa06bc3936675b42917f8d98639d1ffa1",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073514/suppl/GSM10073514_P72_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073514_P72-593d9375abce9684.h5ad",
+      "prepared_sha256": "593d9375abce96847c300701aa1425fc8e0cc0e13c9ba066608a8eab37a177eb"
+    },
+    {
+      "gsm": "GSM10073515",
+      "patient_id": "P73",
+      "group": "RD",
+      "cells": 87683,
+      "raw_files": [
+        {
+          "name": "GSM10073515_P73_cell_feature_matrix.h5",
+          "bytes": 20496803,
+          "sha256": "6456e32f7f18e970d1c70bcac22411979ea997dc0e14b53d4279eac1422ef6c2",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073515/suppl/GSM10073515_P73_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073515_P73_cells.parquet.gz",
+          "bytes": 1677429,
+          "sha256": "e8bd732593fdb236d41a57710f4a5416429176c8744cf08239bd5629d9bad8cf",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073515/suppl/GSM10073515_P73_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073515_P73-77d08c701c0c9265.h5ad",
+      "prepared_sha256": "77d08c701c0c9265f2475bfbd9b19592b160df4dc2778051de691f8648ef0928"
+    },
+    {
+      "gsm": "GSM10073516",
+      "patient_id": "P77",
+      "group": "pCR",
+      "cells": 125417,
+      "raw_files": [
+        {
+          "name": "GSM10073516_P77_cell_feature_matrix.h5",
+          "bytes": 21523107,
+          "sha256": "a298fcbdeab0e821ef4c9e01ba09f8cdbabbe7172004fced2136246a1faeacc3",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073516/suppl/GSM10073516_P77_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073516_P77_cells.parquet.gz",
+          "bytes": 2358018,
+          "sha256": "7a8be214b563d649649f3b764cea7b2517c2fcf1b9d0235ce0be68376ddafdf9",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073516/suppl/GSM10073516_P77_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073516_P77-8cd7b14ba6206e88.h5ad",
+      "prepared_sha256": "8cd7b14ba6206e8810aeeb9d63a52858b2b2d13215a50f652ff7c7bc4a8b16c4"
+    },
+    {
+      "gsm": "GSM10073517",
+      "patient_id": "P78",
+      "group": "RD",
+      "cells": 43871,
+      "raw_files": [
+        {
+          "name": "GSM10073517_P78_cell_feature_matrix.h5",
+          "bytes": 10859606,
+          "sha256": "9538364e1ae2d14907bec72b076c93755d9f56bcd2960c4814c3c51270dff01c",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073517/suppl/GSM10073517_P78_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073517_P78_cells.parquet.gz",
+          "bytes": 846019,
+          "sha256": "e24a85fd0bb063cace95deab2b9c6e9a092b26ee5a2b148277009ae788bcf0ad",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073517/suppl/GSM10073517_P78_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073517_P78-ca77023646eacd3b.h5ad",
+      "prepared_sha256": "ca77023646eacd3b2879b8cc0ba05d99d1061c4331897aff37febb8474d925a9"
+    },
+    {
+      "gsm": "GSM10073518",
+      "patient_id": "P80",
+      "group": "pCR",
+      "cells": 99437,
+      "raw_files": [
+        {
+          "name": "GSM10073518_P80_cell_feature_matrix.h5",
+          "bytes": 19886630,
+          "sha256": "89fefe92f40100a0edf2e523014c218b6e89ba8267528736be7cd0cf2b30099f",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073518/suppl/GSM10073518_P80_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073518_P80_cells.parquet.gz",
+          "bytes": 1883986,
+          "sha256": "82e8e5aa9e634fcb9559e058038cb7cd810dc47c11ea2f70bf3aec8dbf68a36d",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073518/suppl/GSM10073518_P80_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073518_P80-eb33268ee320e047.h5ad",
+      "prepared_sha256": "eb33268ee320e047e468a02cf721ad0b082ca804b37a6bedb609628901223ffc"
+    },
+    {
+      "gsm": "GSM10073519",
+      "patient_id": "P81",
+      "group": "pCR",
+      "cells": 96367,
+      "raw_files": [
+        {
+          "name": "GSM10073519_P81_cell_feature_matrix.h5",
+          "bytes": 27742992,
+          "sha256": "072b11fb84cf8e1859a4129726a7465f0ac134ef18967beef9673a8b13955dba",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073519/suppl/GSM10073519_P81_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073519_P81_cells.parquet.gz",
+          "bytes": 1832228,
+          "sha256": "c93be11851b8cd8293e8d7ad724852f8175eaf7013c6a268c910d40b61d345b4",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073519/suppl/GSM10073519_P81_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073519_P81-a607ca4c7ab93d5a.h5ad",
+      "prepared_sha256": "a607ca4c7ab93d5a6797b942ec02d3468af5cb6c9423444649bfdbf0b91196cd"
+    },
+    {
+      "gsm": "GSM10073520",
+      "patient_id": "P84",
+      "group": "RD",
+      "cells": 69401,
+      "raw_files": [
+        {
+          "name": "GSM10073520_P84_cell_feature_matrix.h5",
+          "bytes": 12011773,
+          "sha256": "46880a0aee90bc80be45a1908f8c3c53d6551bd9eb81631561ebaf43ca6fbc21",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073520/suppl/GSM10073520_P84_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073520_P84_cells.parquet.gz",
+          "bytes": 1328865,
+          "sha256": "77af0d7ddb7b68aba055394822e78c2274f597cd28ceb549c868e6eb128e5af3",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073520/suppl/GSM10073520_P84_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073520_P84-a1a76a7925e75534.h5ad",
+      "prepared_sha256": "a1a76a7925e75534d905b64dba644049380243b58fff4cd92f74bd485d58f2b2"
+    },
+    {
+      "gsm": "GSM10073521",
+      "patient_id": "P87",
+      "group": "pCR",
+      "cells": 158648,
+      "raw_files": [
+        {
+          "name": "GSM10073521_P87_cell_feature_matrix.h5",
+          "bytes": 20993183,
+          "sha256": "eb8cf7ff34f969b113800bbe25df3c26b62c73107bb70ce702fe567c72809761",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073521/suppl/GSM10073521_P87_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073521_P87_cells.parquet.gz",
+          "bytes": 2904220,
+          "sha256": "58d2771fca1123e22e5cdaed34aa524ca17a3d7aabe5bcc2cf87671ae86f1b3e",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073521/suppl/GSM10073521_P87_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073521_P87-fb8a8e7f0b9eabb9.h5ad",
+      "prepared_sha256": "fb8a8e7f0b9eabb9fa2d25bc8fe678a3dedc59d66f6238de5ffa2154ee41665d"
+    },
+    {
+      "gsm": "GSM10073522",
+      "patient_id": "P88",
+      "group": "RD",
+      "cells": 54064,
+      "raw_files": [
+        {
+          "name": "GSM10073522_P88_cell_feature_matrix.h5",
+          "bytes": 16617086,
+          "sha256": "d319b97b135ae34bb8176d323cce0a42bb2598f03f607c7aefe504dabc6b0024",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073522/suppl/GSM10073522_P88_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073522_P88_cells.parquet.gz",
+          "bytes": 1061404,
+          "sha256": "ff92f575454b11261e0a5869f1410313cf29e33bf1002609eff68479eb7e2609",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073522/suppl/GSM10073522_P88_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073522_P88-cc3e5db6ea9fc1b9.h5ad",
+      "prepared_sha256": "cc3e5db6ea9fc1b9979f62fff951f41f84e3413cf9adf720d938e54a1767002b"
+    },
+    {
+      "gsm": "GSM10073523",
+      "patient_id": "P89",
+      "group": "RD",
+      "cells": 53488,
+      "raw_files": [
+        {
+          "name": "GSM10073523_P89_cell_feature_matrix.h5",
+          "bytes": 14161938,
+          "sha256": "35f5e0fe1c92c81d856c74e83342d662ac2cf208863a71a74772df9ae2386fa6",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073523/suppl/GSM10073523_P89_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073523_P89_cells.parquet.gz",
+          "bytes": 1046185,
+          "sha256": "50c6e5b1015e20979532e89ef19bfbe8ed07d393481c8543fbc5547675a61aea",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073523/suppl/GSM10073523_P89_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073523_P89-1e32608b5e4e8b12.h5ad",
+      "prepared_sha256": "1e32608b5e4e8b1296722f8c56ce3fdeed248c449139326631b85bea89787ee6"
+    },
+    {
+      "gsm": "GSM10073524",
+      "patient_id": "P9",
+      "group": "pCR",
+      "cells": 56267,
+      "raw_files": [
+        {
+          "name": "GSM10073524_P9_cell_feature_matrix.h5",
+          "bytes": 35731942,
+          "sha256": "0dec3b24060eaa7ebbcf88915df70a19e6be97f5ac29e8cfbf90bc961a5a48b6",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073524/suppl/GSM10073524_P9_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073524_P9_cells.parquet.gz",
+          "bytes": 1182266,
+          "sha256": "8d9ac475d239b64fbc652917025bb8eac6f6cb5b8145db47859ea6f16d6b4cda",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073524/suppl/GSM10073524_P9_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073524_P9-749cec66a1a369f6.h5ad",
+      "prepared_sha256": "749cec66a1a369f6fb3010afa17c21102572cc6266bf2b4a5700a18151aad2c8"
+    },
+    {
+      "gsm": "GSM10073525",
+      "patient_id": "P90",
+      "group": "pCR",
+      "cells": 88603,
+      "raw_files": [
+        {
+          "name": "GSM10073525_P90_cell_feature_matrix.h5",
+          "bytes": 17935572,
+          "sha256": "052ff2713095e7107af7ac75d5ef9b23b7cd532be15fc8b776d77ad9b31bf7a5",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073525/suppl/GSM10073525_P90_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073525_P90_cells.parquet.gz",
+          "bytes": 1688711,
+          "sha256": "0b59061f876ab6a3539574b9457fffdd92b330e1accc03581eaa22361060e542",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073525/suppl/GSM10073525_P90_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073525_P90-d8ba8c7a8b61518f.h5ad",
+      "prepared_sha256": "d8ba8c7a8b61518ffc499f0dffaa8cc85fc8d75e79c54621db14ef283a4a6b80"
+    },
+    {
+      "gsm": "GSM10073526",
+      "patient_id": "P92",
+      "group": "pCR",
+      "cells": 64171,
+      "raw_files": [
+        {
+          "name": "GSM10073526_P92_cell_feature_matrix.h5",
+          "bytes": 23765976,
+          "sha256": "48d890eeebbaf84a9ebe08fcef97fa64cd7255874713bfa774b804ce4c721a26",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073526/suppl/GSM10073526_P92_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073526_P92_cells.parquet.gz",
+          "bytes": 1244360,
+          "sha256": "9e390a6012398884a1229bc6aa1cacd5932158afbc6ac54f728781fffa36210a",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073526/suppl/GSM10073526_P92_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073526_P92-e0ac5466a6c607e3.h5ad",
+      "prepared_sha256": "e0ac5466a6c607e3d36b1084dab4a5fc07b7621eaa9aa31aaa563fd3a063a5ee"
+    },
+    {
+      "gsm": "GSM10073527",
+      "patient_id": "P93",
+      "group": "pCR",
+      "cells": 16429,
+      "raw_files": [
+        {
+          "name": "GSM10073527_P93_cell_feature_matrix.h5",
+          "bytes": 2281256,
+          "sha256": "ff7d456d8bf8269ab1d45997cd70de54d1b40b8c105a8fdc5cbbc28ac110edc3",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073527/suppl/GSM10073527_P93_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073527_P93_cells.parquet.gz",
+          "bytes": 329389,
+          "sha256": "20d5b351178d2c3e1458de83fd8370d4b30ad855150aab5f510751a30f39a999",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073527/suppl/GSM10073527_P93_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073527_P93-3369ea30cc481269.h5ad",
+      "prepared_sha256": "3369ea30cc4812695a5336741f499a84843a80bdc57fc3f70c1a8814d6a162ac"
+    },
+    {
+      "gsm": "GSM10073528",
+      "patient_id": "P99",
+      "group": "RD",
+      "cells": 57497,
+      "raw_files": [
+        {
+          "name": "GSM10073528_P99_cell_feature_matrix.h5",
+          "bytes": 8067794,
+          "sha256": "0a0014bd6b19a71d8329671871fb0a27c8a7a3c33fbca3a5c82817fe93c8004f",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073528/suppl/GSM10073528_P99_cell_feature_matrix.h5"
+        },
+        {
+          "name": "GSM10073528_P99_cells.parquet.gz",
+          "bytes": 1078753,
+          "sha256": "2f8d4d8e332d30d88f5b61db2b4327c323804578857a48ed4ebbe2688fc79958",
+          "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM10073nnn/GSM10073528/suppl/GSM10073528_P99_cells.parquet.gz"
+        }
+      ],
+      "subset_member": false,
+      "reference_comparison": {
+        "counts_equal": true,
+        "coords_um_equal": true,
+        "barcodes_equal": true,
+        "donor_group_equal": true
+      },
+      "prepared_file": "GSM10073528_P99-3482c1f9439ae573.h5ad",
+      "prepared_sha256": "3482c1f9439ae573bfd99f3cbafad2832e9a21fc68a0081f567c106d56490bf4"
+    }
+  ],
+  "library_size": "Sum of all biological Gene Expression counts in each vendor HDF5 barcode column; compared for exact equality with the raw cells.parquet transcript_counts field."
+}

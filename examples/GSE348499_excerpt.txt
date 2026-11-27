@@ -1,0 +1,4 @@
+Yan et al., Ecotypes of triple-negative breast cancer in response to chemotherapy.
+Source https://doi.org/10.1038/s41586-026-10469-9
+Abstract, spatial modality: “spatial transcriptomic analysis of 44 patients”.
+Extended Data figure, Ki-67 validation: “Wilcoxon test exact P value”.

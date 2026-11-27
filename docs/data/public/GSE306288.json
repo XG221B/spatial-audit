@@ -1,0 +1,1502 @@
+{
+  "schema_version": 1,
+  "id": "GSE306288",
+  "kind": "public",
+  "platform": "Visium",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE306288",
+  "accession": "GSE306288",
+  "provenance": {
+    "inputs": [
+      {
+        "file": "GSM9196846.npz",
+        "sha256": "a84527a641de4927340de8bac1e15f0feac4533ac84a2f5fbbcb9b71c4555fc6",
+        "bytes": 29144
+      },
+      {
+        "file": "GSM9196847.npz",
+        "sha256": "d57aa9707d6f185346243e9d70b624133af4ec929081e3e601c46bf6acfcebc5",
+        "bytes": 25971
+      },
+      {
+        "file": "GSM9196848.npz",
+        "sha256": "2a4f1813347606138a4e5991b6836557c41941b283c7a107dfe0460c343eb8c1",
+        "bytes": 34787
+      },
+      {
+        "file": "GSM9196849.npz",
+        "sha256": "eacd97e2a68f9970fcc0958b343ef506545c35458a2958a870b43f1c4ee84129",
+        "bytes": 39586
+      },
+      {
+        "file": "GSM9759909.npz",
+        "sha256": "25b510d29323386711246accedf1e5775a2ab4419059ac3feab67bc8fee669d8",
+        "bytes": 23543
+      },
+      {
+        "file": "GSM9759910.npz",
+        "sha256": "229a8685d032946525b73b8449cd70c154b32242bb641eff6b834248091d20e3",
+        "bytes": 23495
+      },
+      {
+        "file": "GSM9759911.npz",
+        "sha256": "99f013157b4961e45ee7270c133a0b9c1b5701c5b7b895d7b1d1962b357751e6",
+        "bytes": 16203
+      },
+      {
+        "file": "GSM9759912.npz",
+        "sha256": "b779445a4fd22820e3a13a3f2037bfd6e1ff0d0afddb2ecbfda65c153cbf5b4a",
+        "bytes": 17168
+      }
+    ],
+    "accession": "GSE306288",
+    "measurement": "counts",
+    "batch_label": "acquisition batch",
+    "coordinates": "um",
+    "layer": "X",
+    "covariates": "per-file C if available",
+    "selection": "All archived Visium capture areas with physical position tables. RNA counts, full RNA library depth and a mechanism-informed fixed feature panel. Repeated sections are nested within donor."
+  },
+  "n_patients": 6,
+  "n_sections": 8,
+  "n_observations": 12458,
+  "n_features": 25,
+  "dimensions": {
+    "power": {
+      "status": "red",
+      "message": "Two-sided doubled-tail permutation resolution.",
+      "n0": 3,
+      "n1": 3,
+      "assignments": "20",
+      "p_floor": 0.1,
+      "features": 25,
+      "alpha": 0.05,
+      "minimum_bh_rank": null,
+      "bh_impossible": true,
+      "nominal_impossible": true,
+      "groups": [
+        "female",
+        "male"
+      ],
+      "effective_p_floor": 0.1,
+      "effective_minimum_bh_rank": null,
+      "effective_bh_impossible": true,
+      "executed_mode": "exact",
+      "theoretical_status": "red"
+    },
+    "design": {
+      "status": "yellow",
+      "code": null,
+      "message": "High risk marks categorical aliasing or no observed stage overlap. The linear fixed-effect rank diagnostic is reported separately. Local bounding boxes are coordinate-frame proxies.",
+      "categorical": {
+        "slide_id": {
+          "status": "missing_or_partial"
+        },
+        "batch": {
+          "status": "missing_or_partial"
+        }
+      },
+      "coordinates": {
+        "stage": {
+          "status": "missing"
+        },
+        "bbox": {
+          "linear_separation": false,
+          "descriptive_auc": 0.6875,
+          "linear_fixed_effect_alias": false
+        }
+      },
+      "joint_acquisition_design": {
+        "fields": [],
+        "status": "missing",
+        "relative_residual": null,
+        "fixed_effect_alias": null
+      },
+      "points": [
+        {
+          "x": 3150.0,
+          "y": 3507.4028853269765,
+          "group": "male",
+          "patient": "1"
+        },
+        {
+          "x": 3125.0,
+          "y": 2944.486372867091,
+          "group": "male",
+          "patient": "1"
+        },
+        {
+          "x": 3575.0,
+          "y": 4027.0181275976397,
+          "group": "female",
+          "patient": "6"
+        },
+        {
+          "x": 3275.0,
+          "y": 3637.3066958946424,
+          "group": "female",
+          "patient": "6"
+        },
+        {
+          "x": 3925.0,
+          "y": 3550.704155516198,
+          "group": "female",
+          "patient": "18"
+        },
+        {
+          "x": 3750.0,
+          "y": 3377.4990747593106,
+          "group": "male",
+          "patient": "20"
+        },
+        {
+          "x": 3175.0,
+          "y": 2294.9673200287625,
+          "group": "female",
+          "patient": "23"
+        },
+        {
+          "x": 3100.0,
+          "y": 2771.2812921102036,
+          "group": "male",
+          "patient": "29"
+        }
+      ],
+      "points_frame": "local_bbox",
+      "reasons": []
+    },
+    "pseudorep": {
+      "status": "red",
+      "message": "Difference in BH call rates across sampling units; true discovery status is unknown for public cohorts.",
+      "spot_rate": 0.96,
+      "patient_rate": 0.0,
+      "gap": 0.96,
+      "ratio": null,
+      "zero_denominator": true,
+      "groups": [
+        "female",
+        "male"
+      ],
+      "features": [
+        "COMP",
+        "SERPINE1",
+        "COL1A1",
+        "COL1A2",
+        "COL3A1",
+        "DCN",
+        "LUM",
+        "VIM",
+        "ACTA2",
+        "RUNX2",
+        "SPP1",
+        "FN1",
+        "VCAN",
+        "TAGLN",
+        "PECAM1",
+        "VWF",
+        "CD68",
+        "CD163",
+        "PTPRC",
+        "LYZ",
+        "JUN",
+        "FOS",
+        "GAPDH",
+        "ACTB",
+        "B2M"
+      ],
+      "spot_p": [
+        0.0017039744515615876,
+        2.7815332053317777e-265,
+        9.67717628474446e-142,
+        4.248513766849601e-54,
+        5.228228162008347e-81,
+        1.1957570836716892e-233,
+        2.886710118004538e-05,
+        6.887149461991575e-34,
+        9.80808024877876e-07,
+        0.00232215917991282,
+        1.2926923968415633e-146,
+        1.8355328778286987e-14,
+        1.6805860573180128e-130,
+        2.5339033297555725e-45,
+        5.678641048572754e-06,
+        5.137627974093661e-05,
+        1.5533493118489004e-68,
+        1.164606170049065e-36,
+        1.2711907601535506e-43,
+        5.418167778596059e-124,
+        0.057684355253547086,
+        7.29465552920893e-74,
+        1.786102877730401e-60,
+        1.9021138517887783e-92,
+        5.282813878331944e-62
+      ],
+      "spot_q": [
+        0.0018521461430017255,
+        6.953833013329444e-264,
+        6.048235177965288e-141,
+        8.170218782403079e-54,
+        1.6338213006276083e-80,
+        1.4946963545896114e-232,
+        3.436559664291117e-05,
+        1.012816097351702e-33,
+        1.2905368748393107e-06,
+        0.002418915812409188,
+        1.077243664034636e-145,
+        2.549351219206526e-14,
+        8.402930286590063e-130,
+        4.524827374563522e-45,
+        7.098301310715943e-06,
+        5.8382136069246146e-05,
+        3.883373279622251e-68,
+        1.819697140701664e-36,
+        2.1186512669225845e-43,
+        2.257569907748358e-123,
+        0.057684355253547086,
+        2.026293202558036e-73,
+        3.7210476619383355e-60,
+        6.793263756388494e-92,
+        1.2006395178027145e-61
+      ],
+      "patient": {
+        "method": "exact",
+        "assignments": "20",
+        "evaluations": 20,
+        "seed": null,
+        "variance_prior_scale": "label-blind featurewise marginal SD",
+        "p": [
+          0.8,
+          0.4,
+          1.0,
+          0.8,
+          1.0,
+          0.5,
+          0.7,
+          1.0,
+          0.8,
+          1.0,
+          1.0,
+          1.0,
+          0.5,
+          0.8,
+          1.0,
+          0.4,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9,
+          1.0,
+          0.8,
+          0.9,
+          1.0
+        ],
+        "q": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "statistic": [
+          0.2834919220407129,
+          -0.9581389617986976,
+          -0.735934196098525,
+          -0.5135948445550402,
+          -0.6724908674537535,
+          0.890705274455401,
+          0.38920371621364624,
+          0.04865813524472534,
+          0.2697136345450144,
+          -0.4535631704031123,
+          -0.7359838944335232,
+          -0.3711248835010851,
+          0.675277663591144,
+          -0.21920980576807939,
+          -0.22005510782115628,
+          1.2930219122930475,
+          -0.6338419795996412,
+          -0.5243985746264097,
+          -0.6737727369769296,
+          -0.7363718080853748,
+          0.08150119347846867,
+          0.5526869585773866,
+          -0.597339384753753,
+          -0.6702902848766392,
+          -0.661122224116018
+        ]
+      }
+    },
+    "composition": {
+      "bands": [
+        {
+          "wavelength_um": 250.0,
+          "share": null,
+          "estimable_features": 0,
+          "supported_sections": 0,
+          "supported_patients": 0,
+          "supported_patients_by_group": {
+            "female": 0,
+            "male": 0
+          },
+          "interpretable_sections": 0,
+          "interpretable_patients": 0,
+          "full_coverage": false,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 600.0,
+          "share": null,
+          "estimable_features": 0,
+          "supported_sections": 8,
+          "supported_patients": 6,
+          "supported_patients_by_group": {
+            "female": 3,
+            "male": 3
+          },
+          "interpretable_sections": 0,
+          "interpretable_patients": 0,
+          "full_coverage": false,
+          "saturated_sections": 0
+        },
+        {
+          "wavelength_um": 1400.0,
+          "share": null,
+          "estimable_features": 0,
+          "supported_sections": 8,
+          "supported_patients": 6,
+          "supported_patients_by_group": {
+            "female": 3,
+            "male": 3
+          },
+          "interpretable_sections": 0,
+          "interpretable_patients": 0,
+          "full_coverage": false,
+          "saturated_sections": 0
+        }
+      ],
+      "sections": [
+        {
+          "section_id": "GSM9196846",
+          "patient_id": "1",
+          "group": "male",
+          "has_covariates": false,
+          "volumes": 1381,
+          "pitch_um": 99.99999999999994,
+          "edges": 2498,
+          "connected_components": 10,
+          "largest_2d_span_um": 1875.8531925244076,
+          "fov_span_um": [
+            6300.0,
+            4936.3448015713
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1374,
+              "supported_components": 3,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 789.0037070188235,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06904255378783805
+            },
+            {
+              "supported_volumes": 993,
+              "supported_components": 2,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 100.3832514903484,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.011996971732536695
+            }
+          ]
+        },
+        {
+          "section_id": "GSM9196847",
+          "patient_id": "1",
+          "group": "male",
+          "has_covariates": false,
+          "volumes": 1099,
+          "pitch_um": 99.99999999999994,
+          "edges": 1950,
+          "connected_components": 14,
+          "largest_2d_span_um": 1930.0978455309064,
+          "fov_span_um": [
+            6250.0,
+            5022.9473419497435
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1083,
+              "supported_components": 3,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 462.0106383325056,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.07074456297428583
+            },
+            {
+              "supported_volumes": 812,
+              "supported_components": 2,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 54.59368698132868,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.011825503151598592
+            }
+          ]
+        },
+        {
+          "section_id": "GSM9196848",
+          "patient_id": "6",
+          "group": "female",
+          "has_covariates": false,
+          "volumes": 1462,
+          "pitch_um": 99.99999999999994,
+          "edges": 2697,
+          "connected_components": 14,
+          "largest_2d_span_um": 2687.1084775946674,
+          "fov_span_um": [
+            5550.0,
+            4416.729559300637
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1441,
+              "supported_components": 2,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 836.2070305966806,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06628559688471815
+            },
+            {
+              "supported_volumes": 1441,
+              "supported_components": 2,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 107.8654171384461,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.010461250929565609
+            }
+          ]
+        },
+        {
+          "section_id": "GSM9196849",
+          "patient_id": "6",
+          "group": "female",
+          "has_covariates": false,
+          "volumes": 1488,
+          "pitch_um": 99.99999999999994,
+          "edges": 2742,
+          "connected_components": 8,
+          "largest_2d_span_um": 2767.572346569231,
+          "fov_span_um": [
+            6050.0,
+            3983.716857408418
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1481,
+              "supported_components": 2,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 638.3332307489528,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06823622695218524
+            },
+            {
+              "supported_volumes": 1481,
+              "supported_components": 2,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 118.86654942324947,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.011090389143270157
+            }
+          ]
+        },
+        {
+          "section_id": "GSM9759909",
+          "patient_id": "18",
+          "group": "female",
+          "has_covariates": false,
+          "volumes": 1569,
+          "pitch_um": 99.99999999999994,
+          "edges": 3012,
+          "connected_components": 8,
+          "largest_2d_span_um": 4257.030756099389,
+          "fov_span_um": [
+            4850.0,
+            5022.9473419497435
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1562,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 627.0028710394196,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06480161234821111
+            },
+            {
+              "supported_volumes": 1562,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 111.32647969830813,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.009018248485324969
+            }
+          ]
+        },
+        {
+          "section_id": "GSM9759910",
+          "patient_id": "20",
+          "group": "male",
+          "has_covariates": false,
+          "volumes": 1507,
+          "pitch_um": 99.99999999999994,
+          "edges": 2739,
+          "connected_components": 6,
+          "largest_2d_span_um": 2684.67875173176,
+          "fov_span_um": [
+            5200.0,
+            6062.177826491071
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1504,
+              "supported_components": 3,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 718.9938313708336,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06978474686161938
+            },
+            {
+              "supported_volumes": 1136,
+              "supported_components": 2,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 100.81149162240169,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.011439675777561817
+            }
+          ]
+        },
+        {
+          "section_id": "GSM9759911",
+          "patient_id": "23",
+          "group": "female",
+          "has_covariates": false,
+          "volumes": 1311,
+          "pitch_um": 99.99999999999994,
+          "edges": 2365,
+          "connected_components": 9,
+          "largest_2d_span_um": 1871.8523131219122,
+          "fov_span_um": [
+            6350.0,
+            4589.934640057525
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1304,
+              "supported_components": 3,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 569.7952746424511,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06998126036724808
+            },
+            {
+              "supported_volumes": 1001,
+              "supported_components": 2,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 70.2391762649284,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.011942823670062452
+            }
+          ]
+        },
+        {
+          "section_id": "GSM9759912",
+          "patient_id": "29",
+          "group": "male",
+          "has_covariates": false,
+          "volumes": 1106,
+          "pitch_um": 99.99999999999994,
+          "edges": 2007,
+          "connected_components": 11,
+          "largest_2d_span_um": 3892.5370016721845,
+          "fov_span_um": [
+            6200.0,
+            4330.127018922193
+          ],
+          "nyquist_wavelength_um": 199.9999999999999,
+          "axial_limit_um": 314.15926535897916,
+          "fine_noise_gain": null,
+          "trace_probes": 12,
+          "trace_method": "seeded Rademacher",
+          "projection_ranks": [
+            0,
+            0,
+            0
+          ],
+          "two_step_edges": 0,
+          "occupancy_range": [
+            1,
+            2
+          ],
+          "bands": [
+            {
+              "supported_volumes": 0,
+              "supported_components": 0,
+              "projection_rank": 0,
+              "effective_spectral_dimension": null,
+              "projected_white_fraction": null,
+              "saturated": false,
+              "residual_white_gain": null
+            },
+            {
+              "supported_volumes": 1084,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 613.897452303,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.06851049600625905
+            },
+            {
+              "supported_volumes": 1084,
+              "supported_components": 1,
+              "projection_rank": 0,
+              "effective_spectral_dimension": 116.22843121019585,
+              "projected_white_fraction": 0.0,
+              "saturated": false,
+              "residual_white_gain": 0.011128798926971528
+            }
+          ]
+        }
+      ],
+      "total_patients": 6,
+      "total_patients_by_group": {
+        "female": 3,
+        "male": 3
+      },
+      "total_sections": 8,
+      "covariate_sections": 0,
+      "chebyshev_degree": 137,
+      "shared_spectral_bound_per_um2": 0.008192,
+      "status": "yellow",
+      "message": "Feature-averaged explained energy on matched supporting sections, equally weighted within patient and across patients. A connected 2-D footprint must span a wavelength, with wavelength at least pi times the occupied square-grid pitch. Regridding can alter native geometry. Missing covariates, saturated fits and partial coverage limit interpretation."
+    },
+    "nugget": {
+      "groups": [
+        "female",
+        "male"
+      ],
+      "features": [
+        {
+          "feature": "COMP",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "SERPINE1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL1A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL1A2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "COL3A1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "DCN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "LUM",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "VIM",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ACTA2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "RUNX2",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "SPP1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "FN1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "VCAN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "TAGLN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PECAM1",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "VWF",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD68",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "CD163",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "PTPRC",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "LYZ",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "JUN",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "FOS",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "GAPDH",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "ACTB",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        },
+        {
+          "feature": "B2M",
+          "raw_delta": null,
+          "debiased_delta": null,
+          "raw_energy": null,
+          "corrected_energy": null,
+          "mean_delta": null,
+          "estimated_noise_delta": null,
+          "mean_noise_sensitive": false
+        }
+      ],
+      "flagged": 0,
+      "patient_energies": [
+        {
+          "patient_id": "1",
+          "group": "male",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "6",
+          "group": "female",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "18",
+          "group": "female",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "20",
+          "group": "male",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "23",
+          "group": "female",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "patient_id": "29",
+          "group": "male",
+          "raw": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "corrected": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        }
+      ],
+      "evaluated": 0,
+      "status": "yellow",
+      "message": "Fine-band residual energy minus the estimated white-noise contribution is signed. Matched two-step spatial differences model locally smooth signal plus uncorrelated homoscedastic volume noise. Rough signal, heterogeneous noise and unequal occupancy affect this sensitivity screen.",
+      "measurement_scope": {
+        "measurement": "counts",
+        "layer": "X",
+        "interpretation": "Energy, semivariance and attenuation refer to the supplied measurement scale. For log-normalized inputs they describe variability after transformation. The procedure does not fit a negative-binomial count model or identify a noise cause."
+      }
+    }
+  },
+  "statement": "基于公开存档数据，在患者/生物学重复级去混杂框架下的可复现性、统计功效与混杂敏感性审计。"
+}

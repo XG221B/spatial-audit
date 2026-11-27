@@ -1,0 +1,74 @@
+{
+  "kind": "public",
+  "record_type": "archive_readiness",
+  "accession": "GSE190732",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE190732",
+  "curated_archive": "https://db.cngb.org/stomics/datasets/STDS0000185/data",
+  "files": [
+    {
+      "name": "GSM5729897.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM5729897&targ=self&form=text&view=full",
+      "bytes": 4120,
+      "sha256": "f7f695f796baa70660e05aab658f562975eb06bdaa5a5bdd451f24048e61e733",
+      "reference_digest_matched": false
+    },
+    {
+      "name": "GSM5729897_control_case_1_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM5729nnn/GSM5729897/suppl/GSM5729897_control_case_1_filtered_feature_bc_matrix.h5",
+      "bytes": 3626282,
+      "sha256": "521afeda9cd86eeeef1abf385bf83d4561b2c222ddf117fc38018a814298b2d2",
+      "reference_digest_matched": false
+    },
+    {
+      "name": "GSM5729897_control_case_1_filtered_feature_bc_matrix_processed.h5ad",
+      "url": "https://ftp.cngb.org/pub/SciRAID/stomics/STDS0000185/stomics/STSP0005715/GSM5729897_control_case_1_filtered_feature_bc_matrix_processed.h5ad",
+      "bytes": 82721402,
+      "sha256": "f01ad08d62b8739f3f30603d581e228aeeab24454add44c8b10412d4e3c063b0",
+      "reference_digest_matched": false
+    }
+  ],
+  "inspected_sample": "GSM5729897",
+  "geo_hdf5_keys": [
+    "matrix"
+  ],
+  "matrix_keys": [
+    "barcodes",
+    "data",
+    "features",
+    "indices",
+    "indptr",
+    "shape"
+  ],
+  "curated_obs_columns": [
+    "_index",
+    "cell_type",
+    "clusters",
+    "log1p_n_genes_by_counts",
+    "log1p_total_counts",
+    "log1p_total_counts_mito",
+    "n_genes_by_counts",
+    "pct_counts_in_top_100_genes",
+    "pct_counts_in_top_200_genes",
+    "pct_counts_in_top_500_genes",
+    "pct_counts_in_top_50_genes",
+    "pct_counts_mito",
+    "total_counts",
+    "total_counts_mito"
+  ],
+  "curated_obsm_keys": [
+    "X_pca",
+    "X_umap"
+  ],
+  "curated_uns_keys": [
+    "clusters_colors",
+    "dendrogram_clusters",
+    "hvg",
+    "leiden",
+    "neighbors",
+    "pca",
+    "rank_genes_groups",
+    "umap"
+  ],
+  "preparation_status": "Direct-coordinate screen complete. Case-control audit completed using chemistry-specific canonical barcode addresses.",
+  "resolution": "The source-file gap was resolved for the registered prolonged versus control cases using HDF5 chemistry attributes, archived donor and library metadata, and two identical manufacturer barcode-to-address layouts. All filtered count barcodes mapped. See GSE190732_inputs.json for the reconstruction and source hashes."
+}

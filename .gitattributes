@@ -1,0 +1,13 @@
+* text=auto
+*.json -text
+*.tsv -text
+examples/*.txt -text
+*.npz binary
+*.h5ad binary
+*.pdf binary
+*.png binary
+*.py text eol=lf
+*.R text eol=lf
+*.yml text eol=lf
+*.tex text eol=lf
+*.bib text eol=lf

@@ -1,0 +1,146 @@
+{
+  "kind": "public",
+  "record_type": "benchmark_registry",
+  "cohorts": [
+    {
+      "accession": "GSE220442",
+      "id": "GSE220442",
+      "manifest": "GSE220442/manifest.json",
+      "spatial_cap": null,
+      "adapter": "prepare_gse220442.py"
+    },
+    {
+      "accession": "GSE348499",
+      "id": "GSE348499-subset",
+      "manifest": "GSE348499/manifest-subset.json",
+      "spatial_cap": 800,
+      "adapter": "prepare_gse348499.py"
+    },
+    {
+      "accession": "MTBLS12782",
+      "id": "MTBLS12782",
+      "manifest": "msi.json",
+      "spatial_cap": null,
+      "adapter": "prepare_msi.py"
+    },
+    {
+      "accession": "STT0000036",
+      "id": "STT0000036",
+      "manifest": "stereo-counts.json",
+      "spatial_cap": 600,
+      "adapter": "prepare_stereo.py"
+    },
+    {
+      "accession": "GSE202011",
+      "id": "GSE202011",
+      "manifest": "psoriasis.json",
+      "spatial_cap": 300,
+      "adapter": "prepare_visium.py"
+    },
+    {
+      "accession": "GSE189184",
+      "id": "GSE189184",
+      "manifest": "colitis.json",
+      "spatial_cap": 450,
+      "adapter": "prepare_colitis.py"
+    },
+    {
+      "accession": "GSE282123",
+      "id": "GSE282123",
+      "manifest": "uc-xenium.json",
+      "spatial_cap": 64,
+      "adapter": "prepare_uc_xenium.py"
+    },
+    {
+      "accession": "GSE206391",
+      "id": "GSE206391",
+      "manifest": "skin.json",
+      "spatial_cap": 300,
+      "adapter": "prepare_skin.py"
+    },
+    {
+      "accession": "GSE294965",
+      "id": "GSE294965",
+      "manifest": "renal.json",
+      "spatial_cap": 200,
+      "adapter": "prepare_renal.py"
+    },
+    {
+      "accession": "GSE336890",
+      "id": "GSE336890",
+      "manifest": "cortical-biopsies.json",
+      "spatial_cap": 300,
+      "adapter": "prepare_cortical_biopsies.py"
+    },
+    {
+      "accession": "GSE284005",
+      "id": "GSE284005",
+      "manifest": "merfish.json",
+      "spatial_cap": 600,
+      "adapter": "prepare_merfish.py"
+    },
+    {
+      "accession": "GSE250346",
+      "id": "GSE250346",
+      "manifest": "fibrosis.json",
+      "spatial_cap": 150,
+      "adapter": "prepare_fibrosis.py"
+    },
+    {
+      "accession": "GSE190732",
+      "id": "GSE190732",
+      "manifest": "covid.json",
+      "spatial_cap": 300,
+      "adapter": "prepare_covid_visium.py"
+    },
+    {
+      "accession": "S-BSST1410",
+      "id": "S-BSST1410",
+      "manifest": "biostudies-counts.json",
+      "spatial_cap": 250,
+      "adapter": "prepare_biostudies_lung.py"
+    },
+    {
+      "accession": "GSE327879",
+      "id": "GSE327879",
+      "manifest": "cosmx.json",
+      "spatial_cap": 100,
+      "adapter": "prepare_cosmx.py"
+    },
+    {
+      "accession": "GSE267226",
+      "id": "GSE267226",
+      "manifest": "pasc-counts.json",
+      "spatial_cap": 600,
+      "adapter": "prepare_pasc.py"
+    },
+    {
+      "accession": "10.5281/zenodo.6578047",
+      "id": "zenodo-6578047-FZ",
+      "manifest": "kuppe.json",
+      "spatial_cap": 350,
+      "adapter": "prepare_kuppe.py"
+    },
+    {
+      "accession": "10.5281/zenodo.10012934",
+      "id": "zenodo-10012934",
+      "manifest": "mayr-counts.json",
+      "spatial_cap": 250,
+      "adapter": "prepare_ipf.py"
+    },
+    {
+      "accession": "GSE318039",
+      "id": "GSE318039",
+      "manifest": "GSE318039.json",
+      "spatial_cap": 250,
+      "adapter": "prepare_lung_valve.py"
+    },
+    {
+      "accession": "GSE306288",
+      "id": "GSE306288",
+      "manifest": "GSE306288.json",
+      "spatial_cap": 250,
+      "adapter": "prepare_lung_valve.py"
+    }
+  ]
+}

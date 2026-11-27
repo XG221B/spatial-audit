@@ -1,0 +1,26 @@
+{
+  "wall_seconds": 70.91963329999999,
+  "peak_rss_bytes": 298594304,
+  "os_counter": "Windows PeakWorkingSetSize",
+  "dimensions": [
+    "power",
+    "design",
+    "pseudorep",
+    "composition",
+    "nugget"
+  ],
+  "n_observations": 1000000,
+  "n_patients": 10,
+  "n_features": 64,
+  "kind": "synthetic",
+  "record_type": "memory_benchmark",
+  "seed": 9401,
+  "nnz": 1891454,
+  "density": 0.02955396875,
+  "os": "Windows",
+  "machine": "AMD64",
+  "python": "3.13.14",
+  "budget_bytes": 1610612736,
+  "pass_rss": true,
+  "scope": "Fresh process, backed H5AD ingestion through serialization of all five dimensions. Fixture generation in parent process excluded. Sparse count panel; peak depends on geometry, features and sparsity."
+}

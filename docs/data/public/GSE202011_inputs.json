@@ -1,0 +1,334 @@
+{
+  "kind": "public",
+  "accession": "GSE202011",
+  "files": [
+    {
+      "name": "GSE202011_samples.soft",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE202011&targ=gsm&form=text&view=full",
+      "bytes": 107446,
+      "sha256": "c2a93a50a67b9574388dccfe7f70c1467351dc2420b628e9120ee508fd52f039"
+    },
+    {
+      "name": "GSE202011_RAW.tar",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202011/suppl/GSE202011_RAW.tar",
+      "bytes": 44267520,
+      "sha256": "76ad74e0c38fefbebfdd4fb2e92cf2a3343e87c8cba322a7fe76abec25b6e5a0"
+    },
+    {
+      "name": "GSE202011_st_images.tar.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE202nnn/GSE202011/suppl/GSE202011_st_images.tar.gz",
+      "bytes": 223501975,
+      "sha256": "8e3aca208b196aa2355e6b8e908766336d913a13bfcfa3722ab5a978337c5d29"
+    }
+  ],
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE202011",
+  "physical_calibration": "https://www.10xgenomics.com/support/software/space-ranger/latest/getting-started/space-ranger-glossary",
+  "panel": [
+    "ACTB",
+    "GAPDH",
+    "RPLP0",
+    "PPIA",
+    "B2M",
+    "EEF1A1",
+    "RPS18",
+    "RPL13A",
+    "EPCAM",
+    "KRT5",
+    "KRT14",
+    "KRT1",
+    "KRT10",
+    "KRT16",
+    "KRT17",
+    "S100A7",
+    "S100A8",
+    "S100A9",
+    "LOR",
+    "FLG",
+    "COL1A1",
+    "COL1A2",
+    "DCN",
+    "LUM",
+    "VIM",
+    "PECAM1",
+    "VWF",
+    "PTPRC",
+    "CD3D",
+    "CD68",
+    "LYZ",
+    "HLA-DRA"
+  ],
+  "selection": "First deposited section per donor within PsO lesional and healthy skin. Exclude PsA, non-lesional tissue and additional sections from the same donor.",
+  "screening": [
+    {
+      "section_id": "GSM6086615",
+      "patient_id": "patient 1",
+      "group": "Psoriasis (PsO)",
+      "batch": "1",
+      "matrix_name": "GSM6086615_ST_13_L_filtered_feature_bc_matrix.h5",
+      "selected": true,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086616",
+      "patient_id": "patient 1",
+      "group": "Psoriasis (PsO)",
+      "batch": "1",
+      "matrix_name": "GSM6086616_ST_13_NL_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Non-Lesional"
+    },
+    {
+      "section_id": "GSM6086617",
+      "patient_id": "patient 2",
+      "group": "Psoriasis (PsO)",
+      "batch": "2",
+      "matrix_name": "GSM6086617_ST_14_L_filtered_feature_bc_matrix.h5",
+      "selected": true,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086618",
+      "patient_id": "patient 2",
+      "group": "Psoriasis (PsO)",
+      "batch": "5",
+      "matrix_name": "GSM6086618_ST_14_L_R2_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086619",
+      "patient_id": "patient 2",
+      "group": "Psoriasis (PsO)",
+      "batch": "2",
+      "matrix_name": "GSM6086619_ST_14_NL_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Non-Lesional"
+    },
+    {
+      "section_id": "GSM6086620",
+      "patient_id": "patient 2",
+      "group": "Psoriatic Arthritis (PsA)",
+      "batch": "3",
+      "matrix_name": "GSM6086620_ST_15_L_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086621",
+      "patient_id": "patient 2",
+      "group": "Psoriatic Arthritis (PsA)",
+      "batch": "5",
+      "matrix_name": "GSM6086621_ST_15_L_R2_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086622",
+      "patient_id": "patient 2",
+      "group": "Psoriatic Arthritis (PsA)",
+      "batch": "3",
+      "matrix_name": "GSM6086622_ST_15_NL_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Non-Lesional"
+    },
+    {
+      "section_id": "GSM6086623",
+      "patient_id": "patient 1",
+      "group": "Psoriatic Arthritis (PsA)",
+      "batch": "1",
+      "matrix_name": "GSM6086623_ST_16_L_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086624",
+      "patient_id": "patient 1",
+      "group": "Psoriatic Arthritis (PsA)",
+      "batch": "1",
+      "matrix_name": "GSM6086624_ST_16_NL_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Non-Lesional"
+    },
+    {
+      "section_id": "GSM6086625",
+      "patient_id": "patient 3",
+      "group": "Psoriasis (PsO)",
+      "batch": "2",
+      "matrix_name": "GSM6086625_ST_17_L_filtered_feature_bc_matrix.h5",
+      "selected": true,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086626",
+      "patient_id": "patient 3",
+      "group": "Psoriasis (PsO)",
+      "batch": "2",
+      "matrix_name": "GSM6086626_ST_17_NL_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Non-Lesional"
+    },
+    {
+      "section_id": "GSM6086627",
+      "patient_id": "patient 3",
+      "group": "Psoriatic Arthritis (PsA)",
+      "batch": "4",
+      "matrix_name": "GSM6086627_ST_18_L_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086628",
+      "patient_id": "patient 3",
+      "group": "Psoriatic Arthritis (PsA)",
+      "batch": "5",
+      "matrix_name": "GSM6086628_ST_18_L_R2_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086629",
+      "patient_id": "patient 3",
+      "group": "Psoriatic Arthritis (PsA)",
+      "batch": "4",
+      "matrix_name": "GSM6086629_ST_18_NL_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Non-Lesional"
+    },
+    {
+      "section_id": "GSM6086630",
+      "patient_id": "patient 4",
+      "group": "Psoriasis (PsO)",
+      "batch": "6",
+      "matrix_name": "GSM6086630_ST_20_L_filtered_feature_bc_matrix.h5",
+      "selected": true,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086631",
+      "patient_id": "patient 4",
+      "group": "Psoriasis (PsO)",
+      "batch": "6",
+      "matrix_name": "GSM6086631_ST_20_NL_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Non-Lesional"
+    },
+    {
+      "section_id": "GSM6086632",
+      "patient_id": "patient 5",
+      "group": "Psoriasis (PsO)",
+      "batch": "6",
+      "matrix_name": "GSM6086632_ST_21_L_filtered_feature_bc_matrix.h5",
+      "selected": true,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086633",
+      "patient_id": "patient 5",
+      "group": "Psoriasis (PsO)",
+      "batch": "6",
+      "matrix_name": "GSM6086633_ST_21_NL_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Non-Lesional"
+    },
+    {
+      "section_id": "GSM6086634",
+      "patient_id": "patient 4",
+      "group": "Psoriatic Arthritis (PsA)",
+      "batch": "8",
+      "matrix_name": "GSM6086634_ST_22_L_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086635",
+      "patient_id": "patient 4",
+      "group": "Psoriatic Arthritis (PsA)",
+      "batch": "8",
+      "matrix_name": "GSM6086635_ST_22_NL_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Non-Lesional"
+    },
+    {
+      "section_id": "GSM6086636",
+      "patient_id": "patient 6",
+      "group": "Psoriasis (PsO)",
+      "batch": "8",
+      "matrix_name": "GSM6086636_ST_L_RP1_filtered_feature_bc_matrix.h5",
+      "selected": true,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086637",
+      "patient_id": "patient 5",
+      "group": "Psoriatic Arthritis (PsA)",
+      "batch": "8",
+      "matrix_name": "GSM6086637_ST_L_RP2_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Lesional"
+    },
+    {
+      "section_id": "GSM6086638",
+      "patient_id": "Healthy Volunteer 1",
+      "group": "control",
+      "batch": "4",
+      "matrix_name": "GSM6086638_ST_HM_1_filtered_feature_bc_matrix.h5",
+      "selected": true,
+      "status": "Healthy"
+    },
+    {
+      "section_id": "GSM6086639",
+      "patient_id": "Healthy Volunteer 1",
+      "group": "control",
+      "batch": "4",
+      "matrix_name": "GSM6086639_ST_HM_1_R2_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Healthy"
+    },
+    {
+      "section_id": "GSM6086640",
+      "patient_id": "Healthy Volunteer 2",
+      "group": "control",
+      "batch": "4",
+      "matrix_name": "GSM6086640_ST_HF_1_filtered_feature_bc_matrix.h5",
+      "selected": true,
+      "status": "Healthy"
+    },
+    {
+      "section_id": "GSM6086641",
+      "patient_id": "Healthy Volunteer 2",
+      "group": "control",
+      "batch": "4",
+      "matrix_name": "GSM6086641_ST_HF_1_R2_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Healthy"
+    },
+    {
+      "section_id": "GSM6086642",
+      "patient_id": "Healthy Volunteer 3",
+      "group": "control",
+      "batch": "7",
+      "matrix_name": "GSM6086642_ST_HF_2E_filtered_feature_bc_matrix.h5",
+      "selected": true,
+      "status": "Healthy"
+    },
+    {
+      "section_id": "GSM6086643",
+      "patient_id": "Healthy Volunteer 3",
+      "group": "control",
+      "batch": "7",
+      "matrix_name": "GSM6086643_ST_HF_2T_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Healthy"
+    },
+    {
+      "section_id": "GSM6086644",
+      "patient_id": "Healthy Volunteer 2",
+      "group": "control",
+      "batch": "7",
+      "matrix_name": "GSM6086644_ST_HF_1T_filtered_feature_bc_matrix.h5",
+      "selected": false,
+      "status": "Healthy"
+    }
+  ],
+  "sections": 9
+}

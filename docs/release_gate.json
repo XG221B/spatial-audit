@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "scope": "full",
+  "checks": {
+    "pytest_passed": 304,
+    "pytest_skipped": [],
+    "ruff": "PASS",
+    "mypy": "PASS",
+    "references": "PASS",
+    "json_files": 112,
+    "portable_paths": true,
+    "provenance_matched": 26,
+    "successful_methods": [
+      "Cardinal",
+      "DESeq2",
+      "DESpace2",
+      "SPARK-X",
+      "edgeR",
+      "nnSVG"
+    ],
+    "primary_accessions_measured": 20,
+    "comparator_contrasts": 20,
+    "comparator_rows": 120,
+    "independently_verified_r_fits": 77,
+    "compiled": [
+      "main.pdf",
+      "supplement.pdf"
+    ],
+    "distributions": {
+      "wheel": "spatial_audit-0.1.0-py3-none-any.whl",
+      "sdist": "spatial_audit-0.1.0.tar.gz",
+      "installed_demo": "PASS",
+      "installed_mcp_entrypoint": "PASS"
+    }
+  },
+  "runtime": {
+    "python": "3.13.14",
+    "os": "Windows-11-10.0.26300-SP0",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "pandas": "3.0.6",
+      "h5py": "3.16.0",
+      "anndata": "0.13.4",
+      "statsmodels": "0.15.0",
+      "pyarrow": "26.0.1",
+      "mcp": "1.30.0",
+      "playwright": "1.65.2",
+      "ruff": "0.17.6",
+      "mypy": "2.4.1",
+      "pytest": "9.2.0",
+      "matplotlib": "3.11.2"
+    }
+  }
+}

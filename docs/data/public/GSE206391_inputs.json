@@ -1,0 +1,209 @@
+{
+  "kind": "public",
+  "record_type": "input_provenance",
+  "accession": "GSE206391",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE206391",
+  "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9747967/",
+  "files": [
+    {
+      "name": "GSE206391_Preprocessed_data.h5",
+      "accession": "GSE206391",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE206nnn/GSE206391/suppl/GSE206391_Preprocessed_data.h5",
+      "bytes": 1659973017,
+      "sha256": "51500dc394b92ad629cd4d13bdba90070fce2cddb554638f410b9eb2ebee179f",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "samples.soft",
+      "accession": "GSE206391",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE206391&targ=gsm&form=text&view=full",
+      "bytes": 192422,
+      "sha256": "335165f4ffd6bd7b3ce509c2e23c5054a71d4e40a5096ed7912cecf5971a9a34",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    }
+  ],
+  "selection": "All single-donor lesional capture areas with concordant GEO and per-spot patient assignments for psoriasis or atopic dermatitis. Repeated sections retain their donor ID. NPZ library_size sums the complete archived counts layer before panel selection; square-grid audit uses the physical Visium hex-array addresses.",
+  "physical_calibration": "https://www.10xgenomics.com/support/software/space-ranger/latest/getting-started/space-ranger-glossary",
+  "mapping": [
+    {
+      "patient_id": "1",
+      "group": "psoriasis",
+      "section_id": "GSM6252913",
+      "slide_id": "1-V19523-003",
+      "batch": "P15509",
+      "library": "P15509_1003",
+      "spots": 822
+    },
+    {
+      "patient_id": "1",
+      "group": "psoriasis",
+      "section_id": "GSM6252914",
+      "slide_id": "1-V19523-003",
+      "batch": "P15509",
+      "library": "P15509_1004",
+      "spots": 752
+    },
+    {
+      "patient_id": "2",
+      "group": "atopic dermatitis",
+      "section_id": "GSM6252917",
+      "slide_id": "2-V19S23-004",
+      "batch": "P16357",
+      "library": "P16357_1003",
+      "spots": 521
+    },
+    {
+      "patient_id": "2",
+      "group": "atopic dermatitis",
+      "section_id": "GSM6252918",
+      "slide_id": "2-V19S23-004",
+      "batch": "P16357",
+      "library": "P16357_1004",
+      "spots": 524
+    },
+    {
+      "patient_id": "5",
+      "group": "atopic dermatitis",
+      "section_id": "GSM6252929",
+      "slide_id": "5-V19S18-093",
+      "batch": "P16357",
+      "library": "P16357_1015",
+      "spots": 440
+    },
+    {
+      "patient_id": "5",
+      "group": "atopic dermatitis",
+      "section_id": "GSM6252930",
+      "slide_id": "5-V19S18-093",
+      "batch": "P16357",
+      "library": "P16357_1016",
+      "spots": 464
+    },
+    {
+      "patient_id": "8",
+      "group": "atopic dermatitis",
+      "section_id": "GSM6252941",
+      "slide_id": "8-V19T12-006",
+      "batch": "P16357",
+      "library": "P16357_1027",
+      "spots": 697
+    },
+    {
+      "patient_id": "8",
+      "group": "atopic dermatitis",
+      "section_id": "GSM6252942",
+      "slide_id": "8-V19T12-006",
+      "batch": "P16357",
+      "library": "P16357_1028",
+      "spots": 706
+    },
+    {
+      "patient_id": "10",
+      "group": "psoriasis",
+      "section_id": "GSM6252949",
+      "slide_id": "10-V19T12-025",
+      "batch": "P16357",
+      "library": "P16357_1035",
+      "spots": 1017
+    },
+    {
+      "patient_id": "10",
+      "group": "psoriasis",
+      "section_id": "GSM6252950",
+      "slide_id": "10-V19T12-025",
+      "batch": "P16357",
+      "library": "P16357_1036",
+      "spots": 1009
+    },
+    {
+      "patient_id": "11",
+      "group": "atopic dermatitis",
+      "section_id": "GSM6252953",
+      "slide_id": "11-V19T12-012",
+      "batch": "P16357",
+      "library": "P16357_1039",
+      "spots": 711
+    },
+    {
+      "patient_id": "11",
+      "group": "atopic dermatitis",
+      "section_id": "GSM6252954",
+      "slide_id": "11-V19T12-012",
+      "batch": "P16357",
+      "library": "P16357_1040",
+      "spots": 922
+    },
+    {
+      "patient_id": "13",
+      "group": "psoriasis",
+      "section_id": "GSM6252961",
+      "slide_id": "13-V19T12-048",
+      "batch": "P16357",
+      "library": "P16357_1047",
+      "spots": 1064
+    },
+    {
+      "patient_id": "13",
+      "group": "psoriasis",
+      "section_id": "GSM6252962",
+      "slide_id": "13-V19T12-048",
+      "batch": "P16357",
+      "library": "P16357_1048",
+      "spots": 1413
+    },
+    {
+      "patient_id": "15",
+      "group": "atopic dermatitis",
+      "section_id": "GSM6252967",
+      "slide_id": "15-V19S18-092",
+      "batch": "P16357",
+      "library": "P16357_1053",
+      "spots": 616
+    },
+    {
+      "patient_id": "15",
+      "group": "atopic dermatitis",
+      "section_id": "GSM6252968",
+      "slide_id": "15-V19S18-092",
+      "batch": "P16357",
+      "library": "P16357_1054",
+      "spots": 941
+    }
+  ],
+  "panel": [
+    "ACTB",
+    "GAPDH",
+    "RPLP0",
+    "PPIA",
+    "B2M",
+    "EEF1A1",
+    "RPS18",
+    "RPL13A",
+    "EPCAM",
+    "KRT5",
+    "KRT14",
+    "KRT1",
+    "KRT10",
+    "KRT16",
+    "KRT17",
+    "S100A7",
+    "S100A8",
+    "S100A9",
+    "LOR",
+    "FLG",
+    "COL1A1",
+    "COL1A2",
+    "DCN",
+    "LUM",
+    "VIM",
+    "PECAM1",
+    "VWF",
+    "PTPRC",
+    "CD3D",
+    "CD68",
+    "LYZ",
+    "HLA-DRA"
+  ]
+}

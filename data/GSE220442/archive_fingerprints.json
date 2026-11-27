@@ -1,0 +1,17 @@
+{
+  "kind": "public",
+  "accession": "GSE220442",
+  "method": "Independent SHA-256 of retained GEO supplementary files, not a publisher-supplied checksum.",
+  "files": [
+    {
+      "name": "GSE220442_counts_and_images.tar.gz",
+      "bytes": 473323596,
+      "sha256": "9c54b5607216ce9935bc3768844e154f28489fddb182a86b0703a5c2619db1bf"
+    },
+    {
+      "name": "GSE220442_metadata.csv.gz",
+      "bytes": 499089,
+      "sha256": "21da940179a4a5b9cabce7964bf4087fe505773a79bf79730521f6eacfd3af7e"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "kind": "public",
+  "accession": "GSE327879",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE327879",
+  "paper": "https://doi.org/10.70401/mc.2026.0014",
+  "files": [
+    {
+      "name": "GSM9667707_Ctrl_exprMat_file.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9667nnn/GSM9667707/suppl/GSM9667707_Ctrl_exprMat_file.csv.gz",
+      "role": "audit_input",
+      "bytes": 4753688,
+      "sha256": "9fddbb9936ec4d064057a1d05c327e988bd4330cec78c4a93b1aa3490fae05c9"
+    },
+    {
+      "name": "GSM9667707_Ctrl_fov_positions_file.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9667nnn/GSM9667707/suppl/GSM9667707_Ctrl_fov_positions_file.csv.gz",
+      "role": "audit_input",
+      "bytes": 418,
+      "sha256": "193e8f5c7d542ebd23bcdad36faf94c9a6185709c35fda4214fac62755fc6b8a"
+    },
+    {
+      "name": "GSM9667708_Covid_exprMat_file.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9667nnn/GSM9667708/suppl/GSM9667708_Covid_exprMat_file.csv.gz",
+      "role": "audit_input",
+      "bytes": 7294059,
+      "sha256": "7a1b6c4d71ead0c274f435543023e104b3446289470ef3a562c5b8b0f54d7a7a"
+    },
+    {
+      "name": "GSM9667708_Covid_fov_positions_file.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9667nnn/GSM9667708/suppl/GSM9667708_Covid_fov_positions_file.csv.gz",
+      "role": "audit_input",
+      "bytes": 423,
+      "sha256": "2da8eee0336581e18f1d71591207ddd43ceca90c2c45b228fd4a8491ad949817"
+    },
+    {
+      "name": "Metadata_CosMx.csv",
+      "url": "https://raw.githubusercontent.com/JoanAbinet/COVID19_niche/34dbc8057e70e60eb945d7fb9187c8f33fa417af/3_Cluster_Annotation/Metadata_CosMx.csv",
+      "role": "audit_input",
+      "bytes": 19318773,
+      "sha256": "28e07e2445a94f9a78fd3f8bcccbfe1c031b7a2e2f6b4b76de6a2300f29d230c"
+    }
+  ],
+  "slides": [
+    {
+      "slide": "GSM9667707",
+      "group": "Ctrl",
+      "patients": [
+        "Ctrl_1",
+        "Ctrl_2",
+        "Ctrl_3"
+      ],
+      "cells": 33925,
+      "fields": 40,
+      "um_per_pixel_xy": [
+        0.12,
+        0.11999999999999994
+      ],
+      "max_affine_residual_mm": 4.263256414560601e-14
+    },
+    {
+      "slide": "GSM9667708",
+      "group": "Covid",
+      "patients": [
+        "Covid_1",
+        "Covid_2",
+        "Covid_3"
+      ],
+      "cells": 43048,
+      "fields": 40,
+      "um_per_pixel_xy": [
+        0.12000000000000008,
+        0.12000000000000002
+      ],
+      "max_affine_residual_mm": 4.618527782440651e-14
+    }
+  ],
+  "features": [
+    "AATK",
+    "ABL1",
+    "ABL2",
+    "ACACB",
+    "ACE",
+    "ACKR1",
+    "ACKR3",
+    "ACKR4",
+    "ACP5",
+    "ACTA2",
+    "ACTG2",
+    "ACVR1",
+    "ACVR1B",
+    "ACVR2A",
+    "ACVRL1",
+    "ADGRA2",
+    "ADGRA3",
+    "ADGRE2",
+    "ADGRE5",
+    "ADGRF1",
+    "ADGRF3",
+    "ADGRF5",
+    "ADGRG1",
+    "ADGRG3",
+    "ADGRG5",
+    "ADGRG6",
+    "ADGRL1",
+    "ADGRL2",
+    "ADGRL4",
+    "ADGRV1",
+    "ADIPOQ",
+    "ADIRF"
+  ],
+  "covariate_levels": [
+    "C1 - Endo Vwf+",
+    "C10 - SPP1hi Macs",
+    "C11 - AT0",
+    "C12 - AT1",
+    "C13 - AT2",
+    "C14 - Basal Cells",
+    "C15 - Cilliated Cells",
+    "C16 - Goblet Cells",
+    "C17 - Unindentified",
+    "C18 - Neutro",
+    "C19 - Muscle",
+    "C2 - Endo Vwf-",
+    "C20 - HBB cell",
+    "C3 - Alveolar Fibro",
+    "C4 - COL1A1+ Fibro",
+    "C5 - T Cells",
+    "C6 - Plasma Cells",
+    "C7 - CHI3L1/MMP9hi Macs",
+    "C8 - MARCO+ AM",
+    "C9 - LYVE1/MAF+ Macs"
+  ],
+  "selection": "All author-mapped cells, one graph per FOV. First 32 archived gene targets in original column order. Clinical contrast and slide are completely aliased. C contains the original study's expression-derived cell-type indicators. Shares estimate in-sample annotation sensitivity. FOV widths limit coarse wavelengths.",
+  "coordinate_frame": "Within-FOV physical centroids. No between-slide stage registration assumed. GEO X_mm/Y_mm establish each slide's length calibration from global-minus-local x and global-plus-local y."
+}

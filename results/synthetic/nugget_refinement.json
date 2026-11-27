@@ -1,0 +1,25 @@
+{
+  "kind": "synthetic",
+  "record_type": "refinement_comparison",
+  "before": {
+    "phase_diagram_sha256": "6151f9376575efbe768c4b9eef69c106037e874725598c4c606c400afbbb7092",
+    "estimator": "Nonnegative two-lag intercept and nonnegative section energy; unmatched lag support.",
+    "seed": 45019,
+    "replicates": 96,
+    "zero_alignment_n_ge_5_max_null_corrected": 0.8020833333333334,
+    "figure_slice_max_null_corrected": 0.21875
+  },
+  "figure_slice": {
+    "nb_dispersion": 0.1,
+    "case_mean_multiplier": 1.5,
+    "batch_alignment": 0.0
+  },
+  "after": {
+    "phase_diagram_sha256": "c00012e8a156d193934ec67c46f224f901884c5b7304a8fb7cbb88864e6607c8",
+    "estimator": "Signed, untruncated nugget-adjusted energy; matching one- and two-step path support. Two-sided absolute difference in equal-patient mean energy. Enumerate up to 512 allocations, otherwise use 511 random allocations and add one. Within each scenario the Monte Carlo allocations are shared, so Wilson intervals condition on that reference. Unrestricted tests at nonzero batch alignment are sensitivity experiments. The intervals exclude uncertainty in model choice.",
+    "seed": 45019,
+    "replicates": 96,
+    "zero_alignment_n_ge_5_max_null_corrected": 0.6041666666666666,
+    "figure_slice_max_null_corrected": 0.28125
+  }
+}

@@ -1,0 +1,433 @@
+{
+  "kind": "public",
+  "record_type": "input_provenance",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE306288",
+  "accession": "GSE306288",
+  "paper": "https://pubmed.ncbi.nlm.nih.gov/42206364/",
+  "selection": "All archived Visium capture areas with physical position tables. RNA counts, full RNA library depth and a mechanism-informed fixed feature panel. Repeated sections are nested within donor.",
+  "features": [
+    "COMP",
+    "SERPINE1",
+    "COL1A1",
+    "COL1A2",
+    "COL3A1",
+    "DCN",
+    "LUM",
+    "VIM",
+    "ACTA2",
+    "RUNX2",
+    "SPP1",
+    "FN1",
+    "VCAN",
+    "TAGLN",
+    "PECAM1",
+    "VWF",
+    "CD68",
+    "CD163",
+    "PTPRC",
+    "LYZ",
+    "JUN",
+    "FOS",
+    "GAPDH",
+    "ACTB",
+    "B2M"
+  ],
+  "files": [
+    {
+      "name": "gsm.soft",
+      "accession": "GSE306288",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE306288&targ=gsm&form=text&view=full",
+      "bytes": 160045,
+      "sha256": "13b64848150967c8e229242021dfe1bb1f61b1b3ac6a8b40c07e6b2a71127210",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196846_patient_1A_matrix.mtx.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196846/suppl/GSM9196846_patient_1A_matrix.mtx.gz",
+      "bytes": 2415271,
+      "sha256": "028ca54838a2656666cee22feaa6ffa62bc8b43ca12bdbbce1444fdd9a4e2ff4",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196846_patient_1A_features.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196846/suppl/GSM9196846_patient_1A_features.tsv.gz",
+      "bytes": 333437,
+      "sha256": "b373ddc944461bb494e55da70e8bba9b91bdca5394c28ea3d10267dedb680de0",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196846_patient_1A_barcodes.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196846/suppl/GSM9196846_patient_1A_barcodes.tsv.gz",
+      "bytes": 9260,
+      "sha256": "aafcfa272581862fa8bb48eed2dcdaad6cf623922126dd147357aac3deaa7426",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196846_patient_1A_tissue_positions.csv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196846/suppl/GSM9196846_patient_1A_tissue_positions.csv.gz",
+      "bytes": 142875,
+      "sha256": "09ee6cf629dffaa00cd3b5002765673a97a977dc972822cdb5f77ae3a189780d",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196847_patient_1B_matrix.mtx.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196847/suppl/GSM9196847_patient_1B_matrix.mtx.gz",
+      "bytes": 2530710,
+      "sha256": "0d70dfe1257360adaad7ab35d46163f388fd56f8efb17b33f66abf5757da8368",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196847_patient_1B_features.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196847/suppl/GSM9196847_patient_1B_features.tsv.gz",
+      "bytes": 333437,
+      "sha256": "11e3720d1622ee5b700131408cfe0d8148218ac18dc8370f2bafe30f3eb856d9",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196847_patient_1B_barcodes.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196847/suppl/GSM9196847_patient_1B_barcodes.tsv.gz",
+      "bytes": 7512,
+      "sha256": "690f17b51215e254c8bf2dc412f71f24e302f2a6080af9629e737b51112ef3fd",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196847_patient_1B_tissue_positions.csv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196847/suppl/GSM9196847_patient_1B_tissue_positions.csv.gz",
+      "bytes": 142285,
+      "sha256": "7dddf952b0306af7c68a64ec745bbd230bacc646d9a15fb372b865893506c0d7",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196848_patient_6A_matrix.mtx.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196848/suppl/GSM9196848_patient_6A_matrix.mtx.gz",
+      "bytes": 3159538,
+      "sha256": "9719431b0e8aacd1b7ef9620396f6e9779e07776fad16924b12ab23520cbc687",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196848_patient_6A_features.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196848/suppl/GSM9196848_patient_6A_features.tsv.gz",
+      "bytes": 333437,
+      "sha256": "a144dea8644106cb25f491b6ff3fa98f0f65fb1246cdb0c8922de0297a906632",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196848_patient_6A_barcodes.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196848/suppl/GSM9196848_patient_6A_barcodes.tsv.gz",
+      "bytes": 9720,
+      "sha256": "0ad118835a4c2a36a9a30e0f71647c323c00591c8170d8390b61e37623f2b6d2",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196848_patient_6A_tissue_positions.csv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196848/suppl/GSM9196848_patient_6A_tissue_positions.csv.gz",
+      "bytes": 142876,
+      "sha256": "8b30695d493246bcee5aa01cacbe87de4db3a40b4ef576351d95d7f937bad461",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196849_patient_6B_matrix.mtx.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196849/suppl/GSM9196849_patient_6B_matrix.mtx.gz",
+      "bytes": 4315219,
+      "sha256": "a664823b61b24d5ea446f1c45441294cf25eff9551274f686e58d3ecd5fe0afd",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196849_patient_6B_features.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196849/suppl/GSM9196849_patient_6B_features.tsv.gz",
+      "bytes": 333437,
+      "sha256": "bbb714eb352084e62e30ae4ce9e017e6b1aa2767a13ee2efe72774d211d19c90",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196849_patient_6B_barcodes.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196849/suppl/GSM9196849_patient_6B_barcodes.tsv.gz",
+      "bytes": 9911,
+      "sha256": "5a476df827f217ffb3ea980de3f21c0562925f29647004e3a139c028d649b505",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9196849_patient_6B_tissue_positions.csv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9196nnn/GSM9196849/suppl/GSM9196849_patient_6B_tissue_positions.csv.gz",
+      "bytes": 142926,
+      "sha256": "178d8282278caf2be446848c6149166d50d7a3f17922b57c149142b9f07105ef",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759909_Patient_18V_matrix.mtx.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759909/suppl/GSM9759909_Patient_18V_matrix.mtx.gz",
+      "bytes": 966782,
+      "sha256": "c74bf122bd6823360a2127df5edfe1363fcca4eb8b5796050d63c16f080ee074",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759909_Patient_18V_features.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759909/suppl/GSM9759909_Patient_18V_features.tsv.gz",
+      "bytes": 333437,
+      "sha256": "fea3e3a3cd77b0024b223a0c7408de04fa6e564d88856450e4f68d89ba4189ab",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759909_Patient_18V_barcodes.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759909/suppl/GSM9759909_Patient_18V_barcodes.tsv.gz",
+      "bytes": 10585,
+      "sha256": "36843a435fb72d13fae7716fb10f13bad27c1b47988d1fa0ee84e8d04109f125",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759909_Patient_18V_tissue_positions.csv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759909/suppl/GSM9759909_Patient_18V_tissue_positions.csv.gz",
+      "bytes": 141488,
+      "sha256": "d8a4da57130dad07361c4f217482ad1c072be70af25f2428aacaaed319d6471b",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759910_Patient_20V_matrix.mtx.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759910/suppl/GSM9759910_Patient_20V_matrix.mtx.gz",
+      "bytes": 1093564,
+      "sha256": "b92304bc59989e111fa4e6b0600aabce00e81187672bf4ca8bdb6666749ad08e",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759910_Patient_20V_features.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759910/suppl/GSM9759910_Patient_20V_features.tsv.gz",
+      "bytes": 333437,
+      "sha256": "7ce7a1d252402d651b6548f20da3c8c352228b4f34cbda41d8d81e51e3408286",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759910_Patient_20V_barcodes.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759910/suppl/GSM9759910_Patient_20V_barcodes.tsv.gz",
+      "bytes": 10066,
+      "sha256": "3f316ed9fa3308349cdfd1ac93d7d7a10aa37d52c6db2023645862293a5ad77e",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759910_Patient_20V_tissue_positions.csv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759910/suppl/GSM9759910_Patient_20V_tissue_positions.csv.gz",
+      "bytes": 141139,
+      "sha256": "ab84b48554d4b9950fa1a40ebf82fc73503ff8a9119e98970c18e94d08a73917",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759911_Patient_23V_matrix.mtx.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759911/suppl/GSM9759911_Patient_23V_matrix.mtx.gz",
+      "bytes": 389820,
+      "sha256": "c71299791420ccf80fd72ffc0e29a85dce2dbd6b77c6baa54a6a8487c61e870c",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759911_Patient_23V_features.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759911/suppl/GSM9759911_Patient_23V_features.tsv.gz",
+      "bytes": 333437,
+      "sha256": "b3d4d9ec860d651f1a33c0844a6116d0414bcb6fb9402a452ebba642e7b22a87",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759911_Patient_23V_barcodes.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759911/suppl/GSM9759911_Patient_23V_barcodes.tsv.gz",
+      "bytes": 8898,
+      "sha256": "455f2d4a4663229a8d2a088107fa1faea5ebc0a5dacc3e353638cd0a163d84d7",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759911_Patient_23V_tissue_positions.csv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759911/suppl/GSM9759911_Patient_23V_tissue_positions.csv.gz",
+      "bytes": 140962,
+      "sha256": "6fb71b6b445bc51dc826c6de3143abbc54c04fc326f2372b582519e3d3169db1",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759912_Patient_29V_matrix.mtx.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759912/suppl/GSM9759912_Patient_29V_matrix.mtx.gz",
+      "bytes": 703766,
+      "sha256": "c594ff36780ef214dbb3667609d8fd859781ed0536350289c320572ac15c34aa",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759912_Patient_29V_features.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759912/suppl/GSM9759912_Patient_29V_features.tsv.gz",
+      "bytes": 333437,
+      "sha256": "808419237324457f786e73ce60b5ddfe663581eb8ecfd0c74e6d066af1681495",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759912_Patient_29V_barcodes.tsv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759912/suppl/GSM9759912_Patient_29V_barcodes.tsv.gz",
+      "bytes": 7391,
+      "sha256": "d163b7bdf361eaf7ef1f430fb2a0c5141d0e703f0b8a34063599f34a6df24010",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9759912_Patient_29V_tissue_positions.csv.gz",
+      "accession": "GSE306288",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9759nnn/GSM9759912/suppl/GSM9759912_Patient_29V_tissue_positions.csv.gz",
+      "bytes": 145538,
+      "sha256": "d2bf2075e13042d1302a0ba869980f18aa1626511ff235464c5a47586f723bad",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    }
+  ],
+  "samples": [
+    {
+      "section_id": "GSM9196846",
+      "patient_id": "1",
+      "group": "male",
+      "observations": 1573,
+      "members": [
+        "GSM9196846_patient_1A_matrix.mtx.gz",
+        "GSM9196846_patient_1A_features.tsv.gz",
+        "GSM9196846_patient_1A_barcodes.tsv.gz",
+        "GSM9196846_patient_1A_tissue_positions.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9196847",
+      "patient_id": "1",
+      "group": "male",
+      "observations": 1264,
+      "members": [
+        "GSM9196847_patient_1B_matrix.mtx.gz",
+        "GSM9196847_patient_1B_features.tsv.gz",
+        "GSM9196847_patient_1B_barcodes.tsv.gz",
+        "GSM9196847_patient_1B_tissue_positions.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9196848",
+      "patient_id": "6",
+      "group": "female",
+      "observations": 1658,
+      "members": [
+        "GSM9196848_patient_6A_matrix.mtx.gz",
+        "GSM9196848_patient_6A_features.tsv.gz",
+        "GSM9196848_patient_6A_barcodes.tsv.gz",
+        "GSM9196848_patient_6A_tissue_positions.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9196849",
+      "patient_id": "6",
+      "group": "female",
+      "observations": 1693,
+      "members": [
+        "GSM9196849_patient_6B_matrix.mtx.gz",
+        "GSM9196849_patient_6B_features.tsv.gz",
+        "GSM9196849_patient_6B_barcodes.tsv.gz",
+        "GSM9196849_patient_6B_tissue_positions.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9759909",
+      "patient_id": "18",
+      "group": "female",
+      "observations": 1801,
+      "members": [
+        "GSM9759909_Patient_18V_matrix.mtx.gz",
+        "GSM9759909_Patient_18V_features.tsv.gz",
+        "GSM9759909_Patient_18V_barcodes.tsv.gz",
+        "GSM9759909_Patient_18V_tissue_positions.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9759910",
+      "patient_id": "20",
+      "group": "male",
+      "observations": 1713,
+      "members": [
+        "GSM9759910_Patient_20V_matrix.mtx.gz",
+        "GSM9759910_Patient_20V_features.tsv.gz",
+        "GSM9759910_Patient_20V_barcodes.tsv.gz",
+        "GSM9759910_Patient_20V_tissue_positions.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9759911",
+      "patient_id": "23",
+      "group": "female",
+      "observations": 1512,
+      "members": [
+        "GSM9759911_Patient_23V_matrix.mtx.gz",
+        "GSM9759911_Patient_23V_features.tsv.gz",
+        "GSM9759911_Patient_23V_barcodes.tsv.gz",
+        "GSM9759911_Patient_23V_tissue_positions.csv.gz"
+      ]
+    },
+    {
+      "section_id": "GSM9759912",
+      "patient_id": "29",
+      "group": "male",
+      "observations": 1244,
+      "members": [
+        "GSM9759912_Patient_29V_matrix.mtx.gz",
+        "GSM9759912_Patient_29V_features.tsv.gz",
+        "GSM9759912_Patient_29V_barcodes.tsv.gz",
+        "GSM9759912_Patient_29V_tissue_positions.csv.gz"
+      ]
+    }
+  ],
+  "physical_calibration": "https://www.10xgenomics.com/support/software/space-ranger/latest/getting-started/space-ranger-glossary"
+}

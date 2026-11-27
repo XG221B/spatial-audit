@@ -1,0 +1,280 @@
+{
+  "kind": "public",
+  "record_type": "input_provenance",
+  "accession": "GSE336890",
+  "source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336890",
+  "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13616907/",
+  "selection": "All cortical biopsies assigned to AIN or ATI in the published Xenium tissue subset. Per-cell membership comes from the submitter's region/section CSV; raw feature counts and micrometre Xenium centroids are joined by cell ID. The batch field identifies the acquisition region.",
+  "features": [
+    "LRP2",
+    "CUBN",
+    "SLC5A2",
+    "SLC34A1",
+    "UMOD",
+    "SLC12A1",
+    "SLC12A3",
+    "AQP2",
+    "HAVCR1",
+    "VCAM1",
+    "VIM",
+    "COL1A1",
+    "PTPRC",
+    "CD3E",
+    "CD68",
+    "PECAM1",
+    "EPCAM"
+  ],
+  "files": [
+    {
+      "name": "samples.soft",
+      "accession": "GSE336890",
+      "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE336890&targ=gsm&form=text&view=full",
+      "bytes": 29157,
+      "sha256": "35729a13661d0ea52fd440edd4d0b72fdf5fc84b70d7164d8bbd8b5ad9b8bd81",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSE336890_cells_stats_dir.tar.gz",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE336nnn/GSE336890/suppl/GSE336890_cells_stats_dir.tar.gz",
+      "bytes": 2891642,
+      "sha256": "ad4c591256f800634c6d7521219f4356b38361d969c6ada7170df10cc5b059b3",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844156_Region01_cell_feature_matrix.h5",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844156/suppl/GSM9844156_Region01_cell_feature_matrix.h5",
+      "bytes": 35519675,
+      "sha256": "f72dfd67c689bf8c085159ed3dd59822dab07bf949bc3636343347146fc93284",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844156_Region01_cells.parquet.gz",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844156/suppl/GSM9844156_Region01_cells.parquet.gz",
+      "bytes": 3108283,
+      "sha256": "0a4744e946b95c0e44ab2fe59a7c6ba51aa9ea8b2d8fc6b37efe119e177070c6",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844157_Region02_cell_feature_matrix.h5",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844157/suppl/GSM9844157_Region02_cell_feature_matrix.h5",
+      "bytes": 5469984,
+      "sha256": "e568c7a3716ea90345aec2bc459b9374a7bc22b19eca8e0b78c40b34ce70a23e",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844157_Region02_cells.parquet.gz",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844157/suppl/GSM9844157_Region02_cells.parquet.gz",
+      "bytes": 490248,
+      "sha256": "90c2461588e52dbf5eb1406885cd009e8bba81b7b1b9fd890c6d29c7ad10fcbc",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844159_Region04_cell_feature_matrix.h5",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844159/suppl/GSM9844159_Region04_cell_feature_matrix.h5",
+      "bytes": 3549186,
+      "sha256": "5fce53e354973e940cccf4935ef60936219fe5a34a6060e25d1e9b62dc69b6bc",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844159_Region04_cells.parquet.gz",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844159/suppl/GSM9844159_Region04_cells.parquet.gz",
+      "bytes": 349842,
+      "sha256": "bd7c0d04b36c1149892aaaf40a8fae13920a1a6d3db1e823e94693cd56acfe7e",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844160_Region05_cell_feature_matrix.h5",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844160/suppl/GSM9844160_Region05_cell_feature_matrix.h5",
+      "bytes": 2809787,
+      "sha256": "bf18b204893b389e23f5da997140bf8d4305e726e647184612b9c2d5409379d0",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844160_Region05_cells.parquet.gz",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844160/suppl/GSM9844160_Region05_cells.parquet.gz",
+      "bytes": 262202,
+      "sha256": "5c2e3449a141d7218fdaff060ba177aea59237258bf765acb3c685bd0e40a1f3",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844161_Region09_cell_feature_matrix.h5",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844161/suppl/GSM9844161_Region09_cell_feature_matrix.h5",
+      "bytes": 1867790,
+      "sha256": "d5baee4a430382bdac35dbac5ba4ddc0f7918723d7527e74df9c93d618fc071e",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844161_Region09_cells.parquet.gz",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844161/suppl/GSM9844161_Region09_cells.parquet.gz",
+      "bytes": 406689,
+      "sha256": "cc9caa4f5d1b2a24e582dbf0a9ada5461b71c6b3002eadeceb130e940c7b6cd2",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844162_Region10_cell_feature_matrix.h5",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844162/suppl/GSM9844162_Region10_cell_feature_matrix.h5",
+      "bytes": 3502378,
+      "sha256": "0b5b9fdf883134f13f8b352b740442fa5db48d5e35fa240bed767a686da56f2a",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844162_Region10_cells.parquet.gz",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844162/suppl/GSM9844162_Region10_cells.parquet.gz",
+      "bytes": 485613,
+      "sha256": "7fedb4e787666f8d5efc90cb7ec63fe1d27ca831989d191feba68c83c864d4ca",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844164_Region15_cell_feature_matrix.h5",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844164/suppl/GSM9844164_Region15_cell_feature_matrix.h5",
+      "bytes": 26612429,
+      "sha256": "85e4da4f6e236b5f0f1d64b1845b4dded3f3f5b03ba33f08097d2c2c02318032",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    },
+    {
+      "name": "GSM9844164_Region15_cells.parquet.gz",
+      "accession": "GSE336890",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9844nnn/GSM9844164/suppl/GSM9844164_Region15_cells.parquet.gz",
+      "bytes": 2542740,
+      "sha256": "fc1e8e32c56d921077b45a0a7b7bc4930d71f17f11bc103bded54f5944d63080",
+      "reference_digest_matched": false,
+      "archive_checksum": null
+    }
+  ],
+  "published_unit_check": "Paper reports eight AIN, seven ATI and five reference Xenium tissues. Unique biopsy codes reproduce those group counts before restriction to cortex.",
+  "sections": [
+    {
+      "gsm": "GSM9844156",
+      "biopsy": "14022",
+      "section": "AIN_C_2_14022",
+      "group": "AIN",
+      "cells": 10317,
+      "cell_map_member": "cells_stats_dir/Region_1/AIN_C_2_14022_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844156",
+      "biopsy": "23929",
+      "section": "AIN_C_3_23929",
+      "group": "AIN",
+      "cells": 40589,
+      "cell_map_member": "cells_stats_dir/Region_1/AIN_C_3_23929_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844156",
+      "biopsy": "4442",
+      "section": "ATI_C_23_4442",
+      "group": "ATI",
+      "cells": 20940,
+      "cell_map_member": "cells_stats_dir/Region_1/ATI_C_23_4442_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844156",
+      "biopsy": "8145",
+      "section": "ATI_C_4_8145",
+      "group": "ATI",
+      "cells": 19474,
+      "cell_map_member": "cells_stats_dir/Region_1/ATI_C_4_8145_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844157",
+      "biopsy": "704",
+      "section": "AIN_C_6_704",
+      "group": "AIN",
+      "cells": 23405,
+      "cell_map_member": "cells_stats_dir/Region_2/AIN_C_6_704_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844159",
+      "biopsy": "23693",
+      "section": "ATI_C_18_23693",
+      "group": "ATI",
+      "cells": 16307,
+      "cell_map_member": "cells_stats_dir/Region_4/ATI_C_18_23693_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844160",
+      "biopsy": "26661",
+      "section": "ATI_C_20_26661",
+      "group": "ATI",
+      "cells": 12174,
+      "cell_map_member": "cells_stats_dir/Region_5/ATI_C_20_26661_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844161",
+      "biopsy": "20463",
+      "section": "AIN_C_9_20463",
+      "group": "AIN",
+      "cells": 21376,
+      "cell_map_member": "cells_stats_dir/Region_9/AIN_C_9_20463_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844162",
+      "biopsy": "16104",
+      "section": "AIN_C_8_16104",
+      "group": "AIN",
+      "cells": 7912,
+      "cell_map_member": "cells_stats_dir/Region_10/AIN_C_8_16104_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844162",
+      "biopsy": "7751",
+      "section": "ATI_C_2_7751",
+      "group": "ATI",
+      "cells": 16000,
+      "cell_map_member": "cells_stats_dir/Region_10/ATI_C_2_7751_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844164",
+      "biopsy": "26646",
+      "section": "AIN_C_11_26646",
+      "group": "AIN",
+      "cells": 24112,
+      "cell_map_member": "cells_stats_dir/Region_15/AIN_C_11_26646_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844164",
+      "biopsy": "24870",
+      "section": "AIN_C_4_24870",
+      "group": "AIN",
+      "cells": 5569,
+      "cell_map_member": "cells_stats_dir/Region_15/AIN_C_4_24870_cells_stats.csv"
+    },
+    {
+      "gsm": "GSM9844164",
+      "biopsy": "7997",
+      "section": "ATI_C_3_7997",
+      "group": "ATI",
+      "cells": 9412,
+      "cell_map_member": "cells_stats_dir/Region_15/ATI_C_3_7997_cells_stats.csv"
+    }
+  ]
+}

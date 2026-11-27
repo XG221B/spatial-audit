@@ -1,0 +1,163 @@
+{
+  "kind": "public",
+  "record_type": "archive_reconstruction",
+  "accession": "GSE220442",
+  "coordinate_calibration": "GEO archive barcode-matched Visium array addresses at nominal 100 um nearest-neighbor spacing. Legacy H5AD image scaling is checked separately from the physical lattice.",
+  "input_files": [
+    {
+      "name": "GSE220442_counts_and_images.tar.gz",
+      "bytes": 473323596,
+      "sha256": "9c54b5607216ce9935bc3768844e154f28489fddb182a86b0703a5c2619db1bf",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE220nnn/GSE220442/suppl/GSE220442_counts_and_images.tar.gz",
+      "reference_digest_matched": true
+    },
+    {
+      "name": "GSE220442_metadata.csv.gz",
+      "bytes": 499089,
+      "sha256": "21da940179a4a5b9cabce7964bf4087fe505773a79bf79730521f6eacfd3af7e",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE220nnn/GSE220442/suppl/GSE220442_metadata.csv.gz",
+      "reference_digest_matched": true
+    }
+  ],
+  "feature_panel_sha256": "91b70d24c888724fdc48c7ce3d96d38f572b53896a10578f941d43204b5c18cb",
+  "panel_size": 2512,
+  "audit_feature_limit": 32,
+  "n_patients": 6,
+  "n_observations": 25293,
+  "sections": [
+    {
+      "patient_id": "18_64",
+      "section_id": "GSE220442_18_64",
+      "archive_sample": "18-64",
+      "group": "control",
+      "spots": 4225,
+      "nominal_array_pitch_um": 100.0,
+      "median_adjacent_spacing_pixels": 226.24102192131292,
+      "legacy_image_derived_pitch_um": 84.83984333058024,
+      "library_denominator": "all filtered-matrix genes before panel subset",
+      "reference_comparison": {
+        "barcodes_equal": true,
+        "features_equal": true,
+        "counts_equal": true,
+        "normalized_X_equal": true,
+        "legacy_image_transform_reproduced": true,
+        "patient_group_layer_equal": true,
+        "audit_covariates_equal": true
+      },
+      "prepared_file": "GSE220442_18_64-787d7140c41994c9.h5ad",
+      "prepared_sha256": "787d7140c41994c94ea2b8889da93b52889eb06ecc16b5d6c3560fe6818b5964"
+    },
+    {
+      "patient_id": "1_1",
+      "section_id": "GSE220442_1_1",
+      "archive_sample": "1-1",
+      "group": "control",
+      "spots": 3742,
+      "nominal_array_pitch_um": 100.0,
+      "median_adjacent_spacing_pixels": 222.0,
+      "legacy_image_derived_pitch_um": 84.79289145287655,
+      "library_denominator": "all filtered-matrix genes before panel subset",
+      "reference_comparison": {
+        "barcodes_equal": true,
+        "features_equal": true,
+        "counts_equal": true,
+        "normalized_X_equal": true,
+        "legacy_image_transform_reproduced": true,
+        "patient_group_layer_equal": true,
+        "audit_covariates_equal": true
+      },
+      "prepared_file": "GSE220442_1_1-1be1d9cd7cd4a852.h5ad",
+      "prepared_sha256": "1be1d9cd7cd4a8521d8d460bf09e49818e2fb02389a7c7d1847819bdeb982a35"
+    },
+    {
+      "patient_id": "2_3",
+      "section_id": "GSE220442_2_3",
+      "archive_sample": "2-3",
+      "group": "AD",
+      "spots": 4348,
+      "nominal_array_pitch_um": 100.0,
+      "median_adjacent_spacing_pixels": 221.77691493931465,
+      "legacy_image_derived_pitch_um": 84.80341914298616,
+      "library_denominator": "all filtered-matrix genes before panel subset",
+      "reference_comparison": {
+        "barcodes_equal": true,
+        "features_equal": true,
+        "counts_equal": true,
+        "normalized_X_equal": true,
+        "legacy_image_transform_reproduced": true,
+        "patient_group_layer_equal": true,
+        "audit_covariates_equal": true
+      },
+      "prepared_file": "GSE220442_2_3-48f6e255a8b7c0d8.h5ad",
+      "prepared_sha256": "48f6e255a8b7c0d897ea0a4b2c5f19f99b2a3f5bb29c95bd39ec1c9160b58ba8"
+    },
+    {
+      "patient_id": "2_5",
+      "section_id": "GSE220442_2_5",
+      "archive_sample": "2-5",
+      "group": "control",
+      "spots": 4701,
+      "nominal_array_pitch_um": 100.0,
+      "median_adjacent_spacing_pixels": 225.7432169523594,
+      "legacy_image_derived_pitch_um": 84.81263559844675,
+      "library_denominator": "all filtered-matrix genes before panel subset",
+      "reference_comparison": {
+        "barcodes_equal": true,
+        "features_equal": true,
+        "counts_equal": true,
+        "normalized_X_equal": true,
+        "legacy_image_transform_reproduced": true,
+        "patient_group_layer_equal": true,
+        "audit_covariates_equal": true
+      },
+      "prepared_file": "GSE220442_2_5-0d7ce7cd25cf5e54.h5ad",
+      "prepared_sha256": "0d7ce7cd25cf5e54007faab6e8abe19c6e9c82c54ab4bfa7162be0217603eddf"
+    },
+    {
+      "patient_id": "2_8",
+      "section_id": "GSE220442_2_8",
+      "archive_sample": "2-8",
+      "group": "AD",
+      "spots": 3445,
+      "nominal_array_pitch_um": 100.0,
+      "median_adjacent_spacing_pixels": 226.24102192131292,
+      "legacy_image_derived_pitch_um": 84.91925777109664,
+      "library_denominator": "all filtered-matrix genes before panel subset",
+      "reference_comparison": {
+        "barcodes_equal": true,
+        "features_equal": true,
+        "counts_equal": true,
+        "normalized_X_equal": true,
+        "legacy_image_transform_reproduced": true,
+        "patient_group_layer_equal": true,
+        "audit_covariates_equal": true
+      },
+      "prepared_file": "GSE220442_2_8-99901f42b67947d2.h5ad",
+      "prepared_sha256": "99901f42b67947d26bc08834eafdcc6644871360bd1f9f51289a2100ae5934c8"
+    },
+    {
+      "patient_id": "T4857",
+      "section_id": "GSE220442_T4857",
+      "archive_sample": "T4857",
+      "group": "AD",
+      "spots": 4832,
+      "nominal_array_pitch_um": 100.0,
+      "median_adjacent_spacing_pixels": 225.7432169523594,
+      "legacy_image_derived_pitch_um": 84.77515061380497,
+      "library_denominator": "all filtered-matrix genes before panel subset",
+      "reference_comparison": {
+        "barcodes_equal": true,
+        "features_equal": true,
+        "counts_equal": true,
+        "normalized_X_equal": true,
+        "legacy_image_transform_reproduced": true,
+        "patient_group_layer_equal": true,
+        "audit_covariates_equal": true
+      },
+      "prepared_file": "GSE220442_T4857-21ed29665d64c100.h5ad",
+      "prepared_sha256": "21ed29665d64c100e05e8bb21efd95ba77fe1d6007a632e7fd635e064d73a35f"
+    }
+  ],
+  "mapping": "Direct patientID and category columns of the archived metadata CSV; per-spot donor barcode suffix checked against each archive directory.",
+  "covariates": "Cortical layer and white-matter indicator columns from archived Layer labels. They describe anatomy; no cell-type fractions were estimated."
+}

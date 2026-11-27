@@ -1,0 +1,753 @@
+{
+  "kind": "public",
+  "record_type": "input_provenance",
+  "accession": "GSE282123",
+  "paper": "https://doi.org/10.1172/JCI202488",
+  "figshare": "https://doi.org/10.6084/m9.figshare.27327813",
+  "clinical": "https://dm5migu4zj3pb.cloudfront.net/manuscripts/202000/202488/JCI202488.sdt1-11.xlsx",
+  "coordinate_source": "https://github.com/UCSF-DSCOLAB/spatial_transcriptomics_colitis_analysis_2024/blob/ef610b37ed40f37a6549465e33cb95ac706b34d1/Preprocessing/Preprocessing_XeniumRep1and2.ipynb",
+  "coordinate_frame": "Xenium centroids in micrometres. The author-added 15,000 um x-offset is removed for Nov. Patient group comparisons use core/run local bounding boxes as acquisition proxies; no registered instrument-stage measurements.",
+  "scope": "Dataset 1, HC vs UC pre-vedolizumab; annotated QC-passing cells with assigned biopsies; both technical runs and all eligible cores, grouped by donor; first 32 deposited genes in archive order with full 290-target depth.",
+  "covariates": "One-hot archived coarse cell classes, averaged within spatial volumes; expression-derived annotations can share information with the tested panel.",
+  "files": [
+    {
+      "name": "25_11_12_Xenium_Dataset1_290_IntReps1and2_Raw.h5ad",
+      "accession": "GSE282123",
+      "url": "https://ndownloader.figshare.com/files/59547476",
+      "bytes": 442568032,
+      "sha256": "f50b81859d558262a9c1336c94c6b1b6d661d176789da772c532693ea8e7ebd8",
+      "reference_digest_matched": true,
+      "archive_checksum": "md5:bc1a7f5bd66be6e1350de89a7081744a"
+    },
+    {
+      "name": "25_11_22_Xenium_Dataset1_290_IntReps1and2_Annotated.h5ad",
+      "accession": "GSE282123",
+      "url": "https://ndownloader.figshare.com/files/59799746",
+      "bytes": 1523664984,
+      "sha256": "e0d59891f82989407bf2834215146bc40c80168e73a543d6e6d34edc30c4a1bb",
+      "reference_digest_matched": true,
+      "archive_checksum": "md5:419cab98a3be238d310db6e3fc92bc42"
+    },
+    {
+      "name": "jci-136-202488-s339.xlsx",
+      "accession": "GSE282123",
+      "url": "https://dm5migu4zj3pb.cloudfront.net/manuscripts/202000/202488/JCI202488.sdt1-11.xlsx",
+      "bytes": 440862,
+      "sha256": "fb95db639a496ebcde7507fa5173466d7d835039cdf94565452970bdfe6a1767",
+      "reference_digest_matched": true,
+      "archive_checksum": null
+    }
+  ],
+  "raw_cells": 858896,
+  "annotated_cells": 582188,
+  "included_cells": 401318,
+  "included_donors": 17,
+  "excluded_conditions": {
+    "POST_VDZ_R": 105606,
+    "POST_VDZ_NR": 75043,
+    "unassigned": 221
+  },
+  "clinical_table_donors_without_baseline_cells": [
+    "HS45",
+    "HS47",
+    "HS49"
+  ],
+  "composition_classes": [
+    "B",
+    "Cytotoxic",
+    "Endothelial",
+    "Enteric_glia",
+    "Fibroblast",
+    "IEC",
+    "MAST",
+    "MNP",
+    "Myofibroblast",
+    "Neutrophil",
+    "Pericyte",
+    "Plasma",
+    "T"
+  ],
+  "crosscheck": "All annotated cell keys and centroids matched to the raw archive, with exact agreement of selected counts and full targeted-library sums.",
+  "sections": [
+    {
+      "patient_id": "HS31",
+      "group": "HC",
+      "core": "HS31_HC_3_TMA2",
+      "run": "Nov",
+      "biopsy": "HS31_HC",
+      "cells": 364
+    },
+    {
+      "patient_id": "HS31",
+      "group": "HC",
+      "core": "HS31_HC_4_TMA2",
+      "run": "Nov",
+      "biopsy": "HS31_HC",
+      "cells": 2822
+    },
+    {
+      "patient_id": "HS31",
+      "group": "HC",
+      "core": "HS31_HC_TMA2",
+      "run": "Nov",
+      "biopsy": "HS31_HC",
+      "cells": 721
+    },
+    {
+      "patient_id": "HS32",
+      "group": "UC",
+      "core": "HS32_VDZ_RS_PRE_4_Mayo2_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS32_PRE_VDZ_R",
+      "cells": 653
+    },
+    {
+      "patient_id": "HS32",
+      "group": "UC",
+      "core": "HS32_VDZ_sigm_PRE_1_Mayo1_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS32_PRE_VDZ_R",
+      "cells": 4833
+    },
+    {
+      "patient_id": "HS32",
+      "group": "UC",
+      "core": "HS32_VDZ_sigm_PRE_3_Mayo1_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS32_PRE_VDZ_R",
+      "cells": 1509
+    },
+    {
+      "patient_id": "HS33",
+      "group": "HC",
+      "core": "HS33_HC_2_TMA2",
+      "run": "Nov",
+      "biopsy": "HS33_HC",
+      "cells": 2117
+    },
+    {
+      "patient_id": "HS33",
+      "group": "HC",
+      "core": "HS33_HC_4_TMA2",
+      "run": "Nov",
+      "biopsy": "HS33_HC",
+      "cells": 3920
+    },
+    {
+      "patient_id": "HS33",
+      "group": "HC",
+      "core": "HS33_HC_5_TMA2",
+      "run": "Nov",
+      "biopsy": "HS33_HC",
+      "cells": 2820
+    },
+    {
+      "patient_id": "HS33",
+      "group": "HC",
+      "core": "HS33_HC_TMA2",
+      "run": "Nov",
+      "biopsy": "HS33_HC",
+      "cells": 111
+    },
+    {
+      "patient_id": "HS34",
+      "group": "UC",
+      "core": "HS34_VDZ_C_PRE_1_Mayo2_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS34_PRE_VDZ_R",
+      "cells": 9712
+    },
+    {
+      "patient_id": "HS34",
+      "group": "UC",
+      "core": "HS34_VDZ_C_PRE_3_Mayo2_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS34_PRE_VDZ_R",
+      "cells": 6076
+    },
+    {
+      "patient_id": "HS35",
+      "group": "HC",
+      "core": "HS35_HC_1_TMA2",
+      "run": "Nov",
+      "biopsy": "HS35_HC",
+      "cells": 378
+    },
+    {
+      "patient_id": "HS35",
+      "group": "HC",
+      "core": "HS35_HC_TMA2",
+      "run": "Nov",
+      "biopsy": "HS35_HC",
+      "cells": 87
+    },
+    {
+      "patient_id": "HS36",
+      "group": "UC",
+      "core": "HS36_VDZ_RS_PRE_1_Mayo3_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS36_PRE_VDZ_R",
+      "cells": 6994
+    },
+    {
+      "patient_id": "HS36",
+      "group": "UC",
+      "core": "HS36_VDZ_RS_PRE_3_Mayo3_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS36_PRE_VDZ_R",
+      "cells": 6248
+    },
+    {
+      "patient_id": "HS37",
+      "group": "HC",
+      "core": "HS37_HC_2_TMA2",
+      "run": "Nov",
+      "biopsy": "HS37_HC",
+      "cells": 3727
+    },
+    {
+      "patient_id": "HS37",
+      "group": "HC",
+      "core": "HS37_HC_3_2_TMA2",
+      "run": "Nov",
+      "biopsy": "HS37_HC",
+      "cells": 1679
+    },
+    {
+      "patient_id": "HS37",
+      "group": "HC",
+      "core": "HS37_HC_3_TMA2",
+      "run": "Nov",
+      "biopsy": "HS37_HC",
+      "cells": 3861
+    },
+    {
+      "patient_id": "HS37",
+      "group": "HC",
+      "core": "HS37_HC_5_TMA2",
+      "run": "Nov",
+      "biopsy": "HS37_HC",
+      "cells": 3278
+    },
+    {
+      "patient_id": "HS38",
+      "group": "UC",
+      "core": "HS38_VDZ_AC_PRE_1_Mayo2_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS38_PRE_VDZ_R",
+      "cells": 3785
+    },
+    {
+      "patient_id": "HS38",
+      "group": "UC",
+      "core": "HS38_VDZ_AC_PRE_3_Mayo2_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS38_PRE_VDZ_R",
+      "cells": 3424
+    },
+    {
+      "patient_id": "HS38",
+      "group": "UC",
+      "core": "HS38_VDZ_R_PRE_7_Mayo2_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS38_PRE_VDZ_R",
+      "cells": 3889
+    },
+    {
+      "patient_id": "HS38",
+      "group": "UC",
+      "core": "HS38_VDZ_TC_PRE_5_Mayo0_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS38_PRE_VDZ_R",
+      "cells": 6083
+    },
+    {
+      "patient_id": "HS39",
+      "group": "HC",
+      "core": "HS39_HC_1_TMA2",
+      "run": "Nov",
+      "biopsy": "HS39_HC",
+      "cells": 6027
+    },
+    {
+      "patient_id": "HS39",
+      "group": "HC",
+      "core": "HS39_HC_2_TMA2",
+      "run": "Nov",
+      "biopsy": "HS39_HC",
+      "cells": 4829
+    },
+    {
+      "patient_id": "HS40",
+      "group": "HC",
+      "core": "HS40_HC_1_TMA2",
+      "run": "Nov",
+      "biopsy": "HS40_HC",
+      "cells": 3894
+    },
+    {
+      "patient_id": "HS40",
+      "group": "HC",
+      "core": "HS40_HC_2_TMA2",
+      "run": "Nov",
+      "biopsy": "HS40_HC",
+      "cells": 824
+    },
+    {
+      "patient_id": "HS41",
+      "group": "HC",
+      "core": "HS41_HC_1_2_TMA2",
+      "run": "Nov",
+      "biopsy": "HS41_HC",
+      "cells": 2699
+    },
+    {
+      "patient_id": "HS41",
+      "group": "HC",
+      "core": "HS41_HC_1_TMA2",
+      "run": "Nov",
+      "biopsy": "HS41_HC",
+      "cells": 5097
+    },
+    {
+      "patient_id": "HS41",
+      "group": "HC",
+      "core": "HS41_HC_2_TMA2",
+      "run": "Nov",
+      "biopsy": "HS41_HC",
+      "cells": 5529
+    },
+    {
+      "patient_id": "HS41",
+      "group": "HC",
+      "core": "HS41_HC_TMA2",
+      "run": "Nov",
+      "biopsy": "HS41_HC",
+      "cells": 2646
+    },
+    {
+      "patient_id": "HS42",
+      "group": "HC",
+      "core": "HS42_HC_1_2_TMA2",
+      "run": "Nov",
+      "biopsy": "HS42_HC",
+      "cells": 2823
+    },
+    {
+      "patient_id": "HS42",
+      "group": "HC",
+      "core": "HS42_HC_1_TMA2",
+      "run": "Nov",
+      "biopsy": "HS42_HC",
+      "cells": 3373
+    },
+    {
+      "patient_id": "HS42",
+      "group": "HC",
+      "core": "HS42_HC_2_TMA2",
+      "run": "Nov",
+      "biopsy": "HS42_HC",
+      "cells": 492
+    },
+    {
+      "patient_id": "HS43",
+      "group": "HC",
+      "core": "HS43_HC_1_2_TMA2",
+      "run": "Nov",
+      "biopsy": "HS43_HC",
+      "cells": 6446
+    },
+    {
+      "patient_id": "HS43",
+      "group": "HC",
+      "core": "HS43_HC_1_TMA2",
+      "run": "Nov",
+      "biopsy": "HS43_HC",
+      "cells": 6037
+    },
+    {
+      "patient_id": "HS44",
+      "group": "UC",
+      "core": "HS44_VDZ_C_PRE_1_2_Mayo0_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS44_PRE_VDZ_R",
+      "cells": 5613
+    },
+    {
+      "patient_id": "HS44",
+      "group": "UC",
+      "core": "HS44_VDZ_C_PRE_1_Mayo0_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS44_PRE_VDZ_R",
+      "cells": 7046
+    },
+    {
+      "patient_id": "HS44",
+      "group": "UC",
+      "core": "HS44_VDZ_LC_PRE_2_Mayo0_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS44_PRE_VDZ_R",
+      "cells": 7029
+    },
+    {
+      "patient_id": "HS44",
+      "group": "UC",
+      "core": "HS44_VDZ_R_PRE_2_Mayo1_responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS44_PRE_VDZ_R",
+      "cells": 10021
+    },
+    {
+      "patient_id": "HS46",
+      "group": "UC",
+      "core": "HS46_VDZ_LC_PRE_1_Mayo3_non-responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS46__PRE_VDZ_NR",
+      "cells": 13330
+    },
+    {
+      "patient_id": "HS46",
+      "group": "UC",
+      "core": "HS46_VDZ_LC_PRE_Mayo3_NR_TMA2",
+      "run": "Nov",
+      "biopsy": "HS46__PRE_VDZ_NR",
+      "cells": 3338
+    },
+    {
+      "patient_id": "HS48",
+      "group": "UC",
+      "core": "HS48_VDZ_Ce_PRE_Mayo2_Non-responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS48_PRE_VDZ_NR",
+      "cells": 837
+    },
+    {
+      "patient_id": "HS50",
+      "group": "UC",
+      "core": "HS50_VDZ_RS_PRE_1_Mayo2_non-responder_TMA2",
+      "run": "Nov",
+      "biopsy": "HS50_PRE_VDZ_NR",
+      "cells": 5686
+    },
+    {
+      "patient_id": "HS31",
+      "group": "HC",
+      "core": "HS31_HC_3",
+      "run": "Sept",
+      "biopsy": "HS31_HC",
+      "cells": 1277
+    },
+    {
+      "patient_id": "HS31",
+      "group": "HC",
+      "core": "HS31_HC_4",
+      "run": "Sept",
+      "biopsy": "HS31_HC",
+      "cells": 2355
+    },
+    {
+      "patient_id": "HS32",
+      "group": "UC",
+      "core": "HS32_VDZ_RS_PRE_4_Mayo2_responder",
+      "run": "Sept",
+      "biopsy": "HS32_PRE_VDZ_R",
+      "cells": 2824
+    },
+    {
+      "patient_id": "HS32",
+      "group": "UC",
+      "core": "HS32_VDZ_sigm_PRE_1_Mayo1_responder",
+      "run": "Sept",
+      "biopsy": "HS32_PRE_VDZ_R",
+      "cells": 7780
+    },
+    {
+      "patient_id": "HS32",
+      "group": "UC",
+      "core": "HS32_VDZ_sigm_PRE_3_Mayo1_responder",
+      "run": "Sept",
+      "biopsy": "HS32_PRE_VDZ_R",
+      "cells": 2875
+    },
+    {
+      "patient_id": "HS33",
+      "group": "HC",
+      "core": "HS33_HC_2",
+      "run": "Sept",
+      "biopsy": "HS33_HC",
+      "cells": 3409
+    },
+    {
+      "patient_id": "HS33",
+      "group": "HC",
+      "core": "HS33_HC_4",
+      "run": "Sept",
+      "biopsy": "HS33_HC",
+      "cells": 3787
+    },
+    {
+      "patient_id": "HS33",
+      "group": "HC",
+      "core": "HS33_HC_5",
+      "run": "Sept",
+      "biopsy": "HS33_HC",
+      "cells": 3170
+    },
+    {
+      "patient_id": "HS34",
+      "group": "UC",
+      "core": "HS34_VDZ_C_PRE_1_Mayo2_responder",
+      "run": "Sept",
+      "biopsy": "HS34_PRE_VDZ_R",
+      "cells": 10816
+    },
+    {
+      "patient_id": "HS34",
+      "group": "UC",
+      "core": "HS34_VDZ_C_PRE_3_Mayo2_responder",
+      "run": "Sept",
+      "biopsy": "HS34_PRE_VDZ_R",
+      "cells": 9089
+    },
+    {
+      "patient_id": "HS35",
+      "group": "HC",
+      "core": "HS35_HC_1",
+      "run": "Sept",
+      "biopsy": "HS35_HC",
+      "cells": 1850
+    },
+    {
+      "patient_id": "HS36",
+      "group": "UC",
+      "core": "HS36_VDZ_RS_PRE_1_Mayo3_responder",
+      "run": "Sept",
+      "biopsy": "HS36_PRE_VDZ_R",
+      "cells": 8608
+    },
+    {
+      "patient_id": "HS36",
+      "group": "UC",
+      "core": "HS36_VDZ_RS_PRE_3_Mayo3_responder",
+      "run": "Sept",
+      "biopsy": "HS36_PRE_VDZ_R",
+      "cells": 8109
+    },
+    {
+      "patient_id": "HS37",
+      "group": "HC",
+      "core": "HS37_HC_2",
+      "run": "Sept",
+      "biopsy": "HS37_HC",
+      "cells": 6599
+    },
+    {
+      "patient_id": "HS37",
+      "group": "HC",
+      "core": "HS37_HC_3",
+      "run": "Sept",
+      "biopsy": "HS37_HC",
+      "cells": 5104
+    },
+    {
+      "patient_id": "HS37",
+      "group": "HC",
+      "core": "HS37_HC_3_2",
+      "run": "Sept",
+      "biopsy": "HS37_HC",
+      "cells": 1921
+    },
+    {
+      "patient_id": "HS37",
+      "group": "HC",
+      "core": "HS37_HC_5",
+      "run": "Sept",
+      "biopsy": "HS37_HC",
+      "cells": 3757
+    },
+    {
+      "patient_id": "HS38",
+      "group": "UC",
+      "core": "HS38_VDZ_AC_PRE_1_Mayo2_responder",
+      "run": "Sept",
+      "biopsy": "HS38_PRE_VDZ_R",
+      "cells": 5819
+    },
+    {
+      "patient_id": "HS38",
+      "group": "UC",
+      "core": "HS38_VDZ_AC_PRE_3_Mayo2_responder",
+      "run": "Sept",
+      "biopsy": "HS38_PRE_VDZ_R",
+      "cells": 4882
+    },
+    {
+      "patient_id": "HS38",
+      "group": "UC",
+      "core": "HS38_VDZ_R_PRE_7_Mayo2_responder",
+      "run": "Sept",
+      "biopsy": "HS38_PRE_VDZ_R",
+      "cells": 6864
+    },
+    {
+      "patient_id": "HS38",
+      "group": "UC",
+      "core": "HS38_VDZ_TC_PRE_5_2_Mayo0_responder",
+      "run": "Sept",
+      "biopsy": "HS38_PRE_VDZ_R",
+      "cells": 554
+    },
+    {
+      "patient_id": "HS38",
+      "group": "UC",
+      "core": "HS38_VDZ_TC_PRE_5_Mayo0_responder",
+      "run": "Sept",
+      "biopsy": "HS38_PRE_VDZ_R",
+      "cells": 7587
+    },
+    {
+      "patient_id": "HS39",
+      "group": "HC",
+      "core": "HS39_HC_1",
+      "run": "Sept",
+      "biopsy": "HS39_HC",
+      "cells": 4902
+    },
+    {
+      "patient_id": "HS39",
+      "group": "HC",
+      "core": "HS39_HC_2",
+      "run": "Sept",
+      "biopsy": "HS39_HC",
+      "cells": 4077
+    },
+    {
+      "patient_id": "HS40",
+      "group": "HC",
+      "core": "HS40_HC_1",
+      "run": "Sept",
+      "biopsy": "HS40_HC",
+      "cells": 3502
+    },
+    {
+      "patient_id": "HS40",
+      "group": "HC",
+      "core": "HS40_HC_2",
+      "run": "Sept",
+      "biopsy": "HS40_HC",
+      "cells": 1484
+    },
+    {
+      "patient_id": "HS41",
+      "group": "HC",
+      "core": "HS41_HC_1",
+      "run": "Sept",
+      "biopsy": "HS41_HC",
+      "cells": 4780
+    },
+    {
+      "patient_id": "HS41",
+      "group": "HC",
+      "core": "HS41_HC_1_2",
+      "run": "Sept",
+      "biopsy": "HS41_HC",
+      "cells": 3569
+    },
+    {
+      "patient_id": "HS41",
+      "group": "HC",
+      "core": "HS41_HC_2",
+      "run": "Sept",
+      "biopsy": "HS41_HC",
+      "cells": 5797
+    },
+    {
+      "patient_id": "HS42",
+      "group": "HC",
+      "core": "HS42_HC_1",
+      "run": "Sept",
+      "biopsy": "HS42_HC",
+      "cells": 3434
+    },
+    {
+      "patient_id": "HS42",
+      "group": "HC",
+      "core": "HS42_HC_1_2",
+      "run": "Sept",
+      "biopsy": "HS42_HC",
+      "cells": 3593
+    },
+    {
+      "patient_id": "HS42",
+      "group": "HC",
+      "core": "HS42_HC_2",
+      "run": "Sept",
+      "biopsy": "HS42_HC",
+      "cells": 2352
+    },
+    {
+      "patient_id": "HS43",
+      "group": "HC",
+      "core": "HS43_HC_1",
+      "run": "Sept",
+      "biopsy": "HS43_HC",
+      "cells": 8153
+    },
+    {
+      "patient_id": "HS43",
+      "group": "HC",
+      "core": "HS43_HC_1_2",
+      "run": "Sept",
+      "biopsy": "HS43_HC",
+      "cells": 8422
+    },
+    {
+      "patient_id": "HS44",
+      "group": "UC",
+      "core": "HS44_VDZ_C_PRE_1_2_Mayo0_responder",
+      "run": "Sept",
+      "biopsy": "HS44_PRE_VDZ_R",
+      "cells": 5810
+    },
+    {
+      "patient_id": "HS44",
+      "group": "UC",
+      "core": "HS44_VDZ_C_PRE_1_Mayo0_responder",
+      "run": "Sept",
+      "biopsy": "HS44_PRE_VDZ_R",
+      "cells": 6840
+    },
+    {
+      "patient_id": "HS44",
+      "group": "UC",
+      "core": "HS44_VDZ_LC_PRE_2_Mayo0_responder",
+      "run": "Sept",
+      "biopsy": "HS44_PRE_VDZ_R",
+      "cells": 8187
+    },
+    {
+      "patient_id": "HS44",
+      "group": "UC",
+      "core": "HS44_VDZ_R_PRE_2_Mayo1_responder",
+      "run": "Sept",
+      "biopsy": "HS44_PRE_VDZ_R",
+      "cells": 12941
+    },
+    {
+      "patient_id": "HS46",
+      "group": "UC",
+      "core": "HS46_VDZ_LC_PRE_1_Mayo3_non-responder",
+      "run": "Sept",
+      "biopsy": "HS46__PRE_VDZ_NR",
+      "cells": 15583
+    },
+    {
+      "patient_id": "HS50",
+      "group": "UC",
+      "core": "HS50_VDZ_RS_PRE_1_Mayo2_non-responder",
+      "run": "Sept",
+      "biopsy": "HS50_PRE_VDZ_NR",
+      "cells": 6149
+    }
+  ]
+}
