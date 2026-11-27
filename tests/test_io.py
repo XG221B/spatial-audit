@@ -58,6 +58,8 @@ def test_roundtrip_export(tmp_path):
     spec = tmp_path / "manifest.json"
     again = load_manifest(spec)[0]
     assert again.features == c.features and len(again.sections) == len(c.sections)
+    for key in ("measurement", "layer", "fixture_seed", "construction", "selection"):
+        assert again.provenance[key] == c.provenance[key]
     assert np.array_equal(again.sections[0].X, c.sections[0].X)
     data = strict_read(spec)
     data["cohorts"][0]["files"][0]["sha256"] = "invalid"

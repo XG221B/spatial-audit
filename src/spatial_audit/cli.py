@@ -98,6 +98,11 @@ def export_fixtures(cohorts, root):
                 "platform": c.platform,
                 "source": c.source,
                 "units": "um",
+                **{
+                    key: c.provenance[key]
+                    for key in ("measurement", "layer", "selection", "fixture_seed", "construction")
+                    if key in c.provenance
+                },
                 "files": files,
             }
         )

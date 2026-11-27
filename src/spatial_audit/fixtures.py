@@ -65,6 +65,7 @@ def trap_cohort(trap, seed=36):
         platform="Synthetic lattice",
         source="Synthetic Benchmark Fixtures",
         provenance={
+            "layer": "X",
             "measurement": (
                 "synthetic Poisson counts"
                 if trap == "composition"

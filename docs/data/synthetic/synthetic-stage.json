@@ -6,6 +6,7 @@
   "source": "Synthetic Benchmark Fixtures",
   "accession": null,
   "provenance": {
+    "layer": "X",
     "measurement": "synthetic continuous intensities",
     "selection": "All eight generated features and twelve constructed independent-unit labels",
     "fixture_seed": 36,
@@ -1538,7 +1539,7 @@
       },
       "measurement_scope": {
         "measurement": "synthetic continuous intensities",
-        "layer": null,
+        "layer": "X",
         "interpretation": "Energy, semivariance and attenuation refer to the supplied measurement scale. For log-normalized inputs they describe variability after transformation. The procedure does not fit a negative-binomial count model or identify a noise cause."
       }
     }

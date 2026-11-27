@@ -231,6 +231,11 @@ def load_manifest(path: Path) -> list[Cohort]:
                 spec.get("source", ""),
                 {
                     "inputs": inputs,
+                    **{
+                        key: spec[key]
+                        for key in ("fixture_seed", "construction")
+                        if spec["kind"] == "synthetic" and key in spec
+                    },
                     **({"preprocessing_evidence": evidence} if evidence is not None else {}),
                     "accession": archive_accession(spec.get("accession"), spec.get("source")),
                     "measurement": spec.get("measurement"),
