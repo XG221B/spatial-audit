@@ -384,7 +384,7 @@ function benchmarks() {
                   '%"></i>'
                 : "") +
               "</td><td>" +
-              pct(b.spot_minus_method) +
+              (["DESpace2", "nnSVG", "SPARK-X"].includes(b.method) || b.status === "not_applicable" ? "N/A" : pct(b.spot_minus_method)) +
               "</td><td>" +
               num(b.wall_seconds) +
               "</td><td>" +

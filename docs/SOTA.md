@@ -1,6 +1,6 @@
 # Reproducing the R comparison
 
-The benchmark dispatches one fresh R process per method and cohort. Each process reads the same declared feature panel. Every output stores the patient assignments, section sizes, input file hashes, raw p-values, harmonized BH values, package version, and scope of each test. Input manifests are the same ones used by the Python audit.
+The benchmark dispatches one fresh R process per method and cohort. Each process reads the same declared feature panel. Every output stores the patient assignments, section sizes, input file hashes, raw p-values, harmonized BH values, package version, and scope of each test. The primary Python audit and the R benchmark share patient membership, sections and feature identities. For STT0000036, S-BSST1410, GSE267226 and Zenodo 10012934 the primary audit uses the normalized layer. Count-based comparators use its verified count counterpart, and the R driver recalculates the Python reference rates on that exact input before reporting differences.
 
 The released comparison includes a table of measured calls by cohort. Each cell gives the registered family and the number of estimable hypotheses. The companion JSON includes the feature-level probabilities and sampling records. [Measured package results](../results/public/sota.md) · [Machine-readable results](../results/public/sota.json)
 
