@@ -1,10 +1,7 @@
-# Statement of Significance — Journal of Biomedical Informatics (JBI)
+# Statement of Significance
 
-## Problem or Issue
-Multi-patient spatial transcriptomics and mass spectrometry imaging studies compare clinical groups using $10^4$–$10^6$ spatial measurements from small donor cohorts, making downstream biomarker discovery highly vulnerable to pseudoreplication, slide or stage aliasing, tissue-composition confounding, and abundance-linked short-range noise.
-
-## What is Already Known
-Existing bioinformatics packages target specific downstream estimands—such as pseudobulk differential expression, domain interactions, or within-section spatial variability—but do not provide a unified, modality-agnostic pre-inference audit of biological replication, acquisition identifiability, and physical-scale confounding.
-
-## What This Paper Adds
-We introduce *Spatial Audit*, an open-source five-dimensional audit engine, benchmarked across 20 human clinical cohorts from six platforms, 1,935,360 simulated cohorts, real-data empirical-null splits, and six original R comparators, paired with a zero-backend interactive web observatory and strict machine-readable provenance.
+| Topic | Statement |
+|---|---|
+| Problem or issue | A biomarker contrast can appear precise when many cells come from a few donors or when clinical groups occupy different slides. |
+| What is already known | Local quality checks identify unreliable measurements. Donor-aware tests address biological replication, and spatial variability tests identify patterns within tissue. |
+| What this paper adds | Across 20 public archives, the audit shows which donor contrasts and spatial scales can be assessed. The results inform decisions about descriptive reporting, donor-level testing and additional sampling. |

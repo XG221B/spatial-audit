@@ -164,26 +164,30 @@ def _patient_coordinates(sections, points, labels, section_diagnostics):
     visits: dict = defaultdict(list)
     for s, xy in zip(sections, points, strict=True):
         visits[s.patient_id, s.group].append(xy)
-    x = np.array([np.mean(v, axis=0) for v in visits.values()])
+    # Center before averaging so repeated identical coordinates stay exactly constant.
+    x = np.array([v[0] + np.mean(np.asarray(v) - v[0], axis=0) for v in visits.values()])
     y = np.array([g == labels[1] for _, g in visits], int)
     pids = np.array([p for p, _ in visits])
     separation = np.linalg.norm(x[y == 0].mean(0) - x[y == 1].mean(0))
-    predictions = np.zeros(len(y))
-    # Each fold excludes all conditions and sections from the held-out patient.
-    for pid in set(pids):
-        train = pids != pid
-        center, scale = x[train].mean(0), x[train].std(0)
-        z = (x - center) / np.where(scale > 0, scale, 1)
-        z = np.column_stack((np.ones(len(z)), z))
-        predictions[~train] = z[~train] @ np.linalg.lstsq(z[train], y[train], rcond=None)[0]
-    n0, n1 = np.bincount(y)
-    auc = (rankdata(predictions)[y == 1].sum() - n1 * (n1 + 1) / 2) / (n0 * n1)
+    auc = None
+    # Constant centroids give only the training-fold group proportion.
+    if np.any(x != x[0]):
+        predictions = np.zeros(len(y))
+        # Each fold excludes all conditions and sections from the held-out patient.
+        for pid in set(pids):
+            train = pids != pid
+            center, scale = x[train].mean(0), x[train].std(0)
+            z = (x - center) / np.where(scale > 0, scale, 1)
+            z = np.column_stack((np.ones(len(z)), z))
+            predictions[~train] = z[~train] @ np.linalg.lstsq(z[train], y[train], rcond=None)[0]
+        n0, n1 = np.bincount(y)
+        auc = float((rankdata(predictions)[y == 1].sum() - n1 * (n1 + 1) / 2) / (n0 * n1))
     patient_fit = section_diagnostics if len(x) == len(sections) else _stage(x, y)
     return {
         "patient_centroid_separation_um": float(separation),
         "patient_centroid_linear_separation": patient_fit["linear_separation"],
         "patient_descriptive_auc": patient_fit["descriptive_auc"],
-        "lopo_cv_auc": float(auc),
+        "lopo_cv_auc": auc,
     }
 
 
@@ -263,7 +267,8 @@ def design_audit(cohort):
             else "slide",
             "levels": len(t),
             "normalized_mi": mi / entropy,
-            "complete_alias": separate,
+            "complete_alias": None if missing else separate,
+            "observed_levels_group_specific": separate,
             "fisher_p": fisher,
             "permutation_p": _categorical_mc(visits, labels, cohort.design == "paired")
             if len(t) > 2
@@ -299,20 +304,29 @@ def design_audit(cohort):
                 {"x": float(pt[0]), "y": float(pt[1]), "group": s.group, "patient": s.patient_id}
                 for s, pt in zip(cohort.sections, xy)
             ]
-        if diag["linear_separation"]:
-            small_sample = len({s.patient_id for s in cohort.sections}) <= 8
-            if field == "stage" and (diag["linear_fixed_effect_alias"] or not small_sample):
-                reasons.append(field)
-            else:
-                warning = True
+        if field == "stage" and diag["linear_fixed_effect_alias"]:
+            reasons.append(field)
+        warning |= diag["linear_separation"]
         warning |= diag["descriptive_auc"] >= 0.85
     joint = _joint_design(cohort.sections, labels)
     if joint["fixed_effect_alias"] and not reasons:
         reasons.append("joint_acquisition_main_effects")
+    code = None
+    severity = "yellow" if warning else "green"
+    message = "Local bounding boxes are coordinate-frame proxies."
+    if reasons:
+        code = "UNIDENTIFIABLE_DESIGN"
+        severity = "red"
+        message = "Group is aliased with measured acquisition fixed effects. Collect a crossed design to estimate a separate group effect."
+    elif flags["stage"].get("linear_separation"):
+        code = "NO_STAGE_OVERLAP"
+        reasons.append("stage")
+        severity = "red" if len({s.patient_id for s in cohort.sections}) > 8 else "yellow"
+        message = "Stage regions have disjoint support. Assess extrapolation and sample shared stage regions."
     return {
-        "status": "red" if reasons else ("yellow" if warning else "green"),
-        "code": "UNIDENTIFIABLE_DESIGN" if reasons else None,
-        "message": "High risk marks categorical aliasing or no observed stage overlap. The linear fixed-effect rank diagnostic is reported separately. Local bounding boxes are coordinate-frame proxies.",
+        "status": severity,
+        "code": code,
+        "message": message,
         "categorical": details,
         "coordinates": flags,
         "joint_acquisition_design": joint,

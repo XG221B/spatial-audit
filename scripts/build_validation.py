@@ -107,63 +107,49 @@ def build_validation(save):
     save(fig, "case-studies")
 
     small, large = panel["panels"]
-    worst = {
-        m: max(
-            (r for r in rows if r["state"] == "null" and r["nugget_mode"] == m),
-            key=lambda r: r["rate"],
-        )
-        for m in ("raw", "vst")
+    replicates = vst["replicates_per_state"]
+    matched = {
+        r["nugget_mode"]: r
+        for r in rows
+        if r["state"] == "null"
+        and r["n_per_arm"] == 7
+        and r["case_mean_multiplier"] == 2
+        and r["nb_dispersion"] == 0
+    }
+    raw_max = max(
+        (r for r in rows if r["state"] == "null" and r["nugget_mode"] == "raw"),
+        key=lambda r: r["rate"],
+    )
+    alt = {
+        r["nugget_mode"]: r["rate"]
+        for r in rows
+        if r["state"] == "alternative"
+        and r["n_per_arm"] == 7
+        and r["case_mean_multiplier"] == 2
+        and r["nb_dispersion"] == 0.35
     }
 
-    def pair(state):
-        return [
-            r["rate"]
-            for r in rows
-            if r["state"] == state
-            and r["n_per_arm"] == 7
-            and r["case_mean_multiplier"] == 2
-            and r["nb_dispersion"] == 0.35
-        ]
+    def calls(arm, endpoint):
+        measure = arm["summary"][endpoint]
+        return (
+            f"{measure['bh_calls']:,}/{measure['tests']:,} feature-splits "
+            f"({measure['splits_with_calls']}/{null['splits_per_arm']} splits with calls)"
+        )
 
-    raw, vst_alt = pair("alternative")
     fibrosis = cases["fibrosis"]
     baseline, loo = cases["msi"]["records"]
     paragraphs = [
         (
-            f"In {len(rows) // 4} simulation settings with no batch alignment, each mode used the same count "
-            f"realizations ({vst['replicates_per_state']} cohorts per effect state and setting). Across settings, "
-            f"the largest null rejection fractions were {worst['raw']['rate']:.1%} on the raw scale and "
-            f"{worst['vst']['rate']:.1%} after Anscombe transformation. The latter was "
-            f"{worst['vst']['rejections']}/{vst['replicates_per_state']} cohorts (pointwise 95% Wilson "
-            f"interval {worst['vst']['wilson95'][0]:.1%} to {worst['vst']['wilson95'][1]:.1%}) under Poisson "
-            "sampling with seven donors per arm and a twofold case baseline. At the same donor count and mean "
-            f"shift with dispersion 0.35, alternative detection was {raw:.1%} and {vst_alt:.1%}, respectively. "
-            "A fixed additive pattern in counts changes amplitude after a square-root transformation as baseline "
-            "abundance changes. These rates evaluate the original latent-amplitude null."
-        ),
-        f"GSE348499 supplied {null['splits_per_arm']} random donor splits within each pretreatment breast cancer "
-        "response group. Across splits and features, the BH call fractions for pooled cells, donor means, "
-        "raw-scale corrected energy and VST corrected energy, respectively, were "
-        + " and ".join(
-            ", ".join(
-                f"{a['summary'][k]['bh_fraction']:.2%}"
-                for k in ("pooled", "patient_mean", "raw_corrected", "vst_corrected")
-            )
-            + f" within {a['group']} ({len(a['donors'])} donors)"
-            for a in null["arms"]
-        )
-        + ". Splits reuse donor material. The fractions describe random-label sensitivity conditional on these donors.",
-        (
-            f"In GSE220442, expanding the same {panel['n_patients']} cortical donors from {small['features']} to "
-            f"{large['features']:,} archived features preserved all five screening categories. Pooled BH calls "
-            f"rose from {small['pooled_rate']:.1%} to {large['pooled_rate']:.1%}. Both panels had zero donor-level "
-            f"calls. Cortical-layer covariates accounted for {small['bands'][-1]['share']:.1%} and "
+            f"In GSE220442, expanding the panel for the same {panel['n_patients']} cortical donors from {small['features']} to the "
+            f"frozen {large['features']:,}-feature archived panel preserved all five screening categories. Pooled BH calls "
+            f"rose from {small['pooled_rate']:.1%} to {large['pooled_rate']:.1%}. With three donors per arm, the two-sided permutation floor of "
+            f"0.10 guarantees zero donor-level BH calls at 0.05 on both panels. Cortical-layer covariates accounted for {small['bands'][-1]['share']:.1%} and "
             f"{large['bands'][-1]['share']:.1%} of energy at 1,400 micrometres. Neither panel supported the "
             "250-micrometre nugget endpoint."
         ),
         (
             f"For cortical SDF4, the pooled adjusted p was {pooled_ad:.2g} and the donor-adjusted p was "
-            f"{patient_ad:.2g}. Three donors per arm limit the smallest two-sided donor p to 0.10. In the "
+            f"{patient_ad:.2g}. In the "
             f"breast cancer panel, ABAT yielded pooled and donor-adjusted p values of {pooled_abc:.2g} and "
             f"{patient_abc:.3f}. For ABCB4, the pCR-minus-RD energy difference changed from "
             f"{abc['raw_delta']:.3g} to {abc['debiased_delta']:.3g} after short-lag subtraction. "
@@ -174,10 +160,9 @@ def build_validation(save):
         (
             f"In pancreatic cancer, the without-minus-with-diabetes energy difference for m/z 178.00810 "
             f"changed from {ion['raw_delta']:.3f} to {ion['debiased_delta']:.3f}. The archive identifies "
-            "this feature by mass window. Across the panel, TIC and raster coordinates together accounted for "
-            f"{baseline['shares'][-1]:.2%} of energy at 1,400 micrometres, versus {loo['shares'][-1]:.2%} "
-            "after subtracting each target window from its own TIC covariate. The resulting share still "
-            "includes spatial gradients shared by tissue and acquisition."
+            "this feature by mass window. Leave-one-ion-out TIC modestly changed the joint TIC and raster projection from "
+            f"{baseline['shares'][-1]:.2%} to {loo['shares'][-1]:.2%} "
+            "at 1,400 micrometres. Both projections retain the raster coordinates and may capture gradients shared by tissue and acquisition."
         ),
         (
             f"The {fibrosis['n_patients']}-donor lung fibrosis Xenium contrast GSE250346 yielded "
@@ -186,7 +171,29 @@ def build_validation(save):
             f"DESeq2 calls. All three procedures called {len(fibrosis['shared_calls'])} shared features "
             f"({', '.join(fibrosis['shared_calls'])}). AGER and CA4 link the panel to alveolar and vascular "
             "compartments, respectively. Whole-tissue summaries combine changes in compartment "
-            "abundance and expression within cells. All three analyses share donors and assay data."
+            "abundance and expression within cells. The shared calls represent cross-method concordance on the same donors."
+        ),
+        "In GSE348499, conditional randomization reused the observed donors and the same 32 features. "
+        + " ".join(
+            f"Within {a['group']} ({len(a['donors'])} donors), donor-mean testing called "
+            f"{calls(a, 'patient_mean')} and pooled cells yielded {calls(a, 'pooled')}."
+            for a in null["arms"]
+        ),
+        (
+            f"With seven donors per arm and a twofold baseline increase under Poisson sampling, "
+            f"the raw test rejected in {matched['raw']['rejections']}/{replicates} cohorts "
+            f"({matched['raw']['rate']:.1%}) and the Anscombe test in "
+            f"{matched['vst']['rejections']}/{replicates} ({matched['vst']['rate']:.1%}). "
+            f"The pointwise 95% Wilson interval for the latter was "
+            f"{matched['vst']['wilson95'][0]:.1%} to {matched['vst']['wilson95'][1]:.1%}. "
+            f"Across all {len(rows) // 4} settings without batch alignment "
+            f"({len(rows) // 2 * replicates:,} simulated cohorts shared between modes), the raw maximum was "
+            f"{raw_max['rejections']}/{replicates} ({raw_max['rate']:.1%}). At dispersion 0.35 "
+            f"with the same donor count and baseline shift, alternative detection was {alt['raw']:.1%} "
+            f"on the raw scale and {alt['vst']:.1%} after transformation. A square-root transformation "
+            "changes the amplitude of a fixed additive count pattern as baseline abundance changes. "
+            "These single-feature simulations tested an absolute donor mean contrast. The production "
+            "independent-donor test uses a moderated statistic across the registered feature panel."
         ),
         (
             f"Across {len(scale)} independently launched CPU audits with 10 donors and 64 sparse features, "
@@ -220,8 +227,10 @@ def build_validation(save):
     (PAPER / "generated/validation.tex").write_text(tex + "\n", encoding="utf-8")
 
     table = [
-        r"\begin{center}\small\begin{tabular}{llrrr}\toprule",
-        r"Arm & Endpoint & Nominal (\%) & BH calls/tests & Splits with calls\\\midrule",
+        r"\begin{table}[htbp]\centering\small",
+        r"\caption{Conditional randomization within each response group, using the same donors and 32 features. BH adjustment was applied within each split and endpoint.}\label{tab:null}",
+        r"\begin{tabular}{@{}llrrr@{}}\toprule",
+        r"Arm & Endpoint & Unadjusted $p<0.05$ (\%) & BH calls/tests & Splits with calls\\\midrule",
     ]
     endpoints = {
         "pooled": "Pooled cells",
@@ -234,13 +243,15 @@ def build_validation(save):
             data = arm["summary"][key]
             table.append(
                 f"{arm['group']} & {label} & {100 * data['nominal_fraction']:.2f} & "
-                f"{data['bh_calls']}/{data['tests']} & "
+                f"{data['bh_calls']:,}/{data['tests']:,} & "
                 f"{data['splits_with_calls']}/{null['splits_per_arm']}" + r"\\"
             )
     table.extend(
         [
-            r"\bottomrule\end{tabular}\end{center}",
-            r"\begin{center}\small\begin{tabular}{rrr}\toprule",
+            r"\bottomrule\end{tabular}\end{table}",
+            r"\begin{table}[htbp]\centering\small",
+            r"\caption{One fresh CPU audit per workload, with ten donors and 64 features. RSS is peak resident memory.}\label{tab:scaling}",
+            r"\begin{tabular}{rrr}\toprule",
             r"Observations & Audit seconds & Peak RSS (MiB)\\\midrule",
         ]
     )
@@ -249,7 +260,7 @@ def build_validation(save):
             f"{point['n_observations']:,} & {point['wall_seconds']:.2f} & "
             f"{point['peak_rss_bytes'] / 2**20:.1f}" + r"\\"
         )
-    table.append(r"\bottomrule\end{tabular}\end{center}")
+    table.append(r"\bottomrule\end{tabular}\end{table}")
     (PAPER / "generated/validation-tables.tex").write_text(
         "\n".join(table) + "\n", encoding="utf-8"
     )

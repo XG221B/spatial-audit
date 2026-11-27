@@ -15,8 +15,8 @@ Spatial transcriptomics (Visium, Xenium, Stereo-seq, CosMx SMI, MERFISH) and MAL
 
 | Dimension | What it measures | Key diagnostic output |
 |---|---|---|
-| **1. Power & Exact Floor** | True biological replicate count (patients/donors) and exact combinatorial resolution | Legal label allocations, doubled-tail exact $p$-value floor, executed Monte Carlo floor, first feasible BH rank |
-| **2. Acquisition Design** | Alignment of clinical groups with `slide_id`, `batch`, and physical stage coordinates | Patient-weighted normalized mutual information, binary Fisher exact tests, linear stage separation, `UNIDENTIFIABLE_DESIGN` warnings |
+| **1. Permutation Resolution** | True biological replicate count (patients/donors) and exact combinatorial resolution | Legal label allocations, doubled-tail exact $p$-value floor, executed Monte Carlo floor, first feasible BH rank |
+| **2. Acquisition Design** | Alignment of clinical groups with `slide_id`, `batch`, and physical stage coordinates | Patient-weighted normalized mutual information, binary Fisher exact tests, `NO_STAGE_OVERLAP` for geometric separation, `UNIDENTIFIABLE_DESIGN` for exact fixed-effect aliasing |
 | **3. Pseudoreplication** | Sensitivity of discovery rates to the unit of analysis | Pooled spot/pixel Mann–Whitney BH call rate vs. equal-patient moderated permutation BH call rate, rate gap, and ratio |
 | **4. Multiscale Composition** | Fraction of spatial signal energy explained by tissue composition, covariates, or TIC at physical wavelengths ($\mu\mathrm{m}$) | Finite-volume graph Laplacian, shared Chebyshev bandpass filters, within-band orthogonal projection shares |
 | **5. HF-Nugget Sensitivity** | Susceptibility of fine-scale spatial contrasts to mean-linked short-lag white noise | Matched-path two-lag semivariogram intercept, projected white-noise gain, signed raw vs. noise-adjusted fine-band energy |
@@ -42,6 +42,12 @@ spatial-audit run --manifest work/fixtures/manifest.json --out work/replayed
 3. Replays the exported manifest through the standard `spatial-audit run` CLI pipeline, generating strict RFC-8259 JSON and Markdown reports under `work/replayed/synthetic/`.
 
 ---
+
+For a local H5AD, calibrate the two columns of `obsm["spatial"]` in µm before running the audit. The patient and group columns belong in `obs`.
+
+```sh
+spatial-audit quick-run work/cohort.h5ad --patient-col patient_id --group-col group --out work/quick-audit
+```
 
 ## Public Cohorts & Reproducibility / 公开队列与实测范围
 
@@ -114,6 +120,9 @@ With the `agent` extra installed, `spatial-audit-mcp` exposes the audit engine o
 | `audit_cohort` | `manifest`, `cohort_id` | Run the full 5-dimension audit on a trusted local manifest |
 | `check_design_collinearity` | `manifest`, `cohort_id` | Inspect acquisition-stage separation and categorical aliasing |
 | `compute_exact_p_floor` | `n0`, `n1`, `features`, `alpha` | Compute exact permutation resolution and minimum feasible BH rank |
+| `quick_audit_h5ad` | `path`, `patient_col`, `group_col`, optional `alpha`, `design`, `stratum` | Audit a local H5AD with calibrated coordinates |
+| `claim_check_methods` | `methods`, `report` | Compare methods text or a searchable PDF with a saved audit |
+| `list_manifest_cohorts` | `manifest` | List cohort IDs, designs and biological-unit counts |
 | `simulate_trap_cohort` | `trap` (`null`, `pseudorep`, `composition`, or `stage`) | Generate and audit a deterministic synthetic control |
 
 ---
@@ -138,17 +147,17 @@ python scripts/verify_release_gate.py   # Full release gate: pytest, ruff, mypy,
 
 <!-- BEGIN measured validation -->
 
-In 27 simulation settings with no batch alignment, each mode used the same count realizations (192 cohorts per effect state and setting). Across settings, the largest null rejection fractions were 10.9% on the raw scale and 38.5% after Anscombe transformation. The latter was 74/192 cohorts (pointwise 95% Wilson interval 31.9% to 45.6%) under Poisson sampling with seven donors per arm and a twofold case baseline. At the same donor count and mean shift with dispersion 0.35, alternative detection was 56.2% and 24.5%, respectively. A fixed additive pattern in counts changes amplitude after a square-root transformation as baseline abundance changes. These rates evaluate the original latent-amplitude null.
+In GSE220442, expanding the panel for the same 6 cortical donors from 32 to the frozen 2,512-feature archived panel preserved all five screening categories. Pooled BH calls rose from 87.5% to 93.3%. With three donors per arm, the two-sided permutation floor of 0.10 guarantees zero donor-level BH calls at 0.05 on both panels. Cortical-layer covariates accounted for 35.9% and 33.9% of energy at 1,400 micrometres. Neither panel supported the 250-micrometre nugget endpoint.
 
-GSE348499 supplied 50 random donor splits within each pretreatment breast cancer response group. Across splits and features, the BH call fractions for pooled cells, donor means, raw-scale corrected energy and VST corrected energy, respectively, were 93.31%, 2.69%, 0.12%, 0.00% within RD (19 donors) and 95.06%, 1.69%, 1.62%, 1.62% within pCR (25 donors). Splits reuse donor material. The fractions describe random-label sensitivity conditional on these donors.
+For cortical SDF4, the pooled adjusted p was 3e-56 and the donor-adjusted p was 1. In the breast cancer panel, ABAT yielded pooled and donor-adjusted p values of 1.6e-30 and 0.992. For ABCB4, the pCR-minus-RD energy difference changed from -3.68e-05 to -7.98e-06 after short-lag subtraction. The ABCB4 contrast compares pretreatment spatial variation between eventual response groups. Without measured cell-type covariates in these sections, the contribution of cellular composition to this difference remains unresolved.
 
-In GSE220442, expanding the same 6 cortical donors from 32 to 2,512 archived features preserved all five screening categories. Pooled BH calls rose from 87.5% to 93.3%. Both panels had zero donor-level calls. Cortical-layer covariates accounted for 35.9% and 33.9% of energy at 1,400 micrometres. Neither panel supported the 250-micrometre nugget endpoint.
+In pancreatic cancer, the without-minus-with-diabetes energy difference for m/z 178.00810 changed from 0.743 to 0.010. The archive identifies this feature by mass window. Leave-one-ion-out TIC modestly changed the joint TIC and raster projection from 45.09% to 44.88% at 1,400 micrometres. Both projections retain the raster coordinates and may capture gradients shared by tissue and acquisition.
 
-For cortical SDF4, the pooled adjusted p was 3e-56 and the donor-adjusted p was 1. Three donors per arm limit the smallest two-sided donor p to 0.10. In the breast cancer panel, ABAT yielded pooled and donor-adjusted p values of 1.6e-30 and 0.992. For ABCB4, the pCR-minus-RD energy difference changed from -3.68e-05 to -7.98e-06 after short-lag subtraction. The ABCB4 contrast compares pretreatment spatial variation between eventual response groups. Without measured cell-type covariates in these sections, the contribution of cellular composition to this difference remains unresolved.
+The 35-donor lung fibrosis Xenium contrast GSE250346 yielded 9/32 donor-level BH calls, 13 edgeR calls and 16 DESeq2 calls. All three procedures called 9 shared features (ACKR1, AGER, APLNR, ATF6, AXIN2, BCL2L11, BMP4, BMPR2, CA4). AGER and CA4 link the panel to alveolar and vascular compartments, respectively. Whole-tissue summaries combine changes in compartment abundance and expression within cells. The shared calls represent cross-method concordance on the same donors.
 
-In pancreatic cancer, the without-minus-with-diabetes energy difference for m/z 178.00810 changed from 0.743 to 0.010. The archive identifies this feature by mass window. Across the panel, TIC and raster coordinates together accounted for 45.09% of energy at 1,400 micrometres, versus 44.88% after subtracting each target window from its own TIC covariate. The resulting share still includes spatial gradients shared by tissue and acquisition.
+In GSE348499, conditional randomization reused the observed donors and the same 32 features. Within RD (19 donors), donor-mean testing called 43/1,600 feature-splits (4/50 splits with calls) and pooled cells yielded 1,493/1,600 feature-splits (50/50 splits with calls). Within pCR (25 donors), donor-mean testing called 27/1,600 feature-splits (1/50 splits with calls) and pooled cells yielded 1,521/1,600 feature-splits (50/50 splits with calls).
 
-The 35-donor lung fibrosis Xenium contrast GSE250346 yielded 9/32 donor-level BH calls, 13 edgeR calls and 16 DESeq2 calls. All three procedures called 9 shared features (ACKR1, AGER, APLNR, ATF6, AXIN2, BCL2L11, BMP4, BMPR2, CA4). AGER and CA4 link the panel to alveolar and vascular compartments, respectively. Whole-tissue summaries combine changes in compartment abundance and expression within cells. All three analyses share donors and assay data.
+With seven donors per arm and a twofold baseline increase under Poisson sampling, the raw test rejected in 10/192 cohorts (5.2%) and the Anscombe test in 74/192 (38.5%). The pointwise 95% Wilson interval for the latter was 31.9% to 45.6%. Across all 27 settings without batch alignment (10,368 simulated cohorts shared between modes), the raw maximum was 21/192 (10.9%). At dispersion 0.35 with the same donor count and baseline shift, alternative detection was 56.2% on the raw scale and 24.5% after transformation. A square-root transformation changes the amplitude of a fixed additive count pattern as baseline abundance changes. These single-feature simulations tested an absolute donor mean contrast. The production independent-donor test uses a moderated statistic across the registered feature panel.
 
 Across 4 independently launched CPU audits with 10 donors and 64 sparse features, wall time increased from 2.7 to 34.5 seconds and peak RSS from 179.2 to 283.8 MiB between 10,000 and 1,000,000 observations. Each size has one host-specific measurement.
 
@@ -160,8 +169,8 @@ Reproduce the experiments from the repository root after preparing the two publi
 
 ```sh
 python scripts/run_vst_calibration.py
-python scripts/run_empirical_experiments.py --manifest cache/GSE348499/manifest.json
-python scripts/check_public_cases.py --msi-manifest manifests/msi.json
+python scripts/run_empirical_experiments.py --manifest work/xenium/manifest.json
+python scripts/check_public_cases.py --msi-manifest work/msi.json
 python scripts/measure_memory.py --scaling-curve
 python scripts/screen_cosmx_archives.py
 python scripts/run_benchmark_suite.py

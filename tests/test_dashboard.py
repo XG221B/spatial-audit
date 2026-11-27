@@ -73,7 +73,11 @@ def test_diagnostic_table_sort_search_svg_language_and_mobile(tmp_path):
         page.goto((ROOT / "docs/index.html").as_uri())
         page.locator("#kind").select_option("synthetic")
         page.get_by_role("button", name="synthetic-composition", exact=True).click()
+        assert page.get_by_role("columnheader", name="Resolution", exact=True).count() == 1
+        notes = page.locator("details").filter(has_text="Dimension-by-dimension audit notes")
+        assert "Evaluable" in notes.text_content()
         table = page.locator(".feature-diagnostics")
+        assert table.get_by_role("button", name="Noise-adjusted energy Δ").is_visible()
         assert table.locator("tbody tr").count() == 8
         table.get_by_role("button", name="Pooled q").click()
         assert table.locator("th").nth(1).get_attribute("aria-sort") == "ascending"

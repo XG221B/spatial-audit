@@ -51,7 +51,7 @@ const zh = {
     "在浏览器中本地查看 spatial-audit JSON 报告",
   Main: "主导航",
   "Audit status legend": "审计状态图例",
-  "Dimension 1: Exact permutation floor and feasible BH rank":
+  "Permutation resolution: exact floor and feasible BH rank":
     "维度 1：精确置换下限和可达 BH 秩",
   "Dimension 2: Slide, batch, and acquisition-stage collinearity":
     "维度 2：载玻片、批次与采集坐标共线性",
@@ -75,6 +75,8 @@ const zh = {
   "Low flag": "低风险",
   Review: "需复核",
   "High flag": "高风险",
+  Evaluable: "可评估",
+  Partial: "部分可评估",
   Unassessed: "未评估",
   "Indexed archives": "已收录存档",
   "Platform families": "平台类型",
@@ -87,7 +89,7 @@ const zh = {
   "Local uploads": "本地报告",
   "Filter by accession, platform, or contrast…": "按编号、平台或组间对比筛选…",
   "Cohort / platform": "队列 / 平台",
-  Power: "功效",
+  Resolution: "分辨率",
   Design: "设计",
   "Rep.": "伪重复",
   "Comp.": "组成",
@@ -136,7 +138,7 @@ const zh = {
   "Pooled q": "合并 q 值",
   "Patient q": "患者 q 值",
   "Raw energy Δ": "原始能量差",
-  "Debiased energy Δ": "校正能量差",
+  "Noise-adjusted energy Δ": "噪声校正能量差",
   "Nugget flag": "噪声敏感",
   Yes: "是",
   No: "否",
@@ -187,6 +189,27 @@ for (const el of document.querySelectorAll(
     if (Object.hasOwn(zh, el.getAttribute(attr)))
       staticAttrs.push([el, attr, el.getAttribute(attr)]);
 
+function evaluability(key, dimension, report) {
+  if (key === "design") {
+    const complete = dimension.points_frame === "stage" &&
+      ["slide_id", "batch"].every(k => dimension.categorical?.[k]?.status === "observed");
+    return complete ? "Evaluable" : dimension.points?.length ? "Partial" : "Unassessed";
+  }
+  if (key === "composition") {
+    const bands = dimension.bands || [];
+    if (!bands.some(b => Number.isFinite(b.share))) return "Unassessed";
+    return bands.every(b => Number.isFinite(b.share) && b.full_coverage) ? "Evaluable" : "Partial";
+  }
+  if (key === "nugget") {
+    if (!dimension.evaluated) return "Unassessed";
+    const sections = report.dimensions.composition.sections || [];
+    return dimension.evaluated === report.n_features && sections.length > 0 &&
+      sections.every(s => s.two_step_edges > 0 && !s.bands?.[0]?.saturated) ? "Evaluable" : "Partial";
+  }
+  const value = key === "power" ? dimension.p_floor : dimension.patient_rate;
+  return Number.isFinite(value) ? "Evaluable" : "Unassessed";
+}
+
 function featureTable(root, report) {
   const { pseudorep, nugget } = report.dimensions;
   const noise = new Map(
@@ -213,7 +236,7 @@ function featureTable(root, report) {
     "Pooled q",
     "Patient q",
     "Raw energy Δ",
-    "Debiased energy Δ",
+    "Noise-adjusted energy Δ",
     "Nugget flag",
   ];
   root.innerHTML =
@@ -629,7 +652,7 @@ function render() {
             dot(d[k].status) +
             " <b>" +
             t(dimNames[i]) +
-            ":</b> " +
+            "</b> · " + t(evaluability(k, d[k], r)) + ". " +
             esc(d[k].message) +
             (k === "nugget" && d[k].measurement_scope ? " " + esc(d[k].measurement_scope.interpretation) : "") +
             "</li>",

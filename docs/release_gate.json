@@ -2,7 +2,7 @@
   "status": "PASS",
   "scope": "full",
   "checks": {
-    "pytest_passed": 333,
+    "pytest_passed": 339,
     "pytest_skipped": [],
     "ruff": "PASS",
     "mypy": "PASS",

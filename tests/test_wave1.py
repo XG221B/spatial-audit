@@ -169,6 +169,44 @@ def test_design_centroids_lopo_multilevel_and_missingness():
     assert stage["lopo_cv_auc"] == design_audit(c)["coordinates"]["stage"]["lopo_cv_auc"]
 
 
+@pytest.mark.parametrize("n,severity", [(10, "red"), (8, "yellow")])
+def test_disjoint_stage_support_without_alias(n, severity):
+    c = cohort()
+    c.sections = [
+        replace(c.sections[0], patient_id=str(i), group="A" if i < n // 2 else "B", stage=(i, 0))
+        for i in range(n)
+    ]
+    result = design_audit(c)
+    assert result["coordinates"]["stage"]["linear_separation"]
+    assert not result["coordinates"]["stage"]["linear_fixed_effect_alias"]
+    assert result["joint_acquisition_design"]["fixed_effect_alias"] is False
+    assert (result["code"], result["status"]) == ("NO_STAGE_OVERLAP", severity)
+
+
+def test_constant_stage_coordinates_have_no_predictive_score():
+    c = cohort()
+    c.sections = [
+        replace(c.sections[0], patient_id=str(i), group="A" if i < 5 else "B", stage=(0.1, 0.3))
+        for i in range(10)
+    ]
+    c.sections.extend([c.sections[0]] * 2)
+    result = design_audit(c)
+    assert result["coordinates"]["stage"]["lopo_cv_auc"] is None
+    assert result["code"] is None
+
+
+@pytest.mark.parametrize(
+    "scale,applicable", [("counts", True), ("log_normalized", False), ("intensity", False)]
+)
+def test_depth_contrast_respects_declared_measurement_scale(scale, applicable):
+    c = cohort()
+    c.provenance["measurement"] = scale
+    result = pseudorep_audit(c)
+    assert result["depth_normalization_applicable"] is applicable
+    assert (result["depth_normalized_patient_rate"] is not None) is applicable
+    assert (result["group_depth_ratio"] is not None) is applicable
+
+
 def test_depth_normalization_removes_only_depth_shift():
     c = cohort()
     for s in c.sections:
@@ -255,6 +293,7 @@ def test_voronoi_rigid_motion_invariance(irregular):
     v2, b = section_statistics(replace(s, coords=moved), [4], graph_mode="voronoi")
     np.testing.assert_allclose(v, v2, atol=1e-9)
     assert a["bands"][0]["supported_volumes"] == b["bands"][0]["supported_volumes"] == len(xy)
+    assert a["two_step_edges"] == b["two_step_edges"] == (0 if irregular else 96)
     assert a["largest_2d_span_um"] == pytest.approx(b["largest_2d_span_um"])
 
 

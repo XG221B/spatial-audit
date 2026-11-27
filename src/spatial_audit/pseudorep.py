@@ -167,11 +167,35 @@ def pseudorep_audit(cohort, max_exact=50000, draws=4095, alpha=0.05):
 
 def depth_diagnostic(cohort, by_patient, max_exact, draws, alpha, options):
     """Divide section mean abundance by mean exposure, then equally weight sections per donor."""
-    if any(np.any(block < 0) for s in cohort.sections for block in value_blocks(s.X)):
+    measurement = (cohort.provenance.get("measurement") or "").strip().lower()
+    count_scales = {
+        "count",
+        "counts",
+        "raw",
+        "raw_counts",
+        "raw counts",
+        "synthetic poisson counts",
+    }
+    reason = None
+    if measurement and measurement not in count_scales:
+        reason = f"unavailable for measurement scale: {measurement}"
+    else:
+        for section in cohort.sections:
+            for block in value_blocks(section.X):
+                if np.any(block < 0):
+                    reason = "unavailable for signed measurements"
+                    break
+                if not measurement and np.any(block != np.floor(block)):
+                    reason = "unspecified measurement scale with noninteger values"
+                    break
+            if reason:
+                break
+    if reason:
         return {
+            "depth_normalization_applicable": False,
             "depth_normalized_patient_rate": None,
             "group_depth_ratio": None,
-            "depth_source": "unavailable for signed measurements",
+            "depth_source": reason,
         }
     external = [s.library_size is not None for s in cohort.sections]
     source = "supplied library size" if all(external) else "registered panel sum"
@@ -188,6 +212,7 @@ def depth_diagnostic(cohort, by_patient, max_exact, draws, alpha, options):
     group_depths = np.array([np.mean(depths[key]) for key in by_patient])
     a, b = (group_depths[labels == g].mean() for g in sorted(set(labels)))
     result = {
+        "depth_normalization_applicable": True,
         "depth_source": source,
         "group_depth_ratio": float(b / a) if a else None,
         "depth_normalized_patient_rate": None,

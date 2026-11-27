@@ -10,19 +10,21 @@
 
 ---
 
-## 需要上传的文件清单（全部已在本地生成完毕）
+## 需要上传的文件清单
 | Editorial Manager 栏位 | 上传文件 | 说明 |
 |---|---|---|
 | **Cover Letter** | [COVER_LETTER.md](COVER_LETTER.md)（复制文本或另存 Word/PDF） | 已针对 JBI“通用生物医学信息学方法学”定位定制 |
 | **Manuscript** | [paper/main.pdf](../main.pdf)（或连同 `paper/` 下的 `.tex` + `figures/` + `references.bib`） | 已重构为 JBI 完整 IMRaD 长文结构，含结构化摘要与 Statement of Significance |
 | **Highlights** | [HIGHLIGHTS.md](HIGHLIGHTS.md)（复制 5 条要点，每条均 ≤ 85 字符） | 严格符合 Elsevier 字数限制 |
-| **Statement of Significance** | [STATEMENT_OF_SIGNIFICANCE.md](STATEMENT_OF_SIGNIFICANCE.md) | JBI 特色必填项（3 段式） |
+| **Statement of Significance** | [STATEMENT_OF_SIGNIFICANCE.md](STATEMENT_OF_SIGNIFICANCE.md) | JBI 特色必填项（两列、三项） |
 | **Supplementary Material** | [paper/supplement.pdf](../supplement.pdf) | 补充方法、离散扩散推导与完整复现流程 |
 
 ---
 
+图文摘要（Graphical Abstract）尚未制作，本投稿包仅含正文插图。提交时核对该文章类型在 Editorial Manager 中的具体要求。请同时将正文首页的通讯作者邮箱占位符替换为真实邮箱。
+
 ## 表单填写关键项（防止手滑踩坑）
-- **Article Type**：选 `Original Research Article`（或 `Methodological Review` / `Original Research`）。
+- **Article Type**：选 `Original Research`。
 - **Publishing Option（最关键！）**：务必选择 **Subscription（Traditional publishing model）= 0 元**，**不要勾选 Gold Open Access**。
 - **Author & ORCID**：`Chaohao Liu`，ORCID `0009-0003-4341-2494`，Affiliation 填 `Independent Researcher`（若挂学校单位，先确认学院是否要求导师签字）。
 - **CRediT Author Statement**：`Chaohao Liu: Conceptualization, Methodology, Software, Validation, Formal analysis, Data Curation, Writing – Original Draft, Writing – Review & Editing, Visualization.`

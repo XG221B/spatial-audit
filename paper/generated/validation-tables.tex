@@ -1,18 +1,22 @@
-\begin{center}\small\begin{tabular}{llrrr}\toprule
-Arm & Endpoint & Nominal (\%) & BH calls/tests & Splits with calls\\\midrule
-RD & Pooled cells & 93.44 & 1493/1600 & 50/50\\
-RD & Donor mean & 7.94 & 43/1600 & 4/50\\
-RD & Raw-scale energy & 6.25 & 2/1600 & 2/50\\
-RD & VST energy & 6.62 & 0/1600 & 0/50\\
-pCR & Pooled cells & 95.06 & 1521/1600 & 50/50\\
-pCR & Donor mean & 3.56 & 27/1600 & 1/50\\
-pCR & Raw-scale energy & 3.94 & 26/1600 & 2/50\\
-pCR & VST energy & 3.62 & 26/1600 & 2/50\\
-\bottomrule\end{tabular}\end{center}
-\begin{center}\small\begin{tabular}{rrr}\toprule
+\begin{table}[htbp]\centering\small
+\caption{Conditional randomization within each response group, using the same donors and 32 features. BH adjustment was applied within each split and endpoint.}\label{tab:null}
+\begin{tabular}{@{}llrrr@{}}\toprule
+Arm & Endpoint & Unadjusted $p<0.05$ (\%) & BH calls/tests & Splits with calls\\\midrule
+RD & Pooled cells & 93.44 & 1,493/1,600 & 50/50\\
+RD & Donor mean & 7.94 & 43/1,600 & 4/50\\
+RD & Raw-scale energy & 6.25 & 2/1,600 & 2/50\\
+RD & VST energy & 6.62 & 0/1,600 & 0/50\\
+pCR & Pooled cells & 95.06 & 1,521/1,600 & 50/50\\
+pCR & Donor mean & 3.56 & 27/1,600 & 1/50\\
+pCR & Raw-scale energy & 3.94 & 26/1,600 & 2/50\\
+pCR & VST energy & 3.62 & 26/1,600 & 2/50\\
+\bottomrule\end{tabular}\end{table}
+\begin{table}[htbp]\centering\small
+\caption{One fresh CPU audit per workload, with ten donors and 64 features. RSS is peak resident memory.}\label{tab:scaling}
+\begin{tabular}{rrr}\toprule
 Observations & Audit seconds & Peak RSS (MiB)\\\midrule
 10,000 & 2.69 & 179.2\\
 50,000 & 8.94 & 187.8\\
 250,000 & 16.65 & 203.0\\
 1,000,000 & 34.52 & 283.8\\
-\bottomrule\end{tabular}\end{center}
+\bottomrule\end{tabular}\end{table}

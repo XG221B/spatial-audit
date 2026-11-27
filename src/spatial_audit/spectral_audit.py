@@ -136,7 +136,11 @@ def _clip_cell(polygon, normal, midpoint):
 
 
 def build_voronoi(coords):
-    """No-flux FV graph on Voronoi cells clipped to the convex hull of sampled sites."""
+    """Clip to the sampled convex hull, which can bridge gaps in tissue coverage.
+
+    Record equally spaced collinear triples of face-sharing sites for the nugget
+    estimator. An irregular cloud can have many faces and no matched triples.
+    """
     coords = np.asarray(coords, float)
     # Preserve first-site order so seeded probes follow sites under rigid motion.
     _, first, inverse, counts = np.unique(
@@ -493,7 +497,10 @@ def _section_values(section, waves, block, grid, weight, reference_width, nugget
         "trace_probes": 0 if n <= 144 else 48,
         "trace_method": "exact" if n <= 144 else "seeded Rademacher",
         "projection_ranks": [q.shape[1] for q in qs],
-        "two_step_edges": int(np.sum(masks[0][grid.far_left])),
+        # Number of matched three-point paths on fine-band support.
+        "two_step_edges": int(
+            np.sum(masks[0][grid.far_left] & masks[0][grid.middle] & masks[0][grid.far_right])
+        ),
         "occupancy_range": [int(grid.count.min()), int(grid.count.max())],
         "bands": records,
     }
