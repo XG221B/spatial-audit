@@ -7,7 +7,7 @@ name = "spatial-audit"
 version = "0.1.0"
 description = "Patient-level reproducibility and confounding audits for spatial omics"
 readme = "README.md"
-authors = [{ name = "Chaohao Liu" }]
+authors = [{ name = "Chaohao Liu", email = "chaohao221@163.com" }]
 requires-python = ">=3.13"
 license = "MIT"
 dependencies = [

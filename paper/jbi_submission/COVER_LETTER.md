@@ -25,5 +25,6 @@ Sincerely,
 
 **Chaohao Liu**  
 Independent Researcher  
+Email: `chaohao221@163.com`  
 ORCID: `0009-0003-4341-2494`  
 GitHub: `https://github.com/XG221B/spatial-audit`
